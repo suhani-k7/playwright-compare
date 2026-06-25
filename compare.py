@@ -185,15 +185,14 @@ for i in range(1, num_features + 1):
 
     if shift:
         sx, sy = shift
-        shift_str = (
-            f"shifted {abs(sx)}px {'right' if sx > 0 else 'left'}, "
-            f"{abs(sy)}px {'down' if sy > 0 else 'up'}"
-        )
-        # description = f"{description} + {shift_str}"
+        shift_str = f"x{'+' if sx >= 0 else ''}{sx}px  y{'+' if sy >= 0 else ''}{sy}px"
+    else:
+        shift_str = "no shift detected"
 
     label = (
         f"#{change_count} "
         f"({region_pixels}px, {bbox_coverage:.1f}% fill) "
+        f"— {shift_str}"
         # f"— {description}"
     )
 
@@ -222,7 +221,8 @@ for i in range(1, num_features + 1):
     )
     draw.text((label_x + 4, label_y + 3), label, fill=LABEL_TEXT, font=font)
 
-   # print(f"  Change #{change_count} at ({x_min},{y_min}) → ({x_max},{y_max}): {description}")
+    print(f"  Change #{change_count} at ({x_min},{y_min}) → ({x_max},{y_max}): {shift_str}")
+    # print(f"  Change #{change_count} at ({x_min},{y_min}) → ({x_max},{y_max}): {description}")
 
 annotated.save("diffs/annotated.png")
 print(f"\nAnnotated diff saved to diffs/annotated.png ({change_count} changes marked)")
