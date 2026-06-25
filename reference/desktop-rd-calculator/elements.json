@@ -1,0 +1,3915 @@
+{
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "RD Calculator",
+      "bbox": {
+        "x": 32,
+        "y": 131,
+        "width": 1216,
+        "height": 34.984375
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Calculate your earnings with RD",
+      "bbox": {
+        "x": 57,
+        "y": 268.953125,
+        "width": 304,
+        "height": 85.96875
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Would've been \u20b94.24 Cr*",
+      "bbox": {
+        "x": 81,
+        "y": 649.90625,
+        "width": 232,
+        "height": 37
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "You Get",
+      "bbox": {
+        "x": 410,
+        "y": 268.953125,
+        "width": 544,
+        "height": 35
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Maximise Your Savings",
+      "bbox": {
+        "x": 1020,
+        "y": 268.953125,
+        "width": 211,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Axis Max Life Savings Plans",
+      "bbox": {
+        "x": 0,
+        "y": 1076.21875,
+        "width": 1280,
+        "height": 37.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What is a Recurring Deposit?",
+      "bbox": {
+        "x": 32,
+        "y": 1491.71875,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "How Does RD Interest Calculator help you?",
+      "bbox": {
+        "x": 32,
+        "y": 1761.625,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "How to Use Online RD Calculator?",
+      "bbox": {
+        "x": 32,
+        "y": 3016.53125,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "How is RD Interest calculated in 2025?",
+      "bbox": {
+        "x": 32,
+        "y": 3209.484375,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Recurring Deposit Formula",
+      "bbox": {
+        "x": 32,
+        "y": 3479.390625,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Advantages of RD Calculator",
+      "bbox": {
+        "x": 32,
+        "y": 3956.15625,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "RD vs FD vs SIP: Which Investment Option is Right for You?",
+      "bbox": {
+        "x": 32,
+        "y": 5232.859375,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Tax Implications of RD",
+      "bbox": {
+        "x": 32,
+        "y": 5758.859375,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Is an RD Interest Rate fixed?",
+      "bbox": {
+        "x": 32,
+        "y": 6130.703125,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Is TDS applicable on an RD?",
+      "bbox": {
+        "x": 32,
+        "y": 6323.65625,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What is the minimum tenure for an RD?",
+      "bbox": {
+        "x": 32,
+        "y": 6470.640625,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Eligibility Criteria for an RD Account",
+      "bbox": {
+        "x": 32,
+        "y": 6617.625,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Documents Required to Open an RD Account",
+      "bbox": {
+        "x": 32,
+        "y": 6959.53125,
+        "width": 1216,
+        "height": 36
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Frequently Asked Questions",
+      "bbox": {
+        "x": 32,
+        "y": 7317.4375,
+        "width": 966,
+        "height": 46.078125
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Related Articles",
+      "bbox": {
+        "x": 32,
+        "y": 10263.484375,
+        "width": 966,
+        "height": 54.078125
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Check out the different Online Insurance Plans from Axis Max Life!",
+      "bbox": {
+        "x": 32,
+        "y": 10851.5625,
+        "width": 966,
+        "height": 46.078125
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Customer Reviews",
+      "bbox": {
+        "x": 32,
+        "y": 11711.375,
+        "width": 966,
+        "height": 62.078125
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "We would like to hear from you",
+      "bbox": {
+        "x": 32,
+        "y": 12573.328125,
+        "width": 304,
+        "height": 92.15625
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Popular Searches",
+      "bbox": {
+        "x": 0,
+        "y": 13643.3125,
+        "width": 1280,
+        "height": 39
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "1. Aids Financial Planning",
+      "bbox": {
+        "x": 32,
+        "y": 2701.609375,
+        "width": 928,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "2. RD Calculator is Easy to Use",
+      "bbox": {
+        "x": 32,
+        "y": 2846.5625,
+        "width": 928,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Saves Time",
+      "bbox": {
+        "x": 32,
+        "y": 4133.109375,
+        "width": 928,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Accurate",
+      "bbox": {
+        "x": 32,
+        "y": 4255.078125,
+        "width": 928,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Free to Use",
+      "bbox": {
+        "x": 32,
+        "y": 4354.0625,
+        "width": 928,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Helps Compare RD Interest Rates",
+      "bbox": {
+        "x": 32,
+        "y": 4476.03125,
+        "width": 928,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Future Planning",
+      "bbox": {
+        "x": 32,
+        "y": 4598,
+        "width": 928,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Low Initial Investment",
+      "bbox": {
+        "x": 32,
+        "y": 4719.96875,
+        "width": 928,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Tenure",
+      "bbox": {
+        "x": 32,
+        "y": 4841.9375,
+        "width": 928,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Interest Rate",
+      "bbox": {
+        "x": 32,
+        "y": 4963.90625,
+        "width": 928,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Premature Withdrawal",
+      "bbox": {
+        "x": 32,
+        "y": 5085.875,
+        "width": 928,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "How to use Recurring Deposit Interest calculator?",
+      "bbox": {
+        "x": 32,
+        "y": 7493.515625,
+        "width": 355,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "How to calculate the Recurring Deposit maturity amount?",
+      "bbox": {
+        "x": 32,
+        "y": 7580.515625,
+        "width": 408.96875,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "How is Recurring Deposit interest calculated?",
+      "bbox": {
+        "x": 32,
+        "y": 7667.515625,
+        "width": 325.03125,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "What are the minimum and maximum tenures to open a bank RD?",
+      "bbox": {
+        "x": 32,
+        "y": 7754.515625,
+        "width": 462.328125,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "What is the minimum monthly instalment amount needed to invest in bank RD?",
+      "bbox": {
+        "x": 32,
+        "y": 7841.515625,
+        "width": 555.375,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Is it possible to add nominees in my RD account?",
+      "bbox": {
+        "x": 32,
+        "y": 7928.515625,
+        "width": 341.84375,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Can I make partial withdrawals from my RD account?",
+      "bbox": {
+        "x": 32,
+        "y": 8015.515625,
+        "width": 373.859375,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Will I have to pay a penalty in case there is a delay in the monthly deposit?",
+      "bbox": {
+        "x": 32,
+        "y": 8102.515625,
+        "width": 515.734375,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Is the interest that is generated from the RD account taxable?",
+      "bbox": {
+        "x": 32,
+        "y": 8189.515625,
+        "width": 433.6875,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "What are the different methods by which I can open an RD account?",
+      "bbox": {
+        "x": 32,
+        "y": 8276.515625,
+        "width": 477.984375,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "How is the interest earned on an RD account calculated?",
+      "bbox": {
+        "x": 32,
+        "y": 8363.515625,
+        "width": 398.375,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Is there any additional interest provided for senior citizens?",
+      "bbox": {
+        "x": 32,
+        "y": 8450.515625,
+        "width": 419.390625,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Which form should I submit if I wish to avoid TDS?",
+      "bbox": {
+        "x": 32,
+        "y": 8537.515625,
+        "width": 353.5625,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Which is the formula used to calculate compound interest on Recurring Deposits?",
+      "bbox": {
+        "x": 32,
+        "y": 8624.515625,
+        "width": 571.984375,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Is the interest paid on RDs compounded quarterly?",
+      "bbox": {
+        "x": 32,
+        "y": 8711.515625,
+        "width": 360.046875,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Are the interest rates on an RD pre-fixed?",
+      "bbox": {
+        "x": 32,
+        "y": 8798.515625,
+        "width": 295.984375,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "What happens if I do not pay my RD instalment?",
+      "bbox": {
+        "x": 32,
+        "y": 8885.515625,
+        "width": 339.140625,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Can I add a nominee to my RD account?",
+      "bbox": {
+        "x": 32,
+        "y": 8972.515625,
+        "width": 280.765625,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "What is the Difference between FD vs RD?",
+      "bbox": {
+        "x": 32,
+        "y": 9059.515625,
+        "width": 304.265625,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Is TDS applicable on RD?",
+      "bbox": {
+        "x": 32,
+        "y": 9146.515625,
+        "width": 179.671875,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Is RD better than FD?",
+      "bbox": {
+        "x": 32,
+        "y": 9233.515625,
+        "width": 158,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Are there any charges for closing an RD early?",
+      "bbox": {
+        "x": 32,
+        "y": 9320.515625,
+        "width": 326.15625,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Is RD better than saving in a savings account?",
+      "bbox": {
+        "x": 32,
+        "y": 9407.515625,
+        "width": 321.328125,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Can NRIs open a Recurring Deposit account in India?",
+      "bbox": {
+        "x": 32,
+        "y": 9494.515625,
+        "width": 372.375,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Can I break an RD before maturity?",
+      "bbox": {
+        "x": 32,
+        "y": 9581.515625,
+        "width": 252.671875,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "What is the eligibility criteria for an RD account?",
+      "bbox": {
+        "x": 32,
+        "y": 9668.515625,
+        "width": 343.71875,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Are there different types of RD accounts available?",
+      "bbox": {
+        "x": 32,
+        "y": 9755.515625,
+        "width": 361.1875,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Can I open multiple recurring deposits?",
+      "bbox": {
+        "x": 32,
+        "y": 9842.515625,
+        "width": 279.484375,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Understanding Recurring Deposit Interest Rates",
+      "bbox": {
+        "x": 48,
+        "y": 10561.5625,
+        "width": 274,
+        "height": 48
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "What is RD? - Know About the Features and Benefits",
+      "bbox": {
+        "x": 378,
+        "y": 10561.5625,
+        "width": 274,
+        "height": 48
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Difference Between Fixed Deposit and Recurring Deposit",
+      "bbox": {
+        "x": 708,
+        "y": 10511.5625,
+        "width": 274,
+        "height": 48
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Axis Max Life Insurance",
+      "bbox": {
+        "x": 64,
+        "y": 11813.453125,
+        "width": 902,
+        "height": 22.984375
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Axis Max Life Savings Plan",
+      "bbox": {
+        "x": 64,
+        "y": 12007.390625,
+        "width": 902,
+        "height": 22.984375
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Share your Valuable Feedback",
+      "bbox": {
+        "x": 32,
+        "y": 12261.328125,
+        "width": 336,
+        "height": 23
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "DISCLAIMERS",
+      "bbox": {
+        "x": 102,
+        "y": 16149.28125,
+        "width": 111.21875,
+        "height": 18
+      }
+    },
+    {
+      "tag": "h4",
+      "text": "4.3",
+      "bbox": {
+        "x": 181.96875,
+        "y": 12351.515625,
+        "width": 36.046875,
+        "height": 37.5
+      }
+    }
+  ],
+  "images": [
+    {
+      "alt": "Logo of axis max life insurance graphic",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/axis-max-life-insurance-logo.svg",
+      "bbox": {
+        "x": 12,
+        "y": 23.421875,
+        "width": 99.640625,
+        "height": 38.140625
+      }
+    },
+    {
+      "alt": "left-arrow-icon",
+      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-left-arrow.png",
+      "bbox": {
+        "x": 291,
+        "y": 474.921875,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "alt": "right-arrow-icon",
+      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-right-arrow.png",
+      "bbox": {
+        "x": 327,
+        "y": 474.921875,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "alt": "left-arrow-icon",
+      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-left-arrow.png",
+      "bbox": {
+        "x": 291,
+        "y": 554.921875,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "alt": "right-arrow-icon",
+      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-right-arrow.png",
+      "bbox": {
+        "x": 327,
+        "y": 554.921875,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "alt": "calculatorBannerTickIcon",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
+      "bbox": {
+        "x": 81,
+        "y": 694.90625,
+        "width": 14.984375,
+        "height": 22.984375
+      }
+    },
+    {
+      "alt": "calculatorBannerTickIcon",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
+      "bbox": {
+        "x": 81,
+        "y": 725.890625,
+        "width": 14.984375,
+        "height": 22.984375
+      }
+    },
+    {
+      "alt": "calculatorBannerTickIcon",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
+      "bbox": {
+        "x": 81,
+        "y": 756.875,
+        "width": 15,
+        "height": 22.984375
+      }
+    },
+    {
+      "alt": "Image for the Smart Innovation Pension Fund",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/20%20Past%20Returns%20%282%29.svg",
+      "bbox": {
+        "x": 195.109375,
+        "y": 1205.3125,
+        "width": 39.375,
+        "height": 40
+      }
+    },
+    {
+      "alt": "Image for the Pay 15k/Month, Get 4.24 Crore<sup>$4</sup>",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/money_back_821d401ae6_6a6a47cf28.svg",
+      "bbox": {
+        "x": 365.703125,
+        "y": 1205.3125,
+        "width": 38.328125,
+        "height": 40
+      }
+    },
+    {
+      "alt": "Image for the Savings + Life Cover",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/market_growth_icon_8fed64aded.svg",
+      "bbox": {
+        "x": 536.9375,
+        "y": 1205.3125,
+        "width": 36.015625,
+        "height": 40
+      }
+    },
+    {
+      "alt": "Image for the Tax Saving Investments",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/save_more_taxes_6181fcb93f.svg",
+      "bbox": {
+        "x": 705.71875,
+        "y": 1205.3125,
+        "width": 38.625,
+        "height": 40
+      }
+    },
+    {
+      "alt": "Image for the Whole Life Monthly Income<sup>&#</sup>",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/market_growth_icon_8fed64aded.svg",
+      "bbox": {
+        "x": 877.09375,
+        "y": 1205.3125,
+        "width": 36.015625,
+        "height": 40
+      }
+    },
+    {
+      "alt": "Image for the Get upto $1.08M<sup>$5</sup",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/nri_dollar_074eb640d9.svg",
+      "bbox": {
+        "x": 1044.8125,
+        "y": 1205.3125,
+        "width": 40.734375,
+        "height": 40
+      }
+    },
+    {
+      "alt": "writer-profile",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/sumit-img-transformed11-resize.webp",
+      "bbox": {
+        "x": 149,
+        "y": 1377.71875,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "alt": "verification-badge",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/eat-verified-badge.webp",
+      "bbox": {
+        "x": 372.359375,
+        "y": 1378.71875,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "alt": "reviewer-profile",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/prateek-img-transformed1-resize.webp",
+      "bbox": {
+        "x": 481.265625,
+        "y": 1377.71875,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "alt": "verification-badge",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/eat-verified-badge.webp",
+      "bbox": {
+        "x": 736.109375,
+        "y": 1378.71875,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "alt": "background-image",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/eat-solid-bg-desktop.png",
+      "bbox": {
+        "x": 133,
+        "y": 1359.71875,
+        "width": 1014,
+        "height": 76
+      }
+    },
+    {
+      "alt": "image RD_Calculator_1_de68f391fe_1906f78940",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/RD_Calculator_1_de68f391fe_1906f78940.webp",
+      "bbox": {
+        "x": 32,
+        "y": 1896.609375,
+        "width": 1184,
+        "height": 789
+      }
+    },
+    {
+      "alt": "when-start-investing-wrapper-img",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/RD_Calculator_3_70ed5978a1.webp",
+      "bbox": {
+        "x": 32,
+        "y": 5826.859375,
+        "width": 360.953125,
+        "height": 239.84375
+      }
+    },
+    {
+      "alt": "search",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/search_3f424f3a01.webp",
+      "bbox": {
+        "x": 628,
+        "y": 7424.015625,
+        "width": 23,
+        "height": 23
+      }
+    },
+    {
+      "alt": "image thumbnail_related_articles_rd_calc_4_5dab347b4f_4a68b6fa1c_350bc444c0",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/thumbnail_related_articles_rd_calc_4_5dab347b4f_4a68b6fa1c_350bc444c0.webp",
+      "bbox": {
+        "x": 32,
+        "y": 10341.5625,
+        "width": 306,
+        "height": 204
+      }
+    },
+    {
+      "alt": "image thumbnail_related_articles_rd_calc_2_9f9470a270_15b9c00771_fbd13cda35",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/thumbnail_related_articles_rd_calc_2_9f9470a270_15b9c00771_fbd13cda35.webp",
+      "bbox": {
+        "x": 362,
+        "y": 10341.5625,
+        "width": 306,
+        "height": 204
+      }
+    },
+    {
+      "alt": "Notebook with financial planning title, graph, pen, and spectacles symbolising difference between fixed and recurring deposits",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/thumbnail_related_articles_savings2_b06380d0c0_d264b3d16c.webp",
+      "bbox": {
+        "x": 692,
+        "y": 10341.5625,
+        "width": 245,
+        "height": 154
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 56,
+        "y": 11101.578125,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 56,
+        "y": 11229,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 56,
+        "y": 11367.921875,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 368.796875,
+        "y": 11113.0625,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 368.796875,
+        "y": 11251.984375,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 368.796875,
+        "y": 11390.90625,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 681.59375,
+        "y": 11078.078125,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 681.59375,
+        "y": 11217,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 681.59375,
+        "y": 11344.4375,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 994.390625,
+        "y": 11066.59375,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 994.390625,
+        "y": 11194.015625,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 994.390625,
+        "y": 11332.9375,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 1307.1875,
+        "y": 11113.0625,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 1307.1875,
+        "y": 11240.5,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 1307.1875,
+        "y": 11356.4375,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 1619.984375,
+        "y": 11136.5625,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 1619.984375,
+        "y": 11263.984375,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 1619.984375,
+        "y": 11402.90625,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 1932.78125,
+        "y": 11113.0625,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 1932.78125,
+        "y": 11240.5,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 1932.78125,
+        "y": 11367.921875,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 2245.578125,
+        "y": 11079.609375,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 2245.578125,
+        "y": 11151.609375,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "feature tick",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/product_listing_feature_container_tick.webp",
+      "bbox": {
+        "x": 2245.578125,
+        "y": 11223.609375,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "alt": "Rating Icon",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/rating_Icon_4d04f1d585.webp",
+      "bbox": {
+        "x": 148,
+        "y": 12284.328125,
+        "width": 104,
+        "height": 147
+      }
+    },
+    {
+      "alt": "Image for the icon",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/comment_sec_3bd81afdde.png",
+      "bbox": {
+        "x": 32,
+        "y": 12774.578125,
+        "width": 259,
+        "height": 291
+      }
+    },
+    {
+      "alt": "contact-background-image",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/contact-bg.webp",
+      "bbox": {
+        "x": 0,
+        "y": 13108.359375,
+        "width": 1280,
+        "height": 534.953125
+      }
+    },
+    {
+      "alt": "bima-bharosa",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/bima_barosa_webp.webp",
+      "bbox": {
+        "x": 112,
+        "y": 15304.8125,
+        "width": 104,
+        "height": 46.375
+      }
+    },
+    {
+      "alt": "data-gov-in",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/data-gov-in.webp",
+      "bbox": {
+        "x": 919,
+        "y": 15068.8125,
+        "width": 104,
+        "height": 78
+      }
+    },
+    {
+      "alt": "India-Gov-In",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/india-gov-in.webp",
+      "bbox": {
+        "x": 919,
+        "y": 15158.8125,
+        "width": 104,
+        "height": 78
+      }
+    },
+    {
+      "alt": "AppstoreImg",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/appstore-icon.webp",
+      "bbox": {
+        "x": 925,
+        "y": 15248.8125,
+        "width": 148,
+        "height": 43.875
+      }
+    },
+    {
+      "alt": "GooglePlayStoreImg",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/googleapp-icon.webp",
+      "bbox": {
+        "x": 925,
+        "y": 15308.6875,
+        "width": 148,
+        "height": 44
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "selector": "button",
+      "text": "Track Application",
+      "bbox": {
+        "x": 841.359375,
+        "y": -8,
+        "width": 109.921875,
+        "height": 101
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Join as Advisor",
+      "bbox": {
+        "x": 1007.359375,
+        "y": 16,
+        "width": 113.921875,
+        "height": 53
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Login",
+      "bbox": {
+        "x": 1137.28125,
+        "y": 24,
+        "width": 90.71875,
+        "height": 37
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 1244,
+        "y": 30.5,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 992.171875,
+        "y": 88,
+        "width": 232.40625,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 291,
+        "y": 474.921875,
+        "width": 36,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 327,
+        "y": 474.921875,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 291,
+        "y": 554.921875,
+        "width": 36,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 327,
+        "y": 554.921875,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Graph view",
+      "bbox": {
+        "x": 443,
+        "y": 468.78125,
+        "width": 72.734375,
+        "height": 35.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Calculate Now",
+      "bbox": {
+        "x": 1006.4375,
+        "y": 696.953125,
+        "width": 238.125,
+        "height": 48
+      }
+    },
+    {
+      "selector": "button",
+      "text": "More Resourceful Articles",
+      "bbox": {
+        "x": 392.59375,
+        "y": 10759.5625,
+        "width": 254.8125,
+        "height": 48
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Submit Rating",
+      "bbox": {
+        "x": 433.9375,
+        "y": 12399.359375,
+        "width": 161.125,
+        "height": 48
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Submit Review",
+      "bbox": {
+        "x": 490.8125,
+        "y": 12948.359375,
+        "width": 277.375,
+        "height": 48
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 118,
+        "y": 15304.8125,
+        "width": 104,
+        "height": 46.375
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Tools & Calculators",
+      "bbox": {
+        "x": 371,
+        "y": 14794.8125,
+        "width": 122.65625,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Investment Plans",
+      "bbox": {
+        "x": 656,
+        "y": 14454.8125,
+        "width": 113.46875,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "About Axis Max Life",
+      "bbox": {
+        "x": 925,
+        "y": 14454.8125,
+        "width": 128,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 925,
+        "y": 15068.8125,
+        "width": 104,
+        "height": 78
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 925,
+        "y": 15158.8125,
+        "width": 104,
+        "height": 78
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 925,
+        "y": 15248.8125,
+        "width": 237,
+        "height": 43.875
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 925,
+        "y": 15308.6875,
+        "width": 237,
+        "height": 44
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 1026,
+        "y": 15565.8125,
+        "width": 16,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 1058,
+        "y": 15565.8125,
+        "width": 16,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 1090,
+        "y": 15565.8125,
+        "width": 16,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 1122,
+        "y": 15565.8125,
+        "width": 16,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 1154,
+        "y": 15565.8125,
+        "width": 16,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "IRDAI Consumer Education Website",
+      "bbox": {
+        "x": 145.171875,
+        "y": 15663.8125,
+        "width": 217.3125,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Insurance Ombudsman",
+      "bbox": {
+        "x": 738.234375,
+        "y": 15663.8125,
+        "width": 144.140625,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Bima Bharosa",
+      "bbox": {
+        "x": 426.671875,
+        "y": 15715.8125,
+        "width": 84.90625,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "IRDAI List of Blacklisted Agents",
+      "bbox": {
+        "x": 795.828125,
+        "y": 15767.8125,
+        "width": 189.203125,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "AXIS BANK",
+      "bbox": {
+        "x": 223.828125,
+        "y": 15835.8125,
+        "width": 70.140625,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "MAX INDIA",
+      "bbox": {
+        "x": 341.96875,
+        "y": 15835.8125,
+        "width": 72.546875,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "MAX FINANCIAL SERVICES",
+      "bbox": {
+        "x": 462.515625,
+        "y": 15835.8125,
+        "width": 168,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "ANTARA SENIOR CARE",
+      "bbox": {
+        "x": 678.515625,
+        "y": 15835.8125,
+        "width": 141.46875,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "MAX LIFE PENSION FUND MANAGEMENT",
+      "bbox": {
+        "x": 867.984375,
+        "y": 15835.8125,
+        "width": 261.15625,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "bbox": {
+        "x": 770.765625,
+        "y": 16098.53125,
+        "width": 12,
+        "height": 14
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "",
+      "bbox": {
+        "x": 254.5625,
+        "y": 32.5,
+        "width": 17.625,
+        "height": 20
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "",
+      "bbox": {
+        "x": 410.921875,
+        "y": 32.5,
+        "width": 17.625,
+        "height": 20
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "",
+      "bbox": {
+        "x": 563.484375,
+        "y": 32.5,
+        "width": 17.625,
+        "height": 20
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "",
+      "bbox": {
+        "x": 669.828125,
+        "y": 32.5,
+        "width": 17.5625,
+        "height": 20
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "",
+      "bbox": {
+        "x": 797.359375,
+        "y": 32.5,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Read More",
+      "bbox": {
+        "x": 374.625,
+        "y": 194.96875,
+        "width": 109.375,
+        "height": 42
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "+91",
+      "bbox": {
+        "x": 1041,
+        "y": 549.953125,
+        "width": 27.46875,
+        "height": 46
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "How to use Recurring Deposit Interest calculator?",
+      "bbox": {
+        "x": 32,
+        "y": 7459.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "How to calculate the Recurring Deposit maturity amount?",
+      "bbox": {
+        "x": 32,
+        "y": 7546.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "How is Recurring Deposit interest calculated?",
+      "bbox": {
+        "x": 32,
+        "y": 7633.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What are the minimum and maximum tenures to open a bank RD?",
+      "bbox": {
+        "x": 32,
+        "y": 7720.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What is the minimum monthly instalment amount needed to inve",
+      "bbox": {
+        "x": 32,
+        "y": 7807.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Is it possible to add nominees in my RD account?",
+      "bbox": {
+        "x": 32,
+        "y": 7894.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Can I make partial withdrawals from my RD account?",
+      "bbox": {
+        "x": 32,
+        "y": 7981.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Will I have to pay a penalty in case there is a delay in the",
+      "bbox": {
+        "x": 32,
+        "y": 8068.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Is the interest that is generated from the RD account taxabl",
+      "bbox": {
+        "x": 32,
+        "y": 8155.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What are the different methods by which I can open an RD acc",
+      "bbox": {
+        "x": 32,
+        "y": 8242.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "How is the interest earned on an RD account calculated?",
+      "bbox": {
+        "x": 32,
+        "y": 8329.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Is there any additional interest provided for senior citizen",
+      "bbox": {
+        "x": 32,
+        "y": 8416.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Which form should I submit if I wish to avoid TDS?",
+      "bbox": {
+        "x": 32,
+        "y": 8503.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Which is the formula used to calculate compound interest on ",
+      "bbox": {
+        "x": 32,
+        "y": 8590.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Is the interest paid on RDs compounded quarterly?",
+      "bbox": {
+        "x": 32,
+        "y": 8677.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Are the interest rates on an RD pre-fixed?",
+      "bbox": {
+        "x": 32,
+        "y": 8764.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What happens if I do not pay my RD instalment?",
+      "bbox": {
+        "x": 32,
+        "y": 8851.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Can I add a nominee to my RD account?",
+      "bbox": {
+        "x": 32,
+        "y": 8938.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What is the Difference between FD vs RD?",
+      "bbox": {
+        "x": 32,
+        "y": 9025.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Is TDS applicable on RD?",
+      "bbox": {
+        "x": 32,
+        "y": 9112.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Is RD better than FD?",
+      "bbox": {
+        "x": 32,
+        "y": 9199.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Are there any charges for closing an RD early?",
+      "bbox": {
+        "x": 32,
+        "y": 9286.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Is RD better than saving in a savings account?",
+      "bbox": {
+        "x": 32,
+        "y": 9373.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Can NRIs open a Recurring Deposit account in India?",
+      "bbox": {
+        "x": 32,
+        "y": 9460.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Can I break an RD before maturity?",
+      "bbox": {
+        "x": 32,
+        "y": 9547.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What is the eligibility criteria for an RD account?",
+      "bbox": {
+        "x": 32,
+        "y": 9634.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Are there different types of RD accounts available?",
+      "bbox": {
+        "x": 32,
+        "y": 9721.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Can I open multiple recurring deposits?",
+      "bbox": {
+        "x": 32,
+        "y": 9808.515625,
+        "width": 800,
+        "height": 86
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Back to Previous Page",
+      "bbox": {
+        "x": 48,
+        "y": 14321.8125,
+        "width": 147.1875,
+        "height": 19
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "DISCLAIMERS",
+      "bbox": {
+        "x": 102,
+        "y": 16115.28125,
+        "width": 1076,
+        "height": 86
+      }
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "bbox": {
+        "x": 12,
+        "y": 23.421875,
+        "width": 99.640625,
+        "height": 38.140625
+      }
+    },
+    {
+      "href": "/term-insurance-plans",
+      "bbox": {
+        "x": 151.640625,
+        "y": 20,
+        "width": 98.921875,
+        "height": 45
+      }
+    },
+    {
+      "href": "/investment-plans",
+      "bbox": {
+        "x": 296.1875,
+        "y": 20,
+        "width": 110.734375,
+        "height": 45
+      }
+    },
+    {
+      "href": "/health-insurance-plans",
+      "bbox": {
+        "x": 452.546875,
+        "y": 20,
+        "width": 106.9375,
+        "height": 45
+      }
+    },
+    {
+      "href": "/nri-plans",
+      "bbox": {
+        "x": 605.109375,
+        "y": 20,
+        "width": 60.71875,
+        "height": 45
+      }
+    },
+    {
+      "href": "/calculators",
+      "bbox": {
+        "x": 711.390625,
+        "y": 31.25,
+        "width": 81.96875,
+        "height": 22.5
+      }
+    },
+    {
+      "href": "/",
+      "bbox": {
+        "x": 32,
+        "y": 88,
+        "width": 37,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans",
+      "bbox": {
+        "x": 96.453125,
+        "y": 88,
+        "width": 105.671875,
+        "height": 18
+      }
+    },
+    {
+      "href": "#read-more-section",
+      "bbox": {
+        "x": 16,
+        "y": 94,
+        "width": 311.25,
+        "height": 24
+      }
+    },
+    {
+      "href": "#what-is-recurring-deposit",
+      "bbox": {
+        "x": 328.25,
+        "y": 94,
+        "width": 311.25,
+        "height": 24
+      }
+    },
+    {
+      "href": "#how-does-rd-interest-calculator-help-you-head",
+      "bbox": {
+        "x": 640.5,
+        "y": 94,
+        "width": 311.25,
+        "height": 24
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 374.625,
+        "y": 194.96875,
+        "width": 109.375,
+        "height": 42
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=FixedDeposit",
+      "bbox": {
+        "x": 37,
+        "y": 803.859375,
+        "width": 320,
+        "height": 48
+      }
+    },
+    {
+      "href": "/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "bbox": {
+        "x": 1048,
+        "y": 764.953125,
+        "width": 168.625,
+        "height": 28
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 136.953125,
+        "y": 1137.71875,
+        "width": 155.6875,
+        "height": 166
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 307.03125,
+        "y": 1137.71875,
+        "width": 155.6875,
+        "height": 166
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=FixedDeposit",
+      "bbox": {
+        "x": 477.109375,
+        "y": 1137.71875,
+        "width": 155.6875,
+        "height": 166
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=TaxSaving",
+      "bbox": {
+        "x": 647.1875,
+        "y": 1137.71875,
+        "width": 155.6875,
+        "height": 166
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 817.265625,
+        "y": 1137.71875,
+        "width": 155.6875,
+        "height": 166
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=PartnerGIFTULIP",
+      "bbox": {
+        "x": 987.34375,
+        "y": 1137.71875,
+        "width": 155.6875,
+        "height": 166
+      }
+    },
+    {
+      "href": "/investment-plans/recurring-deposit/rd-interest-rates",
+      "bbox": {
+        "x": 32,
+        "y": 10325.5625,
+        "width": 330,
+        "height": 426
+      }
+    },
+    {
+      "href": "/investment-plans/recurring-deposit/rd-interest-rates",
+      "bbox": {
+        "x": 48,
+        "y": 10696.5625,
+        "width": 80.953125,
+        "height": 22
+      }
+    },
+    {
+      "href": "/investment-plans/recurring-deposit/what-is-rd",
+      "bbox": {
+        "x": 362,
+        "y": 10325.5625,
+        "width": 330,
+        "height": 426
+      }
+    },
+    {
+      "href": "/investment-plans/recurring-deposit/what-is-rd",
+      "bbox": {
+        "x": 378,
+        "y": 10696.5625,
+        "width": 80.953125,
+        "height": 22
+      }
+    },
+    {
+      "href": "/investment-plans/fixed-deposit/difference-between-fd-vs-rd",
+      "bbox": {
+        "x": 692,
+        "y": 10325.5625,
+        "width": 330,
+        "height": 426
+      }
+    },
+    {
+      "href": "/investment-plans/fixed-deposit/difference-between-fd-vs-rd",
+      "bbox": {
+        "x": 708,
+        "y": 10646.5625,
+        "width": 80.953125,
+        "height": 22
+      }
+    },
+    {
+      "href": "/investment-plans/ulip-plans/wealth-investment-plan",
+      "bbox": {
+        "x": 76,
+        "y": 11477.390625,
+        "width": 73.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-wealth-plan",
+      "bbox": {
+        "x": 388.796875,
+        "y": 11500.375,
+        "width": 73.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-wealth-plan",
+      "bbox": {
+        "x": 701.59375,
+        "y": 11442.40625,
+        "width": 73.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-wealth-plan",
+      "bbox": {
+        "x": 1014.390625,
+        "y": 11442.40625,
+        "width": 73.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-wealth-plan",
+      "bbox": {
+        "x": 1327.1875,
+        "y": 11454.40625,
+        "width": 73.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/critical-illness",
+      "bbox": {
+        "x": 1639.984375,
+        "y": 11512.375,
+        "width": 73.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-wealth-plan",
+      "bbox": {
+        "x": 1952.78125,
+        "y": 11477.390625,
+        "width": 73.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-fd-plan",
+      "bbox": {
+        "x": 2265.578125,
+        "y": 11299.609375,
+        "width": 73.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/ulip-plans",
+      "bbox": {
+        "x": 0,
+        "y": 13706.3125,
+        "width": 243.1875,
+        "height": 48
+      }
+    },
+    {
+      "href": "/investment-plans/tax-saving-investments",
+      "bbox": {
+        "x": 259.1875,
+        "y": 13706.3125,
+        "width": 243.203125,
+        "height": 48
+      }
+    },
+    {
+      "href": "/insurance-calculators/tax-calculator",
+      "bbox": {
+        "x": 518.390625,
+        "y": 13706.3125,
+        "width": 243.203125,
+        "height": 48
+      }
+    },
+    {
+      "href": "/investment-plans/ulip-plans",
+      "bbox": {
+        "x": 777.59375,
+        "y": 13706.3125,
+        "width": 243.203125,
+        "height": 48
+      }
+    },
+    {
+      "href": "/insurance-calculators",
+      "bbox": {
+        "x": 1036.796875,
+        "y": 13706.3125,
+        "width": 243.1875,
+        "height": 48
+      }
+    },
+    {
+      "href": "/online-insurance-plans",
+      "bbox": {
+        "x": 0,
+        "y": 13774.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/investments/how-to-save-tax-with-ulips",
+      "bbox": {
+        "x": 259.1875,
+        "y": 13774.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/investments/how-to-choose-the-best-investment-plan",
+      "bbox": {
+        "x": 518.390625,
+        "y": 13774.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/investments/6-benefits-ulip-investment-plan",
+      "bbox": {
+        "x": 777.59375,
+        "y": 13774.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans",
+      "bbox": {
+        "x": 1036.796875,
+        "y": 13774.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator",
+      "bbox": {
+        "x": 0,
+        "y": 13848.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/smart-term-plan-plus",
+      "bbox": {
+        "x": 259.1875,
+        "y": 13848.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/critical-illness",
+      "bbox": {
+        "x": 518.390625,
+        "y": 13848.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/claim-settlement-ratio",
+      "bbox": {
+        "x": 777.59375,
+        "y": 13848.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/",
+      "bbox": {
+        "x": 1036.796875,
+        "y": 13848.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/child-insurance-plans",
+      "bbox": {
+        "x": 0,
+        "y": 13922.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/pension-plans",
+      "bbox": {
+        "x": 259.1875,
+        "y": 13922.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/savings-and-income-plans",
+      "bbox": {
+        "x": 518.390625,
+        "y": 13922.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/health-insurance-plans",
+      "bbox": {
+        "x": 777.59375,
+        "y": 13922.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/join-max-life/become-an-agent",
+      "bbox": {
+        "x": 1036.796875,
+        "y": 13922.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/investments/types-of-investments-in-india",
+      "bbox": {
+        "x": 0,
+        "y": 13996.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/capital-guarantee-solution",
+      "bbox": {
+        "x": 259.1875,
+        "y": 13996.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/fd-calculator",
+      "bbox": {
+        "x": 518.390625,
+        "y": 13996.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/cibil-credit-score",
+      "bbox": {
+        "x": 777.59375,
+        "y": 13996.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/systematic-investment-plans",
+      "bbox": {
+        "x": 1036.796875,
+        "y": 13996.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/sip-calculator",
+      "bbox": {
+        "x": 0,
+        "y": 14070.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/endowment-plan",
+      "bbox": {
+        "x": 259.1875,
+        "y": 14070.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/personal-accident-insurance",
+      "bbox": {
+        "x": 518.390625,
+        "y": 14070.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/calculators/compound-interest-calculator",
+      "bbox": {
+        "x": 777.59375,
+        "y": 14070.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/gold-investment-in-india",
+      "bbox": {
+        "x": 1036.796875,
+        "y": 14070.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/roi-calculator",
+      "bbox": {
+        "x": 0,
+        "y": 14144.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/fixed-deposit",
+      "bbox": {
+        "x": 259.1875,
+        "y": 14144.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/recurring-deposit",
+      "bbox": {
+        "x": 518.390625,
+        "y": 14144.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-insurance-for-housewife",
+      "bbox": {
+        "x": 777.59375,
+        "y": 14144.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/mutual-funds",
+      "bbox": {
+        "x": 1036.796875,
+        "y": 14144.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-insurance-for-self-employed",
+      "bbox": {
+        "x": 0,
+        "y": 14218.3125,
+        "width": 243.1875,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-insurance-for-senior-citizens",
+      "bbox": {
+        "x": 259.1875,
+        "y": 14218.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/nri-plans",
+      "bbox": {
+        "x": 518.390625,
+        "y": 14218.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-insurance-for-women",
+      "bbox": {
+        "x": 777.59375,
+        "y": 14218.3125,
+        "width": 243.203125,
+        "height": 54
+      }
+    },
+    {
+      "href": "https://wa.me/917428396005",
+      "bbox": {
+        "x": 209.015625,
+        "y": 13297.359375,
+        "width": 132.75,
+        "height": 22
+      }
+    },
+    {
+      "href": "tel:+911246488900",
+      "bbox": {
+        "x": 177.15625,
+        "y": 13384.34375,
+        "width": 142.96875,
+        "height": 22
+      }
+    },
+    {
+      "href": "mailto:service.helpdesk@axismaxlife.com",
+      "bbox": {
+        "x": 125.515625,
+        "y": 13471.328125,
+        "width": 289.65625,
+        "height": 22.984375
+      }
+    },
+    {
+      "href": "https://wa.me/917428396005",
+      "bbox": {
+        "x": 579.671875,
+        "y": 13297.359375,
+        "width": 132.75,
+        "height": 22
+      }
+    },
+    {
+      "href": "tel:18601205577",
+      "bbox": {
+        "x": 496.171875,
+        "y": 13366.34375,
+        "width": 287.65625,
+        "height": 22.984375
+      }
+    },
+    {
+      "href": "mailto:service.helpdesk@axismaxlife.com",
+      "bbox": {
+        "x": 496.171875,
+        "y": 13453.328125,
+        "width": 287.65625,
+        "height": 22.984375
+      }
+    },
+    {
+      "href": "tel:911171025900",
+      "bbox": {
+        "x": 864.828125,
+        "y": 13297.359375,
+        "width": 129.203125,
+        "height": 22
+      }
+    },
+    {
+      "href": "tel:911161329950",
+      "bbox": {
+        "x": 1006.921875,
+        "y": 13297.359375,
+        "width": 129.203125,
+        "height": 22
+      }
+    },
+    {
+      "href": "mailto:nri.helpdesk@axismaxlife.com",
+      "bbox": {
+        "x": 864.828125,
+        "y": 13366.34375,
+        "width": 289.65625,
+        "height": 22.984375
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 48,
+        "y": 14321.8125,
+        "width": 147.1875,
+        "height": 19
+      }
+    },
+    {
+      "href": "/term-insurance-plans",
+      "bbox": {
+        "x": 118,
+        "y": 14454.8125,
+        "width": 139.046875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/critical-illness",
+      "bbox": {
+        "x": 118,
+        "y": 14496.8125,
+        "width": 84.203125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-plan-with-return-of-premium",
+      "bbox": {
+        "x": 118,
+        "y": 14522.8125,
+        "width": 210.8125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/claim-settlement-ratio",
+      "bbox": {
+        "x": 118,
+        "y": 14548.8125,
+        "width": 139.1875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/smart-secure-plus-plan",
+      "bbox": {
+        "x": 118,
+        "y": 14574.8125,
+        "width": 140,
+        "height": 18
+      }
+    },
+    {
+      "href": "/continue-your-journey",
+      "bbox": {
+        "x": 118,
+        "y": 14600.8125,
+        "width": 185.03125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-insurance-for-housewife",
+      "bbox": {
+        "x": 118,
+        "y": 14626.8125,
+        "width": 183.9375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/zero-cost-term-insurance",
+      "bbox": {
+        "x": 118,
+        "y": 14652.8125,
+        "width": 156.78125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/smart-term-plan-plus",
+      "bbox": {
+        "x": 118,
+        "y": 14678.8125,
+        "width": 130,
+        "height": 18
+      }
+    },
+    {
+      "href": "/",
+      "bbox": {
+        "x": 371,
+        "y": 14454.8125,
+        "width": 92.0625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/endowment-plan",
+      "bbox": {
+        "x": 371,
+        "y": 14496.8125,
+        "width": 111.984375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/online-insurance-plans",
+      "bbox": {
+        "x": 371,
+        "y": 14522.8125,
+        "width": 140.515625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/pension-plans",
+      "bbox": {
+        "x": 371,
+        "y": 14548.8125,
+        "width": 104.28125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/group-insurance-plans",
+      "bbox": {
+        "x": 371,
+        "y": 14574.8125,
+        "width": 138.71875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/child-insurance-plans",
+      "bbox": {
+        "x": 371,
+        "y": 14600.8125,
+        "width": 131.203125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/health-insurance-plans",
+      "bbox": {
+        "x": 371,
+        "y": 14626.8125,
+        "width": 140.59375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/nri-plans",
+      "bbox": {
+        "x": 371,
+        "y": 14652.8125,
+        "width": 58.53125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/health-insurance-plans/abha-ayushman-bharat-health-account",
+      "bbox": {
+        "x": 371,
+        "y": 14678.8125,
+        "width": 66.703125,
+        "height": 18
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 118,
+        "y": 14794.8125,
+        "width": 113.234375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/pay-online",
+      "bbox": {
+        "x": 118,
+        "y": 14836.8125,
+        "width": 124.828125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login",
+      "bbox": {
+        "x": 118,
+        "y": 14862.8125,
+        "width": 97.34375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utmCode=14363541&utm_source=homepage&utm_medium=agent&utm_campaign=cross_sell",
+      "bbox": {
+        "x": 118,
+        "y": 14888.8125,
+        "width": 153.421875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/claims-centre",
+      "bbox": {
+        "x": 118,
+        "y": 14914.8125,
+        "width": 91.1875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login",
+      "bbox": {
+        "x": 118,
+        "y": 14940.8125,
+        "width": 132.265625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login",
+      "bbox": {
+        "x": 118,
+        "y": 14966.8125,
+        "width": 112.265625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/electronic-insurance-account",
+      "bbox": {
+        "x": 118,
+        "y": 14992.8125,
+        "width": 182.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/contact-us/faqs",
+      "bbox": {
+        "x": 118,
+        "y": 15018.8125,
+        "width": 209.46875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/premium-payment-options",
+      "bbox": {
+        "x": 118,
+        "y": 15044.8125,
+        "width": 165.09375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login?redirectURL=/application-tracker",
+      "bbox": {
+        "x": 118,
+        "y": 15070.8125,
+        "width": 104.03125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/contact-us",
+      "bbox": {
+        "x": 118,
+        "y": 15096.8125,
+        "width": 66.15625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login",
+      "bbox": {
+        "x": 118,
+        "y": 15122.8125,
+        "width": 146.65625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login",
+      "bbox": {
+        "x": 118,
+        "y": 15148.8125,
+        "width": 106.25,
+        "height": 18
+      }
+    },
+    {
+      "href": "/downloads",
+      "bbox": {
+        "x": 118,
+        "y": 15174.8125,
+        "width": 103.609375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login?redirectURL=/update-pan",
+      "bbox": {
+        "x": 118,
+        "y": 15200.8125,
+        "width": 105.59375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/service-tats",
+      "bbox": {
+        "x": 118,
+        "y": 15226.8125,
+        "width": 73.140625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/download-coi",
+      "bbox": {
+        "x": 118,
+        "y": 15252.8125,
+        "width": 142.15625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/feedback",
+      "bbox": {
+        "x": 118,
+        "y": 15278.8125,
+        "width": 57.890625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 14836.8125,
+        "width": 160.359375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/insurance-calculators/tax-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 14862.8125,
+        "width": 134.875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 14888.8125,
+        "width": 135.4375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/compound-interest-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 14914.8125,
+        "width": 184.46875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/insurance-calculators",
+      "bbox": {
+        "x": 371,
+        "y": 14940.8125,
+        "width": 132.03125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/fd-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 14966.8125,
+        "width": 81.328125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/cibil-credit-score",
+      "bbox": {
+        "x": 371,
+        "y": 14992.8125,
+        "width": 109.4375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/rd-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15018.8125,
+        "width": 82.671875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/ppf-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15044.8125,
+        "width": 87.578125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/roi-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15070.8125,
+        "width": 87.75,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/sip-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15096.8125,
+        "width": 84.5,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/nps-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15122.8125,
+        "width": 89.984375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/lumpsum-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15148.8125,
+        "width": 126.515625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/nsc-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15174.8125,
+        "width": 90.328125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/step-up-sip-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15200.8125,
+        "width": 135.921875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/insurance-calculators/bmi-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15226.8125,
+        "width": 89.75,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/sukanya-samriddhi-yojana-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15252.8125,
+        "width": 86.734375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/insurance-calculators/retirement-planning-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15278.8125,
+        "width": 190.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/swp-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15304.8125,
+        "width": 92.1875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/apy-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15330.8125,
+        "width": 88.625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/emi-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15356.8125,
+        "width": 88.53125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/elss-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15382.8125,
+        "width": 93.40625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/insurance-calculators/home-loan-insurance-calculator",
+      "bbox": {
+        "x": 371,
+        "y": 15408.8125,
+        "width": 199.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans",
+      "bbox": {
+        "x": 656,
+        "y": 14454.8125,
+        "width": 113.46875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/ulip-plans",
+      "bbox": {
+        "x": 656,
+        "y": 14496.8125,
+        "width": 64.75,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/tax-saving-investments",
+      "bbox": {
+        "x": 656,
+        "y": 14522.8125,
+        "width": 137.046875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-wealth-plan",
+      "bbox": {
+        "x": 656,
+        "y": 14548.8125,
+        "width": 112.5,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-wealth-income-plan",
+      "bbox": {
+        "x": 656,
+        "y": 14574.8125,
+        "width": 161.90625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/ulip-plans/flexi-wealth-Advantage-Plan",
+      "bbox": {
+        "x": 656,
+        "y": 14600.8125,
+        "width": 172.171875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/savings-and-income-plans",
+      "bbox": {
+        "x": 656,
+        "y": 14626.8125,
+        "width": 145.109375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-fd-plan",
+      "bbox": {
+        "x": 656,
+        "y": 14652.8125,
+        "width": 187.671875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/money-back-policy",
+      "bbox": {
+        "x": 656,
+        "y": 14678.8125,
+        "width": 112.390625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-growth-super-fund",
+      "bbox": {
+        "x": 656,
+        "y": 14704.8125,
+        "width": 212.265625,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-high-growth-fund",
+      "bbox": {
+        "x": 656,
+        "y": 14748.8125,
+        "width": 194.546875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-secured-fund",
+      "bbox": {
+        "x": 656,
+        "y": 14774.8125,
+        "width": 211.25,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-sustainable-equity-fund",
+      "bbox": {
+        "x": 656,
+        "y": 14800.8125,
+        "width": 214.59375,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-nifty-smallcap-quality-index-fund",
+      "bbox": {
+        "x": 656,
+        "y": 14844.8125,
+        "width": 216.96875,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-balanced-fund",
+      "bbox": {
+        "x": 656,
+        "y": 14888.8125,
+        "width": 218.0625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-pure-growth-fund",
+      "bbox": {
+        "x": 656,
+        "y": 14914.8125,
+        "width": 213.578125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-secure-plus-fund",
+      "bbox": {
+        "x": 656,
+        "y": 14940.8125,
+        "width": 206.765625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-growth-fund",
+      "bbox": {
+        "x": 656,
+        "y": 14966.8125,
+        "width": 207.203125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-conservative-fund",
+      "bbox": {
+        "x": 656,
+        "y": 14992.8125,
+        "width": 206.8125,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-diversified-equity-fund",
+      "bbox": {
+        "x": 656,
+        "y": 15036.8125,
+        "width": 234.078125,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-money-market-ii-fund",
+      "bbox": {
+        "x": 656,
+        "y": 15080.8125,
+        "width": 235.015625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-dynamic-bond-fund",
+      "bbox": {
+        "x": 656,
+        "y": 15106.8125,
+        "width": 216.8125,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-midcap-momentum-index-fund",
+      "bbox": {
+        "x": 656,
+        "y": 15150.8125,
+        "width": 202.953125,
+        "height": 36
+      }
+    },
+    {
+      "href": "/blog/tax-savings/income-tax-slab-2025-26",
+      "bbox": {
+        "x": 656,
+        "y": 15194.8125,
+        "width": 151.125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-nifty-500-momentum-50-fund",
+      "bbox": {
+        "x": 656,
+        "y": 15220.8125,
+        "width": 231.609375,
+        "height": 36
+      }
+    },
+    {
+      "href": "/static-page/assets/homepage/Axis%20Max%20Life%20Sustainable%20Yield%20Index%20Factsheet.pdf",
+      "bbox": {
+        "x": 656,
+        "y": 15264.8125,
+        "width": 224.125,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/sustainable-wealth-50-index-fund",
+      "bbox": {
+        "x": 656,
+        "y": 15308.8125,
+        "width": 217.75,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/axis-max-life-smart-innovation-fund",
+      "bbox": {
+        "x": 656,
+        "y": 15352.8125,
+        "width": 222.984375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/nifty-500-multifactor-50-fund",
+      "bbox": {
+        "x": 656,
+        "y": 15378.8125,
+        "width": 226.34375,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/multifactor-index-pension-fund",
+      "bbox": {
+        "x": 656,
+        "y": 15422.8125,
+        "width": 226.34375,
+        "height": 36
+      }
+    },
+    {
+      "href": "/pure-growth-fund-certification",
+      "bbox": {
+        "x": 656,
+        "y": 15466.8125,
+        "width": 226.65625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/why-max-life",
+      "bbox": {
+        "x": 925,
+        "y": 14496.8125,
+        "width": 109.59375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us",
+      "bbox": {
+        "x": 925,
+        "y": 14522.8125,
+        "width": 95.921875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/awards-achievements",
+      "bbox": {
+        "x": 925,
+        "y": 14548.8125,
+        "width": 140.59375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/csr",
+      "bbox": {
+        "x": 925,
+        "y": 14574.8125,
+        "width": 23.453125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/esg",
+      "bbox": {
+        "x": 925,
+        "y": 14600.8125,
+        "width": 23.84375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/diversity-and-inclusion",
+      "bbox": {
+        "x": 925,
+        "y": 14626.8125,
+        "width": 169.15625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/newsroom",
+      "bbox": {
+        "x": 925,
+        "y": 14652.8125,
+        "width": 82.125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/our-leadership",
+      "bbox": {
+        "x": 925,
+        "y": 14678.8125,
+        "width": 94.6875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/newsroom/public-disclosures",
+      "bbox": {
+        "x": 925,
+        "y": 14704.8125,
+        "width": 109.6875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/static-page/assets/homepage/ISNP%20Schedule%20II%20III.pdf",
+      "bbox": {
+        "x": 925,
+        "y": 14730.8125,
+        "width": 74.421875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/claim-settlement-ratio",
+      "bbox": {
+        "x": 925,
+        "y": 14756.8125,
+        "width": 99.28125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/join-max-life/become-an-agent",
+      "bbox": {
+        "x": 925,
+        "y": 14782.8125,
+        "width": 118.203125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/fund-performance",
+      "bbox": {
+        "x": 925,
+        "y": 14808.8125,
+        "width": 108.1875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/fund-performance/monthly-factsheets",
+      "bbox": {
+        "x": 925,
+        "y": 14834.8125,
+        "width": 118.609375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/fund-portfolio-data",
+      "bbox": {
+        "x": 925,
+        "y": 14860.8125,
+        "width": 86.90625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/fund-performance/fund-performance-benchmark",
+      "bbox": {
+        "x": 925,
+        "y": 14886.8125,
+        "width": 194.3125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/monthly-fund-snapshots-report",
+      "bbox": {
+        "x": 925,
+        "y": 14912.8125,
+        "width": 145.25,
+        "height": 18
+      }
+    },
+    {
+      "href": "/fund-performance/annual-investment-reports",
+      "bbox": {
+        "x": 925,
+        "y": 14938.8125,
+        "width": 160.671875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/branches",
+      "bbox": {
+        "x": 925,
+        "y": 14964.8125,
+        "width": 139.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/disclosures-under-regulation-62-lodr",
+      "bbox": {
+        "x": 925,
+        "y": 14990.8125,
+        "width": 56.765625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/newsroom/key-company-policies",
+      "bbox": {
+        "x": 925,
+        "y": 15016.8125,
+        "width": 132.296875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/careers",
+      "bbox": {
+        "x": 925,
+        "y": 15042.8125,
+        "width": 46.890625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/do-not-disturb",
+      "bbox": {
+        "x": 596.515625,
+        "y": 15663.8125,
+        "width": 91.71875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/privacy-policy",
+      "bbox": {
+        "x": 932.375,
+        "y": 15663.8125,
+        "width": 82.046875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/disclaimer",
+      "bbox": {
+        "x": 1064.421875,
+        "y": 15663.8125,
+        "width": 70.40625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/service-tats",
+      "bbox": {
+        "x": 130.421875,
+        "y": 15715.8125,
+        "width": 73.140625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/grievance-redressal",
+      "bbox": {
+        "x": 253.5625,
+        "y": 15715.8125,
+        "width": 123.109375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/unclaimed-amount",
+      "bbox": {
+        "x": 561.578125,
+        "y": 15715.8125,
+        "width": 117.734375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/withdrawn-plans",
+      "bbox": {
+        "x": 729.3125,
+        "y": 15715.8125,
+        "width": 102.984375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/sitemap",
+      "bbox": {
+        "x": 882.296875,
+        "y": 15715.8125,
+        "width": 49.96875,
+        "height": 18
+      }
+    },
+    {
+      "href": "mailto:service.helpdesk@axismaxlife.com",
+      "bbox": {
+        "x": 555.59375,
+        "y": 16095.78125,
+        "width": 211.171875,
+        "height": 19.5
+      }
+    }
+  ],
+  "canonical": [
+    {
+      "href": "https://www.axismaxlife.com/investment-plans/rd-calculator",
+      "bbox": null
+    }
+  ],
+  "meta": [
+    {
+      "name": "title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "name": "description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ],
+  "og_tags": [
+    {
+      "property": "og:title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "property": "og:description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ]
+}
