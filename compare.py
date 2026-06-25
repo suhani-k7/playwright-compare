@@ -27,56 +27,56 @@ print(f"Detected {num_features} changed region(s)")
 
 
 # --- Classification logic (priority-based, no overlap) ---
-def classify_region(ref_crop, live_crop, region_w, region_h, shift=None):
-    ref_arr = np.array(ref_crop).astype(np.float32)
-    live_arr = np.array(live_crop).astype(np.float32)
-    diff = np.abs(ref_arr - live_arr)
+# def classify_region(ref_crop, live_crop, region_w, region_h, shift=None):
+#     ref_arr = np.array(ref_crop).astype(np.float32)
+#     live_arr = np.array(live_crop).astype(np.float32)
+#     diff = np.abs(ref_arr - live_arr)
 
-    avg_diff = diff.mean()
-    changed_ratio = (np.any(diff > 10, axis=2).sum()) / (region_w * region_h)
-    ref_mean = ref_arr.mean(axis=(0, 1))
-    live_mean = live_arr.mean(axis=(0, 1))
-    color_shift = np.abs(ref_mean - live_mean).mean()
-    diff_std = diff.std()
-    ref_brightness = ref_arr.mean()
-    live_brightness = live_arr.mean()
-    brightness_diff = abs(ref_brightness - live_brightness)
+#     avg_diff = diff.mean()
+#     changed_ratio = (np.any(diff > 10, axis=2).sum()) / (region_w * region_h)
+#     ref_mean = ref_arr.mean(axis=(0, 1))
+#     live_mean = live_arr.mean(axis=(0, 1))
+#     color_shift = np.abs(ref_mean - live_mean).mean()
+#     diff_std = diff.std()
+#     ref_brightness = ref_arr.mean()
+#     live_brightness = live_arr.mean()
+#     brightness_diff = abs(ref_brightness - live_brightness)
 
-    # --- Priority 1: confirmed layout shift from detect_shift ---
-    # If shift detection already confirmed a positional match with low error,
-    # trust it and return immediately — avoids conflicting labels.
-    if shift is not None:
-        sx, sy = shift
-        if abs(sx) > 5 or abs(sy) > 5:
-            return "Layout / position shift"
+#     # --- Priority 1: confirmed layout shift from detect_shift ---
+#     # If shift detection already confirmed a positional match with low error,
+#     # trust it and return immediately — avoids conflicting labels.
+#     if shift is not None:
+#         sx, sy = shift
+#         if abs(sx) > 5 or abs(sy) > 5:
+#             return "Layout / position shift"
 
-    # --- Priority 2: brightness jump = theme or visibility change ---
-    if brightness_diff > 40:
-        return "Brightness / theme change"
+#     # --- Priority 2: brightness jump = theme or visibility change ---
+#     if brightness_diff > 40:
+#         return "Brightness / theme change"
 
-    # --- Priority 3: whole region changed color uniformly ---
-    if changed_ratio > 0.85 and color_shift > 30:
-        return "Color change"
+#     # --- Priority 3: whole region changed color uniformly ---
+#     if changed_ratio > 0.85 and color_shift > 30:
+#         return "Color change"
 
-    # --- Priority 4: majority changed + moderate color shift = style ---
-    if changed_ratio > 0.6 and color_shift > 15:
-        return "Background or style change"
+#     # --- Priority 4: majority changed + moderate color shift = style ---
+#     if changed_ratio > 0.6 and color_shift > 15:
+#         return "Background or style change"
 
-    # --- Priority 5: text/content — uneven diff, smaller area changed ---
-    # Checked before the generic layout-shift rule so that small high-variance
-    # regions (e.g. a changed word) aren't mislabeled as layout shifts.
-    if diff_std > 30 and changed_ratio < 0.5:
-        return "Content / text change"
+#     # --- Priority 5: text/content — uneven diff, smaller area changed ---
+#     # Checked before the generic layout-shift rule so that small high-variance
+#     # regions (e.g. a changed word) aren't mislabeled as layout shifts.
+#     if diff_std > 30 and changed_ratio < 0.5:
+#         return "Content / text change"
 
-    # --- Priority 6: layout shift — uneven diff, significant area ---
-    if diff_std > 20 and changed_ratio > 0.4:
-        return "Layout / position shift"
+#     # --- Priority 6: layout shift — uneven diff, significant area ---
+#     if diff_std > 20 and changed_ratio > 0.4:
+#         return "Layout / position shift"
 
-    # --- Priority 7: very subtle ---
-    if avg_diff < 20 and changed_ratio < 0.3:
-        return "Minor pixel difference"
+#     # --- Priority 7: very subtle ---
+#     if avg_diff < 20 and changed_ratio < 0.3:
+#         return "Minor pixel difference"
 
-    return "Visual difference"
+#     return "Visual difference"
 
 
 # --- Shift detection via FFT-based cross-correlation ---
@@ -181,7 +181,7 @@ for i in range(1, num_features + 1):
     live_crop = live.crop((x_min, y_min, x_max, y_max))
 
     shift = detect_shift(ref, live, x_min, y_min, x_max, y_max, padding=40)
-    description = classify_region(ref_crop, live_crop, region_w, region_h, shift=shift)
+    # description = classify_region(ref_crop, live_crop, region_w, region_h, shift=shift)
 
     if shift:
         sx, sy = shift
@@ -189,16 +189,16 @@ for i in range(1, num_features + 1):
             f"shifted {abs(sx)}px {'right' if sx > 0 else 'left'}, "
             f"{abs(sy)}px {'down' if sy > 0 else 'up'}"
         )
-        description = f"{description} + {shift_str}"
+        # description = f"{description} + {shift_str}"
 
     label = (
         f"#{change_count} "
         f"({region_pixels}px, {bbox_coverage:.1f}% fill) "
-        f"— {description}"
+        # f"— {description}"
     )
 
     # Draw bounding box
-    draw.rectangle([x_min, y_min, x_max, y_max], outline=BOX_COLOR, width=3)
+    draw.rectangle([x_min, y_min, x_max, y_max], outline=BOX_COLOR, width=2)
 
     # Place label above the box, shifting down if it overlaps a previous label
     bbox_text = draw.textbbox((0, 0), label, font=font)
@@ -222,7 +222,7 @@ for i in range(1, num_features + 1):
     )
     draw.text((label_x + 4, label_y + 3), label, fill=LABEL_TEXT, font=font)
 
-    print(f"  Change #{change_count} at ({x_min},{y_min}) → ({x_max},{y_max}): {description}")
+   # print(f"  Change #{change_count} at ({x_min},{y_min}) → ({x_max},{y_max}): {description}")
 
 annotated.save("diffs/annotated.png")
 print(f"\nAnnotated diff saved to diffs/annotated.png ({change_count} changes marked)")
