@@ -72,8 +72,7 @@ def extract_elements(page) -> dict:
 
     # --- Buttons ---
     # The docs specify 4 types of buttons
-    button_selectors = [
-        "button",
+         "button",
         "input[type='button']",
         "input[type='submit']",
         "[role='button']"

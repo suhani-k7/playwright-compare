@@ -4,12 +4,13 @@ import os
 os.makedirs("reference", exist_ok=True)
 os.makedirs("live", exist_ok=True)
 
+#hard-coded URLs
 LIVE_URL = "https://neouat.axismaxlife.com/investment-plans/rd-calculator"
 REFERENCE_URL = "https://www.axismaxlife.com/investment-plans/rd-calculator"
 
 with sync_playwright() as p:
     browser = p.chromium.launch()
-    page = browser.new_page(viewport={"width": 1280, "height": 800})
+    page = browser.new_page(viewport={"width": 1280, "height": 800}) #single viewport
 
     page.goto(REFERENCE_URL, wait_until="load")
     page.wait_for_load_state("networkidle")
