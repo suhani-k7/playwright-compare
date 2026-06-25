@@ -2,13 +2,14 @@ import argparse
 import json
 import os
 from bs4 import BeautifulSoup
+from PIL import Image, ImageDraw, ImageFont
 
 # -------------------------------------------------------------------
 # Helpers to load saved capture outputs
 # -------------------------------------------------------------------
 
 def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
-    path = os.path.join(mode, f"{device}-{slug}", "page.html")
+    path = os.path.join(mode, f"{device}-{slug}", f"{mode}-{device}-{slug}-page.html")
     if not os.path.exists(path):
         raise FileNotFoundError(f"HTML not found: {path}. Run capture.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -16,7 +17,7 @@ def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
 
 
 def load_elements(mode: str, device: str, slug: str) -> dict:
-    path = os.path.join(mode, f"{device}-{slug}", "elements.json")
+    path = os.path.join(mode, f"{device}-{slug}", f"{mode}-{device}-{slug}-elements.json")
     if not os.path.exists(path):
         raise FileNotFoundError(f"Elements JSON not found: {path}. Run capture.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -284,14 +285,17 @@ def compare_og_tags(ref_soup, live_soup) -> tuple[str, list]:
     return status, mismatches
 
 
-def compare_links(ref_soup, live_soup) -> tuple[str, list]:
+def compare_links(ref_soup, live_soup, ref_elements: dict, live_elements: dict) -> tuple[str, list]:
     """
-    Compares total anchor tag count.
+    Compares total anchor tag count and exact href values.
     """
     mismatches = []
 
-    ref_count = len(ref_soup.find_all("a"))
-    live_count = len(live_soup.find_all("a"))
+    ref_links = ref_elements.get("links", [])
+    live_links = live_elements.get("links", [])
+
+    ref_count = len(ref_links)
+    live_count = len(live_links)
 
     if ref_count != live_count:
         mismatches.append({
@@ -301,9 +305,124 @@ def compare_links(ref_soup, live_soup) -> tuple[str, list]:
             "message": f"Link count: expected {ref_count}, found {live_count}"
         })
 
+    ref_hrefs = {l["href"]: l for l in ref_links if l.get("href")}
+    live_hrefs = {l["href"]: l for l in live_links if l.get("href")}
+
+    missing_hrefs = set(ref_hrefs.keys()) - set(live_hrefs.keys())
+    extra_hrefs = set(live_hrefs.keys()) - set(ref_hrefs.keys())
+
+    for href in missing_hrefs:
+        mismatches.append({
+            "type": "missing_link",
+            "bbox": ref_hrefs[href].get("bbox"),
+            "message": f"Missing link: {href}"
+        })
+
+    for href in extra_hrefs:
+        mismatches.append({
+            "type": "extra_link",
+            "bbox": live_hrefs[href].get("bbox"),
+            "message": f"Extra link: {href}"
+        })
+
     status = "PASS" if not mismatches else "FAIL"
     return status, mismatches
 
+
+# -------------------------------------------------------------------
+# Annotation runner
+# -------------------------------------------------------------------
+
+def annotate_screenshot(device: str, slug: str, report: dict):
+    """
+    Draws bounding boxes and labels on the live screenshot based on the report.
+    Saves to the 'diffs/' folder.
+    """
+    live_img_path = os.path.join("live", f"{device}-{slug}", f"live-{device}-{slug}-screenshot.png")
+    if not os.path.exists(live_img_path):
+        print(f"  [Annotate] Live screenshot not found: {live_img_path}")
+        return
+
+    try:
+        img = Image.open(live_img_path)
+    except Exception as e:
+        print(f"  [Annotate] Failed to open image {live_img_path}: {e}")
+        return
+
+    draw = ImageDraw.Draw(img)
+    try:
+        font = ImageFont.load_default(size=16)
+    except Exception:
+        font = ImageFont.load_default()
+
+    details = report.get("details", {})
+    floating_messages = []
+
+    for category, issues in details.items():
+        if not isinstance(issues, list):
+            continue
+        for issue in issues:
+            bbox = issue.get("bbox")
+            label = issue.get("message", "Mismatch")
+
+            if bbox is None:
+                floating_messages.append(label)
+                continue
+
+            x = bbox["x"]
+            y = bbox["y"]
+            w = bbox["width"]
+            h = bbox["height"]
+            
+            # Draw red rectangle
+            draw.rectangle([(x, y), (x + w, y + h)], outline="red", width=3)
+            
+            # Truncate label if too long
+            if len(label) > 60:
+                label = label[:57] + "..."
+            
+            text_y = max(0, y - 20)
+            try:
+                text_bbox = draw.textbbox((x, text_y), label, font=font)
+                label_w = text_bbox[2] - text_bbox[0]
+                
+                # Shift X if it exceeds image width
+                if x + label_w > img.width:
+                    x = max(0, img.width - label_w)
+                    text_bbox = draw.textbbox((x, text_y), label, font=font)
+                
+                draw.rectangle(text_bbox, fill="red")
+            except AttributeError:
+                pass # Fallback for very old Pillow versions that lack textbbox
+            
+            draw.text((x, text_y), label, fill="white", font=font)
+
+    # Save floating messages and SEO status to a text file
+    warnings_path = os.path.join("diffs", f"{device}-{slug}-non-visual-warnings.txt")
+    with open(warnings_path, "w", encoding="utf-8") as f:
+        f.write(f"Non-Visual / SEO Status for {device} ({slug})\n")
+        f.write("="*50 + "\n\n")
+        
+        # Print SEO Statuses
+        summary = report.get("summary", {})
+        f.write("[SEO Status Overview]\n")
+        f.write(f"- Canonical Tags: {summary.get('canonical', 'N/A')}\n")
+        f.write(f"- Meta Tags:      {summary.get('meta', 'N/A')}\n")
+        f.write(f"- Open Graph:     {summary.get('og_tags', 'N/A')}\n\n")
+
+        f.write("[Specific Non-Visual Mismatches]\n")
+        if floating_messages:
+            for msg in floating_messages:
+                f.write(f"- {msg}\n")
+        else:
+            f.write("- All correct! No non-visual mismatches found.\n")
+            
+    print(f"  Non-visual warnings saved to {warnings_path}")
+
+    os.makedirs("diffs", exist_ok=True)
+    out_path = os.path.join("diffs", f"{device}-{slug}-annotated.png")
+    img.save(out_path)
+    print(f"  Annotated screenshot saved to {out_path}")
 
 # -------------------------------------------------------------------
 # Main comparison runner for one device
@@ -328,7 +447,7 @@ def compare_device(device: str, slug: str) -> dict:
     canonical_status,canonical_issues= compare_canonical(ref_soup, live_soup)
     meta_status,     meta_issues     = compare_meta(ref_soup, live_soup)
     og_status,       og_issues       = compare_og_tags(ref_soup, live_soup)
-    link_status,     link_issues     = compare_links(ref_soup, live_soup)
+    link_status,     link_issues     = compare_links(ref_soup, live_soup, ref_elements, live_elements)
 
     # Print a quick summary to terminal
     results = {
@@ -398,6 +517,7 @@ if __name__ == "__main__":
         try:
             report = compare_device(device, args.slug)
             all_reports.append(report)
+            annotate_screenshot(device, args.slug, report)
         except FileNotFoundError as e:
             print(f"\n[{device}] Skipping — {e}")
 

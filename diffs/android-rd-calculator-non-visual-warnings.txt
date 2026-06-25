@@ -1,0 +1,13 @@
+Non-Visual / SEO Status for android (rd-calculator)
+==================================================
+
+[SEO Status Overview]
+- Canonical Tags: PASS
+- Meta Tags:      PASS
+- Open Graph:     PASS
+
+[Specific Non-Visual Mismatches]
+- Heading count: expected 72, found 58
+- Image count: expected 53, found 25
+- Button count: expected 64, found 54
+- Link count: expected 88, found 222

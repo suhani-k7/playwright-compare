@@ -167,15 +167,15 @@ def capture_url(url: str, mode: str, slug: str):
         out_dir = get_output_dir(mode, "desktop", slug)
         os.makedirs(out_dir, exist_ok=True)
 
-        page.screenshot(path=os.path.join(out_dir, "screenshot.png"), full_page=True)
+        page.screenshot(path=os.path.join(out_dir, f"{mode}-desktop-{slug}-screenshot.png"), full_page=True)
         print(f"  Screenshot saved.")
 
-        with open(os.path.join(out_dir, "page.html"), "w", encoding="utf-8") as f:
+        with open(os.path.join(out_dir, f"{mode}-desktop-{slug}-page.html"), "w", encoding="utf-8") as f:
             f.write(page.content())
         print(f"  HTML saved.")
 
         elements = extract_elements(page)
-        with open(os.path.join(out_dir, "elements.json"), "w", encoding="utf-8") as f:
+        with open(os.path.join(out_dir, f"{mode}-desktop-{slug}-elements.json"), "w", encoding="utf-8") as f:
             json.dump(elements, f, indent=2)
         print(f"  Elements JSON saved. "
               f"({len(elements['headings'])} headings, "
@@ -199,15 +199,15 @@ def capture_url(url: str, mode: str, slug: str):
         out_dir = get_output_dir(mode, "android", slug)
         os.makedirs(out_dir, exist_ok=True)
 
-        page.screenshot(path=os.path.join(out_dir, "screenshot.png"), full_page=True)
+        page.screenshot(path=os.path.join(out_dir, f"{mode}-android-{slug}-screenshot.png"), full_page=True)
         print(f"  Screenshot saved.")
 
-        with open(os.path.join(out_dir, "page.html"), "w", encoding="utf-8") as f:
+        with open(os.path.join(out_dir, f"{mode}-android-{slug}-page.html"), "w", encoding="utf-8") as f:
             f.write(page.content())
         print(f"  HTML saved.")
 
         elements = extract_elements(page)
-        with open(os.path.join(out_dir, "elements.json"), "w", encoding="utf-8") as f:
+        with open(os.path.join(out_dir, f"{mode}-android-{slug}-elements.json"), "w", encoding="utf-8") as f:
             json.dump(elements, f, indent=2)
         print(f"  Elements JSON saved. "
               f"({len(elements['headings'])} headings, "
@@ -230,15 +230,15 @@ def capture_url(url: str, mode: str, slug: str):
         out_dir = get_output_dir(mode, "ios", slug)
         os.makedirs(out_dir, exist_ok=True)
 
-        page.screenshot(path=os.path.join(out_dir, "screenshot.png"), full_page=True)
+        page.screenshot(path=os.path.join(out_dir, f"{mode}-ios-{slug}-screenshot.png"), full_page=True)
         print(f"  Screenshot saved.")
 
-        with open(os.path.join(out_dir, "page.html"), "w", encoding="utf-8") as f:
+        with open(os.path.join(out_dir, f"{mode}-ios-{slug}-page.html"), "w", encoding="utf-8") as f:
             f.write(page.content())
         print(f"  HTML saved.")
 
         elements = extract_elements(page)
-        with open(os.path.join(out_dir, "elements.json"), "w", encoding="utf-8") as f:
+        with open(os.path.join(out_dir, f"{mode}-ios-{slug}-elements.json"), "w", encoding="utf-8") as f:
             json.dump(elements, f, indent=2)
         print(f"  Elements JSON saved. "
               f"({len(elements['headings'])} headings, "
