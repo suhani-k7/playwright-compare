@@ -9,5 +9,5 @@ Non-Visual / SEO Status for desktop (rd-calculator)
 [Specific Non-Visual Mismatches]
 - Heading count: expected 72, found 62
 - Image count: expected 57, found 27
-- Button count: expected 74, found 46
+- Button count: expected 74, found 37
 - Link count: expected 205, found 230

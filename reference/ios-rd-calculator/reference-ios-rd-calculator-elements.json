@@ -702,6 +702,36 @@
     },
     {
       "tag": "h3",
+      "text": "",
+      "bbox": {
+        "x": 171.5,
+        "y": 284.5,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Wait! \ud83d\udd14\nNFO Live - Closes 30th June",
+      "bbox": {
+        "x": 28,
+        "y": 9.90625,
+        "width": 274,
+        "height": 72
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Wait! \ud83d\udd14\nNFO Live - Closes 30th June",
+      "bbox": {
+        "x": 28,
+        "y": 9.90625,
+        "width": 274,
+        "height": 72
+      }
+    },
+    {
+      "tag": "h3",
       "text": "DISCLAIMERS",
       "bbox": {
         "x": 16,
@@ -1233,6 +1263,46 @@
       }
     },
     {
+      "alt": "image rupeeIconPopup",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/rupeeIconPopup.svg",
+      "bbox": {
+        "x": 36,
+        "y": 114.109375,
+        "width": 12,
+        "height": 12.75
+      }
+    },
+    {
+      "alt": "image Chart",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/Chart.png",
+      "bbox": {
+        "x": 100.75,
+        "y": 4.953125,
+        "width": 264,
+        "height": 145
+      }
+    },
+    {
+      "alt": "image chevron_down_navigate_7dd1121f7c",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/chevron_down_navigate_7dd1121f7c.webp",
+      "bbox": {
+        "x": 88.15625,
+        "y": 445.203125,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "alt": "we_dont_spam",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/Badge.png",
+      "bbox": {
+        "x": 242.75,
+        "y": 474.21875,
+        "width": 106,
+        "height": 18
+      }
+    },
+    {
       "alt": "AppstoreImg",
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/appstore-icon.webp",
       "bbox": {
@@ -1257,6 +1327,8 @@
     {
       "selector": "button",
       "text": "Login",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/term-insurance-plans",
       "bbox": {
         "x": 235,
         "y": 12,
@@ -1267,6 +1339,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "hamburger",
+      "href": "https://www.axismaxlife.com/term-insurance-plans",
       "bbox": {
         "x": 339,
         "y": 18,
@@ -1277,6 +1351,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/investment-plans/rd-calculator#read-more-section",
       "bbox": {
         "x": 12,
         "y": 68,
@@ -1287,6 +1363,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/investment-plans/investment-calculator?utm_theme=FixedDeposit",
       "bbox": {
         "x": 254,
         "y": 453.875,
@@ -1297,6 +1375,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/investment-plans/investment-calculator?utm_theme=FixedDeposit",
       "bbox": {
         "x": 290,
         "y": 453.875,
@@ -1307,6 +1387,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/investment-plans/investment-calculator?utm_theme=FixedDeposit",
       "bbox": {
         "x": 254,
         "y": 525.875,
@@ -1317,6 +1399,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/investment-plans/investment-calculator?utm_theme=FixedDeposit",
       "bbox": {
         "x": 290,
         "y": 525.875,
@@ -1327,6 +1411,8 @@
     {
       "selector": "button",
       "text": "Graph view",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/investment-plans/investment-calculator?utm_theme=FixedDeposit",
       "bbox": {
         "x": 52,
         "y": 1107.765625,
@@ -1337,6 +1423,8 @@
     {
       "selector": "button",
       "text": "Calculate Now",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 33,
         "y": 1941.25,
@@ -1347,6 +1435,8 @@
     {
       "selector": "button",
       "text": "More Resourceful Articles",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/investment-plans/recurring-deposit/rd-interest-rates",
       "bbox": {
         "x": 68.09375,
         "y": 13958.375,
@@ -1357,6 +1447,8 @@
     {
       "selector": "button",
       "text": "Submit Rating",
+      "aria_label": "",
+      "href": "",
       "bbox": {
         "x": 106.921875,
         "y": 16177.25,
@@ -1367,6 +1459,8 @@
     {
       "selector": "button",
       "text": "Submit Review",
+      "aria_label": "",
+      "href": "",
       "bbox": {
         "x": 116.8125,
         "y": 17173.40625,
@@ -1376,7 +1470,21 @@
     },
     {
       "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "bbox": {
+        "x": 83.875,
+        "y": 653.375,
+        "width": 213,
+        "height": 48
+      }
+    },
+    {
+      "selector": "button",
       "text": "Tools & Calculators",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/term-insurance-plans",
       "bbox": {
         "x": 16,
         "y": 19914.859375,
@@ -1387,6 +1495,8 @@
     {
       "selector": "button",
       "text": "Investment Plans",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/investment-plans",
       "bbox": {
         "x": 16,
         "y": 19958.859375,
@@ -1397,6 +1507,8 @@
     {
       "selector": "button",
       "text": "About Axis Max Life",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/term-insurance-plans",
       "bbox": {
         "x": 16,
         "y": 20002.859375,
@@ -1407,6 +1519,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/term-insurance-plans",
       "bbox": {
         "x": 16,
         "y": 20120.859375,
@@ -1417,6 +1531,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/term-insurance-plans",
       "bbox": {
         "x": 188,
         "y": 20120.859375,
@@ -1427,6 +1543,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/term-insurance-plans",
       "bbox": {
         "x": 16,
         "y": 20196.859375,
@@ -1437,6 +1555,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/term-insurance-plans",
       "bbox": {
         "x": 48,
         "y": 20196.859375,
@@ -1447,6 +1567,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/term-insurance-plans",
       "bbox": {
         "x": 80,
         "y": 20196.859375,
@@ -1457,6 +1579,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/term-insurance-plans",
       "bbox": {
         "x": 112,
         "y": 20196.859375,
@@ -1467,6 +1591,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/term-insurance-plans",
       "bbox": {
         "x": 144,
         "y": 20196.859375,
@@ -1477,6 +1603,8 @@
     {
       "selector": "button",
       "text": "IRDAI Consumer Education Website",
+      "aria_label": "IRDAI Consumer Education Website",
+      "href": "https://www.axismaxlife.com/do-not-disturb",
       "bbox": {
         "x": 17,
         "y": 20278.859375,
@@ -1487,6 +1615,8 @@
     {
       "selector": "button",
       "text": "Insurance Ombudsman",
+      "aria_label": "Insurance Ombudsman",
+      "href": "https://www.axismaxlife.com/do-not-disturb",
       "bbox": {
         "x": 17,
         "y": 20382.859375,
@@ -1497,6 +1627,8 @@
     {
       "selector": "button",
       "text": "Bima Bharosa",
+      "aria_label": "Bima Bharosa",
+      "href": "https://www.axismaxlife.com/do-not-disturb",
       "bbox": {
         "x": 17,
         "y": 20486.859375,
@@ -1507,6 +1639,8 @@
     {
       "selector": "button",
       "text": "IRDAI List of Blacklisted Agents",
+      "aria_label": "IRDAI List of Blacklisted Agents",
+      "href": "https://www.axismaxlife.com/do-not-disturb",
       "bbox": {
         "x": 17,
         "y": 20746.859375,
@@ -1517,6 +1651,8 @@
     {
       "selector": "button",
       "text": "AXIS BANK",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/do-not-disturb",
       "bbox": {
         "x": 48,
         "y": 20848.859375,
@@ -1527,6 +1663,8 @@
     {
       "selector": "button",
       "text": "MAX INDIA",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/do-not-disturb",
       "bbox": {
         "x": 150.140625,
         "y": 20848.859375,
@@ -1537,6 +1675,8 @@
     {
       "selector": "button",
       "text": "MAX FINANCIAL SERVICES",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/do-not-disturb",
       "bbox": {
         "x": 48,
         "y": 20898.859375,
@@ -1547,6 +1687,8 @@
     {
       "selector": "button",
       "text": "ANTARA SENIOR CARE",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/do-not-disturb",
       "bbox": {
         "x": 48,
         "y": 20948.859375,
@@ -1557,6 +1699,8 @@
     {
       "selector": "button",
       "text": "MAX LIFE PENSION FUND MANAGEMENT",
+      "aria_label": "[object Object]",
+      "href": "https://www.axismaxlife.com/do-not-disturb",
       "bbox": {
         "x": 48,
         "y": 20998.859375,
@@ -1567,6 +1711,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "",
+      "href": "mailto:service.helpdesk@axismaxlife.com",
       "bbox": {
         "x": 291.171875,
         "y": 21488.546875,
@@ -1577,6 +1723,8 @@
     {
       "selector": "[role='button']",
       "text": "Read More",
+      "aria_label": "Read more about RD Calculator",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 211.921875,
@@ -1587,6 +1735,8 @@
     {
       "selector": "[role='button']",
       "text": "+91",
+      "aria_label": "selected country",
+      "href": "",
       "bbox": {
         "x": 50,
         "y": 1826.25,
@@ -1596,7 +1746,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "How to use Recurring Deposit Interest calculator?",
+      "text": "How to use Recurring Deposit Interest calculator?A recurring",
+      "aria_label": "How to use Recurring Deposit Interest calculator?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10540.421875,
@@ -1606,7 +1758,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "How to calculate the Recurring Deposit maturity amount?",
+      "text": "How to calculate the Recurring Deposit maturity amount?The m",
+      "aria_label": "How to calculate the Recurring Deposit maturity amount?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10627.421875,
@@ -1616,7 +1770,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "How is Recurring Deposit interest calculated?",
+      "text": "How is Recurring Deposit interest calculated?Recurring Depos",
+      "aria_label": "How is Recurring Deposit interest calculated?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10714.421875,
@@ -1626,7 +1782,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "What are the minimum and maximum tenures to open a bank RD?",
+      "text": "What are the minimum and maximum tenures to open a bank RD?T",
+      "aria_label": "What are the minimum and maximum tenures to open a bank RD?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10801.421875,
@@ -1637,6 +1795,8 @@
     {
       "selector": "[role='button']",
       "text": "What is the minimum monthly instalment amount needed to inve",
+      "aria_label": "What is the minimum monthly instalment amount needed to invest in bank RD?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10888.421875,
@@ -1646,7 +1806,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Is it possible to add nominees in my RD account?",
+      "text": "Is it possible to add nominees in my RD account?If you have ",
+      "aria_label": "Is it possible to add nominees in my RD account?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10975.421875,
@@ -1656,7 +1818,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Can I make partial withdrawals from my RD account?",
+      "text": "Can I make partial withdrawals from my RD account?No, partia",
+      "aria_label": "Can I make partial withdrawals from my RD account?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 11062.421875,
@@ -1667,6 +1831,8 @@
     {
       "selector": "[role='button']",
       "text": "Will I have to pay a penalty in case there is a delay in the",
+      "aria_label": "Will I have to pay a penalty in case there is a delay in the monthly deposit?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 11149.421875,
@@ -1677,6 +1843,8 @@
     {
       "selector": "[role='button']",
       "text": "Is the interest that is generated from the RD account taxabl",
+      "aria_label": "Is the interest that is generated from the RD account taxable?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 11236.421875,
@@ -1687,6 +1855,8 @@
     {
       "selector": "[role='button']",
       "text": "What are the different methods by which I can open an RD acc",
+      "aria_label": "What are the different methods by which I can open an RD account?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 11323.421875,
@@ -1696,7 +1866,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "How is the interest earned on an RD account calculated?",
+      "text": "How is the interest earned on an RD account calculated?The i",
+      "aria_label": "How is the interest earned on an RD account calculated?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 11410.421875,
@@ -1707,6 +1879,8 @@
     {
       "selector": "[role='button']",
       "text": "Is there any additional interest provided for senior citizen",
+      "aria_label": "Is there any additional interest provided for senior citizens?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 11497.421875,
@@ -1716,7 +1890,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Which form should I submit if I wish to avoid TDS?",
+      "text": "Which form should I submit if I wish to avoid TDS?Form 15H a",
+      "aria_label": "Which form should I submit if I wish to avoid TDS?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 11584.421875,
@@ -1727,6 +1903,8 @@
     {
       "selector": "[role='button']",
       "text": "Which is the formula used to calculate compound interest on ",
+      "aria_label": "Which is the formula used to calculate compound interest on Recurring Deposits?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 11671.421875,
@@ -1736,7 +1914,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Is the interest paid on RDs compounded quarterly?",
+      "text": "Is the interest paid on RDs compounded quarterly?Yes, the in",
+      "aria_label": "Is the interest paid on RDs compounded quarterly?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 11758.421875,
@@ -1746,7 +1926,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Are the interest rates on an RD pre-fixed?",
+      "text": "Are the interest rates on an RD pre-fixed?Yes, the interest ",
+      "aria_label": "Are the interest rates on an RD pre-fixed?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 11845.421875,
@@ -1756,7 +1938,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "What happens if I do not pay my RD instalment?",
+      "text": "What happens if I do not pay my RD instalment?Some banks lev",
+      "aria_label": "What happens if I do not pay my RD instalment?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 11932.421875,
@@ -1766,7 +1950,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Can I add a nominee to my RD account?",
+      "text": "Can I add a nominee to my RD account?Yes, it is possible to ",
+      "aria_label": "Can I add a nominee to my RD account?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 12019.421875,
@@ -1776,7 +1962,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "What is the Difference between FD vs RD?",
+      "text": "What is the Difference between FD vs RD?The fundamental diff",
+      "aria_label": "What is the Difference between FD vs RD?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 12106.421875,
@@ -1786,7 +1974,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Is TDS applicable on RD?",
+      "text": "Is TDS applicable on RD?Yes, TDS is applicable on RD interes",
+      "aria_label": "Is TDS applicable on RD?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 12193.421875,
@@ -1796,7 +1986,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Is RD better than FD?",
+      "text": "Is RD better than FD?RD and FD do not have similar financial",
+      "aria_label": "Is RD better than FD?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 12280.421875,
@@ -1806,7 +1998,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Are there any charges for closing an RD early?",
+      "text": "Are there any charges for closing an RD early?Yes, a penalty",
+      "aria_label": "Are there any charges for closing an RD early?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 12367.421875,
@@ -1816,7 +2010,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Is RD better than saving in a savings account?",
+      "text": "Is RD better than saving in a savings account?The interest r",
+      "aria_label": "Is RD better than saving in a savings account?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 12454.421875,
@@ -1826,7 +2022,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Can NRIs open a Recurring Deposit account in India?",
+      "text": "Can NRIs open a Recurring Deposit account in India?Yes, Non-",
+      "aria_label": "Can NRIs open a Recurring Deposit account in India?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 12541.421875,
@@ -1836,7 +2034,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Can I break an RD before maturity?",
+      "text": "Can I break an RD before maturity?Yes, the majority of banks",
+      "aria_label": "Can I break an RD before maturity?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 12628.421875,
@@ -1846,7 +2046,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "What is the eligibility criteria for an RD account?",
+      "text": "What is the eligibility criteria for an RD account?The RD ac",
+      "aria_label": "What is the eligibility criteria for an RD account?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 12715.421875,
@@ -1856,7 +2058,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Are there different types of RD accounts available?",
+      "text": "Are there different types of RD accounts available?Yes, bank",
+      "aria_label": "Are there different types of RD accounts available?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 12802.421875,
@@ -1866,7 +2070,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "Can I open multiple recurring deposits?",
+      "text": "Can I open multiple recurring deposits?Yes, you are allowed ",
+      "aria_label": "Can I open multiple recurring deposits?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 12889.421875,
@@ -1876,7 +2082,21 @@
     },
     {
       "selector": "[role='button']",
+      "text": "+91",
+      "aria_label": "selected country",
+      "href": "",
+      "bbox": {
+        "x": 36.6875,
+        "y": 443.71875,
+        "width": 79.46875,
+        "height": 22.984375
+      }
+    },
+    {
+      "selector": "[role='button']",
       "text": "Back to Previous Page",
+      "aria_label": "Back to Previous Page",
+      "href": "https://www.axismaxlife.com/",
       "bbox": {
         "x": 48,
         "y": 19681.859375,
@@ -1886,7 +2106,9 @@
     },
     {
       "selector": "[role='button']",
-      "text": "DISCLAIMERS",
+      "text": "DISCLAIMERS\nAxis Max Life Insurance Limited (earlier known a",
+      "aria_label": "DISCLAIMERS",
+      "href": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=10598",
       "bbox": {
         "x": 16,
         "y": 21505.296875,
@@ -2560,6 +2782,15 @@
         "y": 18103.359375,
         "width": 293,
         "height": 18
+      }
+    },
+    {
+      "href": "/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "bbox": {
+        "x": 177.8125,
+        "y": 589.375,
+        "width": 102.40625,
+        "height": 14
       }
     },
     {

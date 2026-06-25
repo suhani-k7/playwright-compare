@@ -837,6 +837,8 @@
     {
       "selector": "button",
       "text": "Login",
+      "aria_label": "",
+      "href": "https://neouat.axismaxlife.com/cs/login",
       "bbox": {
         "x": 221.25,
         "y": 11.5,
@@ -847,6 +849,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Menu",
+      "href": "https://neouat.axismaxlife.com/cs/login",
       "bbox": {
         "x": 323,
         "y": 10,
@@ -857,6 +861,8 @@
     {
       "selector": "button",
       "text": "RD Calculator",
+      "aria_label": "",
+      "href": "https://neouat.axismaxlife.com/investment-plans/rd-calculator#read-more-section",
       "bbox": {
         "x": 12,
         "y": 68,
@@ -867,6 +873,8 @@
     {
       "selector": "button",
       "text": "Read More",
+      "aria_label": "",
+      "href": "",
       "bbox": {
         "x": 61.875,
         "y": 224.125,
@@ -877,6 +885,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Decrease Rate of Interest (p.a)",
+      "href": "",
       "bbox": {
         "x": 261,
         "y": 425.5,
@@ -887,6 +897,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Increase Rate of Interest (p.a)",
+      "href": "",
       "bbox": {
         "x": 297,
         "y": 425.5,
@@ -897,6 +909,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Decrease Tenure (in months)",
+      "href": "",
       "bbox": {
         "x": 261,
         "y": 501.09375,
@@ -907,6 +921,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Increase Tenure (in months)",
+      "href": "",
       "bbox": {
         "x": 297,
         "y": 501.09375,
@@ -917,6 +933,8 @@
     {
       "selector": "button",
       "text": "View Plans",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 37,
         "y": 717.890625,
@@ -927,6 +945,8 @@
     {
       "selector": "button",
       "text": "No",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 38,
         "y": 1790.390625,
@@ -937,6 +957,8 @@
     {
       "selector": "button",
       "text": "Yes",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 191.5,
         "y": 1790.390625,
@@ -947,6 +969,8 @@
     {
       "selector": "button",
       "text": "<5",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 38,
         "y": 1918.390625,
@@ -957,6 +981,8 @@
     {
       "selector": "button",
       "text": "5 - 7",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 98.59375,
         "y": 1918.390625,
@@ -967,6 +993,8 @@
     {
       "selector": "button",
       "text": "7 - 10",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 159.1875,
         "y": 1918.390625,
@@ -977,6 +1005,8 @@
     {
       "selector": "button",
       "text": "10 - 20",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 219.796875,
         "y": 1918.390625,
@@ -987,6 +1017,8 @@
     {
       "selector": "button",
       "text": ">20",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 280.390625,
         "y": 1918.390625,
@@ -997,6 +1029,8 @@
     {
       "selector": "button",
       "text": "Calculate Now",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 38,
         "y": 1974.390625,
@@ -1007,6 +1041,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Close",
+      "href": "https://www.linkedin.com/in/sumit-narula/",
       "bbox": {
         "x": 264.046875,
         "y": 2700.140625,
@@ -1017,6 +1053,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Close",
+      "href": "https://www.linkedin.com/in/prateek-pandey-61a02a75/",
       "bbox": {
         "x": 415.015625,
         "y": 2761.140625,
@@ -1027,6 +1065,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Rate 1 star",
+      "href": "",
       "bbox": {
         "x": 99.484375,
         "y": 14166.171875,
@@ -1037,6 +1077,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Rate 2 stars",
+      "href": "",
       "bbox": {
         "x": 135.484375,
         "y": 14166.171875,
@@ -1047,6 +1089,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Rate 3 stars",
+      "href": "",
       "bbox": {
         "x": 171.484375,
         "y": 14166.171875,
@@ -1057,6 +1101,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Rate 4 stars",
+      "href": "",
       "bbox": {
         "x": 207.484375,
         "y": 14166.171875,
@@ -1067,6 +1113,8 @@
     {
       "selector": "button",
       "text": "",
+      "aria_label": "Rate 5 stars",
+      "href": "",
       "bbox": {
         "x": 243.484375,
         "y": 14166.171875,
@@ -1077,6 +1125,8 @@
     {
       "selector": "button",
       "text": "Submit Rating",
+      "aria_label": "",
+      "href": "",
       "bbox": {
         "x": 102.484375,
         "y": 14262.171875,
@@ -1087,6 +1137,8 @@
     {
       "selector": "button",
       "text": "Submit Review",
+      "aria_label": "",
+      "href": "",
       "bbox": {
         "x": 98.203125,
         "y": 15077.640625,
@@ -1097,6 +1149,8 @@
     {
       "selector": "button",
       "text": "+91",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 25.125,
         "y": 426.5625,
@@ -1107,6 +1161,8 @@
     {
       "selector": "button",
       "text": "<5",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 25.125,
         "y": 510.5625,
@@ -1117,6 +1173,8 @@
     {
       "selector": "button",
       "text": "5 - 7",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 90.875,
         "y": 510.5625,
@@ -1127,6 +1185,8 @@
     {
       "selector": "button",
       "text": "7 - 10",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 156.625,
         "y": 510.5625,
@@ -1137,6 +1197,8 @@
     {
       "selector": "button",
       "text": "10 - 20",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 222.375,
         "y": 510.5625,
@@ -1147,6 +1209,8 @@
     {
       "selector": "button",
       "text": ">20",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 288.125,
         "y": 510.5625,
@@ -1157,6 +1221,8 @@
     {
       "selector": "button",
       "text": "Calculate Now",
+      "aria_label": "",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 25.125,
         "y": 553.75,
@@ -1167,6 +1233,8 @@
     {
       "selector": "[role='button']",
       "text": "Which form should I submit if I wish to avoid TDS?          ",
+      "aria_label": "Which form should I submit if I wish to avoid TDS?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 9412.171875,
@@ -1177,6 +1245,8 @@
     {
       "selector": "[role='button']",
       "text": "Can I add a nominee to my RD account?            Yes, it is ",
+      "aria_label": "Can I add a nominee to my RD account?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 9500.171875,
@@ -1187,6 +1257,8 @@
     {
       "selector": "[role='button']",
       "text": "How to use Recurring Deposit Interest calculator?           ",
+      "aria_label": "How to use Recurring Deposit Interest calculator?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 9587.171875,
@@ -1197,6 +1269,8 @@
     {
       "selector": "[role='button']",
       "text": "What happens if I do not pay my RD instalment?            So",
+      "aria_label": "What happens if I do not pay my RD instalment?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 9675.171875,
@@ -1207,6 +1281,8 @@
     {
       "selector": "[role='button']",
       "text": "What is the minimum monthly instalment amount needed to inve",
+      "aria_label": "What is the minimum monthly instalment amount needed to invest in bank RD?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 9763.171875,
@@ -1217,6 +1293,8 @@
     {
       "selector": "[role='button']",
       "text": "Can I make partial withdrawals from my RD account?          ",
+      "aria_label": "Can I make partial withdrawals from my RD account?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 9851.171875,
@@ -1227,6 +1305,8 @@
     {
       "selector": "[role='button']",
       "text": "Are the interest rates on an RD pre-fixed?            Yes, t",
+      "aria_label": "Are the interest rates on an RD pre-fixed?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 9939.171875,
@@ -1237,6 +1317,8 @@
     {
       "selector": "[role='button']",
       "text": "How to calculate the Recurring Deposit maturity amount?     ",
+      "aria_label": "How to calculate the Recurring Deposit maturity amount?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10026.171875,
@@ -1247,6 +1329,8 @@
     {
       "selector": "[role='button']",
       "text": "What are the minimum and maximum tenures to open a bank RD? ",
+      "aria_label": "What are the minimum and maximum tenures to open a bank RD?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10114.171875,
@@ -1257,6 +1341,8 @@
     {
       "selector": "[role='button']",
       "text": "Is the interest paid on RDs compounded quarterly?           ",
+      "aria_label": "Is the interest paid on RDs compounded quarterly?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10202.171875,
@@ -1267,6 +1353,8 @@
     {
       "selector": "[role='button']",
       "text": "How is Recurring Deposit interest calculated?            Rec",
+      "aria_label": "How is Recurring Deposit interest calculated?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10290.171875,
@@ -1277,6 +1365,8 @@
     {
       "selector": "[role='button']",
       "text": "Is it possible to add nominees in my RD account?            ",
+      "aria_label": "Is it possible to add nominees in my RD account?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10378.171875,
@@ -1287,6 +1377,8 @@
     {
       "selector": "[role='button']",
       "text": "What is the Difference between FD vs RD?            The fund",
+      "aria_label": "What is the Difference between FD vs RD?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10466.171875,
@@ -1297,6 +1389,8 @@
     {
       "selector": "[role='button']",
       "text": "Which is the formula used to calculate compound interest on ",
+      "aria_label": "Which is the formula used to calculate compound interest on Recurring Deposits?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10553.171875,
@@ -1307,6 +1401,8 @@
     {
       "selector": "[role='button']",
       "text": "Is there any additional interest provided for senior citizen",
+      "aria_label": "Is there any additional interest provided for senior citizens?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10641.171875,
@@ -1317,6 +1413,8 @@
     {
       "selector": "[role='button']",
       "text": "How is the interest earned on an RD account calculated?     ",
+      "aria_label": "How is the interest earned on an RD account calculated?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10729.171875,
@@ -1327,6 +1425,8 @@
     {
       "selector": "[role='button']",
       "text": "What are the different methods by which I can open an RD acc",
+      "aria_label": "What are the different methods by which I can open an RD account?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10817.171875,
@@ -1337,6 +1437,8 @@
     {
       "selector": "[role='button']",
       "text": "Is the interest that is generated from the RD account taxabl",
+      "aria_label": "Is the interest that is generated from the RD account taxable?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10905.171875,
@@ -1347,6 +1449,8 @@
     {
       "selector": "[role='button']",
       "text": "Will I have to pay a penalty in case there is a delay in the",
+      "aria_label": "Will I have to pay a penalty in case there is a delay in the monthly deposit?",
+      "href": "",
       "bbox": {
         "x": 16,
         "y": 10993.171875,
@@ -1357,6 +1461,8 @@
     {
       "selector": "[role='button']",
       "text": "Back to Previous Page",
+      "aria_label": "Back to Previous Page",
+      "href": "https://neouat.axismaxlife.com/",
       "bbox": {
         "x": 16,
         "y": 17946.640625,
@@ -1367,6 +1473,8 @@
     {
       "selector": "[role='button']",
       "text": "",
+      "aria_label": "Close popup",
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 325.875,
         "y": 35,
