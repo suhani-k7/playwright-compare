@@ -4,8 +4,8 @@ import os
 os.makedirs("reference", exist_ok=True)
 os.makedirs("live", exist_ok=True)
 
-REFERENCE_URL = "https://neouat.axismaxlife.com/investment-plans/rd-calculator"
-LIVE_URL = "https://www.axismaxlife.com/investment-plans/rd-calculator"
+LIVE_URL = "https://neouat.axismaxlife.com/investment-plans/rd-calculator"
+REFERENCE_URL = "https://www.axismaxlife.com/investment-plans/rd-calculator"
 
 with sync_playwright() as p:
     browser = p.chromium.launch()

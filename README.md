@@ -7,5 +7,5 @@ A Python-based visual comparison tool that captures screenshots and highlights v
 pip install -r requirements.txt
 
 ## Run
-python capture_playwright.py
+python capture.py
 python compare.py
