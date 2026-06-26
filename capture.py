@@ -72,7 +72,8 @@ def extract_elements(page) -> dict:
 
     # --- Buttons ---
     # The docs specify 4 types of buttons
-         "button",
+    button_selectors = [
+        "button",
         "input[type='button']",
         "input[type='submit']",
         "[role='button']"
@@ -82,10 +83,29 @@ def extract_elements(page) -> dict:
         for el in btn_els:
             bbox = el.bounding_box()
             text = (el.text_content() or "").strip()[:60]
+            # Get href attribute of the element, or its closest anchor ancestor, or its first anchor descendant
+            href = el.evaluate("""el => {
+                let href = el.getAttribute('href');
+                if (href) return href;
+                let anchorAncestor = el.closest('a');
+                if (anchorAncestor) {
+                    href = anchorAncestor.getAttribute('href');
+                    if (href) return href;
+                }
+                let anchorDescendant = el.querySelector('a');
+                if (anchorDescendant) {
+                    href = anchorDescendant.getAttribute('href');
+                    if (href) return href;
+                }
+                return '';
+            }""") or ""
+            aria_label = el.get_attribute("aria-label") or el.get_attribute("aria-labelledby") or ""
             if bbox:
                 elements["buttons"].append({
                     "selector": selector,
                     "text": text,
+                    "aria_label": aria_label.strip(),
+                    "href": href.strip(),
                     "bbox": bbox
                 })
 

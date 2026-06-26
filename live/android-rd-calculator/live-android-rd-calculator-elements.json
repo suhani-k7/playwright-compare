@@ -838,7 +838,7 @@
       "selector": "button",
       "text": "Login",
       "aria_label": "",
-      "href": "https://neouat.axismaxlife.com/cs/login",
+      "href": "",
       "bbox": {
         "x": 239.25,
         "y": 11.5,
@@ -850,7 +850,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "Menu",
-      "href": "https://neouat.axismaxlife.com/cs/login",
+      "href": "",
       "bbox": {
         "x": 341,
         "y": 10,
@@ -862,7 +862,7 @@
       "selector": "button",
       "text": "RD Calculator",
       "aria_label": "",
-      "href": "https://neouat.axismaxlife.com/investment-plans/rd-calculator#read-more-section",
+      "href": "",
       "bbox": {
         "x": 12,
         "y": 68,
@@ -934,7 +934,7 @@
       "selector": "button",
       "text": "View Plans",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 37,
         "y": 717.890625,
@@ -946,7 +946,7 @@
       "selector": "button",
       "text": "No",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 38,
         "y": 1790.390625,
@@ -958,7 +958,7 @@
       "selector": "button",
       "text": "Yes",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 200.5,
         "y": 1790.390625,
@@ -970,7 +970,7 @@
       "selector": "button",
       "text": "<5",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 38,
         "y": 1918.390625,
@@ -982,7 +982,7 @@
       "selector": "button",
       "text": "5 - 7",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 102.1875,
         "y": 1918.390625,
@@ -994,7 +994,7 @@
       "selector": "button",
       "text": "7 - 10",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 166.390625,
         "y": 1918.390625,
@@ -1006,7 +1006,7 @@
       "selector": "button",
       "text": "10 - 20",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 230.59375,
         "y": 1918.390625,
@@ -1018,7 +1018,7 @@
       "selector": "button",
       "text": ">20",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 294.796875,
         "y": 1918.390625,
@@ -1030,7 +1030,7 @@
       "selector": "button",
       "text": "Calculate Now",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 38,
         "y": 1974.390625,
@@ -1042,7 +1042,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "Close",
-      "href": "https://www.linkedin.com/in/sumit-narula/",
+      "href": "",
       "bbox": {
         "x": 264.046875,
         "y": 2674.546875,
@@ -1054,7 +1054,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "Close",
-      "href": "https://www.linkedin.com/in/prateek-pandey-61a02a75/",
+      "href": "",
       "bbox": {
         "x": 415.015625,
         "y": 2735.546875,
@@ -1150,7 +1150,7 @@
       "selector": "button",
       "text": "+91",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 25.75,
         "y": 414.5625,
@@ -1162,7 +1162,7 @@
       "selector": "button",
       "text": "<5",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 25.75,
         "y": 498.5625,
@@ -1174,7 +1174,7 @@
       "selector": "button",
       "text": "5 - 7",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 94.84375,
         "y": 498.5625,
@@ -1186,7 +1186,7 @@
       "selector": "button",
       "text": "7 - 10",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 163.9375,
         "y": 498.5625,
@@ -1198,7 +1198,7 @@
       "selector": "button",
       "text": "10 - 20",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 233.03125,
         "y": 498.5625,
@@ -1210,7 +1210,7 @@
       "selector": "button",
       "text": ">20",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 302.125,
         "y": 498.5625,
@@ -1222,7 +1222,7 @@
       "selector": "button",
       "text": "Calculate Now",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 32.984375,
         "y": 541.75,
@@ -1462,7 +1462,7 @@
       "selector": "[role='button']",
       "text": "Back to Previous Page",
       "aria_label": "Back to Previous Page",
-      "href": "https://neouat.axismaxlife.com/",
+      "href": "/",
       "bbox": {
         "x": 16,
         "y": 17741.546875,
@@ -1474,7 +1474,7 @@
       "selector": "[role='button']",
       "text": "",
       "aria_label": "Close popup",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 343.234375,
         "y": 35,

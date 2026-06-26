@@ -7,7 +7,7 @@ Non-Visual / SEO Status for ios (rd-calculator)
 - Open Graph:     PASS
 
 [Specific Non-Visual Mismatches]
-- Heading count: expected 75, found 58
-- Image count: expected 57, found 25
-- Button count: expected 66, found 45
-- Link count: expected 89, found 222
+- Heading count: expected 72, found 58
+- Image count: expected 53, found 25
+- Button count (identifiable): expected 58, found 54
+- Link count: expected 88, found 222

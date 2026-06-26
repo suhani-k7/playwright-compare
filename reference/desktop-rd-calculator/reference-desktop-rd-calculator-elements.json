@@ -595,7 +595,7 @@
       "text": "Can NRIs open a Recurring Deposit account in India?",
       "bbox": {
         "x": 32,
-        "y": 9497.4296875,
+        "y": 9489.4296875,
         "width": 372.375,
         "height": 18
       }
@@ -605,7 +605,7 @@
       "text": "Can I break an RD before maturity?",
       "bbox": {
         "x": 32,
-        "y": 9584.4296875,
+        "y": 9562.4296875,
         "width": 252.6796875,
         "height": 18
       }
@@ -615,7 +615,7 @@
       "text": "What is the eligibility criteria for an RD account?",
       "bbox": {
         "x": 32,
-        "y": 9671.4296875,
+        "y": 9645.4296875,
         "width": 343.71875,
         "height": 18
       }
@@ -625,7 +625,7 @@
       "text": "Are there different types of RD accounts available?",
       "bbox": {
         "x": 32,
-        "y": 9758.4296875,
+        "y": 9730.4296875,
         "width": 361.1875,
         "height": 18
       }
@@ -635,7 +635,7 @@
       "text": "Can I open multiple recurring deposits?",
       "bbox": {
         "x": 32,
-        "y": 9845.4296875,
+        "y": 9817.4296875,
         "width": 279.4765625,
         "height": 18
       }
@@ -645,7 +645,7 @@
       "text": "Understanding Recurring Deposit Interest Rates",
       "bbox": {
         "x": 48,
-        "y": 10564.4921875,
+        "y": 10536.4921875,
         "width": 274,
         "height": 48
       }
@@ -655,7 +655,7 @@
       "text": "What is RD? - Know About the Features and Benefits",
       "bbox": {
         "x": 378,
-        "y": 10564.4921875,
+        "y": 10536.4921875,
         "width": 274,
         "height": 48
       }
@@ -665,7 +665,7 @@
       "text": "Difference Between Fixed Deposit and Recurring Deposit",
       "bbox": {
         "x": 708,
-        "y": 10514.4921875,
+        "y": 10486.4921875,
         "width": 274,
         "height": 48
       }
@@ -675,7 +675,7 @@
       "text": "Axis Max Life Insurance",
       "bbox": {
         "x": 64,
-        "y": 11816.515625,
+        "y": 11794.515625,
         "width": 902,
         "height": 22.9921875
       }
@@ -1298,7 +1298,7 @@
       "selector": "button",
       "text": "Track Application",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/term-insurance-plans",
+      "href": "",
       "bbox": {
         "x": 836.390625,
         "y": -8,
@@ -1310,7 +1310,7 @@
       "selector": "button",
       "text": "Join as Advisor",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/cs/login",
+      "href": "",
       "bbox": {
         "x": 1001.359375,
         "y": 16,
@@ -1322,7 +1322,7 @@
       "selector": "button",
       "text": "Login",
       "aria_label": "Login menu with 2 items",
-      "href": "https://www.axismaxlife.com/cs/login",
+      "href": "",
       "bbox": {
         "x": 1131.2890625,
         "y": 24,
@@ -1334,7 +1334,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "Hamburger Main menu",
-      "href": "https://www.axismaxlife.com/cs/login",
+      "href": "",
       "bbox": {
         "x": 1238,
         "y": 30.5,
@@ -1346,7 +1346,7 @@
       "selector": "button",
       "text": "View more sections",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/investment-plans/rd-calculator#read-more-section",
+      "href": "",
       "bbox": {
         "x": 986.921875,
         "y": 88,
@@ -1358,7 +1358,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/investment-plans/investment-calculator?utm_theme=FixedDeposit",
+      "href": "",
       "bbox": {
         "x": 291,
         "y": 474.9609375,
@@ -1370,7 +1370,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/investment-plans/investment-calculator?utm_theme=FixedDeposit",
+      "href": "",
       "bbox": {
         "x": 327,
         "y": 474.9609375,
@@ -1382,7 +1382,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/investment-plans/investment-calculator?utm_theme=FixedDeposit",
+      "href": "",
       "bbox": {
         "x": 291,
         "y": 554.9609375,
@@ -1394,7 +1394,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/investment-plans/investment-calculator?utm_theme=FixedDeposit",
+      "href": "",
       "bbox": {
         "x": 327,
         "y": 554.9609375,
@@ -1406,7 +1406,7 @@
       "selector": "button",
       "text": "Graph view",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/investment-plans/investment-calculator?utm_theme=FixedDeposit",
+      "href": "",
       "bbox": {
         "x": 443,
         "y": 468.3125,
@@ -1418,7 +1418,7 @@
       "selector": "button",
       "text": "Calculate Now",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "href": "",
       "bbox": {
         "x": 1003.4453125,
         "y": 724.9765625,
@@ -1430,7 +1430,7 @@
       "selector": "button",
       "text": "More Resourceful Articles",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/investment-plans/recurring-deposit/rd-interest-rates",
+      "href": "",
       "bbox": {
         "x": 392.59375,
         "y": 10762.4921875,
@@ -1466,7 +1466,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/cs/pay-online",
+      "href": "",
       "bbox": {
         "x": 115,
         "y": 15307.46875,
@@ -1478,7 +1478,7 @@
       "selector": "button",
       "text": "Tools & Calculators",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/term-insurance-plans/premium-calculator",
+      "href": "",
       "bbox": {
         "x": 368,
         "y": 14797.46875,
@@ -1490,7 +1490,7 @@
       "selector": "button",
       "text": "Investment Plans",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/investment-plans",
+      "href": "/investment-plans",
       "bbox": {
         "x": 653,
         "y": 14457.46875,
@@ -1502,7 +1502,7 @@
       "selector": "button",
       "text": "About Axis Max Life",
       "aria_label": "",
-      "href": "https://www.axismaxlife.com/about-us/why-max-life",
+      "href": "",
       "bbox": {
         "x": 922,
         "y": 14457.46875,
@@ -1514,7 +1514,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/about-us/why-max-life",
+      "href": "",
       "bbox": {
         "x": 922,
         "y": 15071.46875,
@@ -1526,7 +1526,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/about-us/why-max-life",
+      "href": "",
       "bbox": {
         "x": 922,
         "y": 15161.46875,
@@ -1538,7 +1538,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/about-us/why-max-life",
+      "href": "",
       "bbox": {
         "x": 922,
         "y": 15251.46875,
@@ -1550,7 +1550,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/about-us/why-max-life",
+      "href": "",
       "bbox": {
         "x": 922,
         "y": 15311.3515625,
@@ -1562,7 +1562,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/term-insurance-plans",
+      "href": "",
       "bbox": {
         "x": 1023,
         "y": 15568.46875,
@@ -1574,7 +1574,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/term-insurance-plans",
+      "href": "",
       "bbox": {
         "x": 1055,
         "y": 15568.46875,
@@ -1586,7 +1586,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/term-insurance-plans",
+      "href": "",
       "bbox": {
         "x": 1087,
         "y": 15568.46875,
@@ -1598,7 +1598,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/term-insurance-plans",
+      "href": "",
       "bbox": {
         "x": 1119,
         "y": 15568.46875,
@@ -1610,7 +1610,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/term-insurance-plans",
+      "href": "",
       "bbox": {
         "x": 1151,
         "y": 15568.46875,
@@ -1622,7 +1622,7 @@
       "selector": "button",
       "text": "IRDAI Consumer Education Website",
       "aria_label": "IRDAI Consumer Education Website",
-      "href": "https://www.axismaxlife.com/do-not-disturb",
+      "href": "",
       "bbox": {
         "x": 142.1796875,
         "y": 15666.46875,
@@ -1634,7 +1634,7 @@
       "selector": "button",
       "text": "Insurance Ombudsman",
       "aria_label": "Insurance Ombudsman",
-      "href": "https://www.axismaxlife.com/do-not-disturb",
+      "href": "",
       "bbox": {
         "x": 735.2421875,
         "y": 15666.46875,
@@ -1646,7 +1646,7 @@
       "selector": "button",
       "text": "Bima Bharosa",
       "aria_label": "Bima Bharosa",
-      "href": "https://www.axismaxlife.com/do-not-disturb",
+      "href": "",
       "bbox": {
         "x": 423.671875,
         "y": 15718.46875,
@@ -1658,7 +1658,7 @@
       "selector": "button",
       "text": "IRDAI List of Blacklisted Agents",
       "aria_label": "IRDAI List of Blacklisted Agents",
-      "href": "https://www.axismaxlife.com/do-not-disturb",
+      "href": "",
       "bbox": {
         "x": 792.828125,
         "y": 15770.46875,
@@ -1670,7 +1670,7 @@
       "selector": "button",
       "text": "AXIS BANK",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/do-not-disturb",
+      "href": "",
       "bbox": {
         "x": 220.8359375,
         "y": 15838.46875,
@@ -1682,7 +1682,7 @@
       "selector": "button",
       "text": "MAX INDIA",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/do-not-disturb",
+      "href": "",
       "bbox": {
         "x": 338.9765625,
         "y": 15838.46875,
@@ -1694,7 +1694,7 @@
       "selector": "button",
       "text": "MAX FINANCIAL SERVICES",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/do-not-disturb",
+      "href": "",
       "bbox": {
         "x": 459.5234375,
         "y": 15838.46875,
@@ -1706,7 +1706,7 @@
       "selector": "button",
       "text": "ANTARA SENIOR CARE",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/do-not-disturb",
+      "href": "",
       "bbox": {
         "x": 675.515625,
         "y": 15838.46875,
@@ -1718,7 +1718,7 @@
       "selector": "button",
       "text": "MAX LIFE PENSION FUND MANAGEMENT",
       "aria_label": "[object Object]",
-      "href": "https://www.axismaxlife.com/do-not-disturb",
+      "href": "",
       "bbox": {
         "x": 864.9765625,
         "y": 15838.46875,
@@ -1730,7 +1730,7 @@
       "selector": "button",
       "text": "",
       "aria_label": "",
-      "href": "mailto:service.helpdesk@axismaxlife.com",
+      "href": "",
       "bbox": {
         "x": 767.71875,
         "y": 16101.203125,
@@ -1742,7 +1742,7 @@
       "selector": "[role='button']",
       "text": "",
       "aria_label": "Term Insurance submenu with 6 items",
-      "href": "https://www.axismaxlife.com/term-insurance-plans",
+      "href": "",
       "bbox": {
         "x": 252.9453125,
         "y": 32.5,
@@ -1754,7 +1754,7 @@
       "selector": "[role='button']",
       "text": "",
       "aria_label": "Investment Plans submenu with 7 items",
-      "href": "https://www.axismaxlife.com/investment-plans",
+      "href": "",
       "bbox": {
         "x": 408.0625,
         "y": 32.5,
@@ -1766,7 +1766,7 @@
       "selector": "[role='button']",
       "text": "",
       "aria_label": "Healthcare Plans submenu with 2 items",
-      "href": "https://www.axismaxlife.com/health-insurance-plans",
+      "href": "",
       "bbox": {
         "x": 559.4296875,
         "y": 32.5,
@@ -1778,7 +1778,7 @@
       "selector": "[role='button']",
       "text": "",
       "aria_label": "NRI Plans submenu with 2 items",
-      "href": "https://www.axismaxlife.com/nri-plans",
+      "href": "",
       "bbox": {
         "x": 665.0078125,
         "y": 32.5,
@@ -1790,7 +1790,7 @@
       "selector": "[role='button']",
       "text": "",
       "aria_label": "Calculators submenu with 4 items",
-      "href": "https://www.axismaxlife.com/calculators",
+      "href": "",
       "bbox": {
         "x": 792.390625,
         "y": 32.5,
@@ -2162,7 +2162,7 @@
       "selector": "[role='button']",
       "text": "Back to Previous Page",
       "aria_label": "Back to Previous Page",
-      "href": "https://www.axismaxlife.com/",
+      "href": "",
       "bbox": {
         "x": 48,
         "y": 14324.46875,

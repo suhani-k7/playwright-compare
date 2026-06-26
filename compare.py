@@ -3,10 +3,41 @@ import json
 import os
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
+import urllib.parse
 
 # -------------------------------------------------------------------
 # Helpers to load saved capture outputs
 # -------------------------------------------------------------------
+
+def _normalize_href(href: str, base_url: str = "", known_domains: list = None) -> str:
+    href = href.strip()
+    if not href or href.startswith("mailto:") or href.startswith("tel:") or href.startswith("javascript:"):
+        return href
+
+    if base_url:
+        href = urllib.parse.urljoin(base_url, href)
+
+    parsed = urllib.parse.urlparse(href)
+    netloc = parsed.netloc.lower()
+    path = parsed.path.rstrip("/") or "/"
+    query = parsed.query
+
+    # Known internal domains — strip domain, compare path only
+    # This prevents prod vs UAT domain differences from creating noise
+    internal_domains = known_domains or ["axismaxlife.com", "neouat.axismaxlife.com"]
+    is_internal = any(netloc.endswith(d) for d in internal_domains)
+
+    if is_internal or not netloc:
+        # Internal or relative — path only
+        normalized = path
+    else:
+        # External link — keep full URL so real external destination changes are caught
+        normalized = f"{parsed.scheme.lower()}://{netloc}{path}"
+
+    if query:
+        normalized = f"{normalized}?{query}"
+
+    return normalized
 
 def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
     path = os.path.join(mode, f"{device}-{slug}", f"{mode}-{device}-{slug}-page.html")
@@ -139,58 +170,112 @@ def compare_images(ref_soup, live_soup, ref_elements: dict, live_elements: dict)
     status = "PASS" if not mismatches else "FAIL"
     return status, mismatches
 
+def get_btn_compare_key(btn: dict) -> str:
+    """Return a stable comparison key for a button.
+    Preference order: normalized href → text → aria_label.
+    """
+    href = _normalize_href(btn.get('href', '').strip())
+    if href:
+        return href
+    text = btn.get('text', '').strip().lower()
+    if text:
+        return f"text:{text}"
+    aria = btn.get('aria_label', '').strip().lower()
+    if aria:
+        return f"aria:{aria}"
+    return ''
 
 def compare_buttons(ref_elements: dict, live_elements: dict) -> tuple[str, list]:
-    """
-    Compares buttons using elements.json (captured by Playwright).
-    Uses text content to detect missing/extra buttons.
-    We use elements.json here (not soup) because button text is
-    often injected by JS and won't be in the raw HTML.
-    """
     mismatches = []
 
     ref_buttons = ref_elements.get("buttons", [])
     live_buttons = live_elements.get("buttons", [])
 
-    ref_texts = [b["text"].strip().lower() for b in ref_buttons if b["text"].strip()]
-    live_texts = [b["text"].strip().lower() for b in live_buttons if b["text"].strip()]
+    # Only count buttons we can actually identify — skip purely icon buttons
+    def is_identifiable(btn):
+        return bool(
+            (btn.get("text") or "").strip() or
+            (btn.get("href") or "").strip() or
+            (btn.get("aria_label") or "").strip()
+        )
 
-    ref_set = set(ref_texts)
-    live_set = set(live_texts)
+    ref_identifiable = [b for b in ref_buttons if is_identifiable(b)]
+    live_identifiable = [b for b in live_buttons if is_identifiable(b)]
 
-    # Count mismatch
-    if len(ref_buttons) != len(live_buttons):
+    # Group by comparison key
+    ref_map = {}
+    for b in ref_identifiable:
+        key = get_btn_compare_key(b)
+        ref_map.setdefault(key, []).append(b)
+
+    live_map = {}
+    for b in live_identifiable:
+        key = get_btn_compare_key(b)
+        live_map.setdefault(key, []).append(b)
+
+    ref_map.pop('', None)
+    live_map.pop('', None)
+
+    # Count based on identifiable buttons only
+    if len(ref_identifiable) != len(live_identifiable):
         mismatches.append({
             "type": "button_count",
-            "ref_count": len(ref_buttons),
-            "live_count": len(live_buttons),
-            "message": f"Button count: expected {len(ref_buttons)}, found {len(live_buttons)}"
+            "ref_count": len(ref_identifiable),
+            "live_count": len(live_identifiable),
+            "message": f"Button count (identifiable): expected {len(ref_identifiable)}, found {len(live_identifiable)}"
         })
 
-    # Missing buttons (in ref but not in live)
-    for text in ref_set - live_set:
-        # Find the button entry so we can pass its bbox to the annotator
-        btn = next((b for b in ref_buttons if b["text"].strip().lower() == text), None)
-        mismatches.append({
-            "type": "missing_button",
-            "text": text,
-            "bbox": btn["bbox"] if btn else None,
-            "message": f"Missing button in live: '{text}'"
-        })
+    # Missing, extra, label mismatch — rest of logic unchanged
+    for key in sorted(ref_map.keys() - live_map.keys()):
+        for btn in ref_map[key]:
+            mismatches.append({
+                "type": "missing_button",
+                "bbox": btn.get("bbox"),
+                "message": f"Missing button: '{btn.get('text','').strip()}' (href: '{btn.get('href','').strip()}')"
+            })
 
-    # Extra buttons (in live but not in ref)
-    for text in live_set - ref_set:
-        btn = next((b for b in live_buttons if b["text"].strip().lower() == text), None)
-        mismatches.append({
-            "type": "extra_button",
-            "text": text,
-            "bbox": btn["bbox"] if btn else None,
-            "message": f"Extra button in live (not in reference): '{text}'"
-        })
+    for key in sorted(live_map.keys() - ref_map.keys()):
+        for btn in live_map[key]:
+            mismatches.append({
+                "type": "extra_button",
+                "bbox": btn.get("bbox"),
+                "message": f"Extra button in live: '{btn.get('text','').strip()}' (href: '{btn.get('href','').strip()}')"
+            })
+
+    for key in sorted(ref_map.keys() & live_map.keys()):
+        ref_list = ref_map[key]
+        live_list = live_map[key]
+        for i in range(max(len(ref_list), len(live_list))):
+            if i < len(ref_list) and i < len(live_list):
+                ref_btn = ref_list[i]
+                live_btn = live_list[i]
+                ref_text = ref_btn.get("text", "").strip()
+                live_text = live_btn.get("text", "").strip()
+                ref_aria = ref_btn.get("aria_label", "").strip()
+                live_aria = live_btn.get("aria_label", "").strip()
+                if ref_text.lower() != live_text.lower() or ref_aria.lower() != live_aria.lower():
+                    mismatches.append({
+                        "type": "button_label_mismatch",
+                        "bbox": live_btn.get("bbox"),
+                        "message": f"Button label mismatch for '{key}': expected '{ref_text}', found '{live_text}'"
+                    })
+            elif i < len(ref_list):
+                ref_btn = ref_list[i]
+                mismatches.append({
+                    "type": "missing_button",
+                    "bbox": ref_btn.get("bbox"),
+                    "message": f"Missing button: '{ref_btn.get('text','').strip()}'"
+                })
+            else:
+                live_btn = live_list[i]
+                mismatches.append({
+                    "type": "extra_button",
+                    "bbox": live_btn.get("bbox"),
+                    "message": f"Extra button in live: '{live_btn.get('text','').strip()}'"
+                })
 
     status = "PASS" if not mismatches else "FAIL"
     return status, mismatches
-
 
 def compare_canonical(ref_soup, live_soup) -> tuple[str, list]:
     """
@@ -286,49 +371,70 @@ def compare_og_tags(ref_soup, live_soup) -> tuple[str, list]:
 
 
 def compare_links(ref_soup, live_soup, ref_elements: dict, live_elements: dict) -> tuple[str, list]:
-    """
-    Compares total anchor tag count and exact href values.
-    """
+    from collections import Counter
     mismatches = []
 
     ref_links = ref_elements.get("links", [])
     live_links = live_elements.get("links", [])
 
-    ref_count = len(ref_links)
-    live_count = len(live_links)
+    # Extract base URLs from canonical tags so relative hrefs resolve correctly
+    ref_canonical = ref_soup.find("link", rel="canonical")
+    live_canonical = live_soup.find("link", rel="canonical")
+    ref_base = ref_canonical["href"].strip() if ref_canonical and ref_canonical.get("href") else ""
+    live_base = live_canonical["href"].strip() if live_canonical and live_canonical.get("href") else ""
 
-    if ref_count != live_count:
+    # Count check
+    if len(ref_links) != len(live_links):
         mismatches.append({
             "type": "link_count",
-            "ref_count": ref_count,
-            "live_count": live_count,
-            "message": f"Link count: expected {ref_count}, found {live_count}"
+            "ref_count": len(ref_links),
+            "live_count": len(live_links),
+            "message": f"Link count: expected {len(ref_links)}, found {len(live_links)}"
         })
 
-    ref_hrefs = {l["href"]: l for l in ref_links if l.get("href")}
-    live_hrefs = {l["href"]: l for l in live_links if l.get("href")}
+    # Build normalized lists, resolving relative URLs against their respective base
+    ref_bbox_map = {}
+    live_bbox_map = {}
 
-    missing_hrefs = set(ref_hrefs.keys()) - set(live_hrefs.keys())
-    extra_hrefs = set(live_hrefs.keys()) - set(ref_hrefs.keys())
+    ref_normalized = []
+    for l in ref_links:
+        n = _normalize_href(l.get("href", ""), base_url=ref_base)
+        ref_normalized.append(n)
+        if n not in ref_bbox_map:
+            ref_bbox_map[n] = l.get("bbox")
 
-    for href in missing_hrefs:
-        mismatches.append({
-            "type": "missing_link",
-            "bbox": ref_hrefs[href].get("bbox"),
-            "message": f"Missing link: {href}"
-        })
+    live_normalized = []
+    for l in live_links:
+        n = _normalize_href(l.get("href", ""), base_url=live_base)
+        live_normalized.append(n)
+        if n not in live_bbox_map:
+            live_bbox_map[n] = l.get("bbox")
 
-    for href in extra_hrefs:
-        mismatches.append({
-            "type": "extra_link",
-            "bbox": live_hrefs[href].get("bbox"),
-            "message": f"Extra link: {href}"
-        })
+    ref_counter = Counter(ref_normalized)
+    live_counter = Counter(live_normalized)
+
+    for href, ref_n in ref_counter.items():
+        live_n = live_counter.get(href, 0)
+        if live_n < ref_n:
+            for _ in range(ref_n - live_n):
+                mismatches.append({
+                    "type": "missing_link",
+                    "bbox": ref_bbox_map.get(href),
+                    "message": f"Missing link ({ref_n - live_n}x): {href}"
+                })
+
+    for href, live_n in live_counter.items():
+        ref_n = ref_counter.get(href, 0)
+        if live_n > ref_n:
+            for _ in range(live_n - ref_n):
+                mismatches.append({
+                    "type": "extra_link",
+                    "bbox": live_bbox_map.get(href),
+                    "message": f"Extra link ({live_n - ref_n}x): {href}"
+                })
 
     status = "PASS" if not mismatches else "FAIL"
     return status, mismatches
-
-
 # -------------------------------------------------------------------
 # Annotation runner
 # -------------------------------------------------------------------
