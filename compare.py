@@ -276,7 +276,7 @@ def compare_buttons(ref_elements: dict, live_elements: dict) -> tuple[str, list]
 
     status = "PASS" if not mismatches else "FAIL"
     return status, mismatches
-
+    
 def compare_canonical(ref_soup, live_soup) -> tuple[str, list]:
     """
     Checks canonical tag presence and value match.
@@ -600,7 +600,45 @@ def compare_device(device: str, slug: str) -> dict:
 
     return report
 
+def generate_summary_report(all_reports: list, slug: str):
+    os.makedirs("diffs", exist_ok=True)
+    path = os.path.join("diffs", f"{slug}-problems.txt")
 
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(f"BUTTON DIFF REPORT — {slug}\n")
+        f.write("=" * 60 + "\n\n")
+
+        for report in all_reports:
+            device = report["device"]
+            details = report["details"]
+            btn_issues = details.get("buttons", [])
+
+            missing = [i for i in btn_issues if i.get("type") == "missing_button"]
+            extra = [i for i in btn_issues if i.get("type") == "extra_button"]
+
+            f.write(f"[ {device.upper()} ]\n")
+            f.write("-" * 40 + "\n")
+
+            # Count line
+            ref_count = next((i.get("ref_count") for i in btn_issues if i.get("type") == "button_count"), None)
+            live_count = next((i.get("live_count") for i in btn_issues if i.get("type") == "button_count"), None)
+            if ref_count is not None:
+                f.write(f"Reference identifiable buttons: {ref_count}\n")
+                f.write(f"Live identifiable buttons:      {live_count}\n\n")
+
+            f.write(f"REF only (missing from live) ({len(missing)}):\n")
+            for i in missing:
+                text = i.get("message", "").replace("Missing button: ", "").replace("Missing button:", "")
+                f.write(f"  - {text}\n")
+
+            f.write(f"\nLIVE only (extra) ({len(extra)}):\n")
+            for i in extra:
+                text = i.get("message", "").replace("Extra button in live: ", "").replace("Extra button in live:", "")
+                f.write(f"  - {text}\n")
+
+            f.write("\n")
+
+    print(f"Button diff report saved to {path}")
 # -------------------------------------------------------------------
 # CLI entry point
 # -------------------------------------------------------------------
@@ -634,3 +672,4 @@ if __name__ == "__main__":
         json.dump(all_reports, f, indent=2)
 
     print(f"\nReport saved to {report_path}")
+    generate_summary_report(all_reports, args.slug)
