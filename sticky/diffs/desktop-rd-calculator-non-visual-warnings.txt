@@ -1,0 +1,10 @@
+Non-Visual / SEO Status — Sticky — desktop (rd-calculator)
+==================================================
+
+[Sticky Summary]
+- Sticky Elements: FAIL
+
+[Specific Issues]
+- Image count: expected 8, found 7
+- Button count (identifiable): expected 14, found 19
+- Sticky count differs (ref=8 live=24)

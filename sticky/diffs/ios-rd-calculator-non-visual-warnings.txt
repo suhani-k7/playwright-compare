@@ -1,0 +1,11 @@
+Non-Visual / SEO Status — Sticky — ios (rd-calculator)
+==================================================
+
+[Sticky Summary]
+- Sticky Elements: FAIL
+
+[Specific Issues]
+- Image count: expected 6, found 7
+- Button count (identifiable): expected 3, found 8
+- Link count: expected 4, found 3
+- Sticky count differs (ref=3 live=26)

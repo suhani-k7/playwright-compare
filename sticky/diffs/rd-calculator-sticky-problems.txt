@@ -1,0 +1,15 @@
+STICKY ELEMENT DIFF REPORT — rd-calculator
+============================================================
+
+[ DESKTOP ]
+----------------------------------------
+- Sticky count differs (ref=8 live=24)
+
+[ ANDROID ]
+----------------------------------------
+- Sticky count differs (ref=3 live=26)
+
+[ IOS ]
+----------------------------------------
+- Sticky count differs (ref=3 live=26)
+
