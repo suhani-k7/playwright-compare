@@ -1,0 +1,505 @@
+{
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "RD Calculator",
+      "bbox": {
+        "x": 32,
+        "y": 133.59375,
+        "width": 1216,
+        "height": 32
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Calculate your earnings with RD",
+      "bbox": {
+        "x": 57,
+        "y": 268.578125,
+        "width": 304,
+        "height": 68.75
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "You Get",
+      "bbox": {
+        "x": 410,
+        "y": 268.578125,
+        "width": 544,
+        "height": 24
+      }
+    },
+    {
+      "tag": "h4",
+      "text": "Fixed Returns up to 6.80%*",
+      "bbox": {
+        "x": 81,
+        "y": 648.109375,
+        "width": 256,
+        "height": 28
+      }
+    },
+    {
+      "tag": "h4",
+      "text": "Graph view",
+      "bbox": {
+        "x": 435,
+        "y": 463.578125,
+        "width": 494,
+        "height": 19.5
+      }
+    }
+  ],
+  "images": [
+    {
+      "alt": "Logo of axis max life insurance graphic",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/axis-max-life-insurance-logo.svg",
+      "bbox": {
+        "x": 12,
+        "y": 20,
+        "width": 110,
+        "height": 40
+      }
+    },
+    {
+      "alt": "Decrease",
+      "src": "/corp-astro-static/images/rd-calc-left-arrow.png",
+      "bbox": {
+        "x": 284,
+        "y": 476.71875,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "alt": "Increase",
+      "src": "/corp-astro-static/images/rd-calc-right-arrow.png",
+      "bbox": {
+        "x": 320,
+        "y": 476.71875,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "alt": "Decrease",
+      "src": "/corp-astro-static/images/rd-calc-left-arrow.png",
+      "bbox": {
+        "x": 284,
+        "y": 552.3125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "alt": "Increase",
+      "src": "/corp-astro-static/images/rd-calc-right-arrow.png",
+      "bbox": {
+        "x": 320,
+        "y": 552.3125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "alt": "",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
+      "bbox": {
+        "x": 81,
+        "y": 693.109375,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "alt": "",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
+      "bbox": {
+        "x": 81,
+        "y": 725.109375,
+        "width": 16,
+        "height": 16
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "selector": "button",
+      "text": "Track Application",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 805.7890625,
+        "y": -10.5,
+        "width": 99.4921875,
+        "height": 101
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Open accessibility settings",
+      "href": "",
+      "bbox": {
+        "x": 905.28125,
+        "y": 22,
+        "width": 46,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Login",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1116,
+        "y": 21.5,
+        "width": 100,
+        "height": 37
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Menu",
+      "href": "",
+      "bbox": {
+        "x": 1228,
+        "y": 20,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View more sections",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 996.171875,
+        "y": 83,
+        "width": 224.3984375,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Read More",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 374.6171875,
+        "y": 204.5859375,
+        "width": 85.3671875,
+        "height": 22.9921875
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Decrease Rate of Interest (p.a)",
+      "href": "",
+      "bbox": {
+        "x": 284,
+        "y": 476.71875,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Increase Rate of Interest (p.a)",
+      "href": "",
+      "bbox": {
+        "x": 320,
+        "y": 476.71875,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Decrease Tenure (in months)",
+      "href": "",
+      "bbox": {
+        "x": 284,
+        "y": 552.3125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Increase Tenure (in months)",
+      "href": "",
+      "bbox": {
+        "x": 320,
+        "y": 552.3125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 57,
+        "y": 769.109375,
+        "width": 304,
+        "height": 48
+      }
+    },
+    {
+      "selector": "button",
+      "text": "No",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1025,
+        "y": 477.671875,
+        "width": 150,
+        "height": 52
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Yes",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1183,
+        "y": 477.671875,
+        "width": 150,
+        "height": 52
+      }
+    },
+    {
+      "selector": "button",
+      "text": "<5",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1025,
+        "y": 651.671875,
+        "width": 58.3984375,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "5 - 7",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1087.3984375,
+        "y": 651.671875,
+        "width": 58.3984375,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "7 - 10",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1149.796875,
+        "y": 651.671875,
+        "width": 58.3984375,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "10 - 20",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1212.1953125,
+        "y": 651.671875,
+        "width": 58.3984375,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": ">20",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1274.59375,
+        "y": 651.671875,
+        "width": 58.40625,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Calculate Now",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1025,
+        "y": 723.671875,
+        "width": 308,
+        "height": 48
+      }
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "bbox": {
+        "x": 12,
+        "y": 20,
+        "width": 110,
+        "height": 40
+      }
+    },
+    {
+      "href": "/term-insurance-plans",
+      "bbox": {
+        "x": 162,
+        "y": 17.5,
+        "width": 87.7421875,
+        "height": 45
+      }
+    },
+    {
+      "href": "/investment-plans",
+      "bbox": {
+        "x": 297.7421875,
+        "y": 17.5,
+        "width": 93.7890625,
+        "height": 45
+      }
+    },
+    {
+      "href": "/health-insurance-plans",
+      "bbox": {
+        "x": 439.53125,
+        "y": 17.5,
+        "width": 92.3984375,
+        "height": 45
+      }
+    },
+    {
+      "href": "/nri-plans",
+      "bbox": {
+        "x": 579.9296875,
+        "y": 17.5,
+        "width": 48.453125,
+        "height": 45
+      }
+    },
+    {
+      "href": "/calculators",
+      "bbox": {
+        "x": 676.3828125,
+        "y": 28.75,
+        "width": 81.40625,
+        "height": 22.5
+      }
+    },
+    {
+      "href": "/join-max-life/become-an-agent",
+      "bbox": {
+        "x": 963.28125,
+        "y": 22.5,
+        "width": 140.71875,
+        "height": 35
+      }
+    },
+    {
+      "href": "/",
+      "bbox": {
+        "x": 16,
+        "y": 88.6953125,
+        "width": 36.9921875,
+        "height": 18.1953125
+      }
+    },
+    {
+      "href": "/investment-plans",
+      "bbox": {
+        "x": 77.0078125,
+        "y": 88.6953125,
+        "width": 105.6640625,
+        "height": 18.1953125
+      }
+    },
+    {
+      "href": "#read-more-section",
+      "bbox": {
+        "x": 16,
+        "y": 89,
+        "width": 311.25,
+        "height": 24
+      }
+    },
+    {
+      "href": "#what-is-recurring-deposit",
+      "bbox": {
+        "x": 328.25,
+        "y": 89,
+        "width": 311.25,
+        "height": 24
+      }
+    },
+    {
+      "href": "#how-does-rd-interest-calculator-help-you-head",
+      "bbox": {
+        "x": 640.5,
+        "y": 89,
+        "width": 311.25,
+        "height": 24
+      }
+    },
+    {
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "bbox": {
+        "x": 1049,
+        "y": 788.171875,
+        "width": 229.15625,
+        "height": 29
+      }
+    }
+  ],
+  "canonical": [
+    {
+      "href": "https://www.axismaxlife.com/investment-plans/rd-calculator",
+      "bbox": null
+    }
+  ],
+  "meta": [
+    {
+      "name": "title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "name": "description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ],
+  "og_tags": [
+    {
+      "property": "og:title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "property": "og:description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ]
+}

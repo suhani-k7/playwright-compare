@@ -1,0 +1,897 @@
+[
+  {
+    "device": "desktop",
+    "slug": "rd-calculator",
+    "scope": "first_fold",
+    "summary": {
+      "headings": "FAIL",
+      "images": "FAIL",
+      "buttons": "FAIL",
+      "canonical": "PASS",
+      "meta": "PASS",
+      "og_tags": "PASS",
+      "links": "FAIL"
+    },
+    "details": {
+      "headings": [
+        {
+          "type": "heading_tag_mismatch",
+          "bbox": {
+            "x": 410,
+            "y": 268.578125,
+            "width": 544,
+            "height": 24
+          },
+          "message": "H3, should have been H2"
+        },
+        {
+          "type": "heading_tag_mismatch",
+          "bbox": {
+            "x": 81,
+            "y": 648.109375,
+            "width": 256,
+            "height": 28
+          },
+          "message": "H4, should have been H2"
+        },
+        {
+          "type": "heading_tag_mismatch",
+          "bbox": {
+            "x": 435,
+            "y": 463.578125,
+            "width": 494,
+            "height": 19.5
+          },
+          "message": "H4, should have been H2"
+        }
+      ],
+      "images": [
+        {
+          "type": "image_count",
+          "ref_count": 8,
+          "live_count": 7,
+          "message": "Image count: expected 8, found 7"
+        },
+        {
+          "type": "extra_image",
+          "bbox": {
+            "x": 284,
+            "y": 552.3125,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra image in live"
+        },
+        {
+          "type": "extra_image",
+          "bbox": {
+            "x": 320,
+            "y": 552.3125,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra image in live"
+        },
+        {
+          "type": "alt_mismatch",
+          "bbox": {
+            "x": 81,
+            "y": 725.109375,
+            "width": 16,
+            "height": 16
+          },
+          "message": "Alt mismatch. Expected 'calculatorBannerTickIcon', found ''"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 291,
+            "y": 554.9609375,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Image missing in live (alt: 'left-arrow-icon')"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 327,
+            "y": 554.9609375,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Image missing in live (alt: 'right-arrow-icon')"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 81,
+            "y": 693.109375,
+            "width": 16,
+            "height": 16
+          },
+          "message": "Missing alt attribute"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 81,
+            "y": 725.109375,
+            "width": 16,
+            "height": 16
+          },
+          "message": "Missing alt attribute"
+        }
+      ],
+      "buttons": [
+        {
+          "type": "button_count",
+          "ref_count": 14,
+          "live_count": 19,
+          "message": "Button count (identifiable): expected 14, found 19"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 792.390625,
+            "y": 32.5,
+            "width": 20,
+            "height": 20
+          },
+          "message": "Missing button: '' (href: '')"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 1238,
+            "y": 30.5,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Missing button: '' (href: '')"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 559.4296875,
+            "y": 32.5,
+            "width": 17.4765625,
+            "height": 20
+          },
+          "message": "Missing button: '' (href: '')"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 408.0625,
+            "y": 32.5,
+            "width": 17.4765625,
+            "height": 20
+          },
+          "message": "Missing button: '' (href: '')"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 665.0078125,
+            "y": 32.5,
+            "width": 17.4140625,
+            "height": 20
+          },
+          "message": "Missing button: '' (href: '')"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 252.9453125,
+            "y": 32.5,
+            "width": 17.46875,
+            "height": 20
+          },
+          "message": "Missing button: '' (href: '')"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 1041,
+            "y": 577.9765625,
+            "width": 27.4609375,
+            "height": 46
+          },
+          "message": "Missing button: '+91' (href: '')"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 443,
+            "y": 468.3125,
+            "width": 72.734375,
+            "height": 35.5
+          },
+          "message": "Missing button: 'Graph view' (href: '')"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 1001.359375,
+            "y": 16,
+            "width": 113.9296875,
+            "height": 53
+          },
+          "message": "Missing button: 'Join as Advisor' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 284,
+            "y": 476.71875,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 284,
+            "y": 552.3125,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 320,
+            "y": 476.71875,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 320,
+            "y": 552.3125,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1228,
+            "y": 20,
+            "width": 40,
+            "height": 40
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 905.28125,
+            "y": 22,
+            "width": 46,
+            "height": 36
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1212.1953125,
+            "y": 651.671875,
+            "width": 58.3984375,
+            "height": 56
+          },
+          "message": "Extra button in live: '10 - 20' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1087.3984375,
+            "y": 651.671875,
+            "width": 58.3984375,
+            "height": 56
+          },
+          "message": "Extra button in live: '5 - 7' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1149.796875,
+            "y": 651.671875,
+            "width": 58.3984375,
+            "height": 56
+          },
+          "message": "Extra button in live: '7 - 10' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1025,
+            "y": 651.671875,
+            "width": 58.3984375,
+            "height": 56
+          },
+          "message": "Extra button in live: '<5' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1274.59375,
+            "y": 651.671875,
+            "width": 58.40625,
+            "height": 56
+          },
+          "message": "Extra button in live: '>20' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1025,
+            "y": 477.671875,
+            "width": 150,
+            "height": 52
+          },
+          "message": "Extra button in live: 'No' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 57,
+            "y": 769.109375,
+            "width": 304,
+            "height": 48
+          },
+          "message": "Extra button in live: 'View Plans' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1183,
+            "y": 477.671875,
+            "width": 150,
+            "height": 52
+          },
+          "message": "Extra button in live: 'Yes' (href: '')"
+        },
+        {
+          "type": "button_label_mismatch",
+          "bbox": {
+            "x": 1116,
+            "y": 21.5,
+            "width": 100,
+            "height": 37
+          },
+          "message": "Button label mismatch for 'text:login': expected 'Login', found 'Login'"
+        },
+        {
+          "type": "button_label_mismatch",
+          "bbox": {
+            "x": 374.6171875,
+            "y": 204.5859375,
+            "width": 85.3671875,
+            "height": 22.9921875
+          },
+          "message": "Button label mismatch for 'text:read more': expected 'Read More', found 'Read More'"
+        }
+      ],
+      "canonical": [],
+      "meta": [],
+      "og_tags": [],
+      "links": [
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 374.6171875,
+            "y": 195.484375,
+            "width": 109.3671875,
+            "height": 41.5
+          },
+          "message": "Missing link (1x): "
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 963.28125,
+            "y": 22.5,
+            "width": 140.71875,
+            "height": 35
+          },
+          "message": "Extra link (1x): /join-max-life/become-an-agent"
+        }
+      ]
+    }
+  },
+  {
+    "device": "android",
+    "slug": "rd-calculator",
+    "scope": "first_fold",
+    "summary": {
+      "headings": "FAIL",
+      "images": "FAIL",
+      "buttons": "FAIL",
+      "canonical": "PASS",
+      "meta": "PASS",
+      "og_tags": "PASS",
+      "links": "FAIL"
+    },
+    "details": {
+      "headings": [
+        {
+          "type": "heading_tag_mismatch",
+          "bbox": {
+            "x": 37,
+            "y": 805.890625,
+            "width": 319,
+            "height": 24
+          },
+          "message": "H3, should have been H2"
+        },
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": 61,
+            "y": 596.890625,
+            "width": 271,
+            "height": 28
+          },
+          "message": "Extra H4"
+        },
+        {
+          "type": "heading_count",
+          "ref_count": 3,
+          "live_count": 4,
+          "message": "Heading count: expected 3, found 4"
+        }
+      ],
+      "images": [
+        {
+          "type": "image_count",
+          "ref_count": 8,
+          "live_count": 7,
+          "message": "Image count: expected 8, found 7"
+        },
+        {
+          "type": "alt_mismatch",
+          "bbox": {
+            "x": 12,
+            "y": 10,
+            "width": 110,
+            "height": 40
+          },
+          "message": "Alt mismatch. Expected 'Axis Max Life Insurance', found 'Logo of axis max life insurance graphic'"
+        },
+        {
+          "type": "extra_image",
+          "bbox": {
+            "x": 279,
+            "y": 501.09375,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra image in live"
+        },
+        {
+          "type": "extra_image",
+          "bbox": {
+            "x": 315,
+            "y": 501.09375,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra image in live"
+        },
+        {
+          "type": "alt_mismatch",
+          "bbox": {
+            "x": 61,
+            "y": 673.890625,
+            "width": 16,
+            "height": 16
+          },
+          "message": "Alt mismatch. Expected 'calculatorBannerTickIcon', found ''"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 272,
+            "y": 502.890625,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Image missing in live (alt: 'left-arrow-icon')"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 308,
+            "y": 502.890625,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Image missing in live (alt: 'right-arrow-icon')"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 61,
+            "y": 641.890625,
+            "width": 16,
+            "height": 16
+          },
+          "message": "Missing alt attribute"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 61,
+            "y": 673.890625,
+            "width": 16,
+            "height": 16
+          },
+          "message": "Missing alt attribute"
+        }
+      ],
+      "buttons": [
+        {
+          "type": "button_count",
+          "ref_count": 3,
+          "live_count": 9,
+          "message": "Button count (identifiable): expected 3, found 9"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 357,
+            "y": 18,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Missing button: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 279,
+            "y": 425.5,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 279,
+            "y": 501.09375,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 315,
+            "y": 425.5,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 315,
+            "y": 501.09375,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 341,
+            "y": 10,
+            "width": 40,
+            "height": 40
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 12,
+            "y": 68,
+            "width": 369,
+            "height": 26
+          },
+          "message": "Extra button in live: 'RD Calculator' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 37,
+            "y": 717.890625,
+            "width": 319,
+            "height": 48
+          },
+          "message": "Extra button in live: 'View Plans' (href: '')"
+        },
+        {
+          "type": "button_label_mismatch",
+          "bbox": {
+            "x": 16,
+            "y": 224.125,
+            "width": 74.703125,
+            "height": 22.984375
+          },
+          "message": "Button label mismatch for 'text:read more': expected 'Read More', found 'Read More'"
+        }
+      ],
+      "canonical": [],
+      "meta": [],
+      "og_tags": [],
+      "links": [
+        {
+          "type": "link_count",
+          "ref_count": 5,
+          "live_count": 3,
+          "message": "Link count: expected 5, found 3"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 186.34375,
+            "y": 211.921875,
+            "width": 109.375,
+            "height": 42
+          },
+          "message": "Missing link (1x): "
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 36.5,
+            "y": 756.890625,
+            "width": 320,
+            "height": 48
+          },
+          "message": "Missing link (1x): /investment-plans/investment-calculator?utm_theme=FixedDeposit"
+        }
+      ]
+    }
+  },
+  {
+    "device": "ios",
+    "slug": "rd-calculator",
+    "scope": "first_fold",
+    "summary": {
+      "headings": "FAIL",
+      "images": "FAIL",
+      "buttons": "FAIL",
+      "canonical": "PASS",
+      "meta": "PASS",
+      "og_tags": "PASS",
+      "links": "FAIL"
+    },
+    "details": {
+      "headings": [
+        {
+          "type": "heading_tag_mismatch",
+          "bbox": {
+            "x": 61,
+            "y": 596.890625,
+            "width": 253,
+            "height": 28
+          },
+          "message": "H4, should have been H2"
+        }
+      ],
+      "images": [
+        {
+          "type": "image_count",
+          "ref_count": 6,
+          "live_count": 7,
+          "message": "Image count: expected 6, found 7"
+        },
+        {
+          "type": "alt_mismatch",
+          "bbox": {
+            "x": 12,
+            "y": 10,
+            "width": 110,
+            "height": 40
+          },
+          "message": "Alt mismatch. Expected 'Axis Max Life Insurance', found 'Logo of axis max life insurance graphic'"
+        },
+        {
+          "type": "extra_image",
+          "bbox": {
+            "x": 261,
+            "y": 501.09375,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra image in live"
+        },
+        {
+          "type": "extra_image",
+          "bbox": {
+            "x": 297,
+            "y": 501.09375,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra image in live"
+        },
+        {
+          "type": "alt_mismatch",
+          "bbox": {
+            "x": 61,
+            "y": 673.890625,
+            "width": 16,
+            "height": 16
+          },
+          "message": "Alt mismatch. Expected 'calculatorBannerTickIcon', found ''"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 254,
+            "y": 525.875,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Image missing in live (alt: 'left-arrow-icon')"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 290,
+            "y": 525.875,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Image missing in live (alt: 'right-arrow-icon')"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 61,
+            "y": 641.890625,
+            "width": 16,
+            "height": 16
+          },
+          "message": "Missing alt attribute"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 61,
+            "y": 673.890625,
+            "width": 16,
+            "height": 16
+          },
+          "message": "Missing alt attribute"
+        }
+      ],
+      "buttons": [
+        {
+          "type": "button_count",
+          "ref_count": 3,
+          "live_count": 8,
+          "message": "Button count (identifiable): expected 3, found 8"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 339,
+            "y": 18,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Missing button: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 261,
+            "y": 425.5,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 261,
+            "y": 501.09375,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 297,
+            "y": 425.5,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 297,
+            "y": 501.09375,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 323,
+            "y": 10,
+            "width": 40,
+            "height": 40
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 12,
+            "y": 68,
+            "width": 351,
+            "height": 26
+          },
+          "message": "Extra button in live: 'RD Calculator' (href: '')"
+        },
+        {
+          "type": "button_label_mismatch",
+          "bbox": {
+            "x": 61.875,
+            "y": 224.125,
+            "width": 74.703125,
+            "height": 22.984375
+          },
+          "message": "Button label mismatch for 'text:read more': expected 'Read More', found 'Read More'"
+        }
+      ],
+      "canonical": [],
+      "meta": [],
+      "og_tags": [],
+      "links": [
+        {
+          "type": "link_count",
+          "ref_count": 4,
+          "live_count": 3,
+          "message": "Link count: expected 4, found 3"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 16,
+            "y": 211.921875,
+            "width": 316.28125,
+            "height": 64.984375
+          },
+          "message": "Missing link (1x): "
+        }
+      ]
+    }
+  }
+]
