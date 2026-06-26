@@ -6,6 +6,21 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from playwright.sync_api import sync_playwright
 
+# Base directories
+PROJECT_ROOT = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..")
+)
+
+# Firstfold root directory (this folder)
+FIRSTFOLD_DIR = os.path.abspath(os.path.dirname(__file__))
+# Subdirectories within firstfold
+REFERENCE_DIR = os.path.join(FIRSTFOLD_DIR, "reference")
+LIVE_DIR = os.path.join(FIRSTFOLD_DIR, "live")
+REPORTS_DIR = os.path.join(FIRSTFOLD_DIR, "reports")
+DIFFS_DIR = os.path.join(FIRSTFOLD_DIR, "diffs")
+
+
+
 # First fold = one viewport height, no scrolling
 DESKTOP_VIEWPORT = {"width": 1280, "height": 800}
 FIRST_FOLD_HEIGHTS = {
@@ -15,6 +30,9 @@ FIRST_FOLD_HEIGHTS = {
 }
 
 def get_output_dir(mode: str, device: str, slug: str) -> str:
+    """Return directory for given mode (reference/live) and device/slug combination."""
+    base = REFERENCE_DIR if mode == "reference" else LIVE_DIR
+    return os.path.join(base, f"{device}-{slug}")
     return os.path.join(
         f"{mode}-firstfold",
         f"{device}-{slug}"

@@ -7,6 +7,26 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 
+# Base directories
+PROJECT_ROOT = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..")
+)
+
+# Firstfold root directory (this folder)
+FIRSTFOLD_DIR = os.path.abspath(os.path.dirname(__file__))
+# Subdirectories within firstfold
+REFERENCE_DIR = os.path.join(FIRSTFOLD_DIR, "reference")
+LIVE_DIR = os.path.join(FIRSTFOLD_DIR, "live")
+REPORTS_DIR = os.path.join(FIRSTFOLD_DIR, "reports")
+DIFFS_DIR = os.path.join(FIRSTFOLD_DIR, "diffs")
+import json
+import os
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
+from bs4 import BeautifulSoup
+from PIL import Image, ImageDraw, ImageFont
+
 PROJECT_ROOT = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..")
 )
@@ -25,7 +45,8 @@ from compare import (
 
 
 def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
-    path = os.path.join(PROJECT_ROOT, f"{mode}-firstfold", f"{device}-{slug}", f"{mode}-{device}-{slug}-page.html")
+    base = REFERENCE_DIR if mode == "reference" else LIVE_DIR
+    path = os.path.join(base, f"{device}-{slug}", f"{mode}-{device}-{slug}-page.html")
     if not os.path.exists(path):
         raise FileNotFoundError(f"HTML not found: {path}. Run capture-firstfold.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -33,7 +54,8 @@ def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
 
 
 def load_elements(mode: str, device: str, slug: str) -> dict:
-    path = os.path.join(PROJECT_ROOT, f"{mode}-firstfold", f"{device}-{slug}", f"{mode}-{device}-{slug}-elements.json")
+    base = REFERENCE_DIR if mode == "reference" else LIVE_DIR
+    path = os.path.join(base, f"{device}-{slug}", f"{mode}-{device}-{slug}-elements.json")
     if not os.path.exists(path):
         raise FileNotFoundError(f"Elements JSON not found: {path}. Run capture-firstfold.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -41,7 +63,7 @@ def load_elements(mode: str, device: str, slug: str) -> dict:
 
 
 def annotate_screenshot(device: str, slug: str, report: dict):
-    live_img_path = os.path.join(PROJECT_ROOT, "live-firstfold", f"{device}-{slug}", f"live-{device}-{slug}-screenshot.png")
+    live_img_path = os.path.join(LIVE_DIR, f"{device}-{slug}", f"live-{device}-{slug}-screenshot.png")
     if not os.path.exists(live_img_path):
         print(f"  [Annotate] Screenshot not found: {live_img_path}")
         return
@@ -81,10 +103,10 @@ def annotate_screenshot(device: str, slug: str, report: dict):
                 pass
             draw.text((x, text_y), label, fill="white", font=font)
 
-    os.makedirs(os.path.join(PROJECT_ROOT, "diffs-firstfold"), exist_ok=True)
+    os.makedirs(DIFFS_DIR, exist_ok=True)
 
     # Non-visual warnings
-    warnings_path = os.path.join(PROJECT_ROOT, "diffs-firstfold", f"{device}-{slug}-non-visual-warnings.txt")
+    warnings_path = os.path.join(DIFFS_DIR, f"{device}-{slug}-non-visual-warnings.txt")
     with open(warnings_path, "w", encoding="utf-8") as f:
         f.write(f"Non-Visual / SEO Status — First Fold — {device} ({slug})\n")
         f.write("=" * 50 + "\n\n")
@@ -101,7 +123,7 @@ def annotate_screenshot(device: str, slug: str, report: dict):
             f.write("- All correct!\n")
     print(f"  Non-visual warnings saved.")
 
-    out_path = os.path.join(PROJECT_ROOT, "diffs-firstfold", f"{device}-{slug}-annotated.png")
+    out_path = os.path.join(DIFFS_DIR, f"{device}-{slug}-annotated.png")
     img.save(out_path)
     print(f"  Annotated screenshot saved to {out_path}")
 
@@ -139,8 +161,8 @@ def compare_device(device: str, slug: str) -> dict:
 
 
 def generate_summary_report(all_reports: list, slug: str):
-    os.makedirs(os.path.join(PROJECT_ROOT, "diffs-firstfold"), exist_ok=True)
-    path = os.path.join(PROJECT_ROOT, "diffs-firstfold", f"{slug}-problems.txt")
+    os.makedirs(DIFFS_DIR, exist_ok=True)
+    path = os.path.join(DIFFS_DIR, f"{slug}-problems.txt")
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(f"FIRST FOLD BUTTON DIFF REPORT — {slug}\n")
@@ -191,8 +213,8 @@ if __name__ == "__main__":
         except FileNotFoundError as e:
             print(f"\n[{device}] Skipping — {e}")
 
-    os.makedirs(os.path.join(PROJECT_ROOT, "reports-firstfold"), exist_ok=True)
-    report_path = os.path.join(PROJECT_ROOT, "reports-firstfold", f"firstfold-{args.slug}.json")
+    os.makedirs(REPORTS_DIR, exist_ok=True)
+    report_path = os.path.join(REPORTS_DIR, f"firstfold-{args.slug}.json")
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(all_reports, f, indent=2)
     print(f"\nReport saved to {report_path}")
