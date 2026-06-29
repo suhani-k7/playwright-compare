@@ -20,8 +20,8 @@
         {
           "type": "button_count",
           "ref_count": 10,
-          "live_count": 5,
-          "message": "Button count (identifiable): expected 10, found 5"
+          "live_count": 13,
+          "message": "Button count (identifiable): expected 10, found 13"
         },
         {
           "type": "missing_button",
@@ -114,6 +114,86 @@
           "message": "Extra button in live: '' (href: '')"
         },
         {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1212.1953125,
+            "y": 517.5,
+            "width": 58.3984375,
+            "height": 56
+          },
+          "message": "Extra button in live: '10 - 20' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1087.3984375,
+            "y": 517.5,
+            "width": 58.3984375,
+            "height": 56
+          },
+          "message": "Extra button in live: '5 - 7' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1149.796875,
+            "y": 517.5,
+            "width": 58.3984375,
+            "height": 56
+          },
+          "message": "Extra button in live: '7 - 10' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1025,
+            "y": 517.5,
+            "width": 58.3984375,
+            "height": 56
+          },
+          "message": "Extra button in live: '<5' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1274.59375,
+            "y": 517.5,
+            "width": 58.40625,
+            "height": 56
+          },
+          "message": "Extra button in live: '>20' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1025,
+            "y": 589.5,
+            "width": 308,
+            "height": 48
+          },
+          "message": "Extra button in live: 'Calculate Now' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1025,
+            "y": 341.5,
+            "width": 150,
+            "height": 56
+          },
+          "message": "Extra button in live: 'No' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1183,
+            "y": 341.5,
+            "width": 150,
+            "height": 56
+          },
+          "message": "Extra button in live: 'Yes' (href: '')"
+        },
+        {
           "type": "button_label_mismatch",
           "bbox": {
             "x": 1116,
@@ -128,8 +208,8 @@
         {
           "type": "link_count",
           "ref_count": 9,
-          "live_count": 10,
-          "message": "Link count: expected 9, found 10"
+          "live_count": 11,
+          "message": "Link count: expected 9, found 11"
         },
         {
           "type": "extra_link",
@@ -140,6 +220,16 @@
             "height": 35
           },
           "message": "Extra link (1x): /join-max-life/become-an-agent"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 1049,
+            "y": 654,
+            "width": 229.15625,
+            "height": 29
+          },
+          "message": "Extra link (1x): /static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf"
         }
       ],
       "canonical": [],
@@ -149,8 +239,32 @@
         {
           "type": "sticky_count",
           "ref_count": 2,
-          "live_count": 3,
-          "message": "Sticky count differs (ref=2 live=3)"
+          "live_count": 4,
+          "message": "Sticky count differs (ref=2 live=4)"
+        },
+        {
+          "type": "sticky_missing",
+          "message": "Missing sticky in live: ('nav', 0, 85, 1274, 42)"
+        },
+        {
+          "type": "sticky_missing",
+          "message": "Missing sticky in live: ('div', 0, 0, 1274, 86)"
+        },
+        {
+          "type": "sticky_extra",
+          "message": "Extra sticky in live: ('div', 0, 80, 1280, 42)"
+        },
+        {
+          "type": "sticky_extra",
+          "message": "Extra sticky in live: ('header', 0, 0, 1280, 80)"
+        },
+        {
+          "type": "sticky_extra",
+          "message": "Extra sticky in live: ('nav', 0, 80, 1280, 42)"
+        },
+        {
+          "type": "sticky_extra",
+          "message": "Extra sticky in live: ('div', 1003, 105, 352, 608)"
         }
       ]
     }
@@ -231,6 +345,26 @@
           "ref_count": 2,
           "live_count": 3,
           "message": "Sticky count differs (ref=2 live=3)"
+        },
+        {
+          "type": "sticky_missing",
+          "message": "Missing sticky in live: ('nav', 0, 60, 393, 50)"
+        },
+        {
+          "type": "sticky_missing",
+          "message": "Missing sticky in live: ('div', 0, 0, 393, 61)"
+        },
+        {
+          "type": "sticky_extra",
+          "message": "Extra sticky in live: ('div', 0, 60, 393, 42)"
+        },
+        {
+          "type": "sticky_extra",
+          "message": "Extra sticky in live: ('header', 0, 0, 393, 60)"
+        },
+        {
+          "type": "sticky_extra",
+          "message": "Extra sticky in live: ('nav', 0, 60, 393, 42)"
         }
       ]
     }
@@ -311,6 +445,26 @@
           "ref_count": 2,
           "live_count": 3,
           "message": "Sticky count differs (ref=2 live=3)"
+        },
+        {
+          "type": "sticky_missing",
+          "message": "Missing sticky in live: ('nav', 0, 60, 375, 50)"
+        },
+        {
+          "type": "sticky_missing",
+          "message": "Missing sticky in live: ('div', 0, 0, 375, 61)"
+        },
+        {
+          "type": "sticky_extra",
+          "message": "Extra sticky in live: ('header', 0, 0, 375, 60)"
+        },
+        {
+          "type": "sticky_extra",
+          "message": "Extra sticky in live: ('div', 0, 60, 375, 42)"
+        },
+        {
+          "type": "sticky_extra",
+          "message": "Extra sticky in live: ('nav', 0, 60, 375, 42)"
         }
       ]
     }

@@ -7,3 +7,8 @@ Non-Visual / SEO Status — Sticky — android (rd-calculator)
 [Specific Issues]
 - Button count (identifiable): expected 2, found 3
 - Sticky count differs (ref=2 live=3)
+- Missing sticky in live: ('nav', 0, 60, 393, 50)
+- Missing sticky in live: ('div', 0, 0, 393, 61)
+- Extra sticky in live: ('div', 0, 60, 393, 42)
+- Extra sticky in live: ('header', 0, 0, 393, 60)
+- Extra sticky in live: ('nav', 0, 60, 393, 42)

@@ -182,6 +182,9 @@ def capture_sticky(p, browser_kwargs, page_kwargs, url, mode, device, slug):
     page = browser.new_page(**page_kwargs)
     page.goto(url, wait_until="load")
     page.wait_for_load_state("networkidle")
+    # Scroll down to trigger any JS‑added sticky/fixed sidebars (e.g., "Maximise Your Savings")
+    page.evaluate("window.scrollBy(0, Math.max(500, window.innerHeight))")
+    page.wait_for_timeout(2000)  # give JS a moment to apply sticky styles
     out_dir = get_output_dir(mode, device, slug)
     os.makedirs(out_dir, exist_ok=True)
     # Screenshot – capture full viewport (no clipping) to ensure sticky elements are visible
@@ -190,7 +193,7 @@ def capture_sticky(p, browser_kwargs, page_kwargs, url, mode, device, slug):
     # Save HTML
     with open(os.path.join(out_dir, f"{mode}-{device}-{slug}-page.html"), "w", encoding="utf-8") as f:
         f.write(page.content())
-    # Extract elements (including sticky)
+    # Extract elements (including now‑sticky ones)
     elements = extract_elements(page, fold_height)
     with open(os.path.join(out_dir, f"{mode}-{device}-{slug}-elements.json"), "w", encoding="utf-8") as f:
         json.dump(elements, f, indent=2)

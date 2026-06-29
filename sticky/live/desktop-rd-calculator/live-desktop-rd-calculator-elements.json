@@ -72,6 +72,102 @@
         "width": 224.3984375,
         "height": 36
       }
+    },
+    {
+      "selector": "button",
+      "text": "No",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1025,
+        "y": 341.5,
+        "width": 150,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Yes",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1183,
+        "y": 341.5,
+        "width": 150,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "<5",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1025,
+        "y": 517.5,
+        "width": 58.3984375,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "5 - 7",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1087.3984375,
+        "y": 517.5,
+        "width": 58.3984375,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "7 - 10",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1149.796875,
+        "y": 517.5,
+        "width": 58.3984375,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "10 - 20",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1212.1953125,
+        "y": 517.5,
+        "width": 58.3984375,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": ">20",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1274.59375,
+        "y": 517.5,
+        "width": 58.40625,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Calculate Now",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1025,
+        "y": 589.5,
+        "width": 308,
+        "height": 48
+      }
     }
   ],
   "links": [
@@ -164,6 +260,15 @@
         "width": 311.25,
         "height": 24
       }
+    },
+    {
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "bbox": {
+        "x": 1049,
+        "y": 654,
+        "width": 229.15625,
+        "height": 29
+      }
     }
   ],
   "canonical": [
@@ -222,6 +327,15 @@
         "y": 80,
         "width": 1280,
         "height": 42
+      }
+    },
+    {
+      "tag": "div",
+      "bbox": {
+        "x": 1003,
+        "y": 105,
+        "width": 352,
+        "height": 608
       }
     }
   ]

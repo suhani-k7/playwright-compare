@@ -46,15 +46,15 @@ def load_elements(mode: str, device: str, slug: str) -> dict:
         return json.load(f)
 
 def compare_sticky(ref_elements: dict, live_elements: dict):
-    """Very simple sticky comparison – compare presence and count of sticky entries.
-    Returns a tuple (status, issues)."""
+    """Compare sticky elements between reference and live.
+    Returns a tuple (status, issues) where issues contain detailed mismatches.
+    """
     ref_sticky = ref_elements.get("sticky", [])
     live_sticky = live_elements.get("sticky", [])
     issues = []
-    # Presence check – if one side has sticky elements and the other does not
+    # Presence/Count check
     if (ref_sticky and not live_sticky) or (live_sticky and not ref_sticky):
         issues.append({"type": "sticky_presence", "message": "Sticky presence mismatch"})
-    # Count mismatch
     if len(ref_sticky) != len(live_sticky):
         issues.append({
             "type": "sticky_count",
@@ -62,6 +62,42 @@ def compare_sticky(ref_elements: dict, live_elements: dict):
             "live_count": len(live_sticky),
             "message": f"Sticky count differs (ref={len(ref_sticky)} live={len(live_sticky)})"
         })
+    # Detailed element comparison by tag and bbox coordinates
++    def norm(el):
++        b = el.get("bbox", {})
++        return (
++            el.get("tag", "").lower(),
++            round(b.get("x", 0)),
++            round(b.get("y", 0)),
++            round(b.get("width", 0)),
++            round(b.get("height", 0))
++        )
++
++    ref_set = {norm(e) for e in ref_sticky}
++    live_set = {norm(e) for e in live_sticky}
++    for missing in ref_set - live_set:
++        # find original element to get bbox
++        orig = next(e for e in ref_sticky if norm(e) == missing)
++        issues.append({"type": "sticky_missing", "message": f"Missing sticky in live: {missing}", "bbox": orig.get("bbox")})
++    for extra in live_set - ref_set:
++        orig = next(e for e in live_sticky if norm(e) == extra)
++        issues.append({"type": "sticky_extra", "message": f"Extra sticky in live: {extra}", "bbox": orig.get("bbox")})
+-    # Detailed element comparison by tag and bbox coordinates
+-    def norm(el):
+-        b = el.get("bbox", {})
+-        return (
+-            el.get("tag", "").lower(),
+-            round(b.get("x", 0)),
+-            round(b.get("y", 0)),
+-            round(b.get("width", 0)),
+-            round(b.get("height", 0))
+-        )
+-    ref_set = {norm(e) for e in ref_sticky}
+-    live_set = {norm(e) for e in live_sticky}
+-    for missing in ref_set - live_set:
+-        issues.append({"type": "sticky_missing", "message": f"Missing sticky in live: {missing}"})
+-    for extra in live_set - ref_set:
+-        issues.append({"type": "sticky_extra", "message": f"Extra sticky in live: {extra}"})
     status = "PASS" if not issues else "FAIL"
     return status, issues
 
