@@ -2,3 +2,6 @@ playwright==1.60.0
 Pillow==12.2.0
 beautifulsoup4==4.13.5
 lxml==6.0.2
+fastapi
+uvicorn[standard]
+pydantic

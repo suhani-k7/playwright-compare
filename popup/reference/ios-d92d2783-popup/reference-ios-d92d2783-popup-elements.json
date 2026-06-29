@@ -1,0 +1,40 @@
+{
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Example Domain",
+      "bbox": {
+        "x": 75,
+        "y": 94.34375,
+        "width": 225,
+        "height": 28
+      }
+    }
+  ],
+  "images": [],
+  "buttons": [],
+  "links": [
+    {
+      "href": "https://iana.org/domains/example",
+      "bbox": {
+        "x": 75,
+        "y": 226.421875,
+        "width": 82,
+        "height": 18
+      }
+    }
+  ],
+  "canonical": [],
+  "meta": [
+    {
+      "name": "title",
+      "value": "Example Domain",
+      "bbox": null
+    }
+  ],
+  "og_tags": [],
+  "screenshot_offset": {
+    "x": 0,
+    "y": 0
+  }
+}

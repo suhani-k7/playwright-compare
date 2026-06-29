@@ -1,19 +1,10 @@
 {
   "sticky": [
     {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 1274,
-        "height": 86
-      }
-    },
-    {
       "tag": "nav",
       "bbox": {
         "x": 0,
-        "y": 85,
+        "y": 0,
         "width": 1274,
         "height": 42
       }
@@ -31,27 +22,9 @@
       "tag": "a",
       "bbox": {
         "x": 0,
-        "y": 684,
-        "width": 1280,
-        "height": 44
-      }
-    },
-    {
-      "tag": "a",
-      "bbox": {
-        "x": 0,
         "y": 728,
         "width": 1280,
         "height": 72
-      }
-    },
-    {
-      "tag": "nav",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 1274,
-        "height": 42
       }
     }
   ]

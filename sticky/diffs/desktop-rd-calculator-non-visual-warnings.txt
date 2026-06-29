@@ -8,4 +8,4 @@ Non-Visual / SEO Status — Sticky — desktop (rd-calculator)
 - OG Tags:         PASS
 
 [Non-Visual Mismatches]
-- Sticky count differs (ref=6 live=5)
+- Sticky count differs (ref=3 live=5)
