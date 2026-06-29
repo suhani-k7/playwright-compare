@@ -182,21 +182,58 @@ def capture_sticky(p, browser_kwargs, page_kwargs, url, mode, device, slug):
     page = browser.new_page(**page_kwargs)
     page.goto(url, wait_until="load")
     page.wait_for_load_state("networkidle")
-    # Scroll down to trigger any JS‑added sticky/fixed sidebars (e.g., "Maximise Your Savings")
-    page.evaluate("window.scrollBy(0, Math.max(500, window.innerHeight))")
-    page.wait_for_timeout(2000)  # give JS a moment to apply sticky styles
+
     out_dir = get_output_dir(mode, device, slug)
     os.makedirs(out_dir, exist_ok=True)
-    # Screenshot – capture full viewport (no clipping) to ensure sticky elements are visible
-    page.screenshot(path=os.path.join(out_dir, f"{mode}-{device}-{slug}-screenshot.png"), full_page=False)
-    print(f"  Sticky screenshot saved ({mode}-{device}).")
-    # Save HTML
-    with open(os.path.join(out_dir, f"{mode}-{device}-{slug}-page.html"), "w", encoding="utf-8") as f:
-        f.write(page.content())
-    # Extract elements (including now‑sticky ones)
-    elements = extract_elements(page, fold_height)
+
+        # Define scroll percentages (10% to 100% inclusive)
+    scroll_points = [i for i in range(10, 101, 10)]
+    aggregated_sticky = []
+    # Optionally store per‑point element files for debugging
+    for pct in scroll_points:
+        # Scroll to the desired percentage of total page height
+        page.evaluate(f"window.scrollTo(0, document.body.scrollHeight * {pct} / 100)")
+        # Wait a short time for any JS sticky logic to activate (200‑500 ms)
+        page.wait_for_timeout(300)
+        # Extract elements at this scroll position
+        elements = extract_elements(page, fold_height)
+        sticky_here = elements.get("sticky", [])
+        aggregated_sticky.extend(sticky_here)
+        # Capture screenshot based on mode and sticky presence
+        if mode == "live":
+            # Live mode: always capture screenshot (JPEG)
+            screenshot_name = f"{device}-{slug}-{pct}pctscroll-screenshot.jpg"
+            page.screenshot(path=os.path.join(out_dir, screenshot_name), full_page=False, type="jpeg")
+            print(f"  Sticky screenshot saved (live-{device}) at {pct}% scroll.")
+        else:
+            # Reference mode: capture only if sticky elements detected
+            if sticky_here:
+                screenshot_name = f"{device}-{slug}-{pct}pctscroll-screenshot.png"
+                page.screenshot(path=os.path.join(out_dir, screenshot_name), full_page=False)
+                print(f"  Sticky screenshot saved (reference-{device}) at {pct}% scroll (sticky detected).")
+        # Save per‑point elements file for reference/debug (optional)
+        per_point_path = os.path.join(out_dir, f"{mode}-{device}-{slug}-{pct}pct-elements.json")
+        with open(per_point_path, "w", encoding="utf-8") as f:
+            json.dump(elements, f, indent=2)
+
+    # Remove duplicate sticky entries based on their bounding box & tag
+    def norm(el):
+        b = el.get("bbox", {})
+        return (
+            el.get("tag", "").lower(),
+            round(b.get("x", 0)),
+            round(b.get("y", 0)),
+            round(b.get("width", 0)),
+            round(b.get("height", 0))
+        )
+    unique = {norm(e): e for e in aggregated_sticky}
+    # Replace sticky list with deduped collection
+    final_elements = {
+        "sticky": list(unique.values())
+    }
+    # Save the combined elements JSON used by comparison
     with open(os.path.join(out_dir, f"{mode}-{device}-{slug}-elements.json"), "w", encoding="utf-8") as f:
-        json.dump(elements, f, indent=2)
+        json.dump(final_elements, f, indent=2)
     browser.close()
 
 def capture_url(url: str, mode: str, slug: str):

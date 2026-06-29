@@ -3,14 +3,9 @@ Non-Visual / SEO Status — Sticky — desktop (rd-calculator)
 
 [Sticky Summary]
 - Sticky Elements: FAIL
+- Canonical:       PASS
+- Meta:            PASS
+- OG Tags:         PASS
 
-[Specific Issues]
-- Button count (identifiable): expected 10, found 13
-- Link count: expected 9, found 11
-- Sticky count differs (ref=2 live=4)
-- Missing sticky in live: ('nav', 0, 85, 1274, 42)
-- Missing sticky in live: ('div', 0, 0, 1274, 86)
-- Extra sticky in live: ('div', 0, 80, 1280, 42)
-- Extra sticky in live: ('header', 0, 0, 1280, 80)
-- Extra sticky in live: ('nav', 0, 80, 1280, 42)
-- Extra sticky in live: ('div', 1003, 105, 352, 608)
+[Non-Visual Mismatches]
+- Sticky count differs (ref=6 live=5)

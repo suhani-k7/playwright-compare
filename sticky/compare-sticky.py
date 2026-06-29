@@ -63,85 +63,46 @@ def compare_sticky(ref_elements: dict, live_elements: dict):
             "message": f"Sticky count differs (ref={len(ref_sticky)} live={len(live_sticky)})"
         })
     # Detailed element comparison by tag and bbox coordinates
-+    def norm(el):
-+        b = el.get("bbox", {})
-+        return (
-+            el.get("tag", "").lower(),
-+            round(b.get("x", 0)),
-+            round(b.get("y", 0)),
-+            round(b.get("width", 0)),
-+            round(b.get("height", 0))
-+        )
-+
-+    ref_set = {norm(e) for e in ref_sticky}
-+    live_set = {norm(e) for e in live_sticky}
-+    for missing in ref_set - live_set:
-+        # find original element to get bbox
-+        orig = next(e for e in ref_sticky if norm(e) == missing)
-+        issues.append({"type": "sticky_missing", "message": f"Missing sticky in live: {missing}", "bbox": orig.get("bbox")})
-+    for extra in live_set - ref_set:
-+        orig = next(e for e in live_sticky if norm(e) == extra)
-+        issues.append({"type": "sticky_extra", "message": f"Extra sticky in live: {extra}", "bbox": orig.get("bbox")})
--    # Detailed element comparison by tag and bbox coordinates
--    def norm(el):
--        b = el.get("bbox", {})
--        return (
--            el.get("tag", "").lower(),
--            round(b.get("x", 0)),
--            round(b.get("y", 0)),
--            round(b.get("width", 0)),
--            round(b.get("height", 0))
--        )
--    ref_set = {norm(e) for e in ref_sticky}
--    live_set = {norm(e) for e in live_sticky}
--    for missing in ref_set - live_set:
--        issues.append({"type": "sticky_missing", "message": f"Missing sticky in live: {missing}"})
--    for extra in live_set - ref_set:
--        issues.append({"type": "sticky_extra", "message": f"Extra sticky in live: {extra}"})
+    def norm(el):
+        b = el.get("bbox", {})
+        return (
+            el.get("tag", "").lower(),
+            round(b.get("x", 0)),
+            round(b.get("y", 0)),
+            round(b.get("width", 0)),
+            round(b.get("height", 0))
+        )
+
+    ref_set = {norm(e) for e in ref_sticky}
+    live_set = {norm(e) for e in live_sticky}
+    for missing in ref_set - live_set:
+        # find original element to get bbox
+        orig = next(e for e in ref_sticky if norm(e) == missing)
+        issues.append({"type": "sticky_missing", "message": f"Missing sticky in live: {missing}", "bbox": orig.get("bbox")})
+    for extra in live_set - ref_set:
+        orig = next(e for e in live_sticky if norm(e) == extra)
+        issues.append({"type": "sticky_extra", "message": f"Extra sticky in live: {extra}", "bbox": orig.get("bbox")})
     status = "PASS" if not issues else "FAIL"
     return status, issues
-
 def annotate_screenshot(device: str, slug: str, report: dict):
-    """Draw bounding boxes for any issues onto the live screenshot and write warnings."""
-    live_img_path = os.path.join(LIVE_DIR, f"{device}-{slug}", f"live-{device}-{slug}-screenshot.png")
-    if not os.path.exists(live_img_path):
-        print(f"  [Annotate] Screenshot not found: {live_img_path}")
+    """Draw bounding boxes onto live sticky screenshot and write warnings."""
+    live_dir = os.path.join(LIVE_DIR, f"{device}-{slug}")
+    if not os.path.isdir(live_dir):
+        print(f"  [Annotate] Live directory not found: {live_dir}")
         return
-    img = Image.open(live_img_path)
-    draw = ImageDraw.Draw(img)
-    try:
-        font = ImageFont.load_default(size=16)
-    except Exception:
-        font = ImageFont.load_default()
 
-    details = report.get("details", {})
-    floating = []
-    for category, issues in details.items():
-        if not isinstance(issues, list):
-            continue
-        for issue in issues:
-            bbox = issue.get("bbox")
-            label = issue.get("message", "Mismatch")
-            if bbox is None:
-                floating.append(label)
-                continue
-            x, y, w, h = bbox["x"], bbox["y"], bbox["width"], bbox["height"]
-            draw.rectangle([(x, y), (x + w, y + h)], outline="red", width=3)
-            if len(label) > 60:
-                label = label[:57] + "..."
-            text_y = max(0, y - 20)
-            try:
-                text_bbox = draw.textbbox((x, text_y), label, font=font)
-                label_w = text_bbox[2] - text_bbox[0]
-                if x + label_w > img.width:
-                    x = max(0, img.width - label_w)
-                    text_bbox = draw.textbbox((x, text_y), label, font=font)
-                draw.rectangle(text_bbox, fill="red")
-            except AttributeError:
-                pass
-            draw.text((x, text_y), label, fill="white", font=font)
+    screenshot_files = [
+        f for f in os.listdir(live_dir)
+        if f.startswith(f"{device}-{slug}") and f.lower().endswith(('.png', '.jpg'))
+    ]
+    if not screenshot_files:
+        print(f"  [Annotate] No screenshots found for {device}/{slug}.")
+        return
+
 
     os.makedirs(DIFFS_DIR, exist_ok=True)
+
+    # Non-visual warnings
     warnings_path = os.path.join(DIFFS_DIR, f"{device}-{slug}-non-visual-warnings.txt")
     with open(warnings_path, "w", encoding="utf-8") as f:
         f.write(f"Non-Visual / SEO Status — Sticky — {device} ({slug})\n")
@@ -149,18 +110,137 @@ def annotate_screenshot(device: str, slug: str, report: dict):
         summary = report.get("summary", {})
         f.write("[Sticky Summary]\n")
         f.write(f"- Sticky Elements: {summary.get('sticky', 'N/A')}\n")
-        f.write("\n[Specific Issues]\n")
-        if floating:
-            for msg in floating:
-                f.write(f"- {msg}\n")
-        else:
+        f.write(f"- Canonical:       {summary.get('canonical', 'N/A')}\n")
+        f.write(f"- Meta:            {summary.get('meta', 'N/A')}\n")
+        f.write(f"- OG Tags:         {summary.get('og_tags', 'N/A')}\n\n")
+        f.write("[Non-Visual Mismatches]\n")
+        floating = [
+            issue.get("message", "")
+            for issues in report.get("details", {}).values()
+            if isinstance(issues, list)
+            for issue in issues
+            if issue.get("bbox") is None
+        ]
+        for msg in floating:
+            f.write(f"- {msg}\n")
+        if not floating:
             f.write("- All correct!\n")
     print(f"  Non-visual warnings saved.")
 
-    out_path = os.path.join(DIFFS_DIR, f"{device}-{slug}-annotated.png")
-    img.save(out_path)
-    print(f"  Annotated screenshot saved to {out_path}")
+    # Annotate each screenshot
+    for screenshot in screenshot_files:
+        img = Image.open(os.path.join(live_dir, screenshot))
+        draw = ImageDraw.Draw(img)
+        try:
+            font = ImageFont.load_default(size=16)
+        except Exception:
+            font = ImageFont.load_default()
 
+        for category, issues in report.get("details", {}).items():
+            if not isinstance(issues, list):
+                continue
+            for issue in issues:
+                bbox = issue.get("bbox")
+                if not bbox:
+                    continue
+                label = issue.get("message", "Mismatch")
+                x, y, w, h = bbox["x"], bbox["y"], bbox["width"], bbox["height"]
+                draw.rectangle([(x, y), (x + w, y + h)], outline="red", width=3)
+                if len(label) > 60:
+                    label = label[:57] + "..."
+                text_y = max(0, y - 20)
+                try:
+                    text_bbox = draw.textbbox((x, text_y), label, font=font)
+                    if x + (text_bbox[2] - text_bbox[0]) > img.width:
+                        x = max(0, img.width - (text_bbox[2] - text_bbox[0]))
+                        text_bbox = draw.textbbox((x, text_y), label, font=font)
+                    draw.rectangle(text_bbox, fill="red")
+                except AttributeError:
+                    pass
+                draw.text((x, text_y), label, fill="white", font=font)
+
+        out_path = os.path.join(DIFFS_DIR, screenshot.replace("live-", "annotated-"))
+        img.save(out_path)
+        print(f"  Annotated screenshot saved to {out_path}")
+
+# Removed duplicate annotate_screenshot implementation
+
+    live_dir = os.path.join(LIVE_DIR, f"{device}-{slug}")
+    if not os.path.isdir(live_dir):
+        print(f"  [Annotate] Live directory not found: {live_dir}")
+        return
+
+    screenshot_files = [
+        f for f in os.listdir(live_dir)
+        if f.startswith(f"live-{device}-{slug}") and f.endswith("screenshot.png")
+    ]
+    if not screenshot_files:
+        print(f"  [Annotate] No screenshots found for {device}/{slug}.")
+        return
+
+    os.makedirs(DIFFS_DIR, exist_ok=True)
+
+    # Non-visual warnings
+    warnings_path = os.path.join(DIFFS_DIR, f"{device}-{slug}-non-visual-warnings.txt")
+    with open(warnings_path, "w", encoding="utf-8") as f:
+        f.write(f"Non-Visual / SEO Status — Sticky — {device} ({slug})\n")
+        f.write("=" * 50 + "\n\n")
+        summary = report.get("summary", {})
+        f.write("[Sticky Summary]\n")
+        f.write(f"- Sticky Elements: {summary.get('sticky', 'N/A')}\n")
+        f.write(f"- Canonical:       {summary.get('canonical', 'N/A')}\n")
+        f.write(f"- Meta:            {summary.get('meta', 'N/A')}\n")
+        f.write(f"- OG Tags:         {summary.get('og_tags', 'N/A')}\n\n")
+        f.write("[Non-Visual Mismatches]\n")
+        floating = [
+            issue.get("message", "")
+            for issues in report.get("details", {}).values()
+            if isinstance(issues, list)
+            for issue in issues
+            if issue.get("bbox") is None
+        ]
+        for msg in floating:
+            f.write(f"- {msg}\n")
+        if not floating:
+            f.write("- All correct!\n")
+    print(f"  Non-visual warnings saved.")
+
+    # Annotate each screenshot
+    for screenshot in screenshot_files:
+        img = Image.open(os.path.join(live_dir, screenshot))
+        draw = ImageDraw.Draw(img)
+        try:
+            font = ImageFont.load_default(size=16)
+        except Exception:
+            font = ImageFont.load_default()
+
+        for category, issues in report.get("details", {}).items():
+            if not isinstance(issues, list):
+                continue
+            for issue in issues:
+                bbox = issue.get("bbox")
+                if not bbox:
+                    continue
+                label = issue.get("message", "Mismatch")
+                x, y, w, h = bbox["x"], bbox["y"], bbox["width"], bbox["height"]
+                draw.rectangle([(x, y), (x + w, y + h)], outline="red", width=3)
+                if len(label) > 60:
+                    label = label[:57] + "..."
+                text_y = max(0, y - 20)
+                try:
+                    text_bbox = draw.textbbox((x, text_y), label, font=font)
+                    if x + (text_bbox[2] - text_bbox[0]) > img.width:
+                        x = max(0, img.width - (text_bbox[2] - text_bbox[0]))
+                        text_bbox = draw.textbbox((x, text_y), label, font=font)
+                    draw.rectangle(text_bbox, fill="red")
+                except AttributeError:
+                    pass
+                draw.text((x, text_y), label, fill="white", font=font)
+
+        out_path = os.path.join(DIFFS_DIR, screenshot.replace("live-", "annotated-"))
+        img.save(out_path)
+        print(f"  Annotated screenshot saved to {out_path}")
+        
 def compare_device(device: str, slug: str) -> dict:
     print(f"\n[{device}] Comparing sticky UI...")
     ref_soup = load_html("reference", device, slug)

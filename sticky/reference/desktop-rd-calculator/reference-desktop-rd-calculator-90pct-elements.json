@@ -1,0 +1,129 @@
+{
+  "headings": [],
+  "images": [
+    {
+      "alt": "investment-sticky-image",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/inv-sticky-desktop-img.svg",
+      "bbox": {
+        "x": 0,
+        "y": 662.5,
+        "width": 227,
+        "height": 137
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "selector": "button",
+      "text": "View more sections",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 986.921875,
+        "y": 3,
+        "width": 232.3984375,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 1130.3125,
+        "y": 743,
+        "width": 130.6875,
+        "height": 42
+      }
+    }
+  ],
+  "links": [
+    {
+      "href": "#read-more-section",
+      "bbox": {
+        "x": 16,
+        "y": 9,
+        "width": 309.75,
+        "height": 24
+      }
+    },
+    {
+      "href": "#what-is-recurring-deposit",
+      "bbox": {
+        "x": 326.75,
+        "y": 9,
+        "width": 309.75,
+        "height": 24
+      }
+    },
+    {
+      "href": "#how-does-rd-interest-calculator-help-you-head",
+      "bbox": {
+        "x": 637.5,
+        "y": 9,
+        "width": 309.75,
+        "height": 24
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 0,
+        "y": 728,
+        "width": 1280,
+        "height": 72
+      }
+    }
+  ],
+  "canonical": [
+    {
+      "href": "https://www.axismaxlife.com/investment-plans/rd-calculator",
+      "bbox": null
+    }
+  ],
+  "meta": [
+    {
+      "name": "title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "name": "description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ],
+  "og_tags": [
+    {
+      "property": "og:title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "property": "og:description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ],
+  "sticky": [
+    {
+      "tag": "nav",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1274,
+        "height": 42
+      }
+    },
+    {
+      "tag": "a",
+      "bbox": {
+        "x": 0,
+        "y": 728,
+        "width": 1280,
+        "height": 72
+      }
+    }
+  ]
+}

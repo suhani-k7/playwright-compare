@@ -4,81 +4,34 @@ STICKY ELEMENT DIFF REPORT — rd-calculator
 [ DESKTOP ]
 ----------------------------------------
 Sticky Layout Issues:
-  - Sticky count differs (ref=2 live=4)
-  - Missing sticky in live: ('nav', 0, 85, 1274, 42)
+  - Sticky count differs (ref=6 live=5)
+  - Missing sticky in live: ('a', 0, 684, 1280, 44)
   - Missing sticky in live: ('div', 0, 0, 1274, 86)
+  - Missing sticky in live: ('nav', 0, 85, 1274, 42)
+  - Missing sticky in live: ('div', 1003, 105, 250, 608)
+  - Missing sticky in live: ('nav', 0, 0, 1274, 42)
+  - Extra sticky in live: ('nav', 0, 80, 1280, 42)
   - Extra sticky in live: ('div', 0, 80, 1280, 42)
   - Extra sticky in live: ('header', 0, 0, 1280, 80)
-  - Extra sticky in live: ('nav', 0, 80, 1280, 42)
   - Extra sticky in live: ('div', 1003, 105, 352, 608)
-
-Button Mismatches:
-  Reference ONLY (missing from live):
-    - '' (href: '')
-    - '' (href: '')
-    - '' (href: '')
-    - '' (href: '')
-    - '' (href: '')
-    - '' (href: '')
-    - 'Join as Advisor' (href: '')
-  Live ONLY (extra buttons):
-    - '' (href: '')
-    - '' (href: '')
-    - '10 - 20' (href: '')
-    - '5 - 7' (href: '')
-    - '7 - 10' (href: '')
-    - '<5' (href: '')
-    - '>20' (href: '')
-    - 'Calculate Now' (href: '')
-    - 'No' (href: '')
-    - 'Yes' (href: '')
-  Label Mismatches:
-    - Button label mismatch for 'text:login': expected 'Login', found 'Login'
-
-Link Mismatches:
-  Live ONLY (extra links):
-    - Extra link (1x): /join-max-life/become-an-agent
-    - Extra link (1x): /static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf
 
 [ ANDROID ]
 ----------------------------------------
 Sticky Layout Issues:
-  - Sticky count differs (ref=2 live=3)
-  - Missing sticky in live: ('nav', 0, 60, 393, 50)
   - Missing sticky in live: ('div', 0, 0, 393, 61)
-  - Extra sticky in live: ('div', 0, 60, 393, 42)
-  - Extra sticky in live: ('header', 0, 0, 393, 60)
+  - Missing sticky in live: ('nav', 0, 0, 393, 50)
+  - Missing sticky in live: ('nav', 0, 60, 393, 50)
   - Extra sticky in live: ('nav', 0, 60, 393, 42)
-
-Button Mismatches:
-  Reference ONLY (missing from live):
-    - '' (href: '')
-  Live ONLY (extra buttons):
-    - '' (href: '')
-    - 'RD Calculator' (href: '')
-
-Image Mismatches:
-  Alt Tag Mismatches:
-    - Alt mismatch. Expected 'Axis Max Life Insurance', found 'Logo of axis max life insurance graphic'
+  - Extra sticky in live: ('header', 0, 0, 393, 60)
+  - Extra sticky in live: ('div', 0, 60, 393, 42)
 
 [ IOS ]
 ----------------------------------------
 Sticky Layout Issues:
-  - Sticky count differs (ref=2 live=3)
+  - Missing sticky in live: ('nav', 0, 0, 375, 50)
   - Missing sticky in live: ('nav', 0, 60, 375, 50)
   - Missing sticky in live: ('div', 0, 0, 375, 61)
-  - Extra sticky in live: ('header', 0, 0, 375, 60)
   - Extra sticky in live: ('div', 0, 60, 375, 42)
   - Extra sticky in live: ('nav', 0, 60, 375, 42)
-
-Button Mismatches:
-  Reference ONLY (missing from live):
-    - '' (href: '')
-  Live ONLY (extra buttons):
-    - '' (href: '')
-    - 'RD Calculator' (href: '')
-
-Image Mismatches:
-  Alt Tag Mismatches:
-    - Alt mismatch. Expected 'Axis Max Life Insurance', found 'Logo of axis max life insurance graphic'
+  - Extra sticky in live: ('header', 0, 0, 375, 60)
 

@@ -1,96 +1,4 @@
 {
-  "headings": [],
-  "images": [
-    {
-      "alt": "Axis Max Life Insurance",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/axis-max-life-insurance-logo.svg",
-      "bbox": {
-        "x": 12,
-        "y": 11.703125,
-        "width": 110,
-        "height": 36.59375
-      }
-    }
-  ],
-  "buttons": [
-    {
-      "selector": "button",
-      "text": "Login",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 235,
-        "y": 12,
-        "width": 88,
-        "height": 36
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "hamburger",
-      "href": "",
-      "bbox": {
-        "x": 339,
-        "y": 18,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 12,
-        "y": 68,
-        "width": 351,
-        "height": 34
-      }
-    }
-  ],
-  "links": [
-    {
-      "href": "/",
-      "bbox": {
-        "x": 12,
-        "y": 11.703125,
-        "width": 110,
-        "height": 36.59375
-      }
-    }
-  ],
-  "canonical": [
-    {
-      "href": "https://www.axismaxlife.com/investment-plans/rd-calculator",
-      "bbox": null
-    }
-  ],
-  "meta": [
-    {
-      "name": "title",
-      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
-      "bbox": null
-    },
-    {
-      "name": "description",
-      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
-      "bbox": null
-    }
-  ],
-  "og_tags": [
-    {
-      "property": "og:title",
-      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
-      "bbox": null
-    },
-    {
-      "property": "og:description",
-      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
-      "bbox": null
-    }
-  ],
   "sticky": [
     {
       "tag": "div",
@@ -108,6 +16,24 @@
         "y": 60,
         "width": 375,
         "height": 50
+      }
+    },
+    {
+      "tag": "nav",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 50
+      }
+    },
+    {
+      "tag": "a",
+      "bbox": {
+        "x": 0,
+        "y": 544,
+        "width": 375,
+        "height": 85
       }
     }
   ]
