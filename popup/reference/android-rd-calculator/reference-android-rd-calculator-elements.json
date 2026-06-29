@@ -1,114 +1,74 @@
 {
   "headings": [
     {
-      "tag": "h1",
-      "text": "RD Calculator",
+      "tag": "h3",
+      "text": "",
       "bbox": {
-        "x": 16,
-        "y": 107,
-        "width": 361,
-        "height": 22.984375
+        "x": 180.5,
+        "y": 333.5,
+        "width": 0,
+        "height": 0
       }
     },
     {
-      "tag": "h2",
-      "text": "Calculate your earnings with RD",
+      "tag": "h3",
+      "text": "Wait! \ud83d\udd14 NFO Live - Closes 30th June",
       "bbox": {
-        "x": 51,
-        "y": 295.90625,
-        "width": 291,
-        "height": 30.984375
+        "x": 28,
+        "y": 17.71875,
+        "width": 274,
+        "height": 72
       }
     },
     {
-      "tag": "h2",
-      "text": "Would've been \u20b94.24 Cr*",
+      "tag": "h3",
+      "text": "Wait! \ud83d\udd14 NFO Live - Closes 30th June",
       "bbox": {
-        "x": 58,
-        "y": 617.890625,
-        "width": 277,
-        "height": 37
+        "x": 28,
+        "y": 17.71875,
+        "width": 274,
+        "height": 72
       }
     }
   ],
   "images": [
     {
-      "alt": "Axis Max Life Insurance",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/axis-max-life-insurance-logo.svg",
+      "alt": "image rupeeIconPopup",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/rupeeIconPopup.svg",
       "bbox": {
-        "x": 12,
-        "y": 11.703125,
-        "width": 110,
-        "height": 36.59375
+        "x": 36,
+        "y": 121.921875,
+        "width": 12,
+        "height": 12.75
       }
     },
     {
-      "alt": "left-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-left-arrow.png",
+      "alt": "image Chart",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/Chart.png",
       "bbox": {
-        "x": 272,
-        "y": 430.890625,
-        "width": 24,
-        "height": 24
+        "x": 117.484375,
+        "y": 12.765625,
+        "width": 264,
+        "height": 145
       }
     },
     {
-      "alt": "right-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-right-arrow.png",
+      "alt": "image chevron_down_navigate_7dd1121f7c",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/chevron_down_navigate_7dd1121f7c.webp",
       "bbox": {
-        "x": 308,
-        "y": 430.890625,
-        "width": 24,
-        "height": 24
+        "x": 88.15625,
+        "y": 453.015625,
+        "width": 20,
+        "height": 20
       }
     },
     {
-      "alt": "left-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-left-arrow.png",
+      "alt": "we_dont_spam",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/Badge.png",
       "bbox": {
-        "x": 272,
-        "y": 502.890625,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "right-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-right-arrow.png",
-      "bbox": {
-        "x": 308,
-        "y": 502.890625,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "calculatorBannerTickIcon",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 58,
-        "y": 662.890625,
-        "width": 14.984375,
-        "height": 18
-      }
-    },
-    {
-      "alt": "calculatorBannerTickIcon",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 58,
-        "y": 688.890625,
-        "width": 14.984375,
-        "height": 18
-      }
-    },
-    {
-      "alt": "calculatorBannerTickIcon",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 58,
-        "y": 714.890625,
-        "width": 15,
+        "x": 259.484375,
+        "y": 482.03125,
+        "width": 106,
         "height": 18
       }
     }
@@ -116,145 +76,37 @@
   "buttons": [
     {
       "selector": "button",
-      "text": "Login",
+      "text": "View Plans",
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 253,
-        "y": 12,
-        "width": 88,
-        "height": 36
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "hamburger",
-      "href": "",
-      "bbox": {
-        "x": 357,
-        "y": 18,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 12,
-        "y": 68,
-        "width": 369,
-        "height": 34
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 272,
-        "y": 430.890625,
-        "width": 36,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 308,
-        "y": 430.890625,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 272,
-        "y": 502.890625,
-        "width": 36,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 308,
-        "y": 502.890625,
-        "width": 24,
-        "height": 24
+        "x": 92.234375,
+        "y": 661.1875,
+        "width": 213,
+        "height": 48
       }
     },
     {
       "selector": "[role='button']",
-      "text": "Read More",
-      "aria_label": "Read more about RD Calculator",
+      "text": "+91",
+      "aria_label": "selected country",
       "href": "",
       "bbox": {
-        "x": 186.34375,
-        "y": 211.921875,
-        "width": 109.375,
-        "height": 42
+        "x": 36.6875,
+        "y": 451.53125,
+        "width": 79.46875,
+        "height": 22.984375
       }
     }
   ],
   "links": [
     {
-      "href": "/",
+      "href": "/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
-        "x": 12,
-        "y": 11.703125,
-        "width": 110,
-        "height": 36.59375
-      }
-    },
-    {
-      "href": "/",
-      "bbox": {
-        "x": 16,
-        "y": 68,
-        "width": 28.453125,
+        "x": 177.8125,
+        "y": 597.1875,
+        "width": 102.40625,
         "height": 14
-      }
-    },
-    {
-      "href": "/investment-plans",
-      "bbox": {
-        "x": 71.90625,
-        "y": 68,
-        "width": 81.28125,
-        "height": 14
-      }
-    },
-    {
-      "href": "",
-      "bbox": {
-        "x": 186.34375,
-        "y": 211.921875,
-        "width": 109.375,
-        "height": 42
-      }
-    },
-    {
-      "href": "/investment-plans/investment-calculator?utm_theme=FixedDeposit",
-      "bbox": {
-        "x": 36.5,
-        "y": 756.890625,
-        "width": 320,
-        "height": 48
       }
     }
   ],
@@ -287,5 +139,9 @@
       "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
       "bbox": null
     }
-  ]
+  ],
+  "screenshot_offset": {
+    "x": 0,
+    "y": 0
+  }
 }

@@ -1,0 +1,189 @@
+{
+  "headings": [
+    {
+      "tag": "h3",
+      "text": "NFO Live \ud83d\udd14 Closes on 31st May",
+      "bbox": {
+        "x": 248.4140625,
+        "y": 143.9921875,
+        "width": 268,
+        "height": 70
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "NFO Live \ud83d\udd14 Closes on 31st May",
+      "bbox": {
+        "x": 248.4140625,
+        "y": 143.9921875,
+        "width": 268,
+        "height": 70
+      }
+    }
+  ],
+  "images": [
+    {
+      "alt": "",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/rupeeIconPopup.svg",
+      "bbox": {
+        "x": 256.890625,
+        "y": 271.9921875,
+        "width": 16,
+        "height": 17
+      }
+    },
+    {
+      "alt": "",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/Frame%201171276161.png",
+      "bbox": {
+        "x": 281.0625,
+        "y": 493.5859375,
+        "width": 239,
+        "height": 184
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "selector": "button",
+      "text": "+91",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 553.5,
+        "y": 223.9921875,
+        "width": 72.75,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "<5",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 553.5,
+        "y": 327.9921875,
+        "width": 88,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "5 - 7",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 645.5,
+        "y": 327.9921875,
+        "width": 88,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "7 - 10",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 737.5,
+        "y": 327.9921875,
+        "width": 88,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "10 - 20",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 829.5,
+        "y": 327.9921875,
+        "width": 88,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": ">20",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 921.5,
+        "y": 327.9921875,
+        "width": 88,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Calculate Now",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 617.9921875,
+        "y": 399.9921875,
+        "width": 327.0078125,
+        "height": 48
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "",
+      "aria_label": "Close popup",
+      "href": "",
+      "bbox": {
+        "x": 1017.5,
+        "y": 125.9921875,
+        "width": 24,
+        "height": 24
+      }
+    }
+  ],
+  "links": [
+    {
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "bbox": {
+        "x": 747.5859375,
+        "y": 464.4921875,
+        "width": 123.1640625,
+        "height": 14
+      }
+    }
+  ],
+  "canonical": [
+    {
+      "href": "https://www.axismaxlife.com/investment-plans/rd-calculator",
+      "bbox": null
+    }
+  ],
+  "meta": [
+    {
+      "name": "title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "name": "description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ],
+  "og_tags": [
+    {
+      "property": "og:title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "property": "og:description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ],
+  "screenshot_offset": {
+    "x": 212.5,
+    "y": 101.9921875
+  }
+}

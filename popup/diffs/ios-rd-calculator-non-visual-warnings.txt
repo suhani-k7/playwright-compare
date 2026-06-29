@@ -1,0 +1,12 @@
+Non-Visual / SEO Status — Popup — ios (rd-calculator)
+==================================================
+
+[SEO Status Overview]
+- Canonical Tags: PASS
+- Meta Tags:      PASS
+- Open Graph:     PASS
+
+[Specific Non-Visual Mismatches]
+- Heading count: expected 3, found 2
+- Image count: expected 4, found 2
+- Button count (identifiable): expected 2, found 8

@@ -3,13 +3,57 @@ STICKY ELEMENT DIFF REPORT — rd-calculator
 
 [ DESKTOP ]
 ----------------------------------------
-- Sticky count differs (ref=8 live=24)
+Sticky Layout Issues:
+  - Sticky count differs (ref=2 live=3)
+
+Button Mismatches:
+  Reference ONLY (missing from live):
+    - '' (href: '')
+    - '' (href: '')
+    - '' (href: '')
+    - '' (href: '')
+    - '' (href: '')
+    - '' (href: '')
+    - 'Join as Advisor' (href: '')
+  Live ONLY (extra buttons):
+    - '' (href: '')
+    - '' (href: '')
+  Label Mismatches:
+    - Button label mismatch for 'text:login': expected 'Login', found 'Login'
+
+Link Mismatches:
+  Live ONLY (extra links):
+    - Extra link (1x): /join-max-life/become-an-agent
 
 [ ANDROID ]
 ----------------------------------------
-- Sticky count differs (ref=3 live=26)
+Sticky Layout Issues:
+  - Sticky count differs (ref=2 live=3)
+
+Button Mismatches:
+  Reference ONLY (missing from live):
+    - '' (href: '')
+  Live ONLY (extra buttons):
+    - '' (href: '')
+    - 'RD Calculator' (href: '')
+
+Image Mismatches:
+  Alt Tag Mismatches:
+    - Alt mismatch. Expected 'Axis Max Life Insurance', found 'Logo of axis max life insurance graphic'
 
 [ IOS ]
 ----------------------------------------
-- Sticky count differs (ref=3 live=26)
+Sticky Layout Issues:
+  - Sticky count differs (ref=2 live=3)
+
+Button Mismatches:
+  Reference ONLY (missing from live):
+    - '' (href: '')
+  Live ONLY (extra buttons):
+    - '' (href: '')
+    - 'RD Calculator' (href: '')
+
+Image Mismatches:
+  Alt Tag Mismatches:
+    - Alt mismatch. Expected 'Axis Max Life Insurance', found 'Logo of axis max life insurance graphic'
 

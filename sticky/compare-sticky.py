@@ -164,16 +164,110 @@ def generate_summary_report(all_reports: list, slug: str):
         f.write("=" * 60 + "\n\n")
         for report in all_reports:
             device = report["device"]
-            details = report["details"]
-            sticky_issues = details.get("sticky", [])
+            details = report.get("details", {})
+            
             f.write(f"[ {device.upper()} ]\n")
             f.write("-" * 40 + "\n")
+            
+            # 1. Sticky Count/Presence Mismatches
+            sticky_issues = details.get("sticky", [])
             if sticky_issues:
+                f.write("Sticky Layout Issues:\n")
                 for issue in sticky_issues:
-                    f.write(f"- {issue.get('message', 'Issue')}\n")
-            else:
-                f.write("- No sticky issues detected.\n")
-            f.write("\n")
+                    f.write(f"  - {issue.get('message', 'Issue')}\n")
+                f.write("\n")
+                
+            # 2. Buttons (Missing/Extra/Mismatch)
+            btn_issues = details.get("buttons", [])
+            btn_missing = [i for i in btn_issues if i.get("type") == "missing_button"]
+            btn_extra = [i for i in btn_issues if i.get("type") == "extra_button"]
+            btn_mismatch = [i for i in btn_issues if i.get("type") == "button_label_mismatch"]
+            
+            if btn_missing or btn_extra or btn_mismatch:
+                f.write("Button Mismatches:\n")
+                if btn_missing:
+                    f.write(f"  Reference ONLY (missing from live):\n")
+                    for i in btn_missing:
+                        text = i.get("message", "").replace("Missing button: ", "")
+                        f.write(f"    - {text}\n")
+                if btn_extra:
+                    f.write(f"  Live ONLY (extra buttons):\n")
+                    for i in btn_extra:
+                        text = i.get("message", "").replace("Extra button in live: ", "")
+                        f.write(f"    - {text}\n")
+                if btn_mismatch:
+                    f.write(f"  Label Mismatches:\n")
+                    for i in btn_mismatch:
+                        f.write(f"    - {i.get('message')}\n")
+                f.write("\n")
+                
+            # 3. Links (Missing/Extra)
+            link_issues = details.get("links", [])
+            link_missing = [i for i in link_issues if i.get("type") == "missing_link"]
+            link_extra = [i for i in link_issues if i.get("type") == "extra_link"]
+            
+            if link_missing or link_extra:
+                f.write("Link Mismatches:\n")
+                if link_missing:
+                    f.write(f"  Reference ONLY (missing from live):\n")
+                    for i in link_missing:
+                        text = i.get("message", "").replace("Missing link: ", "")
+                        f.write(f"    - {text}\n")
+                if link_extra:
+                    f.write(f"  Live ONLY (extra links):\n")
+                    for i in link_extra:
+                        text = i.get("message", "").replace("Extra link: ", "")
+                        f.write(f"    - {text}\n")
+                f.write("\n")
+
+            # 4. Images (Missing/Extra/Alt mismatch)
+            img_issues = details.get("images", [])
+            img_missing = [i for i in img_issues if i.get("type") == "missing_image"]
+            img_extra = [i for i in img_issues if i.get("type") == "extra_image"]
+            img_alt = [i for i in img_issues if i.get("type") == "alt_mismatch"]
+            
+            if img_missing or img_extra or img_alt:
+                f.write("Image Mismatches:\n")
+                if img_missing:
+                    f.write(f"  Reference ONLY (missing from live):\n")
+                    for i in img_missing:
+                        text = i.get("message", "").replace("Image missing in live (alt: ", "").rstrip(")")
+                        f.write(f"    - {text}\n")
+                if img_extra:
+                    f.write(f"  Live ONLY (extra images):\n")
+                    for i in img_extra:
+                        f.write(f"    - Extra image in live\n")
+                if img_alt:
+                    f.write(f"  Alt Tag Mismatches:\n")
+                    for i in img_alt:
+                        f.write(f"    - {i.get('message')}\n")
+                f.write("\n")
+
+            # 5. Headings (Missing/Extra/Tag mismatch)
+            hd_issues = details.get("headings", [])
+            hd_missing = [i for i in hd_issues if i.get("type") == "missing_heading"]
+            hd_extra = [i for i in hd_issues if i.get("type") == "extra_heading"]
+            hd_mismatch = [i for i in hd_issues if i.get("type") == "heading_tag_mismatch"]
+            
+            if hd_missing or hd_extra or hd_mismatch:
+                f.write("Heading Mismatches:\n")
+                if hd_missing:
+                    f.write(f"  Reference ONLY (missing from live):\n")
+                    for i in hd_missing:
+                        f.write(f"    - {i.get('message')}\n")
+                if hd_extra:
+                    f.write(f"  Live ONLY (extra headings):\n")
+                    for i in hd_extra:
+                        f.write(f"    - {i.get('message')}\n")
+                if hd_mismatch:
+                    f.write(f"  Tag Level Mismatches:\n")
+                    for i in hd_mismatch:
+                        f.write(f"    - {i.get('message')}\n")
+                f.write("\n")
+                
+            if not (sticky_issues or btn_issues or link_issues or img_issues or hd_issues):
+                f.write("- No mismatches detected in sticky elements.\n\n")
+                
     print(f"Sticky diff report saved to {path}")
 
 if __name__ == "__main__":

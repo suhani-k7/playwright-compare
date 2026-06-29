@@ -1,36 +1,5 @@
 {
-  "headings": [
-    {
-      "tag": "h1",
-      "text": "RD Calculator",
-      "bbox": {
-        "x": 16,
-        "y": 107,
-        "width": 343,
-        "height": 22.984375
-      }
-    },
-    {
-      "tag": "h2",
-      "text": "Calculate your earnings with RD",
-      "bbox": {
-        "x": 51,
-        "y": 318.890625,
-        "width": 273,
-        "height": 30.984375
-      }
-    },
-    {
-      "tag": "h2",
-      "text": "Would've been \u20b94.24 Cr*",
-      "bbox": {
-        "x": 58,
-        "y": 640.875,
-        "width": 259,
-        "height": 37
-      }
-    }
-  ],
+  "headings": [],
   "images": [
     {
       "alt": "Axis Max Life Insurance",
@@ -40,56 +9,6 @@
         "y": 11.703125,
         "width": 110,
         "height": 36.59375
-      }
-    },
-    {
-      "alt": "left-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-left-arrow.png",
-      "bbox": {
-        "x": 254,
-        "y": 453.875,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "right-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-right-arrow.png",
-      "bbox": {
-        "x": 290,
-        "y": 453.875,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "left-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-left-arrow.png",
-      "bbox": {
-        "x": 254,
-        "y": 525.875,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "right-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-right-arrow.png",
-      "bbox": {
-        "x": 290,
-        "y": 525.875,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "calculatorBannerTickIcon",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 58,
-        "y": 685.875,
-        "width": 14.984375,
-        "height": 18
       }
     }
   ],
@@ -129,66 +48,6 @@
         "width": 351,
         "height": 34
       }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 254,
-        "y": 453.875,
-        "width": 36,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 290,
-        "y": 453.875,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 254,
-        "y": 525.875,
-        "width": 36,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 290,
-        "y": 525.875,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "[role='button']",
-      "text": "Read More",
-      "aria_label": "Read more about RD Calculator",
-      "href": "",
-      "bbox": {
-        "x": 16,
-        "y": 211.921875,
-        "width": 316.28125,
-        "height": 64.984375
-      }
     }
   ],
   "links": [
@@ -199,33 +58,6 @@
         "y": 11.703125,
         "width": 110,
         "height": 36.59375
-      }
-    },
-    {
-      "href": "/",
-      "bbox": {
-        "x": 16,
-        "y": 68,
-        "width": 28.453125,
-        "height": 14
-      }
-    },
-    {
-      "href": "/investment-plans",
-      "bbox": {
-        "x": 71.90625,
-        "y": 68,
-        "width": 81.28125,
-        "height": 14
-      }
-    },
-    {
-      "href": "",
-      "bbox": {
-        "x": 16,
-        "y": 211.921875,
-        "width": 316.28125,
-        "height": 64.984375
       }
     }
   ],
@@ -267,15 +99,6 @@
         "y": 0,
         "width": 375,
         "height": 61
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
       }
     },
     {

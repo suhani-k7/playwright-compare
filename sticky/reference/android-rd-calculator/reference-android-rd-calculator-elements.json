@@ -1,36 +1,5 @@
 {
-  "headings": [
-    {
-      "tag": "h1",
-      "text": "RD Calculator",
-      "bbox": {
-        "x": 16,
-        "y": 107,
-        "width": 361,
-        "height": 22.984375
-      }
-    },
-    {
-      "tag": "h2",
-      "text": "Calculate your earnings with RD",
-      "bbox": {
-        "x": 51,
-        "y": 295.90625,
-        "width": 291,
-        "height": 30.984375
-      }
-    },
-    {
-      "tag": "h2",
-      "text": "Would've been \u20b94.24 Cr*",
-      "bbox": {
-        "x": 58,
-        "y": 617.890625,
-        "width": 277,
-        "height": 37
-      }
-    }
-  ],
+  "headings": [],
   "images": [
     {
       "alt": "Axis Max Life Insurance",
@@ -40,76 +9,6 @@
         "y": 11.703125,
         "width": 110,
         "height": 36.59375
-      }
-    },
-    {
-      "alt": "left-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-left-arrow.png",
-      "bbox": {
-        "x": 272,
-        "y": 430.890625,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "right-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-right-arrow.png",
-      "bbox": {
-        "x": 308,
-        "y": 430.890625,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "left-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-left-arrow.png",
-      "bbox": {
-        "x": 272,
-        "y": 502.890625,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "right-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-right-arrow.png",
-      "bbox": {
-        "x": 308,
-        "y": 502.890625,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "calculatorBannerTickIcon",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 58,
-        "y": 662.890625,
-        "width": 14.984375,
-        "height": 18
-      }
-    },
-    {
-      "alt": "calculatorBannerTickIcon",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 58,
-        "y": 688.890625,
-        "width": 14.984375,
-        "height": 18
-      }
-    },
-    {
-      "alt": "calculatorBannerTickIcon",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 58,
-        "y": 714.890625,
-        "width": 15,
-        "height": 18
       }
     }
   ],
@@ -149,66 +48,6 @@
         "width": 369,
         "height": 34
       }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 272,
-        "y": 430.890625,
-        "width": 36,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 308,
-        "y": 430.890625,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 272,
-        "y": 502.890625,
-        "width": 36,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 308,
-        "y": 502.890625,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "[role='button']",
-      "text": "Read More",
-      "aria_label": "Read more about RD Calculator",
-      "href": "",
-      "bbox": {
-        "x": 186.34375,
-        "y": 211.921875,
-        "width": 109.375,
-        "height": 42
-      }
     }
   ],
   "links": [
@@ -219,42 +58,6 @@
         "y": 11.703125,
         "width": 110,
         "height": 36.59375
-      }
-    },
-    {
-      "href": "/",
-      "bbox": {
-        "x": 16,
-        "y": 68,
-        "width": 28.453125,
-        "height": 14
-      }
-    },
-    {
-      "href": "/investment-plans",
-      "bbox": {
-        "x": 71.90625,
-        "y": 68,
-        "width": 81.28125,
-        "height": 14
-      }
-    },
-    {
-      "href": "",
-      "bbox": {
-        "x": 186.34375,
-        "y": 211.921875,
-        "width": 109.375,
-        "height": 42
-      }
-    },
-    {
-      "href": "/investment-plans/investment-calculator?utm_theme=FixedDeposit",
-      "bbox": {
-        "x": 36.5,
-        "y": 756.890625,
-        "width": 320,
-        "height": 48
       }
     }
   ],
@@ -296,15 +99,6 @@
         "y": 0,
         "width": 393,
         "height": 61
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
       }
     },
     {

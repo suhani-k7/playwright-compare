@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 
 # Base directories for popup module
-POPUP_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "popup"))
+POPUP_DIR = os.path.abspath(os.path.dirname(__file__))
 REFERENCE_DIR = os.path.join(POPUP_DIR, "reference")
 LIVE_DIR = os.path.join(POPUP_DIR, "live")
 REPORTS_DIR = os.path.join(POPUP_DIR, "reports")
@@ -103,11 +103,27 @@ def annotate_screenshot(device: str, slug: str, report: dict):
     print(f"  Annotated screenshot saved to {out_path}")
 
 def compare_device(device: str, slug: str) -> dict:
-    print(f"\n[{device}] Comparing popup...\")
+    print(f"\n[{device}] Comparing popup...")
     ref_soup = load_html("reference", device, slug)
     live_soup = load_html("live", device, slug)
     ref_elements = load_elements("reference", device, slug)
     live_elements = load_elements("live", device, slug)
+
+    # Adjust coordinates to be relative to the cropped screenshot popup boundaries
+    ref_offset = ref_elements.get("screenshot_offset", {"x": 0, "y": 0})
+    for cat in ["headings", "images", "buttons", "links"]:
+        for item in ref_elements.get(cat, []):
+            if item.get("bbox"):
+                item["bbox"]["x"] -= ref_offset["x"]
+                item["bbox"]["y"] -= ref_offset["y"]
+
+    live_offset = live_elements.get("screenshot_offset", {"x": 0, "y": 0})
+    for cat in ["headings", "images", "buttons", "links"]:
+        for item in live_elements.get(cat, []):
+            if item.get("bbox"):
+                item["bbox"]["x"] -= live_offset["x"]
+                item["bbox"]["y"] -= live_offset["y"]
+
     results = {
         "headings": compare_headings(ref_soup, live_soup, ref_elements, live_elements),
         "images": compare_images(ref_soup, live_soup, ref_elements, live_elements),

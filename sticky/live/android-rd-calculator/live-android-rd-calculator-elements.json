@@ -1,46 +1,5 @@
 {
-  "headings": [
-    {
-      "tag": "h1",
-      "text": "RD Calculator",
-      "bbox": {
-        "x": 16,
-        "y": 108.1875,
-        "width": 361,
-        "height": 24
-      }
-    },
-    {
-      "tag": "h2",
-      "text": "Calculate your earnings with RD",
-      "bbox": {
-        "x": 37,
-        "y": 284.109375,
-        "width": 319,
-        "height": 22
-      }
-    },
-    {
-      "tag": "h3",
-      "text": "You Get",
-      "bbox": {
-        "x": 37,
-        "y": 805.890625,
-        "width": 319,
-        "height": 24
-      }
-    },
-    {
-      "tag": "h4",
-      "text": "Fixed Returns up to 6.80%*",
-      "bbox": {
-        "x": 61,
-        "y": 596.890625,
-        "width": 271,
-        "height": 28
-      }
-    }
-  ],
+  "headings": [],
   "images": [
     {
       "alt": "Logo of axis max life insurance graphic",
@@ -51,66 +10,6 @@
         "width": 110,
         "height": 40
       }
-    },
-    {
-      "alt": "Decrease",
-      "src": "/corp-astro-static/images/rd-calc-left-arrow.png",
-      "bbox": {
-        "x": 279,
-        "y": 425.5,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "Increase",
-      "src": "/corp-astro-static/images/rd-calc-right-arrow.png",
-      "bbox": {
-        "x": 315,
-        "y": 425.5,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "Decrease",
-      "src": "/corp-astro-static/images/rd-calc-left-arrow.png",
-      "bbox": {
-        "x": 279,
-        "y": 501.09375,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "Increase",
-      "src": "/corp-astro-static/images/rd-calc-right-arrow.png",
-      "bbox": {
-        "x": 315,
-        "y": 501.09375,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 61,
-        "y": 641.890625,
-        "width": 16,
-        "height": 16
-      }
-    },
-    {
-      "alt": "",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 61,
-        "y": 673.890625,
-        "width": 16,
-        "height": 16
-      }
     }
   ],
   "buttons": [
@@ -120,10 +19,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 239.25,
-        "y": 11.5,
-        "width": 89.75,
-        "height": 37
+        "x": 241,
+        "y": 12,
+        "width": 88,
+        "height": 36
       }
     },
     {
@@ -149,78 +48,6 @@
         "width": 369,
         "height": 26
       }
-    },
-    {
-      "selector": "button",
-      "text": "Read More",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 16,
-        "y": 224.125,
-        "width": 74.703125,
-        "height": 22.984375
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "Decrease Rate of Interest (p.a)",
-      "href": "",
-      "bbox": {
-        "x": 279,
-        "y": 425.5,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "Increase Rate of Interest (p.a)",
-      "href": "",
-      "bbox": {
-        "x": 315,
-        "y": 425.5,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "Decrease Tenure (in months)",
-      "href": "",
-      "bbox": {
-        "x": 279,
-        "y": 501.09375,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "Increase Tenure (in months)",
-      "href": "",
-      "bbox": {
-        "x": 315,
-        "y": 501.09375,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "View Plans",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 37,
-        "y": 717.890625,
-        "width": 319,
-        "height": 48
-      }
     }
   ],
   "links": [
@@ -231,24 +58,6 @@
         "y": 10,
         "width": 110,
         "height": 40
-      }
-    },
-    {
-      "href": "/",
-      "bbox": {
-        "x": 16,
-        "y": 66,
-        "width": 37,
-        "height": 18.1875
-      }
-    },
-    {
-      "href": "/investment-plans",
-      "bbox": {
-        "x": 75.875,
-        "y": 66,
-        "width": 105.671875,
-        "height": 18.1875
       }
     }
   ],
@@ -284,174 +93,12 @@
   ],
   "sticky": [
     {
-      "tag": "body",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 393,
-        "height": 20029.71875
-      }
-    },
-    {
       "tag": "header",
       "bbox": {
         "x": 0,
         "y": 0,
         "width": 393,
         "height": 60
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
       }
     },
     {
@@ -470,51 +117,6 @@
         "y": 60,
         "width": 393,
         "height": 42
-      }
-    },
-    {
-      "tag": "a",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "a",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 393,
-        "height": 727
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 13.75,
-        "y": 15,
-        "width": 365.484375,
-        "height": 712
       }
     }
   ]

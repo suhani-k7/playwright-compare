@@ -1,56 +1,5 @@
 {
-  "headings": [
-    {
-      "tag": "h1",
-      "text": "RD Calculator",
-      "bbox": {
-        "x": 32,
-        "y": 131,
-        "width": 1210,
-        "height": 34.9921875
-      }
-    },
-    {
-      "tag": "h2",
-      "text": "Calculate your earnings with RD",
-      "bbox": {
-        "x": 57,
-        "y": 268.9765625,
-        "width": 304,
-        "height": 85.984375
-      }
-    },
-    {
-      "tag": "h2",
-      "text": "Would've been \u20b94.24 Cr*",
-      "bbox": {
-        "x": 81,
-        "y": 649.953125,
-        "width": 232,
-        "height": 37
-      }
-    },
-    {
-      "tag": "h2",
-      "text": "You Get",
-      "bbox": {
-        "x": 410,
-        "y": 268.9765625,
-        "width": 544,
-        "height": 35
-      }
-    },
-    {
-      "tag": "h2",
-      "text": "Maximise Your Savings",
-      "bbox": {
-        "x": 1020,
-        "y": 268.9765625,
-        "width": 205,
-        "height": 56
-      }
-    }
-  ],
+  "headings": [],
   "images": [
     {
       "alt": "Logo of axis max life insurance graphic",
@@ -60,76 +9,6 @@
         "y": 23.53125,
         "width": 98.984375,
         "height": 37.9296875
-      }
-    },
-    {
-      "alt": "left-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-left-arrow.png",
-      "bbox": {
-        "x": 291,
-        "y": 474.9609375,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "right-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-right-arrow.png",
-      "bbox": {
-        "x": 327,
-        "y": 474.9609375,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "left-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-left-arrow.png",
-      "bbox": {
-        "x": 291,
-        "y": 554.9609375,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "right-arrow-icon",
-      "src": "https://www.axismaxlife.com/corp-static/images/rd-calc-right-arrow.png",
-      "bbox": {
-        "x": 327,
-        "y": 554.9609375,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "alt": "calculatorBannerTickIcon",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 81,
-        "y": 694.953125,
-        "width": 14.9921875,
-        "height": 22.9921875
-      }
-    },
-    {
-      "alt": "calculatorBannerTickIcon",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 81,
-        "y": 725.9453125,
-        "width": 14.9921875,
-        "height": 22.9921875
-      }
-    },
-    {
-      "alt": "calculatorBannerTickIcon",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/calculator-banner-tick-icon.svg",
-      "bbox": {
-        "x": 81,
-        "y": 756.9375,
-        "width": 15,
-        "height": 22.9921875
       }
     }
   ],
@@ -195,79 +74,7 @@
       }
     },
     {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 291,
-        "y": 474.9609375,
-        "width": 36,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 327,
-        "y": 474.9609375,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 291,
-        "y": 554.9609375,
-        "width": 36,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 327,
-        "y": 554.9609375,
-        "width": 24,
-        "height": 24
-      }
-    },
-    {
-      "selector": "button",
-      "text": "Graph view",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 443,
-        "y": 468.3125,
-        "width": 72.734375,
-        "height": 35.5
-      }
-    },
-    {
-      "selector": "button",
-      "text": "Calculate Now",
-      "aria_label": "",
-      "href": "",
-      "bbox": {
-        "x": 1003.4453125,
-        "y": 724.9765625,
-        "width": 238.1171875,
-        "height": 48
-      }
-    },
-    {
-      "selector": "[role='button']",
+      "selector": "[role=\"button\"]",
       "text": "",
       "aria_label": "Term Insurance submenu with 6 items",
       "href": "",
@@ -279,7 +86,7 @@
       }
     },
     {
-      "selector": "[role='button']",
+      "selector": "[role=\"button\"]",
       "text": "",
       "aria_label": "Investment Plans submenu with 7 items",
       "href": "",
@@ -291,7 +98,7 @@
       }
     },
     {
-      "selector": "[role='button']",
+      "selector": "[role=\"button\"]",
       "text": "",
       "aria_label": "Healthcare Plans submenu with 2 items",
       "href": "",
@@ -303,7 +110,7 @@
       }
     },
     {
-      "selector": "[role='button']",
+      "selector": "[role=\"button\"]",
       "text": "",
       "aria_label": "NRI Plans submenu with 2 items",
       "href": "",
@@ -315,7 +122,7 @@
       }
     },
     {
-      "selector": "[role='button']",
+      "selector": "[role=\"button\"]",
       "text": "",
       "aria_label": "Calculators submenu with 4 items",
       "href": "",
@@ -324,30 +131,6 @@
         "y": 32.5,
         "width": 20,
         "height": 20
-      }
-    },
-    {
-      "selector": "[role='button']",
-      "text": "Read More",
-      "aria_label": "Read more about RD Calculator",
-      "href": "",
-      "bbox": {
-        "x": 374.6171875,
-        "y": 195.484375,
-        "width": 109.3671875,
-        "height": 41.5
-      }
-    },
-    {
-      "selector": "[role='button']",
-      "text": "+91",
-      "aria_label": "selected country",
-      "href": "",
-      "bbox": {
-        "x": 1041,
-        "y": 577.9765625,
-        "width": 27.4609375,
-        "height": 46
       }
     }
   ],
@@ -407,24 +190,6 @@
       }
     },
     {
-      "href": "/",
-      "bbox": {
-        "x": 32,
-        "y": 88,
-        "width": 36.9921875,
-        "height": 18
-      }
-    },
-    {
-      "href": "/investment-plans",
-      "bbox": {
-        "x": 96.4375,
-        "y": 88,
-        "width": 105.6640625,
-        "height": 18
-      }
-    },
-    {
       "href": "#read-more-section",
       "bbox": {
         "x": 16,
@@ -449,24 +214,6 @@
         "y": 94,
         "width": 309.75,
         "height": 24
-      }
-    },
-    {
-      "href": "",
-      "bbox": {
-        "x": 374.6171875,
-        "y": 195.484375,
-        "width": 109.3671875,
-        "height": 41.5
-      }
-    },
-    {
-      "href": "/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
-      "bbox": {
-        "x": 1048,
-        "y": 792.9765625,
-        "width": 168.609375,
-        "height": 27.5
       }
     }
   ],
@@ -508,60 +255,6 @@
         "y": 0,
         "width": 1274,
         "height": 86
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      }
-    },
-    {
-      "tag": "div",
-      "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
       }
     },
     {

@@ -1,0 +1,614 @@
+[
+  {
+    "device": "desktop",
+    "slug": "rd-calculator",
+    "scope": "popup",
+    "summary": {
+      "headings": "FAIL",
+      "images": "FAIL",
+      "buttons": "FAIL",
+      "links": "PASS",
+      "canonical": "PASS",
+      "meta": "PASS",
+      "og_tags": "PASS"
+    },
+    "details": {
+      "headings": [
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 261.4140625,
+            "y": 140.3671875,
+            "width": 204,
+            "height": 98
+          },
+          "message": "Missing H3"
+        },
+        {
+          "type": "heading_count",
+          "ref_count": 3,
+          "live_count": 2,
+          "message": "Heading count: expected 3, found 2"
+        }
+      ],
+      "images": [
+        {
+          "type": "image_count",
+          "ref_count": 4,
+          "live_count": 2,
+          "message": "Image count: expected 4, found 2"
+        },
+        {
+          "type": "alt_mismatch",
+          "bbox": {
+            "x": 44.390625,
+            "y": 170.0,
+            "width": 16,
+            "height": 17
+          },
+          "message": "Alt mismatch. Expected 'image rupeeIconPopup', found ''"
+        },
+        {
+          "type": "alt_mismatch",
+          "bbox": {
+            "x": 68.5625,
+            "y": 391.59375,
+            "width": 239,
+            "height": 184
+          },
+          "message": "Alt mismatch. Expected 'image Frame%201171276161', found ''"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 650.953125,
+            "y": 303.46875,
+            "width": 20,
+            "height": 20
+          },
+          "message": "Image missing in live (alt: 'image chevron_down_navigate_7dd1121f7c')"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 891.546875,
+            "y": 332.4765625,
+            "width": 106,
+            "height": 18
+          },
+          "message": "Image missing in live (alt: 'we_dont_spam')"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 44.390625,
+            "y": 170.0,
+            "width": 16,
+            "height": 17
+          },
+          "message": "Missing alt attribute"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 68.5625,
+            "y": 391.59375,
+            "width": 239,
+            "height": 184
+          },
+          "message": "Missing alt attribute"
+        }
+      ],
+      "buttons": [
+        {
+          "type": "button_count",
+          "ref_count": 2,
+          "live_count": 8,
+          "message": "Button count (identifiable): expected 2, found 8"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 696,
+            "y": 513.6328125,
+            "width": 213,
+            "height": 48
+          },
+          "message": "Missing button: 'View Plans' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 805.0,
+            "y": 24.0,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 617.0,
+            "y": 226.0,
+            "width": 88,
+            "height": 56
+          },
+          "message": "Extra button in live: '10 - 20' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 433.0,
+            "y": 226.0,
+            "width": 88,
+            "height": 56
+          },
+          "message": "Extra button in live: '5 - 7' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 525.0,
+            "y": 226.0,
+            "width": 88,
+            "height": 56
+          },
+          "message": "Extra button in live: '7 - 10' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 341.0,
+            "y": 226.0,
+            "width": 88,
+            "height": 56
+          },
+          "message": "Extra button in live: '<5' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 709.0,
+            "y": 226.0,
+            "width": 88,
+            "height": 56
+          },
+          "message": "Extra button in live: '>20' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 405.4921875,
+            "y": 298.0,
+            "width": 327.0078125,
+            "height": 48
+          },
+          "message": "Extra button in live: 'Calculate Now' (href: '')"
+        },
+        {
+          "type": "button_label_mismatch",
+          "bbox": {
+            "x": 341.0,
+            "y": 122.0,
+            "width": 72.75,
+            "height": 56
+          },
+          "message": "Button label mismatch for 'text:+91': expected '+91', found '+91'"
+        }
+      ],
+      "links": [],
+      "canonical": [],
+      "meta": [],
+      "og_tags": []
+    }
+  },
+  {
+    "device": "android",
+    "slug": "rd-calculator",
+    "scope": "popup",
+    "summary": {
+      "headings": "FAIL",
+      "images": "FAIL",
+      "buttons": "FAIL",
+      "links": "PASS",
+      "canonical": "PASS",
+      "meta": "PASS",
+      "og_tags": "PASS"
+    },
+    "details": {
+      "headings": [
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 28,
+            "y": 17.71875,
+            "width": 274,
+            "height": 72
+          },
+          "message": "Missing H3"
+        },
+        {
+          "type": "heading_count",
+          "ref_count": 3,
+          "live_count": 2,
+          "message": "Heading count: expected 3, found 2"
+        }
+      ],
+      "images": [
+        {
+          "type": "image_count",
+          "ref_count": 4,
+          "live_count": 2,
+          "message": "Image count: expected 4, found 2"
+        },
+        {
+          "type": "alt_mismatch",
+          "bbox": {
+            "x": 30.0,
+            "y": 120.703125,
+            "width": 12,
+            "height": 12.75
+          },
+          "message": "Alt mismatch. Expected 'image rupeeIconPopup', found ''"
+        },
+        {
+          "type": "alt_mismatch",
+          "bbox": {
+            "x": 111.484375,
+            "y": 82,
+            "width": 264,
+            "height": 145
+          },
+          "message": "Alt mismatch. Expected 'image Chart', found ''"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 88.15625,
+            "y": 453.015625,
+            "width": 20,
+            "height": 20
+          },
+          "message": "Image missing in live (alt: 'image chevron_down_navigate_7dd1121f7c')"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 259.484375,
+            "y": 482.03125,
+            "width": 106,
+            "height": 18
+          },
+          "message": "Image missing in live (alt: 'we_dont_spam')"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 30.0,
+            "y": 120.703125,
+            "width": 12,
+            "height": 12.75
+          },
+          "message": "Missing alt attribute"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 111.484375,
+            "y": 82,
+            "width": 264,
+            "height": 145
+          },
+          "message": "Missing alt attribute"
+        }
+      ],
+      "buttons": [
+        {
+          "type": "button_count",
+          "ref_count": 2,
+          "live_count": 8,
+          "message": "Button count (identifiable): expected 2, found 8"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 92.234375,
+            "y": 661.1875,
+            "width": 213,
+            "height": 48
+          },
+          "message": "Missing button: 'View Plans' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 339.484375,
+            "y": 30,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 229.28125,
+            "y": 549.5625,
+            "width": 65.09375,
+            "height": 45
+          },
+          "message": "Extra button in live: '10 - 20' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 91.09375,
+            "y": 549.5625,
+            "width": 65.09375,
+            "height": 45
+          },
+          "message": "Extra button in live: '5 - 7' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 160.1875,
+            "y": 549.5625,
+            "width": 65.09375,
+            "height": 45
+          },
+          "message": "Extra button in live: '7 - 10' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 22.0,
+            "y": 549.5625,
+            "width": 65.09375,
+            "height": 45
+          },
+          "message": "Extra button in live: '<5' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 298.375,
+            "y": 549.5625,
+            "width": 65.109375,
+            "height": 45
+          },
+          "message": "Extra button in live: '>20' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 29.234375,
+            "y": 610.5625,
+            "width": 327,
+            "height": 48
+          },
+          "message": "Extra button in live: 'Calculate Now' (href: '')"
+        },
+        {
+          "type": "button_label_mismatch",
+          "bbox": {
+            "x": 22.0,
+            "y": 449.5625,
+            "width": 76.75,
+            "height": 56
+          },
+          "message": "Button label mismatch for 'text:+91': expected '+91', found '+91'"
+        }
+      ],
+      "links": [],
+      "canonical": [],
+      "meta": [],
+      "og_tags": []
+    }
+  },
+  {
+    "device": "ios",
+    "slug": "rd-calculator",
+    "scope": "popup",
+    "summary": {
+      "headings": "FAIL",
+      "images": "FAIL",
+      "buttons": "FAIL",
+      "links": "PASS",
+      "canonical": "PASS",
+      "meta": "PASS",
+      "og_tags": "PASS"
+    },
+    "details": {
+      "headings": [
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 28,
+            "y": 9.90625,
+            "width": 274,
+            "height": 72
+          },
+          "message": "Missing H3"
+        },
+        {
+          "type": "heading_count",
+          "ref_count": 3,
+          "live_count": 2,
+          "message": "Heading count: expected 3, found 2"
+        }
+      ],
+      "images": [
+        {
+          "type": "image_count",
+          "ref_count": 4,
+          "live_count": 2,
+          "message": "Image count: expected 4, found 2"
+        },
+        {
+          "type": "alt_mismatch",
+          "bbox": {
+            "x": 30.0,
+            "y": 120.703125,
+            "width": 12,
+            "height": 12.75
+          },
+          "message": "Alt mismatch. Expected 'image rupeeIconPopup', found ''"
+        },
+        {
+          "type": "alt_mismatch",
+          "bbox": {
+            "x": 94.75,
+            "y": 82,
+            "width": 264,
+            "height": 145
+          },
+          "message": "Alt mismatch. Expected 'image Chart', found ''"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 88.15625,
+            "y": 445.203125,
+            "width": 20,
+            "height": 20
+          },
+          "message": "Image missing in live (alt: 'image chevron_down_navigate_7dd1121f7c')"
+        },
+        {
+          "type": "missing_image",
+          "bbox": {
+            "x": 242.75,
+            "y": 474.21875,
+            "width": 106,
+            "height": 18
+          },
+          "message": "Image missing in live (alt: 'we_dont_spam')"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 30.0,
+            "y": 120.703125,
+            "width": 12,
+            "height": 12.75
+          },
+          "message": "Missing alt attribute"
+        },
+        {
+          "type": "empty_alt",
+          "bbox": {
+            "x": 94.75,
+            "y": 82,
+            "width": 264,
+            "height": 145
+          },
+          "message": "Missing alt attribute"
+        }
+      ],
+      "buttons": [
+        {
+          "type": "button_count",
+          "ref_count": 2,
+          "live_count": 8,
+          "message": "Button count (identifiable): expected 2, found 8"
+        },
+        {
+          "type": "missing_button",
+          "bbox": {
+            "x": 83.875,
+            "y": 653.375,
+            "width": 213,
+            "height": 48
+          },
+          "message": "Missing button: 'View Plans' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 322.75,
+            "y": 30,
+            "width": 24,
+            "height": 24
+          },
+          "message": "Extra button in live: '' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 219.25,
+            "y": 561.5625,
+            "width": 61.75,
+            "height": 45
+          },
+          "message": "Extra button in live: '10 - 20' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 87.75,
+            "y": 561.5625,
+            "width": 61.75,
+            "height": 45
+          },
+          "message": "Extra button in live: '5 - 7' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 153.5,
+            "y": 561.5625,
+            "width": 61.75,
+            "height": 45
+          },
+          "message": "Extra button in live: '7 - 10' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 22.0,
+            "y": 561.5625,
+            "width": 61.75,
+            "height": 45
+          },
+          "message": "Extra button in live: '<5' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 285.0,
+            "y": 561.5625,
+            "width": 61.75,
+            "height": 45
+          },
+          "message": "Extra button in live: '>20' (href: '')"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 22.0,
+            "y": 622.5625,
+            "width": 324.75,
+            "height": 48
+          },
+          "message": "Extra button in live: 'Calculate Now' (href: '')"
+        },
+        {
+          "type": "button_label_mismatch",
+          "bbox": {
+            "x": 22.0,
+            "y": 461.5625,
+            "width": 76.75,
+            "height": 56
+          },
+          "message": "Button label mismatch for 'text:+91': expected '+91', found '+91'"
+        }
+      ],
+      "links": [],
+      "canonical": [],
+      "meta": [],
+      "og_tags": []
+    }
+  }
+]

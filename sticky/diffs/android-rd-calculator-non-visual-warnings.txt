@@ -5,8 +5,5 @@ Non-Visual / SEO Status — Sticky — android (rd-calculator)
 - Sticky Elements: FAIL
 
 [Specific Issues]
-- Heading count: expected 3, found 4
-- Image count: expected 8, found 7
-- Button count (identifiable): expected 3, found 9
-- Link count: expected 5, found 3
-- Sticky count differs (ref=3 live=26)
+- Button count (identifiable): expected 2, found 3
+- Sticky count differs (ref=2 live=3)

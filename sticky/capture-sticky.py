@@ -23,100 +23,158 @@ def get_output_dir(mode: str, device: str, slug: str) -> str:
     return os.path.join(base, f"{device}-{slug}")
 
 def extract_elements(page, fold_height: int) -> dict:
-    """Extract the same structural elements as first‑fold capture plus sticky entries."""
-    elements = {
-        "headings": [],
-        "images": [],
-        "buttons": [],
-        "links": [],
-        "canonical": [],
-        "meta": [],
-        "og_tags": [],
-        "sticky": [],
-    }
-    # Headings
-    for level in range(1, 7):
-        tag = f"h{level}"
-        for el in page.query_selector_all(tag):
-            bbox = el.bounding_box()
-            if bbox and bbox["y"] < fold_height:
-                text = " ".join((el.text_content() or "").split())[:80]
-                elements["headings"].append({"tag": tag, "text": text, "bbox": bbox})
-    # Images
-    for el in page.query_selector_all("img"):
-        bbox = el.bounding_box()
-        if bbox and bbox["y"] < fold_height:
-            elements["images"].append({
-                "alt": el.get_attribute("alt") or "",
-                "src": el.get_attribute("src") or "",
-                "bbox": bbox,
-            })
-    # Buttons
-    button_selectors = ["button", "input[type='button']", "input[type='submit']", "[role='button']"]
-    for selector in button_selectors:
-        for el in page.query_selector_all(selector):
-            bbox = el.bounding_box()
-            if not bbox or bbox["y"] > fold_height:
-                continue
-            text = " ".join((el.text_content() or "").split())[:80]
-            href = el.evaluate("""el => {
-                let href = el.getAttribute('href');
-                if (href) return href;
-                let a = el.closest('a');
-                if (a) return a.getAttribute('href') || '';
-                let d = el.querySelector('a');
-                if (d) return d.getAttribute('href') || '';
-                return '';
-            }""") or ""
-            aria_label = el.get_attribute("aria-label") or ""
-            elements["buttons"].append({
-                "selector": selector,
-                "text": text,
-                "aria_label": aria_label.strip(),
-                "href": href.strip(),
-                "bbox": bbox,
-            })
-    # Links
-    for el in page.query_selector_all("a"):
-        bbox = el.bounding_box()
-        if bbox and bbox["y"] < fold_height:
-            elements["links"].append({"href": el.get_attribute("href") or "", "bbox": bbox})
-    # Canonical
-    canonical_el = page.query_selector("link[rel='canonical']")
-    if canonical_el:
-        elements["canonical"].append({"href": canonical_el.get_attribute("href") or "", "bbox": None})
-    # Meta
-    meta_selectors = {"title": "title", "description": "meta[name='description']", "keywords": "meta[name='keywords']"}
-    for key, selector in meta_selectors.items():
-        el = page.query_selector(selector)
-        if el:
-            value = (el.text_content() or "").strip() if key == "title" else (el.get_attribute("content") or "")
-            elements["meta"].append({"name": key, "value": value, "bbox": None})
-    # OG tags
-    og_selectors = {"og:title": "meta[property='og:title']", "og:description": "meta[property='og:description']", "og:keywords": "meta[property='og:keywords']"}
-    for key, selector in og_selectors.items():
-        el = page.query_selector(selector)
-        if el:
-            elements["og_tags"].append({"property": key, "value": el.get_attribute("content") or "", "bbox": None})
-    # Sticky / Fixed elements detection via computed style
-    sticky_elements = page.evaluate("""
+    """Extract only elements that are inside sticky/fixed elements."""
+    return page.evaluate("""
         () => {
-            const elems = Array.from(document.querySelectorAll('*'));
-            return elems.filter(el => {
-                const style = window.getComputedStyle(el);
-                return style.position === 'sticky' || style.position === 'fixed';
-            }).map(el => {
+            function isStickyOrFixed(el) {
+                const viewport_w = window.innerWidth;
+                const viewport_h = window.innerHeight;
+                
+                let cur = el;
+                while (cur && cur !== document.documentElement && cur !== null) {
+                    const style = window.getComputedStyle(cur);
+                    if (style.position === 'sticky' || style.position === 'fixed') {
+                        const rect = cur.getBoundingClientRect();
+                        if (rect.width > 0 && rect.height > 0) {
+                            const isFullPage = (rect.width >= viewport_w * 0.9) && (rect.height >= viewport_h * 0.9);
+                            if (!isFullPage) {
+                                return true;
+                            }
+                        }
+                    }
+                    cur = cur.parentElement;
+                }
+                return false;
+            }
+
+            function getBBox(el) {
                 const rect = el.getBoundingClientRect();
                 return {
-                    tag: el.tagName.toLowerCase(),
-                    bbox: {x: rect.x, y: rect.y, width: rect.width, height: rect.height}
+                    x: rect.x,
+                    y: rect.y,
+                    width: rect.width,
+                    height: rect.height
                 };
+            }
+
+            const headings = [];
+            for (let level = 1; level <= 6; level++) {
+                const tag = 'h' + level;
+                document.querySelectorAll(tag).forEach(el => {
+                    const bbox = getBBox(el);
+                    if (bbox.width > 0 && bbox.height > 0 && isStickyOrFixed(el)) {
+                        headings.push({
+                            tag: tag,
+                            text: (el.textContent || '').trim().replace(/\\s+/g, ' ').substring(0, 80),
+                            bbox: bbox
+                        });
+                    }
+                });
+            }
+
+            const images = [];
+            document.querySelectorAll('img').forEach(el => {
+                const bbox = getBBox(el);
+                if (bbox.width > 0 && bbox.height > 0 && isStickyOrFixed(el)) {
+                    images.push({
+                        alt: el.alt || el.getAttribute('alt') || '',
+                        src: el.getAttribute('src') || '',
+                        bbox: bbox
+                    });
+                }
             });
+
+            const buttons = [];
+            const seenButtons = new Set();
+            const buttonSelectors = ['button', 'input[type="button"]', 'input[type="submit"]', '[role="button"]'];
+            buttonSelectors.forEach(selector => {
+                document.querySelectorAll(selector).forEach(el => {
+                    if (seenButtons.has(el)) return;
+                    const bbox = getBBox(el);
+                    if (bbox.width > 0 && bbox.height > 0 && isStickyOrFixed(el)) {
+                        seenButtons.add(el);
+                        let href = el.getAttribute('href') || '';
+                        if (!href) {
+                            let a = el.closest('a');
+                            if (a) href = a.getAttribute('href') || '';
+                        }
+                        if (!href) {
+                            let d = el.querySelector('a');
+                            if (d) href = d.getAttribute('href') || '';
+                        }
+                        buttons.push({
+                            selector: selector,
+                            text: (el.textContent || '').trim().replace(/\\s+/g, ' ').substring(0, 80),
+                            aria_label: (el.getAttribute('aria-label') || '').trim(),
+                            href: href.trim(),
+                            bbox: bbox
+                        });
+                    }
+                });
+            });
+
+            const links = [];
+            document.querySelectorAll('a').forEach(el => {
+                const bbox = getBBox(el);
+                if (bbox.width > 0 && bbox.height > 0 && isStickyOrFixed(el)) {
+                    links.push({
+                        href: el.getAttribute('href') || '',
+                        bbox: bbox
+                    });
+                }
+            });
+
+            const canonical = [];
+            const canonicalEl = document.querySelector("link[rel='canonical']");
+            if (canonicalEl) {
+                canonical.push({
+                    href: canonicalEl.getAttribute('href') || '',
+                    bbox: null
+                });
+            }
+
+            const meta = [];
+            const titleEl = document.querySelector("title");
+            if (titleEl) {
+                meta.push({ name: "title", value: (titleEl.textContent || "").trim(), bbox: null });
+            }
+            const descEl = document.querySelector("meta[name='description']");
+            if (descEl) {
+                meta.push({ name: "description", value: descEl.getAttribute("content") || "", bbox: null });
+            }
+            const keysEl = document.querySelector("meta[name='keywords']");
+            if (keysEl) {
+                meta.push({ name: "keywords", value: keysEl.getAttribute("content") || "", bbox: null });
+            }
+
+            const og_tags = [];
+            ["og:title", "og:description", "og:keywords"].forEach(prop => {
+                const el = document.querySelector(`meta[property='${prop}']`);
+                if (el) {
+                    og_tags.push({ property: prop, value: el.getAttribute("content") || "", bbox: null });
+                }
+            });
+
+            const sticky = [];
+            document.querySelectorAll('*').forEach(el => {
+                const style = window.getComputedStyle(el);
+                if (style.position === 'sticky' || style.position === 'fixed') {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.width > 0 && rect.height > 0) {
+                        const isFullPage = (rect.width >= window.innerWidth * 0.9) && (rect.height >= window.innerHeight * 0.9);
+                        if (!isFullPage) {
+                            sticky.push({
+                                tag: el.tagName.toLowerCase(),
+                                bbox: { x: rect.x, y: rect.y, width: rect.width, height: rect.height }
+                            });
+                        }
+                    }
+                }
+            });
+
+            return { headings, images, buttons, links, canonical, meta, og_tags, sticky };
         }
     """)
-    for entry in sticky_elements:
-        elements["sticky"].append({"tag": entry["tag"], "bbox": entry["bbox"]})
-    return elements
 
 def capture_sticky(p, browser_kwargs, page_kwargs, url, mode, device, slug):
     fold_height = FIRST_FOLD_HEIGHTS[device]
