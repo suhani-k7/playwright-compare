@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import os
+import shutil
+import sys
 import threading
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -34,6 +36,7 @@ def register_run(run_id: str, request: schemas.CompareRequest) -> None:
             "reference_url": request.reference_url,
             "live_url":      request.live_url,
             "categories":    request.categories,
+            "all_annotations": request.all_annotations,
             "error":         None,
         }
 
@@ -176,11 +179,93 @@ def _substitute_slug(template: str, slug: str) -> str:
     return template.replace("{slug}", slug)
 
 
+def _copy_project_outputs_to_run_dir(run_dir: Path, slug: str, script_key: str) -> None:
+    """Copy generated outputs from project root subfolders to the run_dir."""
+    if script_key == "core":
+        src_dirs = {
+            PROJECT_ROOT / "reference": run_dir / "reference",
+            PROJECT_ROOT / "live": run_dir / "live",
+            PROJECT_ROOT / "diffs": run_dir / "diffs",
+            PROJECT_ROOT / "reports": run_dir / "reports",
+        }
+    elif script_key == "sticky":
+        src_dirs = {
+            PROJECT_ROOT / "sticky" / "reference": run_dir / "reference",
+            PROJECT_ROOT / "sticky" / "live": run_dir / "live",
+            PROJECT_ROOT / "sticky" / "diffs": run_dir / "sticky" / "diffs",
+            PROJECT_ROOT / "sticky" / "reports": run_dir / "sticky" / "reports",
+        }
+    elif script_key == "popup":
+        src_dirs = {
+            PROJECT_ROOT / "popup" / "reference": run_dir / "reference",
+            PROJECT_ROOT / "popup" / "live": run_dir / "live",
+            PROJECT_ROOT / "popup" / "diffs": run_dir / "popup" / "diffs",
+            PROJECT_ROOT / "popup" / "reports": run_dir / "popup" / "reports",
+        }
+    else:
+        src_dirs = {}
+
+    # Copy files and delete them from source
+    for src_dir, dest_dir in src_dirs.items():
+        if not src_dir.is_dir():
+            continue
+        for item in list(src_dir.rglob(f"*{slug}*")):
+            if item.is_file():
+                rel_path = item.relative_to(src_dir)
+                dest_file = dest_dir / rel_path
+                dest_file.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(item, dest_file)
+                print(f"[runner] Copied project output: {item} -> {dest_file}")
+                try:
+                    item.unlink()
+                except Exception as e:
+                    print(f"[runner] Failed to delete temporary source file {item}: {e}")
+
+    # Clean up empty source subdirectories containing slug
+    for src_dir in src_dirs.keys():
+        if not src_dir.is_dir():
+            continue
+        # Search for directories containing the slug
+        for item in list(src_dir.rglob(f"*{slug}*")):
+            if item.is_dir():
+                try:
+                    if not any(item.iterdir()):
+                        item.rmdir()
+                        print(f"[runner] Removed empty temp directory: {item}")
+                except Exception:
+                    pass
+
+
 # ---------------------------------------------------------------------------
 # Main entry point — called by FastAPI BackgroundTasks
 # ---------------------------------------------------------------------------
 
+def _prune_outputs(keep: int = 5) -> None:
+    """Delete oldest output run directories, preserving the most recent `keep` runs.
+    The current run (if present) is always retained because its folder is among the newest.
+    """
+    # Gather all run directories sorted by modification time (newest first)
+    run_dirs = [d for d in OUTPUT_ROOT.iterdir() if d.is_dir()]
+    run_dirs.sort(key=lambda p: p.stat().st_mtime, reverse=True)
+    # Remove any beyond the `keep` most recent
+    for old_dir in run_dirs[keep:]:
+        try:
+            shutil.rmtree(old_dir)
+            print(f"[runner] Pruned old output run: {old_dir}")
+        except Exception as e:
+            print(f"[runner] Failed to prune {old_dir}: {e}")
+
+# Call prune at the start of run_comparison to keep only the latest 5 runs
 def run_comparison(run_id: str) -> None:
+    # Ensure we keep only the latest 5 output runs before proceeding
+    _prune_outputs(keep=5)
+    info = get_run_info(run_id)
+    if not info:
+        return
+
+    _set_status(run_id, "running")
+
+    run_dir    = Path(info["run_dir"])
     info = get_run_info(run_id)
     if not info:
         return
@@ -214,21 +299,26 @@ def run_comparison(run_id: str) -> None:
 
                 # Step 1: capture reference
                 _run(
-                    ["python3", capture_abs,
+                    [sys.executable, capture_abs,
                      "--url", ref_url, "--mode", "reference", "--slug", slug],
-                    cwd=run_dir,
+                    cwd=PROJECT_ROOT,
                 )
                 # Step 2: capture live
                 _run(
-                    ["python3", capture_abs,
+                    [sys.executable, capture_abs,
                      "--url", live_url, "--mode", "live", "--slug", slug],
-                    cwd=run_dir,
+                    cwd=PROJECT_ROOT,
                 )
                 # Step 3: compare
+                compare_cmd = [sys.executable, compare_abs, "--slug", slug]
+                if info.get("all_annotations"):
+                    compare_cmd.append("--all")
                 _run(
-                    ["python3", compare_abs, "--slug", slug],
-                    cwd=run_dir,
+                    compare_cmd,
+                    cwd=PROJECT_ROOT,
                 )
+
+                _copy_project_outputs_to_run_dir(run_dir, slug, script_key)
 
                 scripts_run.add(script_key)
 

@@ -84,7 +84,7 @@ def compare_sticky(ref_elements: dict, live_elements: dict):
         issues.append({"type": "sticky_extra", "message": f"Extra sticky in live: {extra}", "bbox": orig.get("bbox")})
     status = "PASS" if not issues else "FAIL"
     return status, issues
-def annotate_screenshot(device: str, slug: str, report: dict):
+def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = False):
     """Draw bounding boxes onto live sticky screenshot and write warnings."""
     live_dir = os.path.join(LIVE_DIR, f"{device}-{slug}")
     if not os.path.isdir(live_dir):
@@ -94,85 +94,6 @@ def annotate_screenshot(device: str, slug: str, report: dict):
     screenshot_files = [
         f for f in os.listdir(live_dir)
         if f.startswith(f"{device}-{slug}") and f.lower().endswith(('.png', '.jpg'))
-    ]
-    if not screenshot_files:
-        print(f"  [Annotate] No screenshots found for {device}/{slug}.")
-        return
-
-
-    os.makedirs(DIFFS_DIR, exist_ok=True)
-
-    # Non-visual warnings
-    warnings_path = os.path.join(DIFFS_DIR, f"{device}-{slug}-non-visual-warnings.txt")
-    with open(warnings_path, "w", encoding="utf-8") as f:
-        f.write(f"Non-Visual / SEO Status — Sticky — {device} ({slug})\n")
-        f.write("=" * 50 + "\n\n")
-        summary = report.get("summary", {})
-        f.write("[Sticky Summary]\n")
-        f.write(f"- Sticky Elements: {summary.get('sticky', 'N/A')}\n")
-        f.write(f"- Canonical:       {summary.get('canonical', 'N/A')}\n")
-        f.write(f"- Meta:            {summary.get('meta', 'N/A')}\n")
-        f.write(f"- OG Tags:         {summary.get('og_tags', 'N/A')}\n\n")
-        f.write("[Non-Visual Mismatches]\n")
-        floating = [
-            issue.get("message", "")
-            for issues in report.get("details", {}).values()
-            if isinstance(issues, list)
-            for issue in issues
-            if issue.get("bbox") is None
-        ]
-        for msg in floating:
-            f.write(f"- {msg}\n")
-        if not floating:
-            f.write("- All correct!\n")
-    print(f"  Non-visual warnings saved.")
-
-    # Annotate each screenshot
-    for screenshot in screenshot_files:
-        img = Image.open(os.path.join(live_dir, screenshot))
-        draw = ImageDraw.Draw(img)
-        try:
-            font = ImageFont.load_default(size=16)
-        except Exception:
-            font = ImageFont.load_default()
-
-        for category, issues in report.get("details", {}).items():
-            if not isinstance(issues, list):
-                continue
-            for issue in issues:
-                bbox = issue.get("bbox")
-                if not bbox:
-                    continue
-                label = issue.get("message", "Mismatch")
-                x, y, w, h = bbox["x"], bbox["y"], bbox["width"], bbox["height"]
-                draw.rectangle([(x, y), (x + w, y + h)], outline="red", width=3)
-                if len(label) > 60:
-                    label = label[:57] + "..."
-                text_y = max(0, y - 20)
-                try:
-                    text_bbox = draw.textbbox((x, text_y), label, font=font)
-                    if x + (text_bbox[2] - text_bbox[0]) > img.width:
-                        x = max(0, img.width - (text_bbox[2] - text_bbox[0]))
-                        text_bbox = draw.textbbox((x, text_y), label, font=font)
-                    draw.rectangle(text_bbox, fill="red")
-                except AttributeError:
-                    pass
-                draw.text((x, text_y), label, fill="white", font=font)
-
-        out_path = os.path.join(DIFFS_DIR, screenshot.replace("live-", "annotated-"))
-        img.save(out_path)
-        print(f"  Annotated screenshot saved to {out_path}")
-
-# Removed duplicate annotate_screenshot implementation
-
-    live_dir = os.path.join(LIVE_DIR, f"{device}-{slug}")
-    if not os.path.isdir(live_dir):
-        print(f"  [Annotate] Live directory not found: {live_dir}")
-        return
-
-    screenshot_files = [
-        f for f in os.listdir(live_dir)
-        if f.startswith(f"live-{device}-{slug}") and f.endswith("screenshot.png")
     ]
     if not screenshot_files:
         print(f"  [Annotate] No screenshots found for {device}/{slug}.")
@@ -389,6 +310,7 @@ def generate_summary_report(all_reports: list, slug: str):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--slug", required=True)
+    parser.add_argument("--all", action="store_true")
     args = parser.parse_args()
 
     all_reports = []
@@ -396,7 +318,7 @@ if __name__ == "__main__":
         try:
             report = compare_device(device, args.slug)
             all_reports.append(report)
-            annotate_screenshot(device, args.slug, report)
+            annotate_screenshot(device, args.slug, report, show_all=args.all)
         except FileNotFoundError as e:
             print(f"\n[{device}] Skipping — {e}")
 

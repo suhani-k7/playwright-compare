@@ -439,7 +439,7 @@ def compare_links(ref_soup, live_soup, ref_elements: dict, live_elements: dict) 
 # Annotation runner
 # -------------------------------------------------------------------
 
-def annotate_screenshot(device: str, slug: str, report: dict):
+def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = False):
     """
     Draws bounding boxes and labels on the live screenshot based on the report.
     Saves to the 'diffs/' folder.
@@ -652,6 +652,11 @@ if __name__ == "__main__":
         required=True,
         help="Page slug used during capture. e.g. rd-calculator"
     )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Annotate all elements, not just mismatches"
+    )
     args = parser.parse_args()
 
     all_reports = []
@@ -661,7 +666,7 @@ if __name__ == "__main__":
         try:
             report = compare_device(device, args.slug)
             all_reports.append(report)
-            annotate_screenshot(device, args.slug, report)
+            annotate_screenshot(device, args.slug, report, show_all=args.all)
         except FileNotFoundError as e:
             print(f"\n[{device}] Skipping — {e}")
 

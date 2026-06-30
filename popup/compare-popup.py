@@ -42,7 +42,7 @@ def load_elements(mode: str, device: str, slug: str) -> dict:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def annotate_screenshot(device: str, slug: str, report: dict):
+def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = False):
     # Use live screenshot
     live_img_path = os.path.join(LIVE_DIR, f"{device}-{slug}", f"live-{device}-{slug}-screenshot.png")
     if not os.path.exists(live_img_path):
@@ -54,6 +54,7 @@ def annotate_screenshot(device: str, slug: str, report: dict):
         font = ImageFont.load_default(size=16)
     except Exception:
         font = ImageFont.load_default()
+
     details = report.get("details", {})
     floating_messages = []
     for category, issues in details.items():
@@ -178,13 +179,14 @@ def generate_summary_report(all_reports: list, slug: str):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--slug", required=True)
+    parser.add_argument("--all", action="store_true")
     args = parser.parse_args()
     all_reports = []
     for device in ["desktop", "android", "ios"]:
         try:
             report = compare_device(device, args.slug)
             all_reports.append(report)
-            annotate_screenshot(device, args.slug, report)
+            annotate_screenshot(device, args.slug, report, show_all=args.all)
         except FileNotFoundError as e:
             print(f"\n[{device}] Skipping — {e}")
     os.makedirs(REPORTS_DIR, exist_ok=True)

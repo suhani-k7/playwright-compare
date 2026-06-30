@@ -16,6 +16,7 @@ class CompareRequest(BaseModel):
     reference_url: str
     live_url: str
     categories: List[str]  # subset of VALID_CATEGORIES
+    all_annotations: bool = False
 
 
 class CompareResponse(BaseModel):
