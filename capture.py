@@ -166,6 +166,26 @@ def extract_elements(page) -> dict:
 
     return elements
 
+def _neutralize_sticky_elements(page):
+    """
+    Full-page screenshots scroll-and-stitch the page together. Elements with
+    position: fixed or position: sticky (e.g. a sticky nav bar) repaint at
+    their fixed on-screen position during each scroll segment, which can get
+    baked into the final stitched image as a duplicate near the bottom.
+    Force them to static positioning right before the screenshot so they
+    render once, in their normal document-flow position.
+    """
+    page.evaluate("""
+        () => {
+            const all = document.querySelectorAll('*');
+            all.forEach(el => {
+                const style = window.getComputedStyle(el);
+                if (style.position === 'fixed' || style.position === 'sticky') {
+                    el.style.setProperty('position', 'static', 'important');
+                }
+            });
+        }
+    """)
 
 def capture_url(url: str, mode: str, slug: str):
     """
@@ -186,7 +206,8 @@ def capture_url(url: str, mode: str, slug: str):
 
         out_dir = get_output_dir(mode, "desktop", slug)
         os.makedirs(out_dir, exist_ok=True)
-
+        
+        _neutralize_sticky_elements(page)
         page.screenshot(path=os.path.join(out_dir, f"{mode}-desktop-{slug}-screenshot.png"), full_page=True)
         print(f"  Screenshot saved.")
 
@@ -219,6 +240,7 @@ def capture_url(url: str, mode: str, slug: str):
         out_dir = get_output_dir(mode, "android", slug)
         os.makedirs(out_dir, exist_ok=True)
 
+        _neutralize_sticky_elements(page)
         page.screenshot(path=os.path.join(out_dir, f"{mode}-android-{slug}-screenshot.png"), full_page=True)
         print(f"  Screenshot saved.")
 
@@ -250,6 +272,7 @@ def capture_url(url: str, mode: str, slug: str):
         out_dir = get_output_dir(mode, "ios", slug)
         os.makedirs(out_dir, exist_ok=True)
 
+        _neutralize_sticky_elements(page)
         page.screenshot(path=os.path.join(out_dir, f"{mode}-ios-{slug}-screenshot.png"), full_page=True)
         print(f"  Screenshot saved.")
 

@@ -4,6 +4,7 @@ import os
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 import urllib.parse
+from difflib import SequenceMatcher
 
 # -------------------------------------------------------------------
 # Helpers to load saved capture outputs
@@ -62,51 +63,76 @@ def load_elements(mode: str, device: str, slug: str) -> dict:
 #   details — list of mismatch dicts (used by annotator in Phase 3)
 # -------------------------------------------------------------------
 
+def _normalize_heading_text(text: str) -> str:
+    """Lowercase + collapse whitespace so trivial formatting diffs don't count."""
+    return " ".join((text or "").strip().lower().split())
+
+
 def compare_headings(ref_soup, live_soup, ref_elements: dict, live_elements: dict) -> tuple[str, list]:
     """
-    Compares H1-H6 across reference and live sequentially.
-    Checks: tag mismatch and missing/extra tags.
+    Aligns headings by content (tag, normalized_text) using sequence alignment,
+    instead of comparing by index position. This means an inserted/deleted/reordered
+    heading no longer cascades into false mismatches for every heading after it.
     """
     mismatches = []
 
     ref_h = ref_elements.get("headings", [])
     live_h = live_elements.get("headings", [])
 
-    max_len = max(len(ref_h), len(live_h))
-    for i in range(max_len):
-        r = ref_h[i] if i < len(ref_h) else None
-        l = live_h[i] if i < len(live_h) else None
+    ref_keys = [(h["tag"], _normalize_heading_text(h["text"])) for h in ref_h]
+    live_keys = [(h["tag"], _normalize_heading_text(h["text"])) for h in live_h]
 
-        if r and l:
-            if r["tag"] != l["tag"]:
+    matcher = SequenceMatcher(a=ref_keys, b=live_keys, autojunk=False)
+
+    for tag_op, i1, i2, j1, j2 in matcher.get_opcodes():
+        if tag_op == "equal":
+            continue  # genuinely matched, no mismatch to report
+
+        elif tag_op == "replace":
+            # Same slot in the aligned sequence, different content -> modified heading
+            span = min(i2 - i1, j2 - j1)
+            for offset in range(span):
+                r = ref_h[i1 + offset]
+                l = live_h[j1 + offset]
                 mismatches.append({
-                    "type": "heading_tag_mismatch",
+                    "type": "heading_modified",
                     "bbox": l["bbox"],
-                    "message": f"{l['tag'].upper()}, should have been {r['tag'].upper()}"
+                    "message": f"{l['tag'].upper()} changed: expected '{r['text']}', found '{l['text']}'"
                 })
-        elif r and not l:
-            mismatches.append({
-                "type": "missing_heading",
-                "bbox": r["bbox"],
-                "message": f"Missing {r['tag'].upper()}"
-            })
-        elif not r and l:
-            mismatches.append({
-                "type": "extra_heading",
-                "bbox": l["bbox"],
-                "message": f"Extra {l['tag'].upper()}"
-            })
+            # leftover reference-side entries beyond the shorter span = deleted
+            for offset in range(span, i2 - i1):
+                r = ref_h[i1 + offset]
+                mismatches.append({
+                    "type": "missing_heading",
+                    "bbox": r["bbox"],
+                    "message": f"Missing {r['tag'].upper()}: '{r['text']}'"
+                })
+            # leftover live-side entries beyond the shorter span = inserted
+            for offset in range(span, j2 - j1):
+                l = live_h[j1 + offset]
+                mismatches.append({
+                    "type": "extra_heading",
+                    "bbox": l["bbox"],
+                    "message": f"Extra {l['tag'].upper()}: '{l['text']}'"
+                })
 
-    # Global count check
-    ref_count = len(ref_h)
-    live_count = len(live_h)
-    if ref_count != live_count:
-        mismatches.append({
-            "type": "heading_count",
-            "ref_count": ref_count,
-            "live_count": live_count,
-            "message": f"Heading count: expected {ref_count}, found {live_count}"
-        })
+        elif tag_op == "delete":
+            for offset in range(i1, i2):
+                r = ref_h[offset]
+                mismatches.append({
+                    "type": "missing_heading",
+                    "bbox": r["bbox"],
+                    "message": f"Missing {r['tag'].upper()}: '{r['text']}'"
+                })
+
+        elif tag_op == "insert":
+            for offset in range(j1, j2):
+                l = live_h[offset]
+                mismatches.append({
+                    "type": "extra_heading",
+                    "bbox": l["bbox"],
+                    "message": f"Extra {l['tag'].upper()}: '{l['text']}'"
+                })
 
     status = "PASS" if not mismatches else "FAIL"
     return status, mismatches
@@ -170,28 +196,90 @@ def compare_images(ref_soup, live_soup, ref_elements: dict, live_elements: dict)
     status = "PASS" if not mismatches else "FAIL"
     return status, mismatches
 
-def get_btn_compare_key(btn: dict) -> str:
-    """Return a stable comparison key for a button.
-    Preference order: normalized href → text → aria_label.
+def _normalize_btn_text(text: str) -> str:
+    return " ".join((text or "").strip().lower().split())
+
+
+def _btn_text_similarity(a: str, b: str) -> float:
+    """0.0-1.0 similarity between two normalized button texts."""
+    if not a or not b:
+        return 0.0
+    return SequenceMatcher(a=a, b=b, autojunk=False).ratio()
+
+
+def _bbox_center(bbox):
+    if not bbox:
+        return None
+    return (bbox["x"] + bbox["width"] / 2, bbox["y"] + bbox["height"] / 2)
+
+
+def _bbox_proximity_score(ref_bbox, live_bbox, max_bonus: float = 5.0, max_dist: float = 400.0) -> float:
+    """Small tie-breaker bonus for buttons in roughly the same page region. Never primary signal."""
+    rc = _bbox_center(ref_bbox)
+    lc = _bbox_center(live_bbox)
+    if not rc or not lc:
+        return 0.0
+    dist = ((rc[0] - lc[0]) ** 2 + (rc[1] - lc[1]) ** 2) ** 0.5
+    if dist >= max_dist:
+        return 0.0
+    return max_bonus * (1 - dist / max_dist)
+
+
+def _score_button_pair(ref_btn: dict, live_btn: dict) -> float:
     """
-    href = _normalize_href(btn.get('href', '').strip())
-    if href:
-        return href
-    text = btn.get('text', '').strip().lower()
-    if text:
-        return f"text:{text}"
-    aria = btn.get('aria_label', '').strip().lower()
-    if aria:
-        return f"aria:{aria}"
-    return ''
+    Weighted score for how likely ref_btn and live_btn are the "same" button.
+    Higher = more confident match. Signals are additive, not a cascade —
+    a button can match on multiple weak signals even if no single one is exact.
+    """
+    score = 0.0
+
+    ref_href = _normalize_href((ref_btn.get("href") or "").strip())
+    live_href = _normalize_href((live_btn.get("href") or "").strip())
+    if ref_href and live_href and ref_href == live_href:
+        score += 50.0
+
+    ref_text = _normalize_btn_text(ref_btn.get("text"))
+    live_text = _normalize_btn_text(live_btn.get("text"))
+    if ref_text and live_text:
+        if ref_text == live_text:
+            score += 30.0
+        else:
+            # Partial credit for near-identical text (e.g. "Buy Now" vs "Shop Now")
+            score += 20.0 * _btn_text_similarity(ref_text, live_text)
+
+    ref_aria = _normalize_btn_text(ref_btn.get("aria_label"))
+    live_aria = _normalize_btn_text(live_btn.get("aria_label"))
+    if ref_aria and live_aria and ref_aria == live_aria:
+        score += 15.0
+
+    score += _bbox_proximity_score(ref_btn.get("bbox"), live_btn.get("bbox"))
+
+    return score
+
+def _btn_signature(btn: dict) -> str:
+    """
+    Coarse bucket for buttons with no unique identity (icon-only nav toggles etc).
+    Two buttons with the same signature are structurally interchangeable —
+    compare them by count, not by trying to pair specific instances.
+    """
+    text = (btn.get("text") or "").strip()
+    href = (btn.get("href") or "").strip()
+    aria = (btn.get("aria_label") or "").strip()
+    selector = btn.get("selector", "")
+    return f"{selector}|text:{bool(text)}|href:{bool(href)}|aria:{aria.lower()}"
 
 def compare_buttons(ref_elements: dict, live_elements: dict) -> tuple[str, list]:
+    """
+    Matches ref/live buttons via scored one-to-one assignment for buttons with
+    a real identity (text/href/aria), and via count-per-bucket comparison for
+    icon-only/generic buttons that repeat identically (e.g. nav dropdown chevrons)
+    and therefore can't be meaningfully paired instance-to-instance.
+    """
     mismatches = []
 
     ref_buttons = ref_elements.get("buttons", [])
     live_buttons = live_elements.get("buttons", [])
 
-    # Only count buttons we can actually identify — skip purely icon buttons
     def is_identifiable(btn):
         return bool(
             (btn.get("text") or "").strip() or
@@ -199,24 +287,44 @@ def compare_buttons(ref_elements: dict, live_elements: dict) -> tuple[str, list]
             (btn.get("aria_label") or "").strip()
         )
 
-    ref_identifiable = [b for b in ref_buttons if is_identifiable(b)]
-    live_identifiable = [b for b in live_buttons if is_identifiable(b)]
+    ref_identifiable_all = [b for b in ref_buttons if is_identifiable(b)]
+    live_identifiable_all = [b for b in live_buttons if is_identifiable(b)]
 
-    # Group by comparison key
-    ref_map = {}
-    for b in ref_identifiable:
-        key = get_btn_compare_key(b)
-        ref_map.setdefault(key, []).append(b)
+    # --- Split off icon/generic buttons that repeat identically (2+ on a side) ---
+    def bucket_counts(buttons):
+        counts = {}
+        for b in buttons:
+            sig = _btn_signature(b)
+            counts.setdefault(sig, []).append(b)
+        return counts
 
-    live_map = {}
-    for b in live_identifiable:
-        key = get_btn_compare_key(b)
-        live_map.setdefault(key, []).append(b)
+    ref_buckets = bucket_counts(ref_identifiable_all)
+    live_buckets = bucket_counts(live_identifiable_all)
 
-    ref_map.pop('', None)
-    live_map.pop('', None)
+    GENERIC_MIN_GROUP = 2  # 2+ identical buttons on a side = treat as a bucket, not individuals
 
-    # Count based on identifiable buttons only
+    generic_sigs = {
+        sig for sig, items in ref_buckets.items() if len(items) >= GENERIC_MIN_GROUP
+    } | {
+        sig for sig, items in live_buckets.items() if len(items) >= GENERIC_MIN_GROUP
+    }
+
+    ref_identifiable = [b for b in ref_identifiable_all if _btn_signature(b) not in generic_sigs]
+    live_identifiable = [b for b in live_identifiable_all if _btn_signature(b) not in generic_sigs]
+
+    # --- Bucket-level count comparison for generic/icon buttons ---
+    for sig in sorted(generic_sigs):
+        ref_n = len(ref_buckets.get(sig, []))
+        live_n = len(live_buckets.get(sig, []))
+        if ref_n != live_n:
+            sample = (ref_buckets.get(sig) or live_buckets.get(sig))[0]
+            mismatches.append({
+                "type": "icon_button_count_mismatch",
+                "bbox": sample.get("bbox"),
+                "message": f"Icon/generic button group '{sig}': expected {ref_n}, found {live_n}"
+            })
+
+    # Count check — now only over the individually-identifiable set
     if len(ref_identifiable) != len(live_identifiable):
         mismatches.append({
             "type": "button_count",
@@ -225,58 +333,75 @@ def compare_buttons(ref_elements: dict, live_elements: dict) -> tuple[str, list]
             "message": f"Button count (identifiable): expected {len(ref_identifiable)}, found {len(live_identifiable)}"
         })
 
-    # Missing, extra, label mismatch — rest of logic unchanged
-    for key in sorted(ref_map.keys() - live_map.keys()):
-        for btn in ref_map[key]:
+    # ---- Score every ref x live pair (unchanged) ----
+    MIN_MATCH_SCORE = 10.0
+    candidate_pairs = []
+    for ri, ref_btn in enumerate(ref_identifiable):
+        for li, live_btn in enumerate(live_identifiable):
+            score = _score_button_pair(ref_btn, live_btn)
+            if score >= MIN_MATCH_SCORE:
+                candidate_pairs.append((score, ri, li))
+
+    # ---- Greedy highest-score-first assignment (one-to-one) ----
+    candidate_pairs.sort(key=lambda p: p[0], reverse=True)
+    matched_ref = set()
+    matched_live = set()
+    assignments = []
+
+    for score, ri, li in candidate_pairs:
+        if ri in matched_ref or li in matched_live:
+            continue
+        matched_ref.add(ri)
+        matched_live.add(li)
+        assignments.append((ri, li, score))
+
+    # ---- Report label/href mismatches for matched pairs ----
+    for ri, li, score in assignments:
+        ref_btn = ref_identifiable[ri]
+        live_btn = live_identifiable[li]
+
+        ref_text = (ref_btn.get("text") or "").strip()
+        live_text = (live_btn.get("text") or "").strip()
+        ref_aria = (ref_btn.get("aria_label") or "").strip()
+        live_aria = (live_btn.get("aria_label") or "").strip()
+        ref_href = _normalize_href((ref_btn.get("href") or "").strip())
+        live_href = _normalize_href((live_btn.get("href") or "").strip())
+
+        if ref_text.lower() != live_text.lower() or ref_aria.lower() != live_aria.lower():
+            mismatches.append({
+                "type": "button_label_mismatch",
+                "bbox": live_btn.get("bbox"),
+                "message": f"Button label mismatch: expected '{ref_text}', found '{live_text}'"
+            })
+
+        if ref_href != live_href:
+            mismatches.append({
+                "type": "button_href_mismatch",
+                "bbox": live_btn.get("bbox"),
+                "message": f"Button href changed: expected '{ref_href}', found '{live_href}'"
+            })
+
+    # ---- Unmatched ref buttons = missing ----
+    for ri, ref_btn in enumerate(ref_identifiable):
+        if ri not in matched_ref:
             mismatches.append({
                 "type": "missing_button",
-                "bbox": btn.get("bbox"),
-                "message": f"Missing button: '{btn.get('text','').strip()}' (href: '{btn.get('href','').strip()}')"
+                "bbox": ref_btn.get("bbox"),
+                "message": f"Missing button: '{ref_btn.get('text','').strip()}' (href: '{ref_btn.get('href','').strip()}')"
             })
 
-    for key in sorted(live_map.keys() - ref_map.keys()):
-        for btn in live_map[key]:
+    # ---- Unmatched live buttons = extra ----
+    for li, live_btn in enumerate(live_identifiable):
+        if li not in matched_live:
             mismatches.append({
                 "type": "extra_button",
-                "bbox": btn.get("bbox"),
-                "message": f"Extra button in live: '{btn.get('text','').strip()}' (href: '{btn.get('href','').strip()}')"
+                "bbox": live_btn.get("bbox"),
+                "message": f"Extra button in live: '{live_btn.get('text','').strip()}' (href: '{live_btn.get('href','').strip()}')"
             })
-
-    for key in sorted(ref_map.keys() & live_map.keys()):
-        ref_list = ref_map[key]
-        live_list = live_map[key]
-        for i in range(max(len(ref_list), len(live_list))):
-            if i < len(ref_list) and i < len(live_list):
-                ref_btn = ref_list[i]
-                live_btn = live_list[i]
-                ref_text = ref_btn.get("text", "").strip()
-                live_text = live_btn.get("text", "").strip()
-                ref_aria = ref_btn.get("aria_label", "").strip()
-                live_aria = live_btn.get("aria_label", "").strip()
-                if ref_text.lower() != live_text.lower() or ref_aria.lower() != live_aria.lower():
-                    mismatches.append({
-                        "type": "button_label_mismatch",
-                        "bbox": live_btn.get("bbox"),
-                        "message": f"Button label mismatch for '{key}': expected '{ref_text}', found '{live_text}'"
-                    })
-            elif i < len(ref_list):
-                ref_btn = ref_list[i]
-                mismatches.append({
-                    "type": "missing_button",
-                    "bbox": ref_btn.get("bbox"),
-                    "message": f"Missing button: '{ref_btn.get('text','').strip()}'"
-                })
-            else:
-                live_btn = live_list[i]
-                mismatches.append({
-                    "type": "extra_button",
-                    "bbox": live_btn.get("bbox"),
-                    "message": f"Extra button in live: '{live_btn.get('text','').strip()}'"
-                })
 
     status = "PASS" if not mismatches else "FAIL"
     return status, mismatches
-    
+
 def compare_canonical(ref_soup, live_soup) -> tuple[str, list]:
     """
     Checks canonical tag presence and value match.
@@ -678,3 +803,4 @@ if __name__ == "__main__":
 
     print(f"\nReport saved to {report_path}")
     generate_summary_report(all_reports, args.slug)
+

@@ -1,0 +1,14 @@
+{
+  "run_id": "8f32edd4a757432a96139d886170313a",
+  "reference_url": "https://example.com/",
+  "live_url": "https://example.org/",
+  "timestamp": 1785993385.057199,
+  "categories_run": [
+    "headings",
+    "images",
+    "links",
+    "metadata",
+    "sticky",
+    "popup"
+  ]
+}

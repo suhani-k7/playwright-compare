@@ -7,9 +7,10 @@ const api = axios.create({
 });
 
 export interface CompareRequest {
-  ref_url: string;
+  reference_url: string;
   live_url: string;
   categories: string[];
+  all_annotations: boolean;
 }
 
 export interface CompareResponse {
@@ -25,18 +26,22 @@ export interface ResultResponse {
   reference_url: string;
   live_url: string;
   results: Record<string, {
-    report: any;
+    report: unknown;
     screenshots: {
       reference?: string;
       live?: string;
       annotated?: string;
     };
-    annotations: any[];
+    annotations: unknown[];
   }>;
 }
 
-export const postCompare = (data: CompareRequest) => api.post<CompareResponse>('/compare', data);
-export const getStatus = (runId: string) => api.get<StatusResponse>(`/status/${runId}`);
-export const getResults = (runId: string) => api.get<ResultResponse>(`/results/${runId}`);
+export const postCompare = (data: CompareRequest) =>
+  api.post<CompareResponse>('/compare', data);
 
+export const getStatus = (runId: string) =>
+  api.get<StatusResponse>(`/compare/${runId}`);
+
+export const getResults = (runId: string) =>
+  api.get<ResultResponse>(`/compare/${runId}/results`);
 export default api;
