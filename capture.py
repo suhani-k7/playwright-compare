@@ -6,6 +6,8 @@ from PIL import Image
 import imagehash
 from io import BytesIO
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
 # -------------------------------------------------------------------
 # Device viewport configs
 # Playwright has Pixel 5 and iPhone 13 Mini built-in, so we use those
@@ -21,7 +23,7 @@ def get_output_dir(mode: str, device: str, slug: str) -> str:
     Returns the output directory path for a given mode/device/slug combo.
     e.g. reference/desktop-rd-calculator/
     """
-    return os.path.join(mode, f"{device}-{slug}")
+    return os.path.join(DATA_DIR, mode, f"{device}-{slug}")
 
 def _dedupe_buttons(buttons: list) -> list:
     """
@@ -403,4 +405,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     capture_url(args.url, args.mode, args.slug)
-    print(f"\nDone. Output saved to {args.mode}/[device]-{args.slug}/")
+    print(f"\nDone. Output saved to data/{args.mode}/[device]-{args.slug}/")

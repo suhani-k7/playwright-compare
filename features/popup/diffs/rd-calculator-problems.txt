@@ -1,0 +1,54 @@
+POPUP BUTTON DIFF REPORT — rd-calculator
+============================================================
+
+[ DESKTOP ]
+----------------------------------------
+Reference identifiable buttons: 2
+Live identifiable buttons:      8
+
+REF only (missing from live) (1):
+  - 'View Plans' (href: '')
+
+LIVE only (extra) (7):
+  - '' (href: '')
+  - '10 - 20' (href: '')
+  - '5 - 7' (href: '')
+  - '7 - 10' (href: '')
+  - '<5' (href: '')
+  - '>20' (href: '')
+  - 'Calculate Now' (href: '')
+
+[ ANDROID ]
+----------------------------------------
+Reference identifiable buttons: 2
+Live identifiable buttons:      8
+
+REF only (missing from live) (1):
+  - 'View Plans' (href: '')
+
+LIVE only (extra) (7):
+  - '' (href: '')
+  - '10 - 20' (href: '')
+  - '5 - 7' (href: '')
+  - '7 - 10' (href: '')
+  - '<5' (href: '')
+  - '>20' (href: '')
+  - 'Calculate Now' (href: '')
+
+[ IOS ]
+----------------------------------------
+Reference identifiable buttons: 2
+Live identifiable buttons:      8
+
+REF only (missing from live) (1):
+  - 'View Plans' (href: '')
+
+LIVE only (extra) (7):
+  - '' (href: '')
+  - '10 - 20' (href: '')
+  - '5 - 7' (href: '')
+  - '7 - 10' (href: '')
+  - '<5' (href: '')
+  - '>20' (href: '')
+  - 'Calculate Now' (href: '')
+

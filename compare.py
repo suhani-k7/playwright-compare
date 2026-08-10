@@ -5,7 +5,8 @@ from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 import urllib.parse
 from difflib import SequenceMatcher
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
 # -------------------------------------------------------------------
 # Helpers to load saved capture outputs
 # -------------------------------------------------------------------
@@ -41,7 +42,7 @@ def _normalize_href(href: str, base_url: str = "", known_domains: list = None) -
     return normalized
 
 def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
-    path = os.path.join(mode, f"{device}-{slug}", f"{mode}-{device}-{slug}-page.html")
+    path = os.path.join(DATA_DIR, mode, f"{device}-{slug}", f"{mode}-{device}-{slug}-page.html")
     if not os.path.exists(path):
         raise FileNotFoundError(f"HTML not found: {path}. Run capture.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -49,7 +50,7 @@ def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
 
 
 def load_elements(mode: str, device: str, slug: str) -> dict:
-    path = os.path.join(mode, f"{device}-{slug}", f"{mode}-{device}-{slug}-elements.json")
+    path = os.path.join(DATA_DIR, mode, f"{device}-{slug}", f"{mode}-{device}-{slug}-elements.json")
     if not os.path.exists(path):
         raise FileNotFoundError(f"Elements JSON not found: {path}. Run capture.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -625,7 +626,7 @@ def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = F
     Draws bounding boxes and labels on the live screenshot based on the report.
     Saves to the 'diffs/' folder.
     """
-    live_img_path = os.path.join("live", f"{device}-{slug}", f"live-{device}-{slug}-screenshot.png")
+    live_img_path = os.path.join(DATA_DIR, "live", f"{device}-{slug}", f"live-{device}-{slug}-screenshot.png")
     if not os.path.exists(live_img_path):
         print(f"  [Annotate] Live screenshot not found: {live_img_path}")
         return
@@ -685,7 +686,7 @@ def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = F
             draw.text((x, text_y), label, fill="white", font=font)
 
     # Save floating messages and SEO status to a text file
-    warnings_path = os.path.join("diffs", f"{device}-{slug}-non-visual-warnings.txt")
+    warnings_path = os.path.join(DATA_DIR, "diffs", f"{device}-{slug}-non-visual-warnings.txt")
     with open(warnings_path, "w", encoding="utf-8") as f:
         f.write(f"Non-Visual / SEO Status for {device} ({slug})\n")
         f.write("="*50 + "\n\n")
@@ -706,8 +707,8 @@ def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = F
             
     print(f"  Non-visual warnings saved to {warnings_path}")
 
-    os.makedirs("diffs", exist_ok=True)
-    out_path = os.path.join("diffs", f"{device}-{slug}-annotated.png")
+    os.makedirs(os.path.join(DATA_DIR, "diffs"), exist_ok=True)
+    out_path = os.path.join(DATA_DIR, "diffs", f"{device}-{slug}-annotated.png")
     img.save(out_path)
     print(f"  Annotated screenshot saved to {out_path}")
 
@@ -782,8 +783,8 @@ def compare_device(device: str, slug: str) -> dict:
     return report
 
 def generate_summary_report(all_reports: list, slug: str):
-    os.makedirs("diffs", exist_ok=True)
-    path = os.path.join("diffs", f"{slug}-problems.txt")
+    os.makedirs(os.path.join(DATA_DIR, "diffs"), exist_ok=True)
+    path = os.path.join(DATA_DIR, "diffs", f"{slug}-problems.txt")
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(f"BUTTON DIFF REPORT — {slug}\n")
@@ -852,8 +853,8 @@ if __name__ == "__main__":
             print(f"\n[{device}] Skipping — {e}")
 
     # Save combined report to reports/
-    os.makedirs("reports", exist_ok=True)
-    report_path = os.path.join("reports", f"{args.slug}.json")
+    os.makedirs(os.path.join(DATA_DIR, "reports"), exist_ok=True)
+    report_path = os.path.join(DATA_DIR, "reports", f"{args.slug}.json")
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(all_reports, f, indent=2)
 

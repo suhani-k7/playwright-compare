@@ -1,0 +1,147 @@
+{
+  "headings": [
+    {
+      "tag": "h3",
+      "text": "",
+      "bbox": {
+        "x": 171.5,
+        "y": 284.5,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Wait! \ud83d\udd14 NFO Live - Closes 30th June",
+      "bbox": {
+        "x": 28,
+        "y": 9.90625,
+        "width": 274,
+        "height": 72
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Wait! \ud83d\udd14 NFO Live - Closes 30th June",
+      "bbox": {
+        "x": 28,
+        "y": 9.90625,
+        "width": 274,
+        "height": 72
+      }
+    }
+  ],
+  "images": [
+    {
+      "alt": "image rupeeIconPopup",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/rupeeIconPopup.svg",
+      "bbox": {
+        "x": 36,
+        "y": 114.109375,
+        "width": 12,
+        "height": 12.75
+      }
+    },
+    {
+      "alt": "image Chart",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/Chart.png",
+      "bbox": {
+        "x": 100.75,
+        "y": 4.953125,
+        "width": 264,
+        "height": 145
+      }
+    },
+    {
+      "alt": "image chevron_down_navigate_7dd1121f7c",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/chevron_down_navigate_7dd1121f7c.webp",
+      "bbox": {
+        "x": 88.15625,
+        "y": 445.203125,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "alt": "we_dont_spam",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/Badge.png",
+      "bbox": {
+        "x": 242.75,
+        "y": 474.21875,
+        "width": 106,
+        "height": 18
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 83.875,
+        "y": 653.375,
+        "width": 213,
+        "height": 48
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "+91",
+      "aria_label": "selected country",
+      "href": "",
+      "bbox": {
+        "x": 36.6875,
+        "y": 443.71875,
+        "width": 79.46875,
+        "height": 22.984375
+      }
+    }
+  ],
+  "links": [
+    {
+      "href": "/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "bbox": {
+        "x": 177.8125,
+        "y": 589.375,
+        "width": 102.40625,
+        "height": 14
+      }
+    }
+  ],
+  "canonical": [
+    {
+      "href": "https://www.axismaxlife.com/investment-plans/rd-calculator",
+      "bbox": null
+    }
+  ],
+  "meta": [
+    {
+      "name": "title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "name": "description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ],
+  "og_tags": [
+    {
+      "property": "og:title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "property": "og:description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ],
+  "screenshot_offset": {
+    "x": 0,
+    "y": 0
+  }
+}

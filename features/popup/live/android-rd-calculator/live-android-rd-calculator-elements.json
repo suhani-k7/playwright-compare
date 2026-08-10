@@ -1,0 +1,189 @@
+{
+  "headings": [
+    {
+      "tag": "h3",
+      "text": "NFO Live \ud83d\udd14 Closes on 31st May",
+      "bbox": {
+        "x": 25.75,
+        "y": 31,
+        "width": 290,
+        "height": 68
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "NFO Live \ud83d\udd14 Closes on 31st May",
+      "bbox": {
+        "x": 25.75,
+        "y": 31,
+        "width": 290,
+        "height": 68
+      }
+    }
+  ],
+  "images": [
+    {
+      "alt": "",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/rupeeIconPopup.svg",
+      "bbox": {
+        "x": 33.75,
+        "y": 125.703125,
+        "width": 12,
+        "height": 12.75
+      }
+    },
+    {
+      "alt": "",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/Chart.png",
+      "bbox": {
+        "x": 115.234375,
+        "y": 87,
+        "width": 264,
+        "height": 145
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "selector": "button",
+      "text": "+91",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 25.75,
+        "y": 454.5625,
+        "width": 76.75,
+        "height": 56
+      }
+    },
+    {
+      "selector": "button",
+      "text": "<5",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 25.75,
+        "y": 554.5625,
+        "width": 65.09375,
+        "height": 45
+      }
+    },
+    {
+      "selector": "button",
+      "text": "5 - 7",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 94.84375,
+        "y": 554.5625,
+        "width": 65.09375,
+        "height": 45
+      }
+    },
+    {
+      "selector": "button",
+      "text": "7 - 10",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 163.9375,
+        "y": 554.5625,
+        "width": 65.09375,
+        "height": 45
+      }
+    },
+    {
+      "selector": "button",
+      "text": "10 - 20",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 233.03125,
+        "y": 554.5625,
+        "width": 65.09375,
+        "height": 45
+      }
+    },
+    {
+      "selector": "button",
+      "text": ">20",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 302.125,
+        "y": 554.5625,
+        "width": 65.109375,
+        "height": 45
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Calculate Now",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 32.984375,
+        "y": 615.5625,
+        "width": 327,
+        "height": 48
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "",
+      "aria_label": "Close popup",
+      "href": "",
+      "bbox": {
+        "x": 343.234375,
+        "y": 35,
+        "width": 24,
+        "height": 24
+      }
+    }
+  ],
+  "links": [
+    {
+      "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "bbox": {
+        "x": 219.84375,
+        "y": 679.5625,
+        "width": 123.171875,
+        "height": 15
+      }
+    }
+  ],
+  "canonical": [
+    {
+      "href": "https://www.axismaxlife.com/investment-plans/rd-calculator",
+      "bbox": null
+    }
+  ],
+  "meta": [
+    {
+      "name": "title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "name": "description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ],
+  "og_tags": [
+    {
+      "property": "og:title",
+      "value": "RD Calculator | Recurring Deposit Return Calculator Online - Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "property": "og:description",
+      "value": "Recurring Deposit Calculator - Calculate interest rate and maturity value of your recurring deposit through Max Life Insurance RD Calculator, it's is easy to use.",
+      "bbox": null
+    }
+  ],
+  "screenshot_offset": {
+    "x": 3.75,
+    "y": 5
+  }
+}
