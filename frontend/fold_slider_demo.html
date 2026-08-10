@@ -86,6 +86,32 @@
             height: auto;
             display: block;
         }
+
+        .slider-wrap {
+            position: relative;
+        }
+
+        .side-label {
+            position: absolute;
+            top: 8px;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.65);
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+            pointer-events: none;
+            letter-spacing: 0.3px;
+        }
+
+        .label-left {
+            left: 8px;
+        }
+
+        .label-right {
+            right: 8px;
+        }
     </style>
 </head>
 
@@ -116,13 +142,17 @@
                 div.className = fold.flagged ? "fold flagged" : "fold";
                 const scoreClass = fold.flagged ? "score flagged" : "score ok";
                 div.innerHTML = `
-    <p>Fold ${fold.fold_index} — <span class="${scoreClass}">${fold.diff_percent}% different</span></p>
-    <img-comparison-slider>
-        <img slot="first" src="../${fold.reference_image}">
-        <img slot="second" src="../${fold.live_image}">
-        <div slot="handle" class="custom-handle">⇔</div>
-    </img-comparison-slider>
-    `;
+                    <p>Fold ${fold.fold_index} — <span class="${scoreClass}">${fold.diff_percent}% different</span></p>
+                    <div class="slider-wrap">
+                        <span class="side-label label-left">Reference</span>
+                        <span class="side-label label-right">Live</span>
+                        <img-comparison-slider>
+                        <img slot="first" src="../${fold.reference_image}">
+                        <img slot="second" src="../${fold.live_image}">
+                        <div slot="handle" class="custom-handle">⇔</div>
+                        </img-comparison-slider>
+                    </div>
+                    `;
                 container.appendChild(div);
             });
         }
