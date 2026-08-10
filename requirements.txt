@@ -5,3 +5,4 @@ lxml==6.0.2
 fastapi
 uvicorn[standard]
 pydantic
+imagehash

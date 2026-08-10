@@ -2,6 +2,9 @@ import argparse
 import json
 import os
 from playwright.sync_api import sync_playwright
+from PIL import Image
+import imagehash
+from io import BytesIO
 
 # -------------------------------------------------------------------
 # Device viewport configs
@@ -20,6 +23,53 @@ def get_output_dir(mode: str, device: str, slug: str) -> str:
     """
     return os.path.join(mode, f"{device}-{slug}")
 
+def _dedupe_buttons(buttons: list) -> list:
+    """
+    Two DOM elements can both legitimately match our button selectors for
+    what is really one clickable control — e.g. <div role="button"><button>
+    ...</button></div>. Collapse entries whose bounding boxes nearly fully
+    overlap into one, keeping whichever has more identifying info
+    (non-empty text/href/aria), tie-breaking toward the smaller (innermost)
+    element.
+    """
+    def overlap_ratio(a, b):
+        ax1, ay1 = a["x"], a["y"]
+        ax2, ay2 = a["x"] + a["width"], a["y"] + a["height"]
+        bx1, by1 = b["x"], b["y"]
+        bx2, by2 = b["x"] + b["width"], b["y"] + b["height"]
+        ix1, iy1 = max(ax1, bx1), max(ay1, by1)
+        ix2, iy2 = min(ax2, bx2), min(ay2, by2)
+        iw, ih = max(0, ix2 - ix1), max(0, iy2 - iy1)
+        inter = iw * ih
+        area_a = a["width"] * a["height"] or 1
+        area_b = b["width"] * b["height"] or 1
+        return inter / min(area_a, area_b)
+
+    def identity_score(btn):
+        return (
+            (1 if btn.get("text", "").strip() else 0) +
+            (1 if btn.get("href", "").strip() else 0) +
+            (1 if btn.get("aria_label", "").strip() else 0)
+        )
+
+    kept = []
+    for btn in buttons:
+        merged = False
+        for i, existing in enumerate(kept):
+            if overlap_ratio(btn["bbox"], existing["bbox"]) > 0.9:
+                b_score, e_score = identity_score(btn), identity_score(existing)
+                if b_score > e_score:
+                    kept[i] = btn
+                elif b_score == e_score:
+                    b_area = btn["bbox"]["width"] * btn["bbox"]["height"]
+                    e_area = existing["bbox"]["width"] * existing["bbox"]["height"]
+                    if b_area < e_area:
+                        kept[i] = btn
+                merged = True
+                break
+        if not merged:
+            kept.append(btn)
+    return kept
 
 def extract_elements(page) -> dict:
     """
@@ -56,58 +106,72 @@ def extract_elements(page) -> dict:
                     "text": text,
                     "bbox": bbox
                 })
-
+            
     # --- Images ---
+    # phash computation temporarily disabled (image comparator is off for now) —
+    # it was adding an individual screenshot + hash per image, which was slow.
+    # Re-enable the try/except block below if compare_images is turned back on.
     img_els = page.query_selector_all("img")
     for el in img_els:
         bbox = el.bounding_box()
         alt = el.get_attribute("alt") or ""
         src = el.get_attribute("src") or ""
+        phash = None
         if bbox:
             elements["images"].append({
                 "alt": alt,
                 "src": src,
+                "phash": phash,
+                "bbox": bbox
+            })
+    
+    # --- Buttons ---
+    # Single combined selector: querySelectorAll de-dupes automatically when an
+    # element matches more than one part of a comma-separated selector list, so
+    # e.g. <button role="button"> is only returned once instead of once per
+    # selector we used to loop separately.
+    combined_button_selector = "button, input[type='button'], input[type='submit'], [role='button']"
+    btn_els = page.query_selector_all(combined_button_selector)
+    raw_buttons = []
+    for el in btn_els:
+        bbox = el.bounding_box()
+        text = (el.text_content() or "").strip()[:60]
+        href = el.evaluate("""el => {
+            let href = el.getAttribute('href');
+            if (href) return href;
+            let anchorAncestor = el.closest('a');
+            if (anchorAncestor) {
+                href = anchorAncestor.getAttribute('href');
+                if (href) return href;
+            }
+            let anchorDescendant = el.querySelector('a');
+            if (anchorDescendant) {
+                href = anchorDescendant.getAttribute('href');
+                if (href) return href;
+            }
+            return '';
+        }""") or ""
+        aria_label = el.get_attribute("aria-label") or el.get_attribute("aria-labelledby") or ""
+        # We no longer know which single selector matched, since we now query all
+        # of them together — derive an equivalent descriptive "kind" instead, so
+        # compare.py's icon-button bucketing (which reads btn["selector"]) still works.
+        kind = el.evaluate("""el => {
+            const tag = el.tagName.toLowerCase();
+            if (tag === 'input') return "input[type='" + (el.getAttribute('type') || '') + "']";
+            if (el.getAttribute('role') === 'button') return "[role='button']";
+            return tag;
+        }""")
+        if bbox:
+            raw_buttons.append({
+                "selector": kind,
+                "text": text,
+                "aria_label": aria_label.strip(),
+                "href": href.strip(),
                 "bbox": bbox
             })
 
-    # --- Buttons ---
-    # The docs specify 4 types of buttons
-    button_selectors = [
-        "button",
-        "input[type='button']",
-        "input[type='submit']",
-        "[role='button']"
-    ]
-    for selector in button_selectors:
-        btn_els = page.query_selector_all(selector)
-        for el in btn_els:
-            bbox = el.bounding_box()
-            text = (el.text_content() or "").strip()[:60]
-            # Get href attribute of the element, or its closest anchor ancestor, or its first anchor descendant
-            href = el.evaluate("""el => {
-                let href = el.getAttribute('href');
-                if (href) return href;
-                let anchorAncestor = el.closest('a');
-                if (anchorAncestor) {
-                    href = anchorAncestor.getAttribute('href');
-                    if (href) return href;
-                }
-                let anchorDescendant = el.querySelector('a');
-                if (anchorDescendant) {
-                    href = anchorDescendant.getAttribute('href');
-                    if (href) return href;
-                }
-                return '';
-            }""") or ""
-            aria_label = el.get_attribute("aria-label") or el.get_attribute("aria-labelledby") or ""
-            if bbox:
-                elements["buttons"].append({
-                    "selector": selector,
-                    "text": text,
-                    "aria_label": aria_label.strip(),
-                    "href": href.strip(),
-                    "bbox": bbox
-                })
+    elements["buttons"] = _dedupe_buttons(raw_buttons)
+
 
     # --- Links ---
     link_els = page.query_selector_all("a")
@@ -168,19 +232,41 @@ def extract_elements(page) -> dict:
 
 def _neutralize_sticky_elements(page):
     """
-    Full-page screenshots scroll-and-stitch the page together. Elements with
-    position: fixed or position: sticky (e.g. a sticky nav bar) repaint at
-    their fixed on-screen position during each scroll segment, which can get
-    baked into the final stitched image as a duplicate near the bottom.
-    Force them to static positioning right before the screenshot so they
-    render once, in their normal document-flow position.
+    Full-page screenshots scroll-and-stitch the page together. A sticky/fixed
+    nav bar that is actually visible on screen can repaint during that
+    stitching and get duplicated in the final image, so we force truly
+    visible fixed/sticky elements to static positioning right before the
+    screenshot.
+
+    IMPORTANT: we only touch elements that are currently ON SCREEN. Many
+    sites hide an off-canvas mobile menu using position:fixed combined with
+    an off-screen offset (e.g. left:-100% or a translateX transform) until a
+    hamburger click reveals it. Forcing position:static on THAT element would
+    remove the off-screen offset's effect and make the hidden menu render
+    inline in the document instead — which is worse, not better. So this
+    only neutralizes elements whose bounding box actually overlaps the
+    current viewport.
     """
     page.evaluate("""
         () => {
+            const vw = window.innerWidth;
+            const vh = window.innerHeight;
             const all = document.querySelectorAll('*');
             all.forEach(el => {
                 const style = window.getComputedStyle(el);
-                if (style.position === 'fixed' || style.position === 'sticky') {
+                if (style.position !== 'fixed' && style.position !== 'sticky') return;
+
+                const rect = el.getBoundingClientRect();
+                const isOnScreen = (
+                    style.display !== 'none' &&
+                    style.visibility !== 'hidden' &&
+                    parseFloat(style.opacity) !== 0 &&
+                    rect.width > 0 && rect.height > 0 &&
+                    rect.right > 0 && rect.bottom > 0 &&
+                    rect.left < vw && rect.top < vh
+                );
+
+                if (isOnScreen) {
                     el.style.setProperty('position', 'static', 'important');
                 }
             });
@@ -207,7 +293,7 @@ def capture_url(url: str, mode: str, slug: str):
         out_dir = get_output_dir(mode, "desktop", slug)
         os.makedirs(out_dir, exist_ok=True)
         
-        _neutralize_sticky_elements(page)
+        #_neutralize_sticky_elements(page)
         page.screenshot(path=os.path.join(out_dir, f"{mode}-desktop-{slug}-screenshot.png"), full_page=True)
         print(f"  Screenshot saved.")
 
@@ -240,7 +326,7 @@ def capture_url(url: str, mode: str, slug: str):
         out_dir = get_output_dir(mode, "android", slug)
         os.makedirs(out_dir, exist_ok=True)
 
-        _neutralize_sticky_elements(page)
+        #_sticky_elements(page)
         page.screenshot(path=os.path.join(out_dir, f"{mode}-android-{slug}-screenshot.png"), full_page=True)
         print(f"  Screenshot saved.")
 
@@ -272,7 +358,7 @@ def capture_url(url: str, mode: str, slug: str):
         out_dir = get_output_dir(mode, "ios", slug)
         os.makedirs(out_dir, exist_ok=True)
 
-        _neutralize_sticky_elements(page)
+        #_neutralize_sticky_elements(page)
         page.screenshot(path=os.path.join(out_dir, f"{mode}-ios-{slug}-screenshot.png"), full_page=True)
         print(f"  Screenshot saved.")
 

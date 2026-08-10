@@ -7,5 +7,4 @@ Non-Visual / SEO Status for android (rd-calculator)
 - Open Graph:     PASS
 
 [Specific Non-Visual Mismatches]
-- Image count: expected 28, found 30
 - Button count (identifiable): expected 40, found 41

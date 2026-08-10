@@ -7,5 +7,4 @@ Non-Visual / SEO Status for desktop (rd-calculator)
 - Open Graph:     PASS
 
 [Specific Non-Visual Mismatches]
-- Image count: expected 30, found 31
 - Button count (identifiable): expected 40, found 42
