@@ -2,10 +2,9 @@ import argparse
 import json
 import os
 import sys
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..",  ".."))
-
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
+
 
 # Base directories for popup module
 POPUP_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -13,6 +12,8 @@ REFERENCE_DIR = os.path.join(POPUP_DIR, "reference")
 LIVE_DIR = os.path.join(POPUP_DIR, "live")
 REPORTS_DIR = os.path.join(POPUP_DIR, "reports")
 DIFFS_DIR = os.path.join(POPUP_DIR, "diffs")
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "core"))
 
 # Import shared comparator functions
 from compare import (

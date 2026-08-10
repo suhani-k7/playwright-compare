@@ -11,7 +11,7 @@
       "canonical": "PASS",
       "meta": "PASS",
       "og_tags": "PASS",
-      "sticky": "FAIL"
+      "sticky": "PASS"
     },
     "details": {
       "headings": [],
@@ -21,74 +21,7 @@
       "canonical": [],
       "meta": [],
       "og_tags": [],
-      "sticky": [
-        {
-          "type": "sticky_count",
-          "ref_count": 3,
-          "live_count": 5,
-          "message": "Sticky count differs (ref=3 live=5)"
-        },
-        {
-          "type": "sticky_missing",
-          "message": "Missing sticky in live: ('nav', 0, 0, 1274, 42)",
-          "bbox": {
-            "x": 0,
-            "y": 0,
-            "width": 1274,
-            "height": 42
-          }
-        },
-        {
-          "type": "sticky_missing",
-          "message": "Missing sticky in live: ('div', 1003, 105, 250, 608)",
-          "bbox": {
-            "x": 1003,
-            "y": 105,
-            "width": 250,
-            "height": 608
-          }
-        },
-        {
-          "type": "sticky_extra",
-          "message": "Extra sticky in live: ('div', 0, 80, 1280, 42)",
-          "bbox": {
-            "x": 0,
-            "y": 80,
-            "width": 1280,
-            "height": 42
-          }
-        },
-        {
-          "type": "sticky_extra",
-          "message": "Extra sticky in live: ('header', 0, 0, 1280, 80)",
-          "bbox": {
-            "x": 0,
-            "y": 0,
-            "width": 1280,
-            "height": 80
-          }
-        },
-        {
-          "type": "sticky_extra",
-          "message": "Extra sticky in live: ('nav', 0, 80, 1280, 42)",
-          "bbox": {
-            "x": 0,
-            "y": 80,
-            "width": 1280,
-            "height": 42
-          }
-        },
-        {
-          "type": "sticky_extra",
-          "message": "Extra sticky in live: ('div', 1003, 105, 352, 608)",
-          "bbox": {
-            "x": 1003,
-            "y": 105,
-            "width": 352,
-            "height": 608
-          }
-        }
-      ]
+      "sticky": []
     }
   },
   {
@@ -103,7 +36,7 @@
       "canonical": "PASS",
       "meta": "PASS",
       "og_tags": "PASS",
-      "sticky": "FAIL"
+      "sticky": "PASS"
     },
     "details": {
       "headings": [],
@@ -113,68 +46,7 @@
       "canonical": [],
       "meta": [],
       "og_tags": [],
-      "sticky": [
-        {
-          "type": "sticky_missing",
-          "message": "Missing sticky in live: ('nav', 0, 60, 393, 50)",
-          "bbox": {
-            "x": 0,
-            "y": 60,
-            "width": 393,
-            "height": 50
-          }
-        },
-        {
-          "type": "sticky_missing",
-          "message": "Missing sticky in live: ('div', 0, 0, 393, 61)",
-          "bbox": {
-            "x": 0,
-            "y": 0,
-            "width": 393,
-            "height": 61
-          }
-        },
-        {
-          "type": "sticky_missing",
-          "message": "Missing sticky in live: ('nav', 0, 0, 393, 50)",
-          "bbox": {
-            "x": 0,
-            "y": 0,
-            "width": 393,
-            "height": 50
-          }
-        },
-        {
-          "type": "sticky_extra",
-          "message": "Extra sticky in live: ('header', 0, 0, 393, 60)",
-          "bbox": {
-            "x": 0,
-            "y": 0,
-            "width": 393,
-            "height": 60
-          }
-        },
-        {
-          "type": "sticky_extra",
-          "message": "Extra sticky in live: ('div', 0, 60, 393, 42)",
-          "bbox": {
-            "x": 0,
-            "y": 60,
-            "width": 393,
-            "height": 42
-          }
-        },
-        {
-          "type": "sticky_extra",
-          "message": "Extra sticky in live: ('nav', 0, 60, 393, 42)",
-          "bbox": {
-            "x": 0,
-            "y": 60,
-            "width": 393,
-            "height": 42
-          }
-        }
-      ]
+      "sticky": []
     }
   },
   {
@@ -189,7 +61,7 @@
       "canonical": "PASS",
       "meta": "PASS",
       "og_tags": "PASS",
-      "sticky": "FAIL"
+      "sticky": "PASS"
     },
     "details": {
       "headings": [],
@@ -199,68 +71,7 @@
       "canonical": [],
       "meta": [],
       "og_tags": [],
-      "sticky": [
-        {
-          "type": "sticky_missing",
-          "message": "Missing sticky in live: ('nav', 0, 0, 375, 50)",
-          "bbox": {
-            "x": 0,
-            "y": 0,
-            "width": 375,
-            "height": 50
-          }
-        },
-        {
-          "type": "sticky_missing",
-          "message": "Missing sticky in live: ('nav', 0, 60, 375, 50)",
-          "bbox": {
-            "x": 0,
-            "y": 60,
-            "width": 375,
-            "height": 50
-          }
-        },
-        {
-          "type": "sticky_missing",
-          "message": "Missing sticky in live: ('div', 0, 0, 375, 61)",
-          "bbox": {
-            "x": 0,
-            "y": 0,
-            "width": 375,
-            "height": 61
-          }
-        },
-        {
-          "type": "sticky_extra",
-          "message": "Extra sticky in live: ('nav', 0, 60, 375, 42)",
-          "bbox": {
-            "x": 0,
-            "y": 60,
-            "width": 375,
-            "height": 42
-          }
-        },
-        {
-          "type": "sticky_extra",
-          "message": "Extra sticky in live: ('div', 0, 60, 375, 42)",
-          "bbox": {
-            "x": 0,
-            "y": 60,
-            "width": 375,
-            "height": 42
-          }
-        },
-        {
-          "type": "sticky_extra",
-          "message": "Extra sticky in live: ('header', 0, 0, 375, 60)",
-          "bbox": {
-            "x": 0,
-            "y": 0,
-            "width": 375,
-            "height": 60
-          }
-        }
-      ]
+      "sticky": []
     }
   }
 ]

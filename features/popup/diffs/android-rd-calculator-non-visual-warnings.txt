@@ -7,6 +7,5 @@ Non-Visual / SEO Status — Popup — android (rd-calculator)
 - Open Graph:     PASS
 
 [Specific Non-Visual Mismatches]
-- Heading count: expected 3, found 2
-- Image count: expected 4, found 2
-- Button count (identifiable): expected 2, found 8
+- Image count: expected 2, found 3
+- Button count (identifiable): expected 1, found 2

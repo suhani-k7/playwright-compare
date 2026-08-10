@@ -8,3 +8,29 @@ Non-Visual / SEO Status for android (rd-calculator)
 
 [Specific Non-Visual Mismatches]
 - Button count (identifiable): expected 40, found 41
+- Fold 0: 0.64% visually different
+- Fold 1: 0.24% visually different
+- Fold 2: 15.27% visually different
+- Fold 3: 12.33% visually different
+- Fold 4: 9.56% visually different
+- Fold 5: 12.35% visually different
+- Fold 6: 8.37% visually different
+- Fold 7: 10.4% visually different
+- Fold 8: 9.97% visually different
+- Fold 9: 7.41% visually different
+- Fold 10: 33.62% visually different
+- Fold 11: 13.76% visually different
+- Fold 12: 8.81% visually different
+- Fold 13: 8.32% visually different
+- Fold 14: 8.46% visually different
+- Fold 15: 12.68% visually different
+- Fold 16: 9.91% visually different
+- Fold 17: 9.48% visually different
+- Fold 18: 12.97% visually different
+- Fold 19: 8.74% visually different
+- Fold 20: 9.15% visually different
+- Fold 21: 12.75% visually different
+- Fold 22: 13.21% visually different
+- Fold 23: 10.58% visually different
+- Fold 24: 14.44% visually different
+- Fold 25: 28.14% visually different

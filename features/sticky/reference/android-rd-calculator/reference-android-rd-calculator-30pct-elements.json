@@ -1,7 +1,42 @@
 {
   "headings": [],
-  "images": [],
+  "images": [
+    {
+      "alt": "Logo of axis max life insurance graphic",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/axis-max-life-insurance-logo.svg",
+      "bbox": {
+        "x": 12,
+        "y": 10,
+        "width": 110,
+        "height": 40
+      }
+    }
+  ],
   "buttons": [
+    {
+      "selector": "button",
+      "text": "Login",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 241,
+        "y": 12,
+        "width": 88,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Menu",
+      "href": "",
+      "bbox": {
+        "x": 341,
+        "y": 10,
+        "width": 40,
+        "height": 40
+      }
+    },
     {
       "selector": "button",
       "text": "Advantages of RD Calculator",
@@ -9,9 +44,9 @@
       "href": "",
       "bbox": {
         "x": 12,
-        "y": 8,
+        "y": 68,
         "width": 369,
-        "height": 34
+        "height": 26
       }
     },
     {
@@ -28,6 +63,15 @@
     }
   ],
   "links": [
+    {
+      "href": "/",
+      "bbox": {
+        "x": 12,
+        "y": 10,
+        "width": 110,
+        "height": 40
+      }
+    },
     {
       "href": "/investment-plans/investment-calculator?utm_theme=SIP",
       "bbox": {
@@ -70,12 +114,30 @@
   ],
   "sticky": [
     {
-      "tag": "nav",
+      "tag": "header",
       "bbox": {
         "x": 0,
         "y": 0,
         "width": 393,
-        "height": 50
+        "height": 60
+      }
+    },
+    {
+      "tag": "div",
+      "bbox": {
+        "x": 0,
+        "y": 60,
+        "width": 393,
+        "height": 42
+      }
+    },
+    {
+      "tag": "nav",
+      "bbox": {
+        "x": 0,
+        "y": 60,
+        "width": 393,
+        "height": 42
       }
     },
     {

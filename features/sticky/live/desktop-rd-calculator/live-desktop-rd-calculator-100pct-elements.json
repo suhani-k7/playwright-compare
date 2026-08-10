@@ -25,14 +25,86 @@
   "buttons": [
     {
       "selector": "button",
-      "text": "Track Application",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 250.890625,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 380.6640625,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 509.2421875,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 599.0234375,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 718.96875,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 809.7890625,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Track Policy",
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 805.7890625,
-        "y": -10.5,
-        "width": 99.4921875,
-        "height": 101
+        "x": 845.7890625,
+        "y": -7.5,
+        "width": 59.4921875,
+        "height": 95
       }
     },
     {
@@ -110,45 +182,54 @@
       "href": "/term-insurance-plans",
       "bbox": {
         "x": 162,
-        "y": 17.5,
-        "width": 87.7421875,
-        "height": 45
+        "y": 20.5,
+        "width": 76.890625,
+        "height": 39
       }
     },
     {
       "href": "/investment-plans",
       "bbox": {
-        "x": 297.7421875,
-        "y": 17.5,
-        "width": 93.7890625,
-        "height": 45
+        "x": 286.890625,
+        "y": 20.5,
+        "width": 81.7734375,
+        "height": 39
       }
     },
     {
       "href": "/health-insurance-plans",
       "bbox": {
-        "x": 439.53125,
-        "y": 17.5,
-        "width": 92.3984375,
-        "height": 45
+        "x": 416.6640625,
+        "y": 20.5,
+        "width": 80.578125,
+        "height": 39
       }
     },
     {
       "href": "/nri-plans",
       "bbox": {
-        "x": 579.9296875,
-        "y": 17.5,
-        "width": 48.453125,
-        "height": 45
+        "x": 545.2421875,
+        "y": 20.5,
+        "width": 41.78125,
+        "height": 39
       }
     },
     {
       "href": "/calculators",
       "bbox": {
-        "x": 676.3828125,
-        "y": 28.75,
-        "width": 81.40625,
-        "height": 22.5
+        "x": 635.0234375,
+        "y": 30.25,
+        "width": 71.9453125,
+        "height": 19.5
+      }
+    },
+    {
+      "href": "/claims-centre",
+      "bbox": {
+        "x": 754.96875,
+        "y": 30.25,
+        "width": 42.8203125,
+        "height": 19.5
       }
     },
     {

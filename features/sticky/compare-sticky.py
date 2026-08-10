@@ -13,7 +13,7 @@ REPORTS_DIR = os.path.join(STICKY_DIR, "reports")
 DIFFS_DIR = os.path.join(STICKY_DIR, "diffs")
 
 # Ensure project root is on path for importing compare utilities
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..",  ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "core"))
 sys.path.insert(0, PROJECT_ROOT)
 
 # Import comparison helpers

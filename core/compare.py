@@ -5,7 +5,9 @@ from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 import urllib.parse
 from difflib import SequenceMatcher
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+from fold_utils import compare_visual_folds
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 # -------------------------------------------------------------------
 # Helpers to load saved capture outputs
@@ -736,7 +738,16 @@ def compare_device(device: str, slug: str) -> dict:
     meta_status,     meta_issues     = compare_meta(ref_soup, live_soup)
     og_status,       og_issues       = compare_og_tags(ref_soup, live_soup)
     link_status,     link_issues     = compare_links(ref_soup, live_soup, ref_elements, live_elements)
-
+    
+    visual_status, visual_issues = compare_visual_folds(
+        reference_dir=os.path.join(DATA_DIR, "reference", f"{device}-{slug}"),
+        live_dir=os.path.join(DATA_DIR, "live", f"{device}-{slug}"),
+        out_dir=os.path.join(DATA_DIR, "diffs", "folds", f"{device}-{slug}"),
+        device=device,
+        slug=slug,
+        target_fold_height=2500,
+        repo_root=os.path.dirname(DATA_DIR),
+    )
     # Print a quick summary to terminal
     results = {
         "headings":  (heading_status,   heading_issues),
@@ -746,6 +757,7 @@ def compare_device(device: str, slug: str) -> dict:
         "meta":      (meta_status,      meta_issues),
         "og_tags":   (og_status,        og_issues),
         "links":     (link_status,      link_issues),
+        "visual_folds": (visual_status, visual_issues),
     }
 
     for category, (status, issues) in results.items():
@@ -768,6 +780,7 @@ def compare_device(device: str, slug: str) -> dict:
             "meta":      meta_status,
             "og_tags":   og_status,
             "links":     link_status,
+            "visual_folds": visual_status,
         },
         "details": {
             "headings":  heading_issues,
@@ -777,6 +790,7 @@ def compare_device(device: str, slug: str) -> dict:
             "meta":      meta_issues,
             "og_tags":   og_issues,
             "links":     link_issues,
+            "visual_folds": visual_issues,
         }
     }
 

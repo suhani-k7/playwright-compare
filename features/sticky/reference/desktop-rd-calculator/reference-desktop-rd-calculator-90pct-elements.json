@@ -2,6 +2,16 @@
   "headings": [],
   "images": [
     {
+      "alt": "Logo of axis max life insurance graphic",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/axis-max-life-insurance-logo.svg",
+      "bbox": {
+        "x": 12,
+        "y": 20,
+        "width": 110,
+        "height": 40
+      }
+    },
+    {
       "alt": "investment-sticky-image",
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/inv-sticky-desktop-img.svg",
       "bbox": {
@@ -15,13 +25,61 @@
   "buttons": [
     {
       "selector": "button",
+      "text": "Track Policy",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 845.7890625,
+        "y": -7.5,
+        "width": 59.4921875,
+        "height": 95
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Open accessibility settings",
+      "href": "",
+      "bbox": {
+        "x": 905.28125,
+        "y": 22,
+        "width": 46,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Login",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1116,
+        "y": 21.5,
+        "width": 100,
+        "height": 37
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Menu",
+      "href": "",
+      "bbox": {
+        "x": 1228,
+        "y": 20,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "selector": "button",
       "text": "View more sections",
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 986.921875,
-        "y": 3,
-        "width": 232.3984375,
+        "x": 996.171875,
+        "y": 83,
+        "width": 224.3984375,
         "height": 36
       }
     },
@@ -31,38 +89,110 @@
       "aria_label": "",
       "href": "/investment-plans/investment-calculator?utm_theme=SIP",
       "bbox": {
-        "x": 1130.3125,
-        "y": 743,
-        "width": 130.6875,
-        "height": 42
+        "x": 1128.0078125,
+        "y": 746,
+        "width": 132.9921875,
+        "height": 36
       }
     }
   ],
   "links": [
     {
+      "href": "/",
+      "bbox": {
+        "x": 12,
+        "y": 20,
+        "width": 110,
+        "height": 40
+      }
+    },
+    {
+      "href": "/term-insurance-plans",
+      "bbox": {
+        "x": 162,
+        "y": 20.5,
+        "width": 76.890625,
+        "height": 39
+      }
+    },
+    {
+      "href": "/investment-plans",
+      "bbox": {
+        "x": 286.890625,
+        "y": 20.5,
+        "width": 81.7734375,
+        "height": 39
+      }
+    },
+    {
+      "href": "/health-insurance-plans",
+      "bbox": {
+        "x": 416.6640625,
+        "y": 20.5,
+        "width": 80.578125,
+        "height": 39
+      }
+    },
+    {
+      "href": "/nri-plans",
+      "bbox": {
+        "x": 545.2421875,
+        "y": 20.5,
+        "width": 41.78125,
+        "height": 39
+      }
+    },
+    {
+      "href": "/calculators",
+      "bbox": {
+        "x": 635.0234375,
+        "y": 30.25,
+        "width": 71.9453125,
+        "height": 19.5
+      }
+    },
+    {
+      "href": "/claims-centre",
+      "bbox": {
+        "x": 754.96875,
+        "y": 30.25,
+        "width": 42.8203125,
+        "height": 19.5
+      }
+    },
+    {
+      "href": "/join-max-life/become-an-agent",
+      "bbox": {
+        "x": 963.28125,
+        "y": 22.5,
+        "width": 140.71875,
+        "height": 35
+      }
+    },
+    {
       "href": "#read-more-section",
       "bbox": {
         "x": 16,
-        "y": 9,
-        "width": 309.75,
+        "y": 89,
+        "width": 311.25,
         "height": 24
       }
     },
     {
       "href": "#what-is-recurring-deposit",
       "bbox": {
-        "x": 326.75,
-        "y": 9,
-        "width": 309.75,
+        "x": 328.25,
+        "y": 89,
+        "width": 311.25,
         "height": 24
       }
     },
     {
       "href": "#how-does-rd-interest-calculator-help-you-head",
       "bbox": {
-        "x": 637.5,
-        "y": 9,
-        "width": 309.75,
+        "x": 640.5,
+        "y": 89,
+        "width": 311.25,
         "height": 24
       }
     },
@@ -108,11 +238,29 @@
   ],
   "sticky": [
     {
-      "tag": "nav",
+      "tag": "header",
       "bbox": {
         "x": 0,
         "y": 0,
-        "width": 1274,
+        "width": 1280,
+        "height": 80
+      }
+    },
+    {
+      "tag": "div",
+      "bbox": {
+        "x": 0,
+        "y": 80,
+        "width": 1280,
+        "height": 42
+      }
+    },
+    {
+      "tag": "nav",
+      "bbox": {
+        "x": 0,
+        "y": 80,
+        "width": 1280,
         "height": 42
       }
     },

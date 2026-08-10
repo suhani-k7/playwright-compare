@@ -681,26 +681,6 @@
       }
     },
     {
-      "tag": "h3",
-      "text": "Extended Fund Offer \ud83d\udd14\nCloses on 20th August",
-      "bbox": {
-        "x": 25.75,
-        "y": 31,
-        "width": 290,
-        "height": 46
-      }
-    },
-    {
-      "tag": "h3",
-      "text": "Extended Fund Offer \ud83d\udd14\nCloses on 20th August",
-      "bbox": {
-        "x": 25.75,
-        "y": 31,
-        "width": 290,
-        "height": 46
-      }
-    },
-    {
       "tag": "h4",
       "text": "Would've been \u20b93.92 Cr*",
       "bbox": {
@@ -1016,28 +996,6 @@
         "y": 21110.828125,
         "width": 120,
         "height": 35.671875
-      }
-    },
-    {
-      "alt": "",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/rupeeIconPopup.svg",
-      "phash": null,
-      "bbox": {
-        "x": 33.75,
-        "y": 103.703125,
-        "width": 12,
-        "height": 12.75
-      }
-    },
-    {
-      "alt": "",
-      "src": "https://www.axismaxlife.com/static-page/assets/homepage/Chart.png",
-      "phash": null,
-      "bbox": {
-        "x": 115.234375,
-        "y": 87,
-        "width": 264,
-        "height": 145
       }
     }
   ],

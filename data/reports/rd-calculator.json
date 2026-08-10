@@ -9,7 +9,8 @@
       "canonical": "PASS",
       "meta": "PASS",
       "og_tags": "PASS",
-      "links": "FAIL"
+      "links": "FAIL",
+      "visual_folds": "FLAGGED"
     },
     "details": {
       "headings": [
@@ -56,7 +57,7 @@
           "type": "extra_button",
           "bbox": {
             "x": 675.1171875,
-            "y": 16476.859375,
+            "y": 16502.453125,
             "width": 12,
             "height": 14
           },
@@ -81,7 +82,7 @@
           "type": "missing_link",
           "bbox": {
             "x": 960,
-            "y": 15249.3671875,
+            "y": 15292.796875,
             "width": 272,
             "height": 26.1953125
           },
@@ -91,7 +92,7 @@
           "type": "missing_link",
           "bbox": {
             "x": 327.7734375,
-            "y": 16043.1640625,
+            "y": 16086.59375,
             "width": 177.7734375,
             "height": 39
           },
@@ -111,7 +112,7 @@
           "type": "extra_link",
           "bbox": {
             "x": 327.7734375,
-            "y": 16023.109375,
+            "y": 16048.703125,
             "width": 177.7734375,
             "height": 39
           },
@@ -121,11 +122,76 @@
           "type": "extra_link",
           "bbox": {
             "x": 572.78125,
-            "y": 16474.109375,
+            "y": 16499.703125,
             "width": 98.3359375,
             "height": 19.5
           },
           "message": "Extra link (1x): mailto:axismaxlife.com"
+        }
+      ],
+      "visual_folds": [
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 0,
+          "reference_image": "data/diffs/folds/desktop-rd-calculator/reference-fold0.png",
+          "live_image": "data/diffs/folds/desktop-rd-calculator/live-fold0.png",
+          "diff_percent": 1.22,
+          "flagged": false,
+          "message": "Fold 0: 1.22% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 1,
+          "reference_image": "data/diffs/folds/desktop-rd-calculator/reference-fold1.png",
+          "live_image": "data/diffs/folds/desktop-rd-calculator/live-fold1.png",
+          "diff_percent": 7.82,
+          "flagged": true,
+          "message": "Fold 1: 7.82% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 2,
+          "reference_image": "data/diffs/folds/desktop-rd-calculator/reference-fold2.png",
+          "live_image": "data/diffs/folds/desktop-rd-calculator/live-fold2.png",
+          "diff_percent": 8.87,
+          "flagged": true,
+          "message": "Fold 2: 8.87% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 3,
+          "reference_image": "data/diffs/folds/desktop-rd-calculator/reference-fold3.png",
+          "live_image": "data/diffs/folds/desktop-rd-calculator/live-fold3.png",
+          "diff_percent": 4.11,
+          "flagged": false,
+          "message": "Fold 3: 4.11% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 4,
+          "reference_image": "data/diffs/folds/desktop-rd-calculator/reference-fold4.png",
+          "live_image": "data/diffs/folds/desktop-rd-calculator/live-fold4.png",
+          "diff_percent": 7.3,
+          "flagged": true,
+          "message": "Fold 4: 7.3% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 5,
+          "reference_image": "data/diffs/folds/desktop-rd-calculator/reference-fold5.png",
+          "live_image": "data/diffs/folds/desktop-rd-calculator/live-fold5.png",
+          "diff_percent": 7.22,
+          "flagged": true,
+          "message": "Fold 5: 7.22% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 6,
+          "reference_image": "data/diffs/folds/desktop-rd-calculator/reference-fold6.png",
+          "live_image": "data/diffs/folds/desktop-rd-calculator/live-fold6.png",
+          "diff_percent": 14.48,
+          "flagged": true,
+          "message": "Fold 6: 14.48% visually different"
         }
       ]
     }
@@ -140,7 +206,8 @@
       "canonical": "PASS",
       "meta": "PASS",
       "og_tags": "PASS",
-      "links": "FAIL"
+      "links": "FAIL",
+      "visual_folds": "FLAGGED"
     },
     "details": {
       "headings": [
@@ -152,27 +219,27 @@
             "width": 290,
             "height": 46
           },
-          "message": "H3 changed: expected 'Extended Fund Offer \ud83d\udd14\nCloses on 20th August', found 'Wait! \ud83d\udd14'"
+          "message": "H3 changed: expected 'Would've been \u20b93.92 Cr*', found 'Wait! \ud83d\udd14'"
         },
         {
-          "type": "heading_modified",
+          "type": "extra_heading",
           "bbox": {
             "x": 25.75,
             "y": 31,
             "width": 290,
             "height": 46
           },
-          "message": "H3 changed: expected 'Extended Fund Offer \ud83d\udd14\nCloses on 20th August', found 'Wait! \ud83d\udd14'"
+          "message": "Extra H3: 'Wait! \ud83d\udd14'"
         },
         {
-          "type": "heading_modified",
+          "type": "extra_heading",
           "bbox": {
             "x": 61,
             "y": 596.890625,
             "width": 271,
             "height": 28
           },
-          "message": "H4 changed: expected 'Would've been \u20b93.92 Cr*', found 'Would've been \u20b94.24 Cr*'"
+          "message": "Extra H4: 'Would've been \u20b94.24 Cr*'"
         }
       ],
       "images": [],
@@ -197,7 +264,7 @@
           "type": "extra_button",
           "bbox": {
             "x": 178.34375,
-            "y": 22419.71875,
+            "y": 22883.953125,
             "width": 12,
             "height": 14
           },
@@ -252,7 +319,7 @@
           "type": "extra_link",
           "bbox": {
             "x": 36.578125,
-            "y": 21360.46875,
+            "y": 21824.703125,
             "width": 177.78125,
             "height": 39
           },
@@ -262,11 +329,247 @@
           "type": "extra_link",
           "bbox": {
             "x": 76,
-            "y": 22416.96875,
+            "y": 22881.203125,
             "width": 98.34375,
             "height": 19.5
           },
           "message": "Extra link (1x): mailto:axismaxlife.com"
+        }
+      ],
+      "visual_folds": [
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 0,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold0.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold0.png",
+          "diff_percent": 0.64,
+          "flagged": false,
+          "message": "Fold 0: 0.64% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 1,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold1.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold1.png",
+          "diff_percent": 0.24,
+          "flagged": false,
+          "message": "Fold 1: 0.24% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 2,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold2.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold2.png",
+          "diff_percent": 15.27,
+          "flagged": true,
+          "message": "Fold 2: 15.27% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 3,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold3.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold3.png",
+          "diff_percent": 12.33,
+          "flagged": true,
+          "message": "Fold 3: 12.33% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 4,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold4.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold4.png",
+          "diff_percent": 9.56,
+          "flagged": true,
+          "message": "Fold 4: 9.56% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 5,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold5.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold5.png",
+          "diff_percent": 12.35,
+          "flagged": true,
+          "message": "Fold 5: 12.35% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 6,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold6.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold6.png",
+          "diff_percent": 8.37,
+          "flagged": true,
+          "message": "Fold 6: 8.37% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 7,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold7.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold7.png",
+          "diff_percent": 10.4,
+          "flagged": true,
+          "message": "Fold 7: 10.4% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 8,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold8.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold8.png",
+          "diff_percent": 9.97,
+          "flagged": true,
+          "message": "Fold 8: 9.97% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 9,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold9.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold9.png",
+          "diff_percent": 7.41,
+          "flagged": true,
+          "message": "Fold 9: 7.41% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 10,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold10.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold10.png",
+          "diff_percent": 33.62,
+          "flagged": true,
+          "message": "Fold 10: 33.62% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 11,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold11.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold11.png",
+          "diff_percent": 13.76,
+          "flagged": true,
+          "message": "Fold 11: 13.76% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 12,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold12.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold12.png",
+          "diff_percent": 8.81,
+          "flagged": true,
+          "message": "Fold 12: 8.81% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 13,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold13.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold13.png",
+          "diff_percent": 8.32,
+          "flagged": true,
+          "message": "Fold 13: 8.32% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 14,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold14.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold14.png",
+          "diff_percent": 8.46,
+          "flagged": true,
+          "message": "Fold 14: 8.46% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 15,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold15.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold15.png",
+          "diff_percent": 12.68,
+          "flagged": true,
+          "message": "Fold 15: 12.68% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 16,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold16.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold16.png",
+          "diff_percent": 9.91,
+          "flagged": true,
+          "message": "Fold 16: 9.91% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 17,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold17.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold17.png",
+          "diff_percent": 9.48,
+          "flagged": true,
+          "message": "Fold 17: 9.48% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 18,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold18.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold18.png",
+          "diff_percent": 12.97,
+          "flagged": true,
+          "message": "Fold 18: 12.97% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 19,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold19.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold19.png",
+          "diff_percent": 8.74,
+          "flagged": true,
+          "message": "Fold 19: 8.74% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 20,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold20.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold20.png",
+          "diff_percent": 9.15,
+          "flagged": true,
+          "message": "Fold 20: 9.15% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 21,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold21.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold21.png",
+          "diff_percent": 12.75,
+          "flagged": true,
+          "message": "Fold 21: 12.75% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 22,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold22.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold22.png",
+          "diff_percent": 13.21,
+          "flagged": true,
+          "message": "Fold 22: 13.21% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 23,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold23.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold23.png",
+          "diff_percent": 10.58,
+          "flagged": true,
+          "message": "Fold 23: 10.58% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 24,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold24.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold24.png",
+          "diff_percent": 14.44,
+          "flagged": true,
+          "message": "Fold 24: 14.44% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 25,
+          "reference_image": "data/diffs/folds/android-rd-calculator/reference-fold25.png",
+          "live_image": "data/diffs/folds/android-rd-calculator/live-fold25.png",
+          "diff_percent": 28.14,
+          "flagged": true,
+          "message": "Fold 25: 28.14% visually different"
         }
       ]
     }
@@ -281,7 +584,8 @@
       "canonical": "PASS",
       "meta": "PASS",
       "og_tags": "PASS",
-      "links": "FAIL"
+      "links": "FAIL",
+      "visual_folds": "FLAGGED"
     },
     "details": {
       "headings": [
@@ -338,7 +642,7 @@
           "type": "extra_button",
           "bbox": {
             "x": 178.34375,
-            "y": 22730.5,
+            "y": 23182.765625,
             "width": 12,
             "height": 14
           },
@@ -393,7 +697,7 @@
           "type": "extra_link",
           "bbox": {
             "x": 27.578125,
-            "y": 21639.75,
+            "y": 22092.015625,
             "width": 177.78125,
             "height": 39
           },
@@ -403,11 +707,265 @@
           "type": "extra_link",
           "bbox": {
             "x": 76,
-            "y": 22727.75,
+            "y": 23180.015625,
             "width": 98.34375,
             "height": 19.5
           },
           "message": "Extra link (1x): mailto:axismaxlife.com"
+        }
+      ],
+      "visual_folds": [
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 0,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold0.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold0.png",
+          "diff_percent": 0.72,
+          "flagged": false,
+          "message": "Fold 0: 0.72% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 1,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold1.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold1.png",
+          "diff_percent": 0.0,
+          "flagged": false,
+          "message": "Fold 1: 0.0% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 2,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold2.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold2.png",
+          "diff_percent": 15.13,
+          "flagged": true,
+          "message": "Fold 2: 15.13% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 3,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold3.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold3.png",
+          "diff_percent": 10.23,
+          "flagged": true,
+          "message": "Fold 3: 10.23% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 4,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold4.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold4.png",
+          "diff_percent": 11.93,
+          "flagged": true,
+          "message": "Fold 4: 11.93% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 5,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold5.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold5.png",
+          "diff_percent": 11.03,
+          "flagged": true,
+          "message": "Fold 5: 11.03% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 6,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold6.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold6.png",
+          "diff_percent": 10.49,
+          "flagged": true,
+          "message": "Fold 6: 10.49% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 7,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold7.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold7.png",
+          "diff_percent": 9.49,
+          "flagged": true,
+          "message": "Fold 7: 9.49% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 8,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold8.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold8.png",
+          "diff_percent": 10.8,
+          "flagged": true,
+          "message": "Fold 8: 10.8% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 9,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold9.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold9.png",
+          "diff_percent": 9.0,
+          "flagged": true,
+          "message": "Fold 9: 9.0% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 10,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold10.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold10.png",
+          "diff_percent": 7.95,
+          "flagged": true,
+          "message": "Fold 10: 7.95% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 11,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold11.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold11.png",
+          "diff_percent": 33.72,
+          "flagged": true,
+          "message": "Fold 11: 33.72% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 12,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold12.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold12.png",
+          "diff_percent": 15.84,
+          "flagged": true,
+          "message": "Fold 12: 15.84% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 13,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold13.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold13.png",
+          "diff_percent": 10.76,
+          "flagged": true,
+          "message": "Fold 13: 10.76% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 14,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold14.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold14.png",
+          "diff_percent": 8.7,
+          "flagged": true,
+          "message": "Fold 14: 8.7% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 15,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold15.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold15.png",
+          "diff_percent": 8.3,
+          "flagged": true,
+          "message": "Fold 15: 8.3% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 16,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold16.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold16.png",
+          "diff_percent": 7.76,
+          "flagged": true,
+          "message": "Fold 16: 7.76% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 17,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold17.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold17.png",
+          "diff_percent": 10.87,
+          "flagged": true,
+          "message": "Fold 17: 10.87% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 18,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold18.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold18.png",
+          "diff_percent": 11.26,
+          "flagged": true,
+          "message": "Fold 18: 11.26% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 19,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold19.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold19.png",
+          "diff_percent": 10.63,
+          "flagged": true,
+          "message": "Fold 19: 10.63% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 20,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold20.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold20.png",
+          "diff_percent": 13.09,
+          "flagged": true,
+          "message": "Fold 20: 13.09% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 21,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold21.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold21.png",
+          "diff_percent": 9.29,
+          "flagged": true,
+          "message": "Fold 21: 9.29% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 22,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold22.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold22.png",
+          "diff_percent": 9.49,
+          "flagged": true,
+          "message": "Fold 22: 9.49% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 23,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold23.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold23.png",
+          "diff_percent": 11.01,
+          "flagged": true,
+          "message": "Fold 23: 11.01% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 24,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold24.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold24.png",
+          "diff_percent": 13.6,
+          "flagged": true,
+          "message": "Fold 24: 13.6% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 25,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold25.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold25.png",
+          "diff_percent": 10.07,
+          "flagged": true,
+          "message": "Fold 25: 10.07% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 26,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold26.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold26.png",
+          "diff_percent": 13.24,
+          "flagged": true,
+          "message": "Fold 26: 13.24% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 27,
+          "reference_image": "data/diffs/folds/ios-rd-calculator/reference-fold27.png",
+          "live_image": "data/diffs/folds/ios-rd-calculator/live-fold27.png",
+          "diff_percent": 22.92,
+          "flagged": true,
+          "message": "Fold 27: 22.92% visually different"
         }
       ]
     }

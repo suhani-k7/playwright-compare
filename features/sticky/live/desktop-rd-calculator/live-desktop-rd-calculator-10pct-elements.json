@@ -10,19 +10,101 @@
         "width": 110,
         "height": 40
       }
+    },
+    {
+      "alt": "investment-sticky-image",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/inv-sticky-desktop-img.svg",
+      "bbox": {
+        "x": 0,
+        "y": 662.5,
+        "width": 227,
+        "height": 137
+      }
     }
   ],
   "buttons": [
     {
       "selector": "button",
-      "text": "Track Application",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 250.890625,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 380.6640625,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 509.2421875,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 599.0234375,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 718.96875,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Toggle submenu",
+      "href": "",
+      "bbox": {
+        "x": 809.7890625,
+        "y": 34,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Track Policy",
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 805.7890625,
-        "y": -10.5,
-        "width": 99.4921875,
-        "height": 101
+        "x": 845.7890625,
+        "y": -7.5,
+        "width": 59.4921875,
+        "height": 95
       }
     },
     {
@@ -105,7 +187,7 @@
       "bbox": {
         "x": 1025,
         "y": 517.5,
-        "width": 58.3984375,
+        "width": 62.59375,
         "height": 56
       }
     },
@@ -115,9 +197,9 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 1087.3984375,
+        "x": 1086.59375,
         "y": 517.5,
-        "width": 58.3984375,
+        "width": 62.6015625,
         "height": 56
       }
     },
@@ -127,9 +209,9 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 1149.796875,
+        "x": 1148.1953125,
         "y": 517.5,
-        "width": 58.3984375,
+        "width": 62.6015625,
         "height": 56
       }
     },
@@ -139,9 +221,9 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 1212.1953125,
+        "x": 1209.796875,
         "y": 517.5,
-        "width": 58.3984375,
+        "width": 62.6015625,
         "height": 56
       }
     },
@@ -151,9 +233,9 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 1274.59375,
+        "x": 1271.3984375,
         "y": 517.5,
-        "width": 58.40625,
+        "width": 62.59375,
         "height": 56
       }
     },
@@ -164,9 +246,33 @@
       "href": "",
       "bbox": {
         "x": 1025,
-        "y": 589.5,
+        "y": 665.5,
         "width": 308,
         "height": 48
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 1128.0078125,
+        "y": 746,
+        "width": 132.9921875,
+        "height": 36
+      }
+    },
+    {
+      "selector": "[role=\"button\"]",
+      "text": "Read more",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1191.6875,
+        "y": 635,
+        "width": 53.671875,
+        "height": 13.5
       }
     }
   ],
@@ -184,45 +290,54 @@
       "href": "/term-insurance-plans",
       "bbox": {
         "x": 162,
-        "y": 17.5,
-        "width": 87.7421875,
-        "height": 45
+        "y": 20.5,
+        "width": 76.890625,
+        "height": 39
       }
     },
     {
       "href": "/investment-plans",
       "bbox": {
-        "x": 297.7421875,
-        "y": 17.5,
-        "width": 93.7890625,
-        "height": 45
+        "x": 286.890625,
+        "y": 20.5,
+        "width": 81.7734375,
+        "height": 39
       }
     },
     {
       "href": "/health-insurance-plans",
       "bbox": {
-        "x": 439.53125,
-        "y": 17.5,
-        "width": 92.3984375,
-        "height": 45
+        "x": 416.6640625,
+        "y": 20.5,
+        "width": 80.578125,
+        "height": 39
       }
     },
     {
       "href": "/nri-plans",
       "bbox": {
-        "x": 579.9296875,
-        "y": 17.5,
-        "width": 48.453125,
-        "height": 45
+        "x": 545.2421875,
+        "y": 20.5,
+        "width": 41.78125,
+        "height": 39
       }
     },
     {
       "href": "/calculators",
       "bbox": {
-        "x": 676.3828125,
-        "y": 28.75,
-        "width": 81.40625,
-        "height": 22.5
+        "x": 635.0234375,
+        "y": 30.25,
+        "width": 71.9453125,
+        "height": 19.5
+      }
+    },
+    {
+      "href": "/claims-centre",
+      "bbox": {
+        "x": 754.96875,
+        "y": 30.25,
+        "width": 42.8203125,
+        "height": 19.5
       }
     },
     {
@@ -264,10 +379,19 @@
     {
       "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
-        "x": 1049,
-        "y": 654,
-        "width": 229.15625,
-        "height": 29
+        "x": 1196.8359375,
+        "y": 590,
+        "width": 102.40625,
+        "height": 13.5
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 0,
+        "y": 728,
+        "width": 1280,
+        "height": 72
       }
     }
   ],
@@ -336,6 +460,15 @@
         "y": 105,
         "width": 352,
         "height": 608
+      }
+    },
+    {
+      "tag": "a",
+      "bbox": {
+        "x": 0,
+        "y": 728,
+        "width": 1280,
+        "height": 72
       }
     }
   ]

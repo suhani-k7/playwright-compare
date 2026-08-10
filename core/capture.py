@@ -6,7 +6,7 @@ from PIL import Image
 import imagehash
 from io import BytesIO
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 # -------------------------------------------------------------------
 # Device viewport configs
@@ -275,6 +275,34 @@ def _neutralize_sticky_elements(page):
         }
     """)
 
+def _scroll_full_page(page):
+    """
+    Step-scrolls to the bottom of the page and back to the top, to trigger
+    any lazy-loaded images (loading="lazy" or intersection-observer based)
+    before taking the full-page screenshot. A single scrollTo() jump can
+    skip past the trigger point for observer-based lazy loaders, so we
+    scroll in small increments instead.
+    """
+    page.evaluate("""
+        async () => {
+            await new Promise((resolve) => {
+                let totalHeight = 0;
+                const distance = 400;
+                const timer = setInterval(() => {
+                    window.scrollBy(0, distance);
+                    totalHeight += distance;
+                    if (totalHeight >= document.body.scrollHeight) {
+                        clearInterval(timer);
+                        resolve();
+                    }
+                }, 100);
+            });
+        }
+    """)
+    page.wait_for_timeout(500)  # let final images finish loading after last scroll step
+    page.evaluate("window.scrollTo(0, 0)")
+    page.wait_for_timeout(300)  # let the page settle back at top before screenshotting
+
 def capture_url(url: str, mode: str, slug: str):
     """
     Main capture function. Opens the URL in all 3 viewports,
@@ -291,6 +319,7 @@ def capture_url(url: str, mode: str, slug: str):
 
         page.goto(url, wait_until="load")
         page.wait_for_load_state("networkidle")
+        _scroll_full_page(page)
 
         out_dir = get_output_dir(mode, "desktop", slug)
         os.makedirs(out_dir, exist_ok=True)
@@ -324,6 +353,7 @@ def capture_url(url: str, mode: str, slug: str):
 
         page.goto(url, wait_until="load")
         page.wait_for_load_state("networkidle")
+        _scroll_full_page(page)
 
         out_dir = get_output_dir(mode, "android", slug)
         os.makedirs(out_dir, exist_ok=True)
@@ -356,6 +386,7 @@ def capture_url(url: str, mode: str, slug: str):
 
         page.goto(url, wait_until="load")
         page.wait_for_load_state("networkidle")
+        _scroll_full_page(page)
 
         out_dir = get_output_dir(mode, "ios", slug)
         os.makedirs(out_dir, exist_ok=True)

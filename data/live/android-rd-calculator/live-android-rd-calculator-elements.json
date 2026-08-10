@@ -115,7 +115,7 @@
       "text": "Is an RD Interest Rate fixed?",
       "bbox": {
         "x": 24,
-        "y": 9587.609375,
+        "y": 9792.84375,
         "width": 345,
         "height": 33.75
       }
@@ -125,7 +125,7 @@
       "text": "Is TDS applicable on an RD?",
       "bbox": {
         "x": 24,
-        "y": 9914.109375,
+        "y": 10119.34375,
         "width": 345,
         "height": 33.75
       }
@@ -135,7 +135,7 @@
       "text": "What is the minimum tenure for an RD?",
       "bbox": {
         "x": 24,
-        "y": 10138.234375,
+        "y": 10343.46875,
         "width": 345,
         "height": 67.5
       }
@@ -145,7 +145,7 @@
       "text": "Eligibility Criteria for an RD Account",
       "bbox": {
         "x": 24,
-        "y": 10396.109375,
+        "y": 10601.34375,
         "width": 345,
         "height": 67.5
       }
@@ -155,7 +155,7 @@
       "text": "Documents Required to Open an RD Account",
       "bbox": {
         "x": 24,
-        "y": 10850.796875,
+        "y": 11056.03125,
         "width": 345,
         "height": 67.5
       }
@@ -165,7 +165,7 @@
       "text": "Frequently Asked Questions",
       "bbox": {
         "x": 16,
-        "y": 11273.484375,
+        "y": 11478.71875,
         "width": 361,
         "height": 36
       }
@@ -175,7 +175,7 @@
       "text": "Related Articles",
       "bbox": {
         "x": 16,
-        "y": 14460.859375,
+        "y": 14666.09375,
         "width": 361,
         "height": 52.796875
       }
@@ -185,7 +185,7 @@
       "text": "Check out the different Online Insurance Plans from Axis Max Life!",
       "bbox": {
         "x": 32,
-        "y": 15097.09375,
+        "y": 15302.328125,
         "width": 329,
         "height": 69
       }
@@ -195,7 +195,7 @@
       "text": "Customer Reviews",
       "bbox": {
         "x": 32,
-        "y": 15940.09375,
+        "y": 16145.328125,
         "width": 329,
         "height": 33.75
       }
@@ -205,7 +205,7 @@
       "text": "We would like to hear from you",
       "bbox": {
         "x": 16,
-        "y": 17144.359375,
+        "y": 17349.59375,
         "width": 361,
         "height": 46
       }
@@ -215,7 +215,7 @@
       "text": "Popular Searches",
       "bbox": {
         "x": 16,
-        "y": 19122.796875,
+        "y": 19587.03125,
         "width": 361,
         "height": 24
       }
@@ -345,7 +345,7 @@
       "text": "Which form should I submit if I wish to avoid TDS?",
       "bbox": {
         "x": 16,
-        "y": 11458.484375,
+        "y": 11663.71875,
         "width": 307,
         "height": 39
       }
@@ -355,7 +355,7 @@
       "text": "Are there different types of RD accounts available?",
       "bbox": {
         "x": 16,
-        "y": 11546.484375,
+        "y": 11751.71875,
         "width": 307,
         "height": 39
       }
@@ -365,7 +365,7 @@
       "text": "Can I add a nominee to my RD account?",
       "bbox": {
         "x": 16,
-        "y": 11643.734375,
+        "y": 11848.96875,
         "width": 257.234375,
         "height": 19.5
       }
@@ -375,7 +375,7 @@
       "text": "How to use Recurring Deposit Interest calculator?",
       "bbox": {
         "x": 16,
-        "y": 11721.484375,
+        "y": 11926.71875,
         "width": 307,
         "height": 39
       }
@@ -385,7 +385,7 @@
       "text": "Can I open multiple recurring deposits?",
       "bbox": {
         "x": 16,
-        "y": 11818.734375,
+        "y": 12023.96875,
         "width": 256.109375,
         "height": 19.5
       }
@@ -395,7 +395,7 @@
       "text": "What happens if I do not pay my RD instalment?",
       "bbox": {
         "x": 16,
-        "y": 11896.484375,
+        "y": 12101.71875,
         "width": 307,
         "height": 39
       }
@@ -405,7 +405,7 @@
       "text": "What is the minimum monthly instalment amount needed to invest in bank RD?",
       "bbox": {
         "x": 16,
-        "y": 11984.484375,
+        "y": 12189.71875,
         "width": 307,
         "height": 39
       }
@@ -415,7 +415,7 @@
       "text": "Can I make partial withdrawals from my RD account?",
       "bbox": {
         "x": 16,
-        "y": 12072.484375,
+        "y": 12277.71875,
         "width": 307,
         "height": 39
       }
@@ -425,7 +425,7 @@
       "text": "Are the interest rates on an RD pre-fixed?",
       "bbox": {
         "x": 16,
-        "y": 12169.734375,
+        "y": 12374.96875,
         "width": 270.078125,
         "height": 19.5
       }
@@ -435,7 +435,7 @@
       "text": "How to calculate the Recurring Deposit maturity amount?",
       "bbox": {
         "x": 16,
-        "y": 12247.484375,
+        "y": 12452.71875,
         "width": 307,
         "height": 39
       }
@@ -445,7 +445,7 @@
       "text": "What are the minimum and maximum tenures to open a bank RD?",
       "bbox": {
         "x": 16,
-        "y": 12335.484375,
+        "y": 12540.71875,
         "width": 307,
         "height": 39
       }
@@ -455,7 +455,7 @@
       "text": "Is the interest paid on RDs compounded quarterly?",
       "bbox": {
         "x": 16,
-        "y": 12423.484375,
+        "y": 12628.71875,
         "width": 307,
         "height": 39
       }
@@ -465,7 +465,7 @@
       "text": "How is Recurring Deposit interest calculated?",
       "bbox": {
         "x": 16,
-        "y": 12520.734375,
+        "y": 12725.96875,
         "width": 295.734375,
         "height": 19.5
       }
@@ -475,7 +475,7 @@
       "text": "Is it possible to add nominees in my RD account?",
       "bbox": {
         "x": 16,
-        "y": 12598.484375,
+        "y": 12803.71875,
         "width": 307,
         "height": 39
       }
@@ -485,7 +485,7 @@
       "text": "What is the Difference between FD vs RD?",
       "bbox": {
         "x": 16,
-        "y": 12695.734375,
+        "y": 12900.96875,
         "width": 273.390625,
         "height": 19.5
       }
@@ -495,7 +495,7 @@
       "text": "Which is the formula used to calculate compound interest on Recurring Deposits?",
       "bbox": {
         "x": 16,
-        "y": 12773.484375,
+        "y": 12978.71875,
         "width": 307,
         "height": 39
       }
@@ -505,7 +505,7 @@
       "text": "Is there any additional interest provided for senior citizens?",
       "bbox": {
         "x": 16,
-        "y": 12861.484375,
+        "y": 13066.71875,
         "width": 307,
         "height": 39
       }
@@ -515,7 +515,7 @@
       "text": "How is the interest earned on an RD account calculated?",
       "bbox": {
         "x": 16,
-        "y": 12949.484375,
+        "y": 13154.71875,
         "width": 307,
         "height": 39
       }
@@ -525,7 +525,7 @@
       "text": "What are the different methods by which I can open an RD account?",
       "bbox": {
         "x": 16,
-        "y": 13037.484375,
+        "y": 13242.71875,
         "width": 307,
         "height": 39
       }
@@ -535,7 +535,7 @@
       "text": "Is the interest that is generated from the RD account taxable?",
       "bbox": {
         "x": 16,
-        "y": 13125.484375,
+        "y": 13330.71875,
         "width": 307,
         "height": 39
       }
@@ -545,7 +545,7 @@
       "text": "Will I have to pay a penalty in case there is a delay in the monthly deposit?",
       "bbox": {
         "x": 16,
-        "y": 13213.484375,
+        "y": 13418.71875,
         "width": 307,
         "height": 39
       }
@@ -555,7 +555,7 @@
       "text": "Is TDS applicable on RD?",
       "bbox": {
         "x": 16,
-        "y": 13310.734375,
+        "y": 13515.96875,
         "width": 165.09375,
         "height": 19.5
       }
@@ -565,7 +565,7 @@
       "text": "Is RD better than FD?",
       "bbox": {
         "x": 16,
-        "y": 13397.734375,
+        "y": 13602.96875,
         "width": 142.125,
         "height": 19.5
       }
@@ -575,7 +575,7 @@
       "text": "Is RD better than saving in a savings account?",
       "bbox": {
         "x": 16,
-        "y": 13484.734375,
+        "y": 13689.96875,
         "width": 297.78125,
         "height": 19.5
       }
@@ -585,7 +585,7 @@
       "text": "Are there any charges for closing an RD early?",
       "bbox": {
         "x": 16,
-        "y": 13571.734375,
+        "y": 13776.96875,
         "width": 299.3125,
         "height": 19.5
       }
@@ -595,7 +595,7 @@
       "text": "Can NRIs open a Recurring Deposit account in India?",
       "bbox": {
         "x": 16,
-        "y": 13649.484375,
+        "y": 13854.71875,
         "width": 307,
         "height": 39
       }
@@ -605,7 +605,7 @@
       "text": "Can I break an RD before maturity?",
       "bbox": {
         "x": 16,
-        "y": 13746.734375,
+        "y": 13951.96875,
         "width": 228.1875,
         "height": 19.5
       }
@@ -615,7 +615,7 @@
       "text": "What is the eligibility criteria for an RD account?",
       "bbox": {
         "x": 16,
-        "y": 13824.484375,
+        "y": 14029.71875,
         "width": 307,
         "height": 39
       }
@@ -625,7 +625,7 @@
       "text": "Understanding Recurring Deposit Interest Rates",
       "bbox": {
         "x": 32,
-        "y": 14754.984375,
+        "y": 14960.21875,
         "width": 240,
         "height": 44.78125
       }
@@ -635,7 +635,7 @@
       "text": "What is RD? - Know About the Features and Benefits",
       "bbox": {
         "x": 328,
-        "y": 14755.3125,
+        "y": 14960.546875,
         "width": 240,
         "height": 44.78125
       }
@@ -645,7 +645,7 @@
       "text": "Difference Between Fixed Deposit and Recurring Deposit",
       "bbox": {
         "x": 624,
-        "y": 14751.421875,
+        "y": 14956.65625,
         "width": 240,
         "height": 44.78125
       }
@@ -655,7 +655,7 @@
       "text": "Axis Max Life Insurance",
       "bbox": {
         "x": 32,
-        "y": 16005.84375,
+        "y": 16211.078125,
         "width": 329,
         "height": 40.296875
       }
@@ -665,7 +665,7 @@
       "text": "Axis Max Life Savings Plan",
       "bbox": {
         "x": 32,
-        "y": 16286.890625,
+        "y": 16492.125,
         "width": 329,
         "height": 40.296875
       }
@@ -675,7 +675,7 @@
       "text": "Share your Valuable Feedback",
       "bbox": {
         "x": 16,
-        "y": 16623.9375,
+        "y": 16829.171875,
         "width": 361,
         "height": 23
       }
@@ -725,7 +725,7 @@
       "text": "4.3",
       "bbox": {
         "x": 176.5,
-        "y": 16722.125,
+        "y": 16927.359375,
         "width": 37.953125,
         "height": 36
       }
@@ -936,9 +936,9 @@
       "phash": null,
       "bbox": {
         "x": 24,
-        "y": 9156.671875,
-        "width": 0,
-        "height": 0
+        "y": 9142.890625,
+        "width": 344.984375,
+        "height": 229.234375
       }
     },
     {
@@ -947,7 +947,7 @@
       "phash": null,
       "bbox": {
         "x": 16,
-        "y": 14557.65625,
+        "y": 14762.890625,
         "width": 272,
         "height": 181.328125
       }
@@ -958,7 +958,7 @@
       "phash": null,
       "bbox": {
         "x": 312,
-        "y": 14557.65625,
+        "y": 14762.890625,
         "width": 272,
         "height": 181.65625
       }
@@ -969,7 +969,7 @@
       "phash": null,
       "bbox": {
         "x": 608,
-        "y": 14557.65625,
+        "y": 14762.890625,
         "width": 272,
         "height": 177.765625
       }
@@ -980,9 +980,9 @@
       "phash": null,
       "bbox": {
         "x": 16,
-        "y": 17295.453125,
-        "width": 0,
-        "height": 32
+        "y": 17500.6875,
+        "width": 259,
+        "height": 291
       }
     },
     {
@@ -991,7 +991,7 @@
       "phash": null,
       "bbox": {
         "x": 0,
-        "y": 17985.796875,
+        "y": 18450.03125,
         "width": 393,
         "height": 1089
       }
@@ -1002,7 +1002,7 @@
       "phash": null,
       "bbox": {
         "x": 24,
-        "y": 21163.84375,
+        "y": 21628.078125,
         "width": 120,
         "height": 35.578125
       }
@@ -1013,7 +1013,7 @@
       "phash": null,
       "bbox": {
         "x": 156,
-        "y": 21163.796875,
+        "y": 21628.03125,
         "width": 120,
         "height": 35.671875
       }
@@ -1024,7 +1024,7 @@
       "phash": null,
       "bbox": {
         "x": 352,
-        "y": 22472.46875,
+        "y": 22936.703125,
         "width": 25,
         "height": 25
       }
@@ -1090,7 +1090,7 @@
     },
     {
       "selector": "button",
-      "text": "RD Calculator",
+      "text": "Check out the different Online Insurance Plans from Axis Max",
       "aria_label": "",
       "href": "",
       "bbox": {
@@ -1311,7 +1311,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 11434.484375,
+        "y": 11639.71875,
         "width": 361,
         "height": 87
       }
@@ -1323,7 +1323,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 11522.484375,
+        "y": 11727.71875,
         "width": 361,
         "height": 87
       }
@@ -1335,7 +1335,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 11610.484375,
+        "y": 11815.71875,
         "width": 361,
         "height": 86
       }
@@ -1347,7 +1347,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 11697.484375,
+        "y": 11902.71875,
         "width": 361,
         "height": 87
       }
@@ -1359,7 +1359,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 11785.484375,
+        "y": 11990.71875,
         "width": 361,
         "height": 86
       }
@@ -1371,7 +1371,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 11872.484375,
+        "y": 12077.71875,
         "width": 361,
         "height": 87
       }
@@ -1383,7 +1383,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 11960.484375,
+        "y": 12165.71875,
         "width": 361,
         "height": 87
       }
@@ -1395,7 +1395,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 12048.484375,
+        "y": 12253.71875,
         "width": 361,
         "height": 87
       }
@@ -1407,7 +1407,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 12136.484375,
+        "y": 12341.71875,
         "width": 361,
         "height": 86
       }
@@ -1419,7 +1419,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 12223.484375,
+        "y": 12428.71875,
         "width": 361,
         "height": 87
       }
@@ -1431,7 +1431,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 12311.484375,
+        "y": 12516.71875,
         "width": 361,
         "height": 87
       }
@@ -1443,7 +1443,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 12399.484375,
+        "y": 12604.71875,
         "width": 361,
         "height": 87
       }
@@ -1455,7 +1455,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 12487.484375,
+        "y": 12692.71875,
         "width": 361,
         "height": 86
       }
@@ -1467,7 +1467,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 12574.484375,
+        "y": 12779.71875,
         "width": 361,
         "height": 87
       }
@@ -1479,7 +1479,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 12662.484375,
+        "y": 12867.71875,
         "width": 361,
         "height": 86
       }
@@ -1491,7 +1491,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 12749.484375,
+        "y": 12954.71875,
         "width": 361,
         "height": 87
       }
@@ -1503,7 +1503,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 12837.484375,
+        "y": 13042.71875,
         "width": 361,
         "height": 87
       }
@@ -1515,7 +1515,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 12925.484375,
+        "y": 13130.71875,
         "width": 361,
         "height": 87
       }
@@ -1527,7 +1527,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 13013.484375,
+        "y": 13218.71875,
         "width": 361,
         "height": 87
       }
@@ -1539,7 +1539,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 13101.484375,
+        "y": 13306.71875,
         "width": 361,
         "height": 87
       }
@@ -1551,7 +1551,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 13189.484375,
+        "y": 13394.71875,
         "width": 361,
         "height": 87
       }
@@ -1563,7 +1563,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 13277.484375,
+        "y": 13482.71875,
         "width": 361,
         "height": 86
       }
@@ -1575,7 +1575,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 13364.484375,
+        "y": 13569.71875,
         "width": 361,
         "height": 86
       }
@@ -1587,7 +1587,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 13451.484375,
+        "y": 13656.71875,
         "width": 361,
         "height": 86
       }
@@ -1599,7 +1599,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 13538.484375,
+        "y": 13743.71875,
         "width": 361,
         "height": 86
       }
@@ -1611,7 +1611,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 13625.484375,
+        "y": 13830.71875,
         "width": 361,
         "height": 87
       }
@@ -1623,7 +1623,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 13713.484375,
+        "y": 13918.71875,
         "width": 361,
         "height": 86
       }
@@ -1635,7 +1635,7 @@
       "href": "",
       "bbox": {
         "x": 16,
-        "y": 13800.484375,
+        "y": 14005.71875,
         "width": 361,
         "height": 87
       }
@@ -1647,7 +1647,7 @@
       "href": "",
       "bbox": {
         "x": 108.484375,
-        "y": 16920.359375,
+        "y": 17125.59375,
         "width": 32,
         "height": 32
       }
@@ -1659,7 +1659,7 @@
       "href": "",
       "bbox": {
         "x": 144.484375,
-        "y": 16920.359375,
+        "y": 17125.59375,
         "width": 32,
         "height": 32
       }
@@ -1671,7 +1671,7 @@
       "href": "",
       "bbox": {
         "x": 180.484375,
-        "y": 16920.359375,
+        "y": 17125.59375,
         "width": 32,
         "height": 32
       }
@@ -1683,7 +1683,7 @@
       "href": "",
       "bbox": {
         "x": 216.484375,
-        "y": 16920.359375,
+        "y": 17125.59375,
         "width": 32,
         "height": 32
       }
@@ -1695,7 +1695,7 @@
       "href": "",
       "bbox": {
         "x": 252.484375,
-        "y": 16920.359375,
+        "y": 17125.59375,
         "width": 32,
         "height": 32
       }
@@ -1707,7 +1707,7 @@
       "href": "",
       "bbox": {
         "x": 111.484375,
-        "y": 17016.359375,
+        "y": 17221.59375,
         "width": 170,
         "height": 48
       }
@@ -1719,7 +1719,7 @@
       "href": "",
       "bbox": {
         "x": 105.8125,
-        "y": 17829.796875,
+        "y": 18294.03125,
         "width": 181.375,
         "height": 52
       }
@@ -1731,7 +1731,7 @@
       "href": "/",
       "bbox": {
         "x": 16,
-        "y": 20734.796875,
+        "y": 21199.03125,
         "width": 146.796875,
         "height": 17
       }
@@ -1743,7 +1743,7 @@
       "href": "",
       "bbox": {
         "x": 178.34375,
-        "y": 22419.71875,
+        "y": 22883.953125,
         "width": 12,
         "height": 14
       }
@@ -1970,7 +1970,7 @@
       "href": "/investment-plans/recurring-deposit/rd-interest-rates",
       "bbox": {
         "x": 16,
-        "y": 14541.65625,
+        "y": 14746.890625,
         "width": 272,
         "height": 430.4375
       }
@@ -1979,7 +1979,7 @@
       "href": "/investment-plans/recurring-deposit/what-is-rd",
       "bbox": {
         "x": 312,
-        "y": 14541.65625,
+        "y": 14746.890625,
         "width": 272,
         "height": 430.4375
       }
@@ -1988,7 +1988,7 @@
       "href": "/investment-plans/fixed-deposit/difference-between-fd-vs-rd",
       "bbox": {
         "x": 608,
-        "y": 14541.65625,
+        "y": 14746.890625,
         "width": 272,
         "height": 430.4375
       }
@@ -1997,7 +1997,7 @@
       "href": "/blog/investments",
       "bbox": {
         "x": 68.5,
-        "y": 14980.09375,
+        "y": 15185.328125,
         "width": 256,
         "height": 48
       }
@@ -2006,7 +2006,7 @@
       "href": "/investment-plans/smart-wealth-plan",
       "bbox": {
         "x": 52,
-        "y": 15644.59375,
+        "y": 15849.828125,
         "width": 276.796875,
         "height": 22
       }
@@ -2015,7 +2015,7 @@
       "href": "/investment-plans/smart-wealth-plan",
       "bbox": {
         "x": 360.796875,
-        "y": 15644.59375,
+        "y": 15849.828125,
         "width": 276.796875,
         "height": 22
       }
@@ -2024,7 +2024,7 @@
       "href": "/investment-plans/smart-wealth-plan",
       "bbox": {
         "x": 669.59375,
-        "y": 15664.09375,
+        "y": 15869.328125,
         "width": 276.796875,
         "height": 22
       }
@@ -2033,7 +2033,7 @@
       "href": "/investment-plans/smart-wealth-plan",
       "bbox": {
         "x": 978.390625,
-        "y": 15740.09375,
+        "y": 15945.328125,
         "width": 276.796875,
         "height": 22
       }
@@ -2042,7 +2042,7 @@
       "href": "/investment-plans/smart-wealth-plan",
       "bbox": {
         "x": 1287.1875,
-        "y": 15740.09375,
+        "y": 15945.328125,
         "width": 276.796875,
         "height": 22
       }
@@ -2051,7 +2051,7 @@
       "href": "/term-insurance-plans/critical-illness",
       "bbox": {
         "x": 1595.984375,
-        "y": 15644.59375,
+        "y": 15849.828125,
         "width": 276.796875,
         "height": 22
       }
@@ -2060,7 +2060,7 @@
       "href": "/investment-plans/smart-fd-plan",
       "bbox": {
         "x": 1904.78125,
-        "y": 15544.09375,
+        "y": 15749.328125,
         "width": 276.796875,
         "height": 22
       }
@@ -2069,7 +2069,7 @@
       "href": "/investment-plans/ulip-plans/wealth-investment-plan",
       "bbox": {
         "x": 2213.578125,
-        "y": 15644.59375,
+        "y": 15849.828125,
         "width": 276.796875,
         "height": 22
       }
@@ -2078,7 +2078,7 @@
       "href": "https://wa.me/917428396005",
       "bbox": {
         "x": 131.46875,
-        "y": 18137.796875,
+        "y": 18602.03125,
         "width": 133.828125,
         "height": 26.5
       }
@@ -2087,7 +2087,7 @@
       "href": "tel:+911246488900",
       "bbox": {
         "x": 103.15625,
-        "y": 18224.546875,
+        "y": 18688.78125,
         "width": 147.390625,
         "height": 26.5
       }
@@ -2096,7 +2096,7 @@
       "href": "mailto:service.helpdesk@axismaxlife.com",
       "bbox": {
         "x": 57,
-        "y": 18313.296875,
+        "y": 18777.53125,
         "width": 257.984375,
         "height": 18
       }
@@ -2105,7 +2105,7 @@
       "href": "https://wa.me/917428396005",
       "bbox": {
         "x": 131.46875,
-        "y": 18497.046875,
+        "y": 18961.28125,
         "width": 133.828125,
         "height": 26.5
       }
@@ -2114,7 +2114,7 @@
       "href": "tel:18601205577",
       "bbox": {
         "x": 57,
-        "y": 18566.296875,
+        "y": 19030.53125,
         "width": 115.953125,
         "height": 18
       }
@@ -2123,7 +2123,7 @@
       "href": "mailto:service.helpdesk@axismaxlife.com",
       "bbox": {
         "x": 57,
-        "y": 18649.046875,
+        "y": 19113.28125,
         "width": 257.984375,
         "height": 18
       }
@@ -2132,7 +2132,7 @@
       "href": "tel:911171025900",
       "bbox": {
         "x": 57,
-        "y": 18832.796875,
+        "y": 19297.03125,
         "width": 125.421875,
         "height": 22.5
       }
@@ -2141,7 +2141,7 @@
       "href": "tel:911161329950",
       "bbox": {
         "x": 187.40625,
-        "y": 18832.796875,
+        "y": 19297.03125,
         "width": 126.453125,
         "height": 22.5
       }
@@ -2150,7 +2150,7 @@
       "href": "mailto:nri.helpdesk@axismaxlife.com",
       "bbox": {
         "x": 57,
-        "y": 18898.046875,
+        "y": 19362.28125,
         "width": 224.109375,
         "height": 18
       }
@@ -2159,7 +2159,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19178.796875,
+        "y": 19643.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2168,7 +2168,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19178.796875,
+        "y": 19643.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2177,7 +2177,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19238.796875,
+        "y": 19703.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2186,7 +2186,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19238.796875,
+        "y": 19703.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2195,7 +2195,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19298.796875,
+        "y": 19763.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2204,7 +2204,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19298.796875,
+        "y": 19763.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2213,7 +2213,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19358.796875,
+        "y": 19823.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2222,7 +2222,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19358.796875,
+        "y": 19823.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2231,7 +2231,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19420.796875,
+        "y": 19885.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2240,7 +2240,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19420.796875,
+        "y": 19885.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2249,7 +2249,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19482.796875,
+        "y": 19947.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2258,7 +2258,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19482.796875,
+        "y": 19947.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2267,7 +2267,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19544.796875,
+        "y": 20009.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2276,7 +2276,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19544.796875,
+        "y": 20009.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2285,7 +2285,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19606.796875,
+        "y": 20071.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2294,7 +2294,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19606.796875,
+        "y": 20071.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2303,7 +2303,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19666.796875,
+        "y": 20131.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2312,7 +2312,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19666.796875,
+        "y": 20131.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2321,7 +2321,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19726.796875,
+        "y": 20191.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2330,7 +2330,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19726.796875,
+        "y": 20191.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2339,7 +2339,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19788.796875,
+        "y": 20253.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2348,7 +2348,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19788.796875,
+        "y": 20253.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2357,7 +2357,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19848.796875,
+        "y": 20313.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2366,7 +2366,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19848.796875,
+        "y": 20313.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2375,7 +2375,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19910.796875,
+        "y": 20375.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2384,7 +2384,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19910.796875,
+        "y": 20375.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2393,7 +2393,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 19970.796875,
+        "y": 20435.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2402,7 +2402,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 19970.796875,
+        "y": 20435.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2411,7 +2411,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 20032.796875,
+        "y": 20497.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2420,7 +2420,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 20032.796875,
+        "y": 20497.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2429,7 +2429,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 20094.796875,
+        "y": 20559.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2438,7 +2438,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 20094.796875,
+        "y": 20559.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2447,7 +2447,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 20154.796875,
+        "y": 20619.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2456,7 +2456,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 20154.796875,
+        "y": 20619.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2465,7 +2465,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 20214.796875,
+        "y": 20679.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2474,7 +2474,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 20214.796875,
+        "y": 20679.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2483,7 +2483,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 20276.796875,
+        "y": 20741.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2492,7 +2492,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 20276.796875,
+        "y": 20741.03125,
         "width": 174.5,
         "height": 48
       }
@@ -2501,7 +2501,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 20336.796875,
+        "y": 20801.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2510,7 +2510,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 20336.796875,
+        "y": 20801.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2519,7 +2519,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 20398.796875,
+        "y": 20863.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2528,7 +2528,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 20398.796875,
+        "y": 20863.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2537,7 +2537,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 20460.796875,
+        "y": 20925.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2546,7 +2546,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 20460.796875,
+        "y": 20925.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2555,7 +2555,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 20522.796875,
+        "y": 20987.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2564,7 +2564,7 @@
       "href": "#",
       "bbox": {
         "x": 202.5,
-        "y": 20522.796875,
+        "y": 20987.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2573,7 +2573,7 @@
       "href": "#",
       "bbox": {
         "x": 16,
-        "y": 20584.796875,
+        "y": 21049.03125,
         "width": 174.5,
         "height": 50
       }
@@ -2582,7 +2582,7 @@
       "href": "/",
       "bbox": {
         "x": 16,
-        "y": 20734.796875,
+        "y": 21199.03125,
         "width": 146.796875,
         "height": 17
       }
@@ -2591,7 +2591,7 @@
       "href": "/term-insurance-plans/critical-illness",
       "bbox": {
         "x": 24,
-        "y": 20872.796875,
+        "y": 21337.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2600,7 +2600,7 @@
       "href": "/term-insurance-plans/term-plan-with-return-of-premium",
       "bbox": {
         "x": 24,
-        "y": 20904.296875,
+        "y": 21368.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2609,7 +2609,7 @@
       "href": "/term-insurance-plans/claim-settlement-ratio",
       "bbox": {
         "x": 24,
-        "y": 20935.796875,
+        "y": 21400.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2618,7 +2618,7 @@
       "href": "/term-insurance-plans/smart-secure-plus-plan",
       "bbox": {
         "x": 24,
-        "y": 20967.296875,
+        "y": 21431.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2627,7 +2627,7 @@
       "href": "/continue-your-journey",
       "bbox": {
         "x": 24,
-        "y": 20998.796875,
+        "y": 21463.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2636,7 +2636,7 @@
       "href": "/term-insurance-plans/term-insurance-for-housewife",
       "bbox": {
         "x": 24,
-        "y": 21030.296875,
+        "y": 21494.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2645,7 +2645,7 @@
       "href": "/term-insurance-plans/zero-cost-term-insurance",
       "bbox": {
         "x": 24,
-        "y": 21061.796875,
+        "y": 21526.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2654,7 +2654,7 @@
       "href": "/term-insurance-plans/smart-term-plan-plus",
       "bbox": {
         "x": 24,
-        "y": 21093.296875,
+        "y": 21557.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2663,7 +2663,7 @@
       "href": "/investment-plans/endowment-plan",
       "bbox": {
         "x": 24,
-        "y": 20926.796875,
+        "y": 21391.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2672,7 +2672,7 @@
       "href": "/online-insurance-plans",
       "bbox": {
         "x": 24,
-        "y": 20958.296875,
+        "y": 21422.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2681,7 +2681,7 @@
       "href": "/pension-plans",
       "bbox": {
         "x": 24,
-        "y": 20989.796875,
+        "y": 21454.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2690,7 +2690,7 @@
       "href": "/group-insurance-plans",
       "bbox": {
         "x": 24,
-        "y": 21021.296875,
+        "y": 21485.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2699,7 +2699,7 @@
       "href": "/child-insurance-plans",
       "bbox": {
         "x": 24,
-        "y": 21052.796875,
+        "y": 21517.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2708,7 +2708,7 @@
       "href": "/health-insurance-plans",
       "bbox": {
         "x": 24,
-        "y": 21084.296875,
+        "y": 21548.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2717,7 +2717,7 @@
       "href": "/nri-plans",
       "bbox": {
         "x": 24,
-        "y": 21115.796875,
+        "y": 21580.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2726,7 +2726,7 @@
       "href": "/health-insurance-plans/abha-ayushman-bharat-health-account",
       "bbox": {
         "x": 24,
-        "y": 21147.296875,
+        "y": 21611.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2735,7 +2735,7 @@
       "href": "/cs/pay-online",
       "bbox": {
         "x": 24,
-        "y": 20980.796875,
+        "y": 21445.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2744,7 +2744,7 @@
       "href": "/cs/login",
       "bbox": {
         "x": 24,
-        "y": 21012.296875,
+        "y": 21476.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2753,7 +2753,7 @@
       "href": "/term-insurance-plans/premium-calculator?utmCode=14363541&utm_source=homepage&utm_medium=agent&utm_campaign=cross_sell",
       "bbox": {
         "x": 24,
-        "y": 21043.796875,
+        "y": 21508.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2762,7 +2762,7 @@
       "href": "/claims-centre",
       "bbox": {
         "x": 24,
-        "y": 21075.296875,
+        "y": 21539.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2771,7 +2771,7 @@
       "href": "/cs/login",
       "bbox": {
         "x": 24,
-        "y": 21106.796875,
+        "y": 21571.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2780,7 +2780,7 @@
       "href": "/cs/login",
       "bbox": {
         "x": 24,
-        "y": 21138.296875,
+        "y": 21602.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2789,7 +2789,7 @@
       "href": "/customer-servicing/electronic-insurance-account",
       "bbox": {
         "x": 24,
-        "y": 21169.796875,
+        "y": 21634.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2798,7 +2798,7 @@
       "href": "/contact-us/faqs",
       "bbox": {
         "x": 24,
-        "y": 21201.296875,
+        "y": 21665.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2807,7 +2807,7 @@
       "href": "/customer-servicing/premium-payment-options",
       "bbox": {
         "x": 24,
-        "y": 21232.796875,
+        "y": 21697.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2816,7 +2816,7 @@
       "href": "/cs/login?redirectURL=/application-tracker",
       "bbox": {
         "x": 24,
-        "y": 21264.296875,
+        "y": 21728.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2825,7 +2825,7 @@
       "href": "/contact-us",
       "bbox": {
         "x": 24,
-        "y": 21295.796875,
+        "y": 21760.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2834,7 +2834,7 @@
       "href": "/cs/login",
       "bbox": {
         "x": 24,
-        "y": 21327.296875,
+        "y": 21791.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2843,7 +2843,7 @@
       "href": "/cs/login",
       "bbox": {
         "x": 24,
-        "y": 21358.796875,
+        "y": 21823.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2852,7 +2852,7 @@
       "href": "/downloads",
       "bbox": {
         "x": 24,
-        "y": 21390.296875,
+        "y": 21854.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2861,7 +2861,7 @@
       "href": "/cs/login?redirectURL=/update-pan",
       "bbox": {
         "x": 24,
-        "y": 21421.796875,
+        "y": 21886.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2870,7 +2870,7 @@
       "href": "/customer-servicing/service-tats",
       "bbox": {
         "x": 24,
-        "y": 21453.296875,
+        "y": 21917.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2879,7 +2879,7 @@
       "href": "/customer-servicing/download-coi",
       "bbox": {
         "x": 24,
-        "y": 21484.796875,
+        "y": 21949.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2888,7 +2888,7 @@
       "href": "/feedback",
       "bbox": {
         "x": 24,
-        "y": 21516.296875,
+        "y": 21980.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2897,7 +2897,7 @@
       "href": "https://bimabharosa.irdai.gov.in/Home/Home",
       "bbox": {
         "x": 24,
-        "y": 21547.796875,
+        "y": 22012.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2906,7 +2906,7 @@
       "href": "/term-insurance-plans/premium-calculator",
       "bbox": {
         "x": 24,
-        "y": 21034.796875,
+        "y": 21499.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2915,7 +2915,7 @@
       "href": "/insurance-calculators/tax-calculator",
       "bbox": {
         "x": 24,
-        "y": 21066.296875,
+        "y": 21530.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2924,7 +2924,7 @@
       "href": "/investment-plans/investment-calculator",
       "bbox": {
         "x": 24,
-        "y": 21097.796875,
+        "y": 21562.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2933,7 +2933,7 @@
       "href": "/calculators/compound-interest-calculator",
       "bbox": {
         "x": 24,
-        "y": 21129.296875,
+        "y": 21593.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2942,7 +2942,7 @@
       "href": "/insurance-calculators",
       "bbox": {
         "x": 24,
-        "y": 21160.796875,
+        "y": 21625.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2951,7 +2951,7 @@
       "href": "/fd-calculator",
       "bbox": {
         "x": 24,
-        "y": 21192.296875,
+        "y": 21656.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2960,7 +2960,7 @@
       "href": "/investment-plans/cibil-credit-score",
       "bbox": {
         "x": 24,
-        "y": 21223.796875,
+        "y": 21688.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2969,7 +2969,7 @@
       "href": "/investment-plans/rd-calculator",
       "bbox": {
         "x": 24,
-        "y": 21255.296875,
+        "y": 21719.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2978,7 +2978,7 @@
       "href": "/investment-plans/ppf-calculator",
       "bbox": {
         "x": 24,
-        "y": 21286.796875,
+        "y": 21751.03125,
         "width": 345,
         "height": 31.5
       }
@@ -2987,7 +2987,7 @@
       "href": "/investment-plans/roi-calculator",
       "bbox": {
         "x": 24,
-        "y": 21318.296875,
+        "y": 21782.53125,
         "width": 345,
         "height": 31.5
       }
@@ -2996,7 +2996,7 @@
       "href": "/investment-plans/sip-calculator",
       "bbox": {
         "x": 24,
-        "y": 21349.796875,
+        "y": 21814.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3005,7 +3005,7 @@
       "href": "/calculators/nps-calculator",
       "bbox": {
         "x": 24,
-        "y": 21381.296875,
+        "y": 21845.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3014,7 +3014,7 @@
       "href": "/calculators/lumpsum-calculator",
       "bbox": {
         "x": 24,
-        "y": 21412.796875,
+        "y": 21877.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3023,7 +3023,7 @@
       "href": "/calculators/nsc-calculator",
       "bbox": {
         "x": 24,
-        "y": 21444.296875,
+        "y": 21908.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3032,7 +3032,7 @@
       "href": "/calculators/step-up-sip-calculator",
       "bbox": {
         "x": 24,
-        "y": 21475.796875,
+        "y": 21940.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3041,7 +3041,7 @@
       "href": "/insurance-calculators/bmi-calculator",
       "bbox": {
         "x": 24,
-        "y": 21507.296875,
+        "y": 21971.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3050,7 +3050,7 @@
       "href": "/calculators/sukanya-samriddhi-yojana-calculator",
       "bbox": {
         "x": 24,
-        "y": 21538.796875,
+        "y": 22003.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3059,7 +3059,7 @@
       "href": "/insurance-calculators/retirement-planning-calculator",
       "bbox": {
         "x": 24,
-        "y": 21570.296875,
+        "y": 22034.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3068,7 +3068,7 @@
       "href": "/calculators/swp-calculator",
       "bbox": {
         "x": 24,
-        "y": 21601.796875,
+        "y": 22066.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3077,7 +3077,7 @@
       "href": "/calculators/apy-calculator",
       "bbox": {
         "x": 24,
-        "y": 21633.296875,
+        "y": 22097.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3086,7 +3086,7 @@
       "href": "/calculators/emi-calculator",
       "bbox": {
         "x": 24,
-        "y": 21664.796875,
+        "y": 22129.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3095,7 +3095,7 @@
       "href": "/calculators/elss-calculator",
       "bbox": {
         "x": 24,
-        "y": 21696.296875,
+        "y": 22160.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3104,7 +3104,7 @@
       "href": "/insurance-calculators/home-loan-insurance-calculator",
       "bbox": {
         "x": 24,
-        "y": 21727.796875,
+        "y": 22192.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3113,7 +3113,7 @@
       "href": "/investment-plans/ulip-plans",
       "bbox": {
         "x": 24,
-        "y": 21088.796875,
+        "y": 21553.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3122,7 +3122,7 @@
       "href": "/investment-plans/tax-saving-investments",
       "bbox": {
         "x": 24,
-        "y": 21120.296875,
+        "y": 21584.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3131,7 +3131,7 @@
       "href": "/investment-plans/smart-wealth-plan",
       "bbox": {
         "x": 24,
-        "y": 21151.796875,
+        "y": 21616.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3140,7 +3140,7 @@
       "href": "/investment-plans/smart-wealth-income-plan",
       "bbox": {
         "x": 24,
-        "y": 21183.296875,
+        "y": 21647.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3149,7 +3149,7 @@
       "href": "/ulip-plans/flexi-wealth-Advantage-Plan",
       "bbox": {
         "x": 24,
-        "y": 21214.796875,
+        "y": 21679.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3158,7 +3158,7 @@
       "href": "/investment-plans/savings-and-income-plans",
       "bbox": {
         "x": 24,
-        "y": 21246.296875,
+        "y": 21710.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3167,7 +3167,7 @@
       "href": "/investment-plans/smart-fd-plan",
       "bbox": {
         "x": 24,
-        "y": 21277.796875,
+        "y": 21742.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3176,7 +3176,7 @@
       "href": "/investment-plans/money-back-policy",
       "bbox": {
         "x": 24,
-        "y": 21309.296875,
+        "y": 21773.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3185,7 +3185,7 @@
       "href": "/investment-plans/max-life-ul-life-growth-super-fund",
       "bbox": {
         "x": 24,
-        "y": 21340.796875,
+        "y": 21805.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3194,7 +3194,7 @@
       "href": "/investment-plans/max-life-high-growth-fund",
       "bbox": {
         "x": 24,
-        "y": 21372.296875,
+        "y": 21836.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3203,7 +3203,7 @@
       "href": "/investment-plans/max-life-ul-life-secured-fund",
       "bbox": {
         "x": 24,
-        "y": 21403.796875,
+        "y": 21868.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3212,7 +3212,7 @@
       "href": "/investment-plans/max-life-ul-sustainable-equity-fund",
       "bbox": {
         "x": 24,
-        "y": 21435.296875,
+        "y": 21899.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3221,7 +3221,7 @@
       "href": "/investment-plans/max-life-nifty-smallcap-quality-index-fund",
       "bbox": {
         "x": 24,
-        "y": 21466.796875,
+        "y": 21931.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3230,7 +3230,7 @@
       "href": "/investment-plans/max-life-ul-life-balanced-fund",
       "bbox": {
         "x": 24,
-        "y": 21498.296875,
+        "y": 21962.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3239,7 +3239,7 @@
       "href": "/investment-plans/max-life-ul-pure-growth-fund",
       "bbox": {
         "x": 24,
-        "y": 21529.796875,
+        "y": 21994.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3248,7 +3248,7 @@
       "href": "/investment-plans/max-life-ul-secure-plus-fund",
       "bbox": {
         "x": 24,
-        "y": 21561.296875,
+        "y": 22025.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3257,7 +3257,7 @@
       "href": "/investment-plans/max-life-ul-life-growth-fund",
       "bbox": {
         "x": 24,
-        "y": 21592.796875,
+        "y": 22057.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3266,7 +3266,7 @@
       "href": "/investment-plans/max-life-ul-life-conservative-fund",
       "bbox": {
         "x": 24,
-        "y": 21624.296875,
+        "y": 22088.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3275,7 +3275,7 @@
       "href": "/investment-plans/max-life-ul-life-diversified-equity-fund",
       "bbox": {
         "x": 24,
-        "y": 21655.796875,
+        "y": 22120.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3284,7 +3284,7 @@
       "href": "/investment-plans/max-life-ul-money-market-ii-fund",
       "bbox": {
         "x": 24,
-        "y": 21687.296875,
+        "y": 22151.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3293,7 +3293,7 @@
       "href": "/investment-plans/max-life-ul-life-dynamic-bond-fund",
       "bbox": {
         "x": 24,
-        "y": 21718.796875,
+        "y": 22183.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3302,7 +3302,7 @@
       "href": "/investment-plans/max-life-midcap-momentum-index-fund",
       "bbox": {
         "x": 24,
-        "y": 21750.296875,
+        "y": 22214.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3311,7 +3311,7 @@
       "href": "/blog/tax-savings/income-tax-slab-2025-26",
       "bbox": {
         "x": 24,
-        "y": 21781.796875,
+        "y": 22246.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3320,7 +3320,7 @@
       "href": "/investment-plans/max-life-nifty-500-momentum-50-fund",
       "bbox": {
         "x": 24,
-        "y": 21813.296875,
+        "y": 22277.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3329,7 +3329,7 @@
       "href": "/static-page/assets/homepage/Axis%20Max%20Life%20Sustainable%20Yield%20Index%20Factsheet.pdf",
       "bbox": {
         "x": 24,
-        "y": 21844.796875,
+        "y": 22309.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3338,7 +3338,7 @@
       "href": "/investment-plans/sustainable-wealth-50-index-fund",
       "bbox": {
         "x": 24,
-        "y": 21876.296875,
+        "y": 22340.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3347,7 +3347,7 @@
       "href": "/investment-plans/axis-max-life-smart-innovation-fund",
       "bbox": {
         "x": 24,
-        "y": 21907.796875,
+        "y": 22372.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3356,7 +3356,7 @@
       "href": "/investment-plans/nifty-500-multifactor-50-fund",
       "bbox": {
         "x": 24,
-        "y": 21939.296875,
+        "y": 22403.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3365,7 +3365,7 @@
       "href": "/investment-plans/multifactor-index-pension-fund",
       "bbox": {
         "x": 24,
-        "y": 21970.796875,
+        "y": 22435.03125,
         "width": 345,
         "height": 51
       }
@@ -3374,7 +3374,7 @@
       "href": "/pure-growth-fund-certification",
       "bbox": {
         "x": 24,
-        "y": 22021.796875,
+        "y": 22486.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3383,7 +3383,7 @@
       "href": "/about-us/why-max-life",
       "bbox": {
         "x": 24,
-        "y": 21142.796875,
+        "y": 21607.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3392,7 +3392,7 @@
       "href": "/about-us",
       "bbox": {
         "x": 24,
-        "y": 21174.296875,
+        "y": 21638.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3401,7 +3401,7 @@
       "href": "/about-us/awards-achievements",
       "bbox": {
         "x": 24,
-        "y": 21205.796875,
+        "y": 21670.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3410,7 +3410,7 @@
       "href": "/about-us/csr",
       "bbox": {
         "x": 24,
-        "y": 21237.296875,
+        "y": 21701.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3419,7 +3419,7 @@
       "href": "/about-us/esg",
       "bbox": {
         "x": 24,
-        "y": 21268.796875,
+        "y": 21733.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3428,7 +3428,7 @@
       "href": "/about-us/diversity-and-inclusion",
       "bbox": {
         "x": 24,
-        "y": 21300.296875,
+        "y": 21764.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3437,7 +3437,7 @@
       "href": "/newsroom",
       "bbox": {
         "x": 24,
-        "y": 21331.796875,
+        "y": 21796.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3446,7 +3446,7 @@
       "href": "/about-us/our-leadership",
       "bbox": {
         "x": 24,
-        "y": 21363.296875,
+        "y": 21827.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3455,7 +3455,7 @@
       "href": "/newsroom/public-disclosures",
       "bbox": {
         "x": 24,
-        "y": 21394.796875,
+        "y": 21859.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3464,7 +3464,7 @@
       "href": "/static-page/assets/homepage/ISNP%20Schedule%20II%20III.pdf",
       "bbox": {
         "x": 24,
-        "y": 21426.296875,
+        "y": 21890.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3473,7 +3473,7 @@
       "href": "/term-insurance-plans/claim-settlement-ratio",
       "bbox": {
         "x": 24,
-        "y": 21457.796875,
+        "y": 21922.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3482,7 +3482,7 @@
       "href": "/join-max-life/become-an-agent",
       "bbox": {
         "x": 24,
-        "y": 21489.296875,
+        "y": 21953.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3491,7 +3491,7 @@
       "href": "/fund-performance",
       "bbox": {
         "x": 24,
-        "y": 21520.796875,
+        "y": 21985.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3500,7 +3500,7 @@
       "href": "/fund-performance/monthly-factsheets",
       "bbox": {
         "x": 24,
-        "y": 21552.296875,
+        "y": 22016.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3509,7 +3509,7 @@
       "href": "/customer-servicing/fund-portfolio-data",
       "bbox": {
         "x": 24,
-        "y": 21583.796875,
+        "y": 22048.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3518,7 +3518,7 @@
       "href": "/fund-performance/fund-performance-benchmark",
       "bbox": {
         "x": 24,
-        "y": 21615.296875,
+        "y": 22079.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3527,7 +3527,7 @@
       "href": "/monthly-fund-snapshots-report",
       "bbox": {
         "x": 24,
-        "y": 21646.796875,
+        "y": 22111.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3536,7 +3536,7 @@
       "href": "/fund-performance/annual-investment-reports",
       "bbox": {
         "x": 24,
-        "y": 21678.296875,
+        "y": 22142.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3545,7 +3545,7 @@
       "href": "/branches",
       "bbox": {
         "x": 24,
-        "y": 21709.796875,
+        "y": 22174.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3554,7 +3554,7 @@
       "href": "/disclosures-under-regulation-62-lodr",
       "bbox": {
         "x": 24,
-        "y": 21741.296875,
+        "y": 22205.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3563,7 +3563,7 @@
       "href": "/newsroom/key-company-policies",
       "bbox": {
         "x": 24,
-        "y": 21772.796875,
+        "y": 22237.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3572,7 +3572,7 @@
       "href": "/careers",
       "bbox": {
         "x": 24,
-        "y": 21804.296875,
+        "y": 22268.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3581,7 +3581,7 @@
       "href": "https://data.gov.in/",
       "bbox": {
         "x": 24,
-        "y": 21835.796875,
+        "y": 22300.03125,
         "width": 345,
         "height": 31.5
       }
@@ -3590,7 +3590,7 @@
       "href": "https://www.india.gov.in/",
       "bbox": {
         "x": 24,
-        "y": 21867.296875,
+        "y": 22331.53125,
         "width": 345,
         "height": 31.5
       }
@@ -3599,7 +3599,7 @@
       "href": "https://apps.apple.com/in/app/max-life-insurance/id6447048056",
       "bbox": {
         "x": 24,
-        "y": 21163.84375,
+        "y": 21628.078125,
         "width": 120,
         "height": 35.578125
       }
@@ -3608,7 +3608,7 @@
       "href": "https://play.google.com/store/apps/details?id=com.maxlifeinsurance.www.twa",
       "bbox": {
         "x": 156,
-        "y": 21163.796875,
+        "y": 21628.03125,
         "width": 120,
         "height": 35.671875
       }
@@ -3617,7 +3617,7 @@
       "href": "https://www.facebook.com/AxisMaxLife",
       "bbox": {
         "x": 24,
-        "y": 21236.46875,
+        "y": 21700.703125,
         "width": 24,
         "height": 24
       }
@@ -3626,7 +3626,7 @@
       "href": "https://x.com/AxisMaxLifeIns",
       "bbox": {
         "x": 68,
-        "y": 21236.46875,
+        "y": 21700.703125,
         "width": 24,
         "height": 24
       }
@@ -3635,7 +3635,7 @@
       "href": "https://www.linkedin.com/company/axis-max-life-insurance-limited",
       "bbox": {
         "x": 112,
-        "y": 21236.46875,
+        "y": 21700.703125,
         "width": 24,
         "height": 24
       }
@@ -3644,7 +3644,7 @@
       "href": "https://www.instagram.com/axis_max_life_insurance/",
       "bbox": {
         "x": 156,
-        "y": 21236.46875,
+        "y": 21700.703125,
         "width": 24,
         "height": 24
       }
@@ -3653,7 +3653,7 @@
       "href": "http://www.youtube.com/@axismaxlifeinsurance",
       "bbox": {
         "x": 200,
-        "y": 21236.46875,
+        "y": 21700.703125,
         "width": 24,
         "height": 24
       }
@@ -3662,7 +3662,7 @@
       "href": "http://www.policyholder.gov.in/",
       "bbox": {
         "x": 64.9375,
-        "y": 21309.46875,
+        "y": 21773.703125,
         "width": 263.125,
         "height": 39
       }
@@ -3671,7 +3671,7 @@
       "href": "/static-page/assets/homepage/IRDAI-Database-Terminated-Agents-Data_May%2726.xlsx",
       "bbox": {
         "x": 36.578125,
-        "y": 21360.46875,
+        "y": 21824.703125,
         "width": 177.78125,
         "height": 39
       }
@@ -3680,7 +3680,7 @@
       "href": "/do-not-disturb",
       "bbox": {
         "x": 226.359375,
-        "y": 21360.46875,
+        "y": 21824.703125,
         "width": 130.046875,
         "height": 39
       }
@@ -3689,7 +3689,7 @@
       "href": "https://www.cioins.co.in/Ombudsman",
       "bbox": {
         "x": 37.140625,
-        "y": 21411.46875,
+        "y": 21875.703125,
         "width": 183.3125,
         "height": 39
       }
@@ -3698,7 +3698,7 @@
       "href": "/privacy-policy",
       "bbox": {
         "x": 232.453125,
-        "y": 21411.46875,
+        "y": 21875.703125,
         "width": 123.390625,
         "height": 39
       }
@@ -3707,7 +3707,7 @@
       "href": "/disclaimer",
       "bbox": {
         "x": 77.953125,
-        "y": 21462.46875,
+        "y": 21926.703125,
         "width": 108.578125,
         "height": 39
       }
@@ -3716,7 +3716,7 @@
       "href": "/customer-servicing/service-tats",
       "bbox": {
         "x": 198.53125,
-        "y": 21462.46875,
+        "y": 21926.703125,
         "width": 116.5,
         "height": 39
       }
@@ -3725,7 +3725,7 @@
       "href": "/customer-servicing/grievance-redressal",
       "bbox": {
         "x": 46.484375,
-        "y": 21513.46875,
+        "y": 21977.703125,
         "width": 165.6875,
         "height": 39
       }
@@ -3734,7 +3734,7 @@
       "href": "https://bimabharosa.irdai.gov.in/Home/Home",
       "bbox": {
         "x": 224.171875,
-        "y": 21513.46875,
+        "y": 21977.703125,
         "width": 122.328125,
         "height": 39
       }
@@ -3743,7 +3743,7 @@
       "href": "/cs/unclaimed-amount",
       "bbox": {
         "x": 41.15625,
-        "y": 21564.46875,
+        "y": 22028.703125,
         "width": 156.671875,
         "height": 39
       }
@@ -3752,7 +3752,7 @@
       "href": "/customer-servicing/withdrawn-plans",
       "bbox": {
         "x": 209.828125,
-        "y": 21564.46875,
+        "y": 22028.703125,
         "width": 142,
         "height": 39
       }
@@ -3761,7 +3761,7 @@
       "href": "/sitemap",
       "bbox": {
         "x": 41.171875,
-        "y": 21615.46875,
+        "y": 22079.703125,
         "width": 86.765625,
         "height": 39
       }
@@ -3770,7 +3770,7 @@
       "href": "/static-page/assets/homepage/Underwriting-philosophy-and-approach-of-offering-Life-insurance-coverage-to-persons-with-disability.pdf",
       "bbox": {
         "x": 139.9375,
-        "y": 21615.46875,
+        "y": 22079.703125,
         "width": 211.875,
         "height": 39
       }
@@ -3779,7 +3779,7 @@
       "href": "/static-page/assets/homepage/Congratulatory-Quote-on-Accounts-Aggregator-Foundation-Day.pdf",
       "bbox": {
         "x": 88.359375,
-        "y": 21666.46875,
+        "y": 22130.703125,
         "width": 216.265625,
         "height": 39
       }
@@ -3788,7 +3788,7 @@
       "href": "/static-page/assets/homepage/Banner%20NCFE.pdf",
       "bbox": {
         "x": 54.96875,
-        "y": 21717.46875,
+        "y": 22181.703125,
         "width": 283.046875,
         "height": 39
       }
@@ -3797,7 +3797,7 @@
       "href": "https://www.irdai.gov.in/list-of-black-listed-agents",
       "bbox": {
         "x": 78.71875,
-        "y": 21768.46875,
+        "y": 22232.703125,
         "width": 235.546875,
         "height": 39
       }
@@ -3806,7 +3806,7 @@
       "href": "https://www.axisbank.com/",
       "bbox": {
         "x": 162.609375,
-        "y": 21848.46875,
+        "y": 22312.703125,
         "width": 72.34375,
         "height": 19.5
       }
@@ -3815,7 +3815,7 @@
       "href": "https://www.maxindia.com/",
       "bbox": {
         "x": 246.953125,
-        "y": 21848.46875,
+        "y": 22312.703125,
         "width": 70.96875,
         "height": 19.5
       }
@@ -3824,7 +3824,7 @@
       "href": "https://www.maxfinancialservices.com/",
       "bbox": {
         "x": 30.171875,
-        "y": 21879.96875,
+        "y": 22344.203125,
         "width": 173.90625,
         "height": 19.5
       }
@@ -3833,7 +3833,7 @@
       "href": "https://www.antaraseniorcare.com/",
       "bbox": {
         "x": 216.078125,
-        "y": 21879.96875,
+        "y": 22344.203125,
         "width": 146.734375,
         "height": 19.5
       }
@@ -3842,7 +3842,7 @@
       "href": "https://www.maxlifepensionfund.com/",
       "bbox": {
         "x": 64.6875,
-        "y": 21911.46875,
+        "y": 22375.703125,
         "width": 263.625,
         "height": 19.5
       }
@@ -3851,7 +3851,7 @@
       "href": "mailto:axismaxlife.com",
       "bbox": {
         "x": 76,
-        "y": 22416.96875,
+        "y": 22881.203125,
         "width": 98.34375,
         "height": 19.5
       }
@@ -3860,7 +3860,7 @@
       "href": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=10598",
       "bbox": {
         "x": 257.234375,
-        "y": 23218.46875,
+        "y": 23682.703125,
         "width": 34.234375,
         "height": 22
       }

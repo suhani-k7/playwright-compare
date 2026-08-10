@@ -8,3 +8,31 @@ Non-Visual / SEO Status for ios (rd-calculator)
 
 [Specific Non-Visual Mismatches]
 - Button count (identifiable): expected 40, found 41
+- Fold 0: 0.72% visually different
+- Fold 1: 0.0% visually different
+- Fold 2: 15.13% visually different
+- Fold 3: 10.23% visually different
+- Fold 4: 11.93% visually different
+- Fold 5: 11.03% visually different
+- Fold 6: 10.49% visually different
+- Fold 7: 9.49% visually different
+- Fold 8: 10.8% visually different
+- Fold 9: 9.0% visually different
+- Fold 10: 7.95% visually different
+- Fold 11: 33.72% visually different
+- Fold 12: 15.84% visually different
+- Fold 13: 10.76% visually different
+- Fold 14: 8.7% visually different
+- Fold 15: 8.3% visually different
+- Fold 16: 7.76% visually different
+- Fold 17: 10.87% visually different
+- Fold 18: 11.26% visually different
+- Fold 19: 10.63% visually different
+- Fold 20: 13.09% visually different
+- Fold 21: 9.29% visually different
+- Fold 22: 9.49% visually different
+- Fold 23: 11.01% visually different
+- Fold 24: 13.6% visually different
+- Fold 25: 10.07% visually different
+- Fold 26: 13.24% visually different
+- Fold 27: 22.92% visually different

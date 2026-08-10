@@ -2,22 +2,22 @@
   "headings": [
     {
       "tag": "h3",
-      "text": "NFO Live \ud83d\udd14 Closes on 31st May",
+      "text": "Wait! \ud83d\udd14",
       "bbox": {
         "x": 248.4140625,
-        "y": 143.9921875,
+        "y": 170.9921875,
         "width": 268,
-        "height": 70
+        "height": 46
       }
     },
     {
       "tag": "h3",
-      "text": "NFO Live \ud83d\udd14 Closes on 31st May",
+      "text": "Wait! \ud83d\udd14",
       "bbox": {
         "x": 248.4140625,
-        "y": 143.9921875,
+        "y": 170.9921875,
         "width": 268,
-        "height": 70
+        "height": 46
       }
     }
   ],
@@ -27,7 +27,7 @@
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/rupeeIconPopup.svg",
       "bbox": {
         "x": 256.890625,
-        "y": 271.9921875,
+        "y": 274.9921875,
         "width": 16,
         "height": 17
       }
@@ -37,9 +37,19 @@
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/Frame%201171276161.png",
       "bbox": {
         "x": 281.0625,
-        "y": 493.5859375,
+        "y": 472.5859375,
         "width": 239,
         "height": 184
+      }
+    },
+    {
+      "alt": "we_dont_spam",
+      "src": "https://www.axismaxlife.com/static-page/assets/homepage/Badge.png",
+      "bbox": {
+        "x": 899.5,
+        "y": 297.9921875,
+        "width": 106,
+        "height": 18
       }
     }
   ],
@@ -51,8 +61,8 @@
       "href": "",
       "bbox": {
         "x": 553.5,
-        "y": 223.9921875,
-        "width": 72.75,
+        "y": 250.9921875,
+        "width": 96.75,
         "height": 56
       }
     },
@@ -63,8 +73,8 @@
       "href": "",
       "bbox": {
         "x": 553.5,
-        "y": 327.9921875,
-        "width": 88,
+        "y": 354.9921875,
+        "width": 92.1953125,
         "height": 56
       }
     },
@@ -74,9 +84,9 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 645.5,
-        "y": 327.9921875,
-        "width": 88,
+        "x": 644.6953125,
+        "y": 354.9921875,
+        "width": 92.203125,
         "height": 56
       }
     },
@@ -86,9 +96,9 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 737.5,
-        "y": 327.9921875,
-        "width": 88,
+        "x": 735.8984375,
+        "y": 354.9921875,
+        "width": 92.1953125,
         "height": 56
       }
     },
@@ -98,9 +108,9 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 829.5,
-        "y": 327.9921875,
-        "width": 88,
+        "x": 827.09375,
+        "y": 354.9921875,
+        "width": 92.203125,
         "height": 56
       }
     },
@@ -110,21 +120,21 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 921.5,
-        "y": 327.9921875,
-        "width": 88,
+        "x": 918.296875,
+        "y": 354.9921875,
+        "width": 92.1953125,
         "height": 56
       }
     },
     {
       "selector": "button",
-      "text": "Calculate Now",
+      "text": "View Plans",
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 617.9921875,
-        "y": 399.9921875,
-        "width": 327.0078125,
+        "x": 675,
+        "y": 487.9921875,
+        "width": 213,
         "height": 48
       }
     },
@@ -135,9 +145,21 @@
       "href": "",
       "bbox": {
         "x": 1017.5,
-        "y": 125.9921875,
+        "y": 152.9921875,
         "width": 24,
         "height": 24
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Read more",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 617.484375,
+        "y": 457.4921875,
+        "width": 53.671875,
+        "height": 13.5
       }
     }
   ],
@@ -145,10 +167,10 @@
     {
       "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
-        "x": 747.5859375,
-        "y": 464.4921875,
-        "width": 123.1640625,
-        "height": 14
+        "x": 725.3359375,
+        "y": 427.4921875,
+        "width": 102.40625,
+        "height": 13.5
       }
     }
   ],
@@ -184,6 +206,6 @@
   ],
   "screenshot_offset": {
     "x": 212.5,
-    "y": 101.9921875
+    "y": 128.9921875
   }
 }

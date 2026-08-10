@@ -2,13 +2,13 @@
   "headings": [],
   "images": [
     {
-      "alt": "Axis Max Life Insurance",
+      "alt": "Logo of axis max life insurance graphic",
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/axis-max-life-insurance-logo.svg",
       "bbox": {
         "x": 12,
-        "y": 11.703125,
+        "y": 10,
         "width": 110,
-        "height": 36.59375
+        "height": 40
       }
     }
   ],
@@ -19,7 +19,7 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 235,
+        "x": 223,
         "y": 12,
         "width": 88,
         "height": 36
@@ -28,13 +28,13 @@
     {
       "selector": "button",
       "text": "",
-      "aria_label": "hamburger",
+      "aria_label": "Menu",
       "href": "",
       "bbox": {
-        "x": 339,
-        "y": 18,
-        "width": 24,
-        "height": 24
+        "x": 323,
+        "y": 10,
+        "width": 40,
+        "height": 40
       }
     },
     {
@@ -46,7 +46,7 @@
         "x": 12,
         "y": 68,
         "width": 351,
-        "height": 34
+        "height": 26
       }
     }
   ],
@@ -55,9 +55,9 @@
       "href": "/",
       "bbox": {
         "x": 12,
-        "y": 11.703125,
+        "y": 10,
         "width": 110,
-        "height": 36.59375
+        "height": 40
       }
     }
   ],
@@ -93,12 +93,21 @@
   ],
   "sticky": [
     {
-      "tag": "div",
+      "tag": "header",
       "bbox": {
         "x": 0,
         "y": 0,
         "width": 375,
-        "height": 61
+        "height": 60
+      }
+    },
+    {
+      "tag": "div",
+      "bbox": {
+        "x": 0,
+        "y": 60,
+        "width": 375,
+        "height": 42
       }
     },
     {
@@ -107,7 +116,7 @@
         "x": 0,
         "y": 60,
         "width": 375,
-        "height": 50
+        "height": 42
       }
     }
   ]

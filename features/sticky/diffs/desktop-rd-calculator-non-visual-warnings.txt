@@ -2,10 +2,10 @@ Non-Visual / SEO Status — Sticky — desktop (rd-calculator)
 ==================================================
 
 [Sticky Summary]
-- Sticky Elements: FAIL
+- Sticky Elements: PASS
 - Canonical:       PASS
 - Meta:            PASS
 - OG Tags:         PASS
 
 [Non-Visual Mismatches]
-- Sticky count differs (ref=3 live=5)
+- All correct!

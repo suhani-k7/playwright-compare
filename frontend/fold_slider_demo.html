@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Fold slider demo</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
+    <style>
+        :root {
+            --divider-width: 4px;
+            --divider-color: #ff8a3d;
+            --default-handle-color: #ff8a3d;
+            --default-handle-opacity: 1;
+        }
+
+        body {
+            font-family: sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            background: #121212;
+            color: #e6e6e6;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        .fold {
+            margin-bottom: 40px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 16px;
+            background: #1a1a1a;
+        }
+
+        .fold.flagged {
+            border-color: #ff8a3d;
+        }
+
+        .score {
+            font-weight: bold;
+        }
+
+        .score.flagged {
+            color: #ff8a3d;
+        }
+
+        .score.ok {
+            color: #7fd88f;
+        }
+
+        img-comparison-slider {
+            width: 100%;
+            display: block;
+            border: 1px solid #333;
+        }
+
+        img-comparison-slider:focus {
+            outline: none;
+        }
+
+        img-comparison-slider {
+            --divider-width: 6px;
+            --divider-color: #ff8a3d;
+            --default-handle-opacity: 1;
+        }
+
+        .custom-handle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #ff8a3d;
+            color: #121212;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 0 0 3px #121212, 0 2px 6px rgba(0, 0, 0, 0.5);
+            cursor: ew-resize;
+        }
+
+        img-comparison-slider img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Visual fold comparison — <span id="slug"></span></h1>
+    <div id="folds"></div>
+    <script>
+
+        async function load() {
+            const params = new URLSearchParams(window.location.search);
+            const slug = params.get("slug") || "rd-calculator";
+            const device = params.get("device") || "desktop";
+            document.getElementById("slug").textContent = `${slug} (${device})`;
+
+            const res = await fetch(`../data/reports/${slug}.json`);
+            const reports = await res.json();
+            const report = reports.find(r => r.device === device);
+            if (!report) {
+                document.getElementById("folds").textContent = `No report found for device "${device}"`;
+                return;
+            }
+
+            const container = document.getElementById("folds");
+            const folds = [...report.details.visual_folds].sort((a, b) => a.fold_index - b.fold_index);
+
+            folds.forEach(fold => {
+                const div = document.createElement("div");
+                div.className = fold.flagged ? "fold flagged" : "fold";
+                const scoreClass = fold.flagged ? "score flagged" : "score ok";
+                div.innerHTML = `
+    <p>Fold ${fold.fold_index} — <span class="${scoreClass}">${fold.diff_percent}% different</span></p>
+    <img-comparison-slider>
+        <img slot="first" src="../${fold.reference_image}">
+        <img slot="second" src="../${fold.live_image}">
+        <div slot="handle" class="custom-handle">⇔</div>
+    </img-comparison-slider>
+    `;
+                container.appendChild(div);
+            });
+        }
+
+        load();
+    </script>
+</body>
+
+</html>

@@ -1,11 +1,29 @@
 {
   "sticky": [
     {
-      "tag": "nav",
+      "tag": "header",
       "bbox": {
         "x": 0,
         "y": 0,
-        "width": 1274,
+        "width": 1280,
+        "height": 80
+      }
+    },
+    {
+      "tag": "div",
+      "bbox": {
+        "x": 0,
+        "y": 80,
+        "width": 1280,
+        "height": 42
+      }
+    },
+    {
+      "tag": "nav",
+      "bbox": {
+        "x": 0,
+        "y": 80,
+        "width": 1280,
         "height": 42
       }
     },
@@ -14,7 +32,7 @@
       "bbox": {
         "x": 1003,
         "y": 105,
-        "width": 250,
+        "width": 352,
         "height": 608
       }
     },

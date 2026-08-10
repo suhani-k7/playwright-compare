@@ -2,7 +2,7 @@ Non-Visual / SEO Status — Sticky — ios (rd-calculator)
 ==================================================
 
 [Sticky Summary]
-- Sticky Elements: FAIL
+- Sticky Elements: PASS
 - Canonical:       PASS
 - Meta:            PASS
 - OG Tags:         PASS
