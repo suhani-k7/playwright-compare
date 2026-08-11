@@ -4,6 +4,8 @@ import os
 import sys
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
+import re
+
 
 # Base directories for sticky module
 STICKY_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -84,8 +86,45 @@ def compare_sticky(ref_elements: dict, live_elements: dict):
         issues.append({"type": "sticky_extra", "message": f"Extra sticky in live: {extra}", "bbox": orig.get("bbox")})
     status = "PASS" if not issues else "FAIL"
     return status, issues
+
+def _load_pct_elements(mode: str, device: str, slug: str, pct: int) -> dict:
+    base = REFERENCE_DIR if mode == "reference" else LIVE_DIR
+    path = os.path.join(base, f"{device}-{slug}", f"{mode}-{device}-{slug}-{pct}pct-elements.json")
+    if not os.path.exists(path):
+        return {}
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _bboxes_at_pct(device: str, slug: str, pct: int) -> list:
+    """All element bboxes present in the LIVE capture at this scroll pct,
+    across every category — used to check whether a flagged element was
+    actually on screen at this particular scroll position."""
+    data = _load_pct_elements("live", device, slug, pct)
+    boxes = []
+    for cat in ["headings", "images", "buttons", "links", "sticky"]:
+        for el in data.get(cat, []):
+            b = el.get("bbox")
+            if b:
+                boxes.append(b)
+    return boxes
+
+
+def _bbox_present(bbox: dict, candidates: list, tol: int = 5) -> bool:
+    for c in candidates:
+        if (abs(bbox["x"] - c["x"]) <= tol and abs(bbox["y"] - c["y"]) <= tol and
+            abs(bbox["width"] - c["width"]) <= tol and abs(bbox["height"] - c["height"]) <= tol):
+            return True
+    return False
+
+
 def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = False):
-    """Draw bounding boxes onto live sticky screenshot and write warnings."""
+    """
+    Draw bounding boxes onto live sticky screenshots — but only onto the
+    screenshot(s) where the flagged element was actually present at that
+    scroll position, and skip saving screenshots that end up with nothing
+    to show (so we're not saving 10 near-duplicate annotated images).
+    """
     live_dir = os.path.join(LIVE_DIR, f"{device}-{slug}")
     if not os.path.isdir(live_dir):
         print(f"  [Annotate] Live directory not found: {live_dir}")
@@ -100,8 +139,10 @@ def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = F
         return
 
     os.makedirs(DIFFS_DIR, exist_ok=True)
+    device_diffs_dir = os.path.join(DIFFS_DIR, device, slug)
+    os.makedirs(device_diffs_dir, exist_ok=True)
 
-    # Non-visual warnings
+    # --- Non-visual warnings (unchanged from before) ---
     warnings_path = os.path.join(DIFFS_DIR, f"{device}-{slug}-non-visual-warnings.txt")
     with open(warnings_path, "w", encoding="utf-8") as f:
         f.write(f"Non-Visual / SEO Status — Sticky — {device} ({slug})\n")
@@ -126,8 +167,32 @@ def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = F
             f.write("- All correct!\n")
     print(f"  Non-visual warnings saved.")
 
-    # Annotate each screenshot
+    # --- Collect every issue that has a bbox, across all categories ---
+    all_issues = [
+        issue
+        for issues in report.get("details", {}).values()
+        if isinstance(issues, list)
+        for issue in issues
+        if issue.get("bbox") is not None
+    ]
+
+    saved_count = 0
+    skipped_count = 0
+
     for screenshot in screenshot_files:
+        match = re.search(r"-(\d+)pctscroll-screenshot", screenshot)
+        pct = int(match.group(1)) if match else None
+
+        candidates = _bboxes_at_pct(device, slug, pct) if pct is not None else []
+        relevant_issues = [
+            issue for issue in all_issues
+            if _bbox_present(issue["bbox"], candidates)
+        ]
+
+        if not relevant_issues:
+            skipped_count += 1
+            continue  # nothing to show at this scroll point — skip saving a clean duplicate
+
         img = Image.open(os.path.join(live_dir, screenshot))
         draw = ImageDraw.Draw(img)
         try:
@@ -135,32 +200,30 @@ def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = F
         except Exception:
             font = ImageFont.load_default()
 
-        for category, issues in report.get("details", {}).items():
-            if not isinstance(issues, list):
-                continue
-            for issue in issues:
-                bbox = issue.get("bbox")
-                if not bbox:
-                    continue
-                label = issue.get("message", "Mismatch")
-                x, y, w, h = bbox["x"], bbox["y"], bbox["width"], bbox["height"]
-                draw.rectangle([(x, y), (x + w, y + h)], outline="red", width=3)
-                if len(label) > 60:
-                    label = label[:57] + "..."
-                text_y = max(0, y - 20)
-                try:
+        for issue in relevant_issues:
+            bbox = issue["bbox"]
+            label = issue.get("message", "Mismatch")
+            x, y, w, h = bbox["x"], bbox["y"], bbox["width"], bbox["height"]
+            draw.rectangle([(x, y), (x + w, y + h)], outline="red", width=3)
+            if len(label) > 60:
+                label = label[:57] + "..."
+            text_y = max(0, y - 20)
+            try:
+                text_bbox = draw.textbbox((x, text_y), label, font=font)
+                if x + (text_bbox[2] - text_bbox[0]) > img.width:
+                    x = max(0, img.width - (text_bbox[2] - text_bbox[0]))
                     text_bbox = draw.textbbox((x, text_y), label, font=font)
-                    if x + (text_bbox[2] - text_bbox[0]) > img.width:
-                        x = max(0, img.width - (text_bbox[2] - text_bbox[0]))
-                        text_bbox = draw.textbbox((x, text_y), label, font=font)
-                    draw.rectangle(text_bbox, fill="red")
-                except AttributeError:
-                    pass
-                draw.text((x, text_y), label, fill="white", font=font)
+                draw.rectangle(text_bbox, fill="red")
+            except AttributeError:
+                pass
+            draw.text((x, text_y), label, fill="white", font=font)
 
-        out_path = os.path.join(DIFFS_DIR, screenshot.replace("live-", "annotated-"))
+        out_path = os.path.join(device_diffs_dir, screenshot.replace("live-", "annotated-"))
         img.save(out_path)
+        saved_count += 1
         print(f"  Annotated screenshot saved to {out_path}")
+
+    print(f"  {saved_count} screenshot(s) annotated, {skipped_count} skipped (no issues at that scroll point).")
         
 def compare_device(device: str, slug: str) -> dict:
     print(f"\n[{device}] Comparing sticky UI...")

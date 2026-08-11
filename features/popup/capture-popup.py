@@ -23,7 +23,16 @@ def get_output_dir(mode: str, device: str, slug: str) -> str:
     return os.path.join(base, f"{device}-{slug}")
 
 # Reuse element extraction from firstfold (same logic) – copy here
-def extract_elements(page, fold_height: int, popup_selector: str = None) -> dict:
+def extract_elements(page, fold_height: int, popup_selector: str = None, device_scale_factor: float = 1) -> dict:
+    def scale_bbox(bbox):
+        if not bbox:
+            return None
+        return {
+            "x": bbox["x"] * device_scale_factor,
+            "y": bbox["y"] * device_scale_factor,
+            "width": bbox["width"] * device_scale_factor,
+            "height": bbox["height"] * device_scale_factor,
+        }
     elements = {
         "headings": [],
         "images": [],
@@ -44,7 +53,7 @@ def extract_elements(page, fold_height: int, popup_selector: str = None) -> dict
             bbox = el.bounding_box()
             if bbox and (popup_selector or bbox["y"] < fold_height):
                 text = " ".join((el.text_content() or "").split())[:80]
-                elements["headings"].append({"tag": tag, "text": text, "bbox": bbox})
+                elements["headings"].append({"tag": tag, "text": text, "bbox": scale_bbox(bbox)})
     # Images
     items = root_element.query_selector_all("img") if root_element else page.query_selector_all("img")
     for el in items:
@@ -53,7 +62,7 @@ def extract_elements(page, fold_height: int, popup_selector: str = None) -> dict
             elements["images"].append({
                 "alt": el.get_attribute("alt") or "",
                 "src": el.get_attribute("src") or "",
-                "bbox": bbox,
+                "bbox": scale_bbox(bbox),
             })
     # Buttons
     button_selectors = ["button", "input[type='button']", "input[type='submit']", "[role='button']"]
@@ -79,7 +88,7 @@ def extract_elements(page, fold_height: int, popup_selector: str = None) -> dict
                 "text": text,
                 "aria_label": aria_label.strip(),
                 "href": href.strip(),
-                "bbox": bbox,
+                "bbox": scale_bbox(bbox),
             })
     # Links
     items = root_element.query_selector_all("a") if root_element else page.query_selector_all("a")
@@ -88,7 +97,7 @@ def extract_elements(page, fold_height: int, popup_selector: str = None) -> dict
         if bbox and (popup_selector or bbox["y"] < fold_height):
             elements["links"].append({
                 "href": el.get_attribute("href") or "",
-                "bbox": bbox,
+                "bbox": scale_bbox(bbox),
             })
     # Canonical
     canonical_el = page.query_selector("link[rel='canonical']")
@@ -337,7 +346,12 @@ def capture_popup(p, browser_kwargs, page_kwargs, url, mode, device, slug):
     with open(os.path.join(out_dir, f"{mode}-{device}-{slug}-page.html"), "w", encoding="utf-8") as f:
         f.write(page.content())
 
-    elements = extract_elements(page, fold_height, popup_selector=sel if popup_bbox else None)
+    elements = extract_elements(
+        page, fold_height,
+        popup_selector=sel if popup_bbox else None,
+        device_scale_factor=page_kwargs.get("device_scale_factor", 1)
+    )
+
     elements["screenshot_offset"] = {
         "x": clip["x"],
         "y": clip["y"]
@@ -350,7 +364,7 @@ def capture_popup(p, browser_kwargs, page_kwargs, url, mode, device, slug):
 def capture_url(url: str, mode: str, slug: str):
     with sync_playwright() as p:
         print(f"\n[desktop] Capturing popup: {url}")
-        capture_popup(p, {"channel": "chrome", "headless": False}, {"viewport": DESKTOP_VIEWPORT}, url, mode, "desktop", slug)
+        capture_popup(p, {"channel": "chrome", "headless": True}, {"viewport": DESKTOP_VIEWPORT}, url, mode, "desktop", slug)
         print(f"\n[android] Capturing popup: {url}")
         capture_popup(p, {}, p.devices["Pixel 5"], url, mode, "android", slug)
         print(f"\n[ios] Capturing popup: {url}")

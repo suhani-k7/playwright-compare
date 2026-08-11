@@ -357,6 +357,7 @@ def capture_url(url: str, mode: str, slug: str):
 
         page.goto(url, wait_until="load")
         page.wait_for_load_state("networkidle")
+        page.wait_for_timeout(2000)
         _dismiss_popup(page)
         _scroll_full_page(page)
 
@@ -392,6 +393,7 @@ def capture_url(url: str, mode: str, slug: str):
 
         page.goto(url, wait_until="load")
         page.wait_for_load_state("networkidle")
+        page.wait_for_timeout(2000)
         _dismiss_popup(page)
         _scroll_full_page(page)
 
@@ -426,6 +428,7 @@ def capture_url(url: str, mode: str, slug: str):
 
         page.goto(url, wait_until="load")
         page.wait_for_load_state("networkidle")
+        page.wait_for_timeout(2000)
         _dismiss_popup(page)
         _scroll_full_page(page)
 

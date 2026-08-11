@@ -4,20 +4,20 @@
       "tag": "h3",
       "text": "Extended Fund Offer \ud83d\udd14Closes on 20th August",
       "bbox": {
-        "x": 25.125,
-        "y": 31,
-        "width": 290,
-        "height": 46
+        "x": 75.375,
+        "y": 93,
+        "width": 870,
+        "height": 138
       }
     },
     {
       "tag": "h3",
       "text": "Extended Fund Offer \ud83d\udd14Closes on 20th August",
       "bbox": {
-        "x": 25.125,
-        "y": 31,
-        "width": 290,
-        "height": 46
+        "x": 75.375,
+        "y": 93,
+        "width": 870,
+        "height": 138
       }
     }
   ],
@@ -26,20 +26,20 @@
       "alt": "",
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/rupeeIconPopup.svg",
       "bbox": {
-        "x": 33.125,
-        "y": 103.703125,
-        "width": 12,
-        "height": 12.75
+        "x": 99.375,
+        "y": 311.109375,
+        "width": 36,
+        "height": 38.25
       }
     },
     {
       "alt": "",
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/Chart.png",
       "bbox": {
-        "x": 97.875,
-        "y": 87,
-        "width": 264,
-        "height": 145
+        "x": 293.625,
+        "y": 261,
+        "width": 792,
+        "height": 435
       }
     }
   ],
@@ -50,10 +50,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 25.125,
-        "y": 431.5625,
-        "width": 76.75,
-        "height": 56
+        "x": 75.375,
+        "y": 1294.6875,
+        "width": 230.25,
+        "height": 168
       }
     },
     {
@@ -62,10 +62,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 25.125,
-        "y": 531.5625,
-        "width": 61.75,
-        "height": 45
+        "x": 75.375,
+        "y": 1594.6875,
+        "width": 185.25,
+        "height": 135
       }
     },
     {
@@ -74,10 +74,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 90.875,
-        "y": 531.5625,
-        "width": 61.75,
-        "height": 45
+        "x": 272.625,
+        "y": 1594.6875,
+        "width": 185.25,
+        "height": 135
       }
     },
     {
@@ -86,10 +86,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 156.625,
-        "y": 531.5625,
-        "width": 61.75,
-        "height": 45
+        "x": 469.875,
+        "y": 1594.6875,
+        "width": 185.25,
+        "height": 135
       }
     },
     {
@@ -98,10 +98,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 222.375,
-        "y": 531.5625,
-        "width": 61.75,
-        "height": 45
+        "x": 667.125,
+        "y": 1594.6875,
+        "width": 185.25,
+        "height": 135
       }
     },
     {
@@ -110,10 +110,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 288.125,
-        "y": 531.5625,
-        "width": 61.75,
-        "height": 45
+        "x": 864.375,
+        "y": 1594.6875,
+        "width": 185.25,
+        "height": 135
       }
     },
     {
@@ -122,10 +122,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 25.125,
-        "y": 592.5625,
-        "width": 324.75,
-        "height": 48
+        "x": 75.375,
+        "y": 1777.6875,
+        "width": 974.25,
+        "height": 144
       }
     },
     {
@@ -134,10 +134,10 @@
       "aria_label": "Close popup",
       "href": "",
       "bbox": {
-        "x": 325.875,
-        "y": 35,
-        "width": 24,
-        "height": 24
+        "x": 977.625,
+        "y": 105,
+        "width": 72,
+        "height": 72
       }
     }
   ],
@@ -145,10 +145,10 @@
     {
       "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
-        "x": 219.21875,
-        "y": 656.5625,
-        "width": 123.171875,
-        "height": 15
+        "x": 657.65625,
+        "y": 1969.6875,
+        "width": 369.515625,
+        "height": 45
       }
     }
   ],

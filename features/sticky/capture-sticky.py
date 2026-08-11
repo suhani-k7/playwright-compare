@@ -185,10 +185,17 @@ def capture_sticky(p, browser_kwargs, page_kwargs, url, mode, device, slug):
 
     out_dir = get_output_dir(mode, device, slug)
     os.makedirs(out_dir, exist_ok=True)
+    with open(os.path.join(out_dir, f"{mode}-{device}-{slug}-page.html"), "w", encoding="utf-8") as f:
+        f.write(page.content())
 
         # Define scroll percentages (10% to 100% inclusive)
     scroll_points = [i for i in range(10, 101, 10)]
     aggregated_sticky = []
+    aggregated_headings = []
+    aggregated_images = []
+    aggregated_buttons = []
+    aggregated_links = []
+    last_elements = {}
     # Optionally store per‑point element files for debugging
     for pct in scroll_points:
         # Scroll to the desired percentage of total page height
@@ -199,7 +206,11 @@ def capture_sticky(p, browser_kwargs, page_kwargs, url, mode, device, slug):
         elements = extract_elements(page, fold_height)
         sticky_here = elements.get("sticky", [])
         aggregated_sticky.extend(sticky_here)
-        # Capture screenshot based on mode and sticky presence
+        aggregated_headings.extend(elements.get("headings", []))
+        aggregated_images.extend(elements.get("images", []))
+        aggregated_buttons.extend(elements.get("buttons", []))
+        aggregated_links.extend(elements.get("links", []))
+        last_elements = elements  # keep most recent for canonical/meta/og_tags (scroll-invariant)        # Capture screenshot based on mode and sticky presence
         if mode == "live":
             # Live mode: always capture screenshot (JPEG)
             screenshot_name = f"{device}-{slug}-{pct}pctscroll-screenshot.jpg"
@@ -217,7 +228,8 @@ def capture_sticky(p, browser_kwargs, page_kwargs, url, mode, device, slug):
             json.dump(elements, f, indent=2)
 
     # Remove duplicate sticky entries based on their bounding box & tag
-    def norm(el):
+    # Remove duplicate sticky entries based on their bounding box & tag
+    def norm_sticky(el):
         b = el.get("bbox", {})
         return (
             el.get("tag", "").lower(),
@@ -226,10 +238,45 @@ def capture_sticky(p, browser_kwargs, page_kwargs, url, mode, device, slug):
             round(b.get("width", 0)),
             round(b.get("height", 0))
         )
-    unique = {norm(e): e for e in aggregated_sticky}
-    # Replace sticky list with deduped collection
+    unique_sticky = {norm_sticky(e): e for e in aggregated_sticky}
+
+    # The same sticky element (e.g. a fixed header) reappears at every scroll
+    # point since it's re-extracted each time — dedupe headings/images/buttons/
+    # links the same way so the final elements.json doesn't contain N duplicate
+    # copies of one sticky heading/button/link.
+    def norm_generic(el, key_fields):
+        b = el.get("bbox", {})
+        key = tuple(el.get(f, "") for f in key_fields)
+        return key + (
+            round(b.get("x", 0)),
+            round(b.get("y", 0)),
+            round(b.get("width", 0)),
+            round(b.get("height", 0))
+        )
+
+    unique_headings = {}
+    unique_images = {}
+    unique_buttons = {}
+    unique_links = {}
+
+    for el in aggregated_headings:
+        unique_headings[norm_generic(el, ["tag", "text"])] = el
+    for el in aggregated_images:
+        unique_images[norm_generic(el, ["src", "alt"])] = el
+    for el in aggregated_buttons:
+        unique_buttons[norm_generic(el, ["text", "href", "aria_label"])] = el
+    for el in aggregated_links:
+        unique_links[norm_generic(el, ["href"])] = el
+
     final_elements = {
-        "sticky": list(unique.values())
+        "headings": list(unique_headings.values()),
+        "images": list(unique_images.values()),
+        "buttons": list(unique_buttons.values()),
+        "links": list(unique_links.values()),
+        "canonical": last_elements.get("canonical", []),
+        "meta": last_elements.get("meta", []),
+        "og_tags": last_elements.get("og_tags", []),
+        "sticky": list(unique_sticky.values()),
     }
     # Save the combined elements JSON used by comparison
     with open(os.path.join(out_dir, f"{mode}-{device}-{slug}-elements.json"), "w", encoding="utf-8") as f:
@@ -239,7 +286,7 @@ def capture_sticky(p, browser_kwargs, page_kwargs, url, mode, device, slug):
 def capture_url(url: str, mode: str, slug: str):
     with sync_playwright() as p:
         print(f"\n[desktop] Capturing sticky UI: {url}")
-        capture_sticky(p, {"channel": "chrome", "headless": False}, {"viewport": DESKTOP_VIEWPORT}, url, mode, "desktop", slug)
+        capture_sticky(p, {"channel": "chrome", "headless": True}, {"viewport": DESKTOP_VIEWPORT}, url, mode, "desktop", slug)
         print(f"\n[android] Capturing sticky UI: {url}")
         capture_sticky(p, {}, p.devices["Pixel 5"], url, mode, "android", slug)
         print(f"\n[ios] Capturing sticky UI: {url}")

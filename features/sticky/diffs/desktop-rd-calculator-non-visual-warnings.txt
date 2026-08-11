@@ -8,4 +8,4 @@ Non-Visual / SEO Status — Sticky — desktop (rd-calculator)
 - OG Tags:         PASS
 
 [Non-Visual Mismatches]
-- All correct!
+- Button count (identifiable): expected 3, found 4

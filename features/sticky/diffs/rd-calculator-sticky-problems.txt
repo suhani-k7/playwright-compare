@@ -3,7 +3,9 @@ STICKY ELEMENT DIFF REPORT — rd-calculator
 
 [ DESKTOP ]
 ----------------------------------------
-- No mismatches detected in sticky elements.
+Button Mismatches:
+  Live ONLY (extra buttons):
+    - 'Read more' (href: '')
 
 [ ANDROID ]
 ----------------------------------------

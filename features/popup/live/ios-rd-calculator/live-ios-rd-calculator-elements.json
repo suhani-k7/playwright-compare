@@ -4,20 +4,20 @@
       "tag": "h3",
       "text": "Wait! \ud83d\udd14",
       "bbox": {
-        "x": 25.125,
-        "y": 31,
-        "width": 290,
-        "height": 46
+        "x": 75.375,
+        "y": 93,
+        "width": 870,
+        "height": 138
       }
     },
     {
       "tag": "h3",
       "text": "Wait! \ud83d\udd14",
       "bbox": {
-        "x": 25.125,
-        "y": 31,
-        "width": 290,
-        "height": 46
+        "x": 75.375,
+        "y": 93,
+        "width": 870,
+        "height": 138
       }
     }
   ],
@@ -26,30 +26,30 @@
       "alt": "",
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/rupeeIconPopup.svg",
       "bbox": {
-        "x": 33.125,
-        "y": 103.703125,
-        "width": 12,
-        "height": 12.75
+        "x": 99.375,
+        "y": 311.109375,
+        "width": 36,
+        "height": 38.25
       }
     },
     {
       "alt": "",
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/Chart.png",
       "bbox": {
-        "x": 97.875,
-        "y": 87,
-        "width": 264,
-        "height": 145
+        "x": 293.625,
+        "y": 261,
+        "width": 792,
+        "height": 435
       }
     },
     {
       "alt": "we_dont_spam",
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/Badge.png",
       "bbox": {
-        "x": 239.875,
-        "y": 479.5625,
-        "width": 106,
-        "height": 18
+        "x": 719.625,
+        "y": 1438.6875,
+        "width": 318,
+        "height": 54
       }
     }
   ],
@@ -60,10 +60,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 25.125,
-        "y": 432.5625,
-        "width": 96.75,
-        "height": 56
+        "x": 75.375,
+        "y": 1297.6875,
+        "width": 290.25,
+        "height": 168
       }
     },
     {
@@ -72,10 +72,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 25.125,
-        "y": 532.5625,
-        "width": 65.9375,
-        "height": 56
+        "x": 75.375,
+        "y": 1597.6875,
+        "width": 197.8125,
+        "height": 168
       }
     },
     {
@@ -84,10 +84,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 90.0625,
-        "y": 532.5625,
-        "width": 65.953125,
-        "height": 56
+        "x": 270.1875,
+        "y": 1597.6875,
+        "width": 197.859375,
+        "height": 168
       }
     },
     {
@@ -96,10 +96,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 155.015625,
-        "y": 532.5625,
-        "width": 65.953125,
-        "height": 56
+        "x": 465.046875,
+        "y": 1597.6875,
+        "width": 197.859375,
+        "height": 168
       }
     },
     {
@@ -108,10 +108,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 219.96875,
-        "y": 532.5625,
-        "width": 65.953125,
-        "height": 56
+        "x": 659.90625,
+        "y": 1597.6875,
+        "width": 197.859375,
+        "height": 168
       }
     },
     {
@@ -120,10 +120,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 284.921875,
-        "y": 532.5625,
-        "width": 65.9375,
-        "height": 56
+        "x": 854.765625,
+        "y": 1597.6875,
+        "width": 197.8125,
+        "height": 168
       }
     },
     {
@@ -132,10 +132,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 81,
-        "y": 680.5625,
-        "width": 213,
-        "height": 48
+        "x": 243,
+        "y": 2041.6875,
+        "width": 639,
+        "height": 144
       }
     },
     {
@@ -144,10 +144,10 @@
       "aria_label": "Close popup",
       "href": "",
       "bbox": {
-        "x": 325.875,
-        "y": 35,
-        "width": 24,
-        "height": 24
+        "x": 977.625,
+        "y": 105,
+        "width": 72,
+        "height": 72
       }
     },
     {
@@ -156,10 +156,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 157.234375,
-        "y": 649.5625,
-        "width": 53.671875,
-        "height": 14
+        "x": 471.703125,
+        "y": 1948.6875,
+        "width": 161.015625,
+        "height": 42
       }
     }
   ],
@@ -167,10 +167,10 @@
     {
       "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
-        "x": 196.96875,
-        "y": 604.5625,
-        "width": 102.40625,
-        "height": 14
+        "x": 590.90625,
+        "y": 1813.6875,
+        "width": 307.21875,
+        "height": 42
       }
     }
   ],

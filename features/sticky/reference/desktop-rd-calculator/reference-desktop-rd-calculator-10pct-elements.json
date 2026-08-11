@@ -29,9 +29,9 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 845.7890625,
+        "x": 845.78125,
         "y": -7.5,
-        "width": 59.4921875,
+        "width": 59.5,
         "height": 95
       }
     },
@@ -79,7 +79,7 @@
       "bbox": {
         "x": 996.171875,
         "y": 83,
-        "width": 224.3984375,
+        "width": 224.40625,
         "height": 36
       }
     },
@@ -115,7 +115,7 @@
       "bbox": {
         "x": 1025,
         "y": 517.5,
-        "width": 58.3984375,
+        "width": 58.390625,
         "height": 56
       }
     },
@@ -125,9 +125,9 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 1087.3984375,
+        "x": 1087.390625,
         "y": 517.5,
-        "width": 58.3984375,
+        "width": 58.40625,
         "height": 56
       }
     },
@@ -139,7 +139,7 @@
       "bbox": {
         "x": 1149.796875,
         "y": 517.5,
-        "width": 58.3984375,
+        "width": 58.390625,
         "height": 56
       }
     },
@@ -149,9 +149,9 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 1212.1953125,
+        "x": 1212.1875,
         "y": 517.5,
-        "width": 58.3984375,
+        "width": 58.40625,
         "height": 56
       }
     },
@@ -185,9 +185,9 @@
       "aria_label": "",
       "href": "/investment-plans/investment-calculator?utm_theme=SIP",
       "bbox": {
-        "x": 1128.0078125,
+        "x": 1128,
         "y": 746,
-        "width": 132.9921875,
+        "width": 133,
         "height": 36
       }
     }
@@ -216,23 +216,23 @@
       "bbox": {
         "x": 286.890625,
         "y": 20.5,
-        "width": 81.7734375,
+        "width": 81.765625,
         "height": 39
       }
     },
     {
       "href": "/health-insurance-plans",
       "bbox": {
-        "x": 416.6640625,
+        "x": 416.65625,
         "y": 20.5,
-        "width": 80.578125,
+        "width": 80.5625,
         "height": 39
       }
     },
     {
       "href": "/nri-plans",
       "bbox": {
-        "x": 545.2421875,
+        "x": 545.21875,
         "y": 20.5,
         "width": 41.78125,
         "height": 39
@@ -241,18 +241,18 @@
     {
       "href": "/calculators",
       "bbox": {
-        "x": 635.0234375,
+        "x": 635,
         "y": 30.25,
-        "width": 71.9453125,
+        "width": 71.953125,
         "height": 19.5
       }
     },
     {
       "href": "/claims-centre",
       "bbox": {
-        "x": 754.96875,
+        "x": 754.953125,
         "y": 30.25,
-        "width": 42.8203125,
+        "width": 42.828125,
         "height": 19.5
       }
     },
@@ -296,9 +296,9 @@
       "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
         "x": 1049,
-        "y": 654,
-        "width": 229.15625,
-        "height": 29
+        "y": 653.5,
+        "width": 229.171875,
+        "height": 30
       }
     },
     {

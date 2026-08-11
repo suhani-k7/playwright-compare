@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Playwright Compare</title>
+<style>
+  body { background: #1e1e1e; color: #ddd; font-family: sans-serif; padding: 2rem; }
+  input, button { padding: 8px; margin: 4px 0; width: 100%; box-sizing: border-box; }
+  input { background: #2d2d2d; color: #fff; border: 1px solid #444; }
+  button { background: #007acc; color: #fff; border: none; cursor: pointer; }
+  #status { margin-top: 1rem; }
+  .tab-btn { background: #333; margin-right: 4px; width: auto; display: inline-block; padding: 6px 12px; }
+  .tab-btn.active { background: #007acc; }
+  img { max-width: 100%; margin-top: 1rem; border: 1px solid #444; }
+</style>
+</head>
+<body>
+  <h2>Playwright Compare</h2>
+  <input id="refUrl" placeholder="Reference URL">
+  <input id="liveUrl" placeholder="Live URL">
+  <input id="slug" placeholder="Slug (optional)">
+  <button onclick="submitJob()">Compare</button>
+  <div id="status"></div>
+  <div id="tabs"></div>
+  <div id="results"></div>
+
+<script>
+async function submitJob() {
+  const reference_url = document.getElementById('refUrl').value;
+  const live_url = document.getElementById('liveUrl').value;
+  const slug = document.getElementById('slug').value || null;
+
+  document.getElementById('status').innerText = 'Submitting...';
+  const res = await fetch('/api/compare', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({reference_url, live_url, slug})
+  });
+  const data = await res.json();
+  poll(data.job_id);
+}
+
+function poll(jobId) {
+  const interval = setInterval(async () => {
+    const res = await fetch(`/api/jobs/${jobId}`);
+    const job = await res.json();
+    document.getElementById('status').innerText = `Status: ${job.status}`;
+    if (job.status === 'done') {
+      clearInterval(interval);
+      loadReport(job.slug);
+    } else if (job.status === 'error') {
+      clearInterval(interval);
+      document.getElementById('status').innerText = `Error: ${job.error}`;
+    }
+  }, 2000);
+}
+
+async function loadReport(slug) {
+  const res = await fetch(`/api/reports/${slug}`);
+  const reports = await res.json();
+  const tabsDiv = document.getElementById('tabs');
+  const resultsDiv = document.getElementById('results');
+  tabsDiv.innerHTML = '';
+  resultsDiv.innerHTML = '';
+
+  reports.forEach((r, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
+    btn.innerText = r.device;
+    btn.onclick = () => showDevice(r, slug);
+    tabsDiv.appendChild(btn);
+  });
+
+  if (reports.length) showDevice(reports[0], slug);
+}
+
+function showDevice(report, slug) {
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = `
+    <h3>${report.device}</h3>
+    <pre>${JSON.stringify(report.summary, null, 2)}</pre>
+    <img src="/data/diffs/${report.device}-${slug}-annotated.png">
+    <br><a href="/data/diffs/${report.device}-${slug}-annotated.png" download>Download annotated screenshot</a>
+  `;
+}
+</script>
+</body>
+</html>

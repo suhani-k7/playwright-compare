@@ -41,7 +41,7 @@
       "aria_label": "Toggle submenu",
       "href": "",
       "bbox": {
-        "x": 380.6640625,
+        "x": 380.65625,
         "y": 34,
         "width": 12,
         "height": 12
@@ -53,7 +53,7 @@
       "aria_label": "Toggle submenu",
       "href": "",
       "bbox": {
-        "x": 509.2421875,
+        "x": 509.21875,
         "y": 34,
         "width": 12,
         "height": 12
@@ -65,7 +65,7 @@
       "aria_label": "Toggle submenu",
       "href": "",
       "bbox": {
-        "x": 599.0234375,
+        "x": 599,
         "y": 34,
         "width": 12,
         "height": 12
@@ -77,7 +77,7 @@
       "aria_label": "Toggle submenu",
       "href": "",
       "bbox": {
-        "x": 718.96875,
+        "x": 718.953125,
         "y": 34,
         "width": 12,
         "height": 12
@@ -89,7 +89,7 @@
       "aria_label": "Toggle submenu",
       "href": "",
       "bbox": {
-        "x": 809.7890625,
+        "x": 809.78125,
         "y": 34,
         "width": 12,
         "height": 12
@@ -101,9 +101,9 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 845.7890625,
+        "x": 845.78125,
         "y": -7.5,
-        "width": 59.4921875,
+        "width": 59.5,
         "height": 95
       }
     },
@@ -151,7 +151,7 @@
       "bbox": {
         "x": 996.171875,
         "y": 83,
-        "width": 224.3984375,
+        "width": 224.40625,
         "height": 36
       }
     },
@@ -161,9 +161,9 @@
       "aria_label": "",
       "href": "/investment-plans/investment-calculator?utm_theme=SIP",
       "bbox": {
-        "x": 1128.0078125,
+        "x": 1128,
         "y": 746,
-        "width": 132.9921875,
+        "width": 133,
         "height": 36
       }
     }
@@ -192,23 +192,23 @@
       "bbox": {
         "x": 286.890625,
         "y": 20.5,
-        "width": 81.7734375,
+        "width": 81.765625,
         "height": 39
       }
     },
     {
       "href": "/health-insurance-plans",
       "bbox": {
-        "x": 416.6640625,
+        "x": 416.65625,
         "y": 20.5,
-        "width": 80.578125,
+        "width": 80.5625,
         "height": 39
       }
     },
     {
       "href": "/nri-plans",
       "bbox": {
-        "x": 545.2421875,
+        "x": 545.21875,
         "y": 20.5,
         "width": 41.78125,
         "height": 39
@@ -217,18 +217,18 @@
     {
       "href": "/calculators",
       "bbox": {
-        "x": 635.0234375,
+        "x": 635,
         "y": 30.25,
-        "width": 71.9453125,
+        "width": 71.953125,
         "height": 19.5
       }
     },
     {
       "href": "/claims-centre",
       "bbox": {
-        "x": 754.96875,
+        "x": 754.953125,
         "y": 30.25,
-        "width": 42.8203125,
+        "width": 42.828125,
         "height": 19.5
       }
     },

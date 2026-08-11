@@ -4,20 +4,20 @@
       "tag": "h3",
       "text": "Extended Fund Offer \ud83d\udd14Closes on 20th August",
       "bbox": {
-        "x": 25.75,
-        "y": 31,
-        "width": 290,
-        "height": 46
+        "x": 70.8125,
+        "y": 85.25,
+        "width": 797.5,
+        "height": 126.5
       }
     },
     {
       "tag": "h3",
       "text": "Extended Fund Offer \ud83d\udd14Closes on 20th August",
       "bbox": {
-        "x": 25.75,
-        "y": 31,
-        "width": 290,
-        "height": 46
+        "x": 70.8125,
+        "y": 85.25,
+        "width": 797.5,
+        "height": 126.5
       }
     }
   ],
@@ -26,20 +26,20 @@
       "alt": "",
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/rupeeIconPopup.svg",
       "bbox": {
-        "x": 33.75,
-        "y": 103.703125,
-        "width": 12,
-        "height": 12.75
+        "x": 92.8125,
+        "y": 285.18359375,
+        "width": 33.0,
+        "height": 35.0625
       }
     },
     {
       "alt": "",
       "src": "https://www.axismaxlife.com/static-page/assets/homepage/Chart.png",
       "bbox": {
-        "x": 115.234375,
-        "y": 87,
-        "width": 264,
-        "height": 145
+        "x": 316.89453125,
+        "y": 239.25,
+        "width": 726.0,
+        "height": 398.75
       }
     }
   ],
@@ -50,10 +50,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 25.75,
-        "y": 431.5625,
-        "width": 76.75,
-        "height": 56
+        "x": 70.8125,
+        "y": 1186.796875,
+        "width": 211.0625,
+        "height": 154.0
       }
     },
     {
@@ -62,10 +62,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 25.75,
-        "y": 531.5625,
-        "width": 65.09375,
-        "height": 45
+        "x": 70.8125,
+        "y": 1461.796875,
+        "width": 179.0078125,
+        "height": 123.75
       }
     },
     {
@@ -74,10 +74,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 94.84375,
-        "y": 531.5625,
-        "width": 65.09375,
-        "height": 45
+        "x": 260.8203125,
+        "y": 1461.796875,
+        "width": 179.0078125,
+        "height": 123.75
       }
     },
     {
@@ -86,10 +86,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 163.9375,
-        "y": 531.5625,
-        "width": 65.09375,
-        "height": 45
+        "x": 450.828125,
+        "y": 1461.796875,
+        "width": 179.0078125,
+        "height": 123.75
       }
     },
     {
@@ -98,10 +98,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 233.03125,
-        "y": 531.5625,
-        "width": 65.09375,
-        "height": 45
+        "x": 640.8359375,
+        "y": 1461.796875,
+        "width": 179.0078125,
+        "height": 123.75
       }
     },
     {
@@ -110,10 +110,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 302.125,
-        "y": 531.5625,
-        "width": 65.109375,
-        "height": 45
+        "x": 830.84375,
+        "y": 1461.796875,
+        "width": 179.05078125,
+        "height": 123.75
       }
     },
     {
@@ -122,10 +122,10 @@
       "aria_label": "",
       "href": "",
       "bbox": {
-        "x": 32.984375,
-        "y": 592.5625,
-        "width": 327,
-        "height": 48
+        "x": 90.70703125,
+        "y": 1629.546875,
+        "width": 899.25,
+        "height": 132.0
       }
     },
     {
@@ -134,10 +134,10 @@
       "aria_label": "Close popup",
       "href": "",
       "bbox": {
-        "x": 343.234375,
-        "y": 35,
-        "width": 24,
-        "height": 24
+        "x": 943.89453125,
+        "y": 96.25,
+        "width": 66.0,
+        "height": 66.0
       }
     }
   ],
@@ -145,10 +145,10 @@
     {
       "href": "https://www.axismaxlife.com/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
       "bbox": {
-        "x": 219.84375,
-        "y": 656.5625,
-        "width": 123.171875,
-        "height": 15
+        "x": 604.5703125,
+        "y": 1805.546875,
+        "width": 338.72265625,
+        "height": 41.25
       }
     }
   ],

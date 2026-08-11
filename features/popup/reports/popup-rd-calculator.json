@@ -95,20 +95,20 @@
         {
           "type": "heading_modified",
           "bbox": {
-            "x": 22.0,
-            "y": 26,
-            "width": 290,
-            "height": 46
+            "x": 67.0625,
+            "y": 80.25,
+            "width": 797.5,
+            "height": 126.5
           },
           "message": "H3 changed: expected 'Extended Fund Offer \ud83d\udd14Closes on 20th August', found 'Wait! \ud83d\udd14'"
         },
         {
           "type": "heading_modified",
           "bbox": {
-            "x": 22.0,
-            "y": 26,
-            "width": 290,
-            "height": 46
+            "x": 67.0625,
+            "y": 80.25,
+            "width": 797.5,
+            "height": 126.5
           },
           "message": "H3 changed: expected 'Extended Fund Offer \ud83d\udd14Closes on 20th August', found 'Wait! \ud83d\udd14'"
         }
@@ -123,10 +123,10 @@
         {
           "type": "extra_image",
           "bbox": {
-            "x": 253.484375,
-            "y": 474.5625,
-            "width": 106,
-            "height": 18
+            "x": 703.64453125,
+            "y": 1313.796875,
+            "width": 291.5,
+            "height": 49.5
           },
           "message": "Extra image in live"
         }
@@ -141,10 +141,10 @@
         {
           "type": "extra_button",
           "bbox": {
-            "x": 154.109375,
-            "y": 644.5625,
-            "width": 53.671875,
-            "height": 14
+            "x": 430.36328125,
+            "y": 1781.296875,
+            "width": 147.59765625,
+            "height": 38.5
           },
           "message": "Extra button in live: 'Read more' (href: '')"
         }
@@ -173,20 +173,20 @@
         {
           "type": "heading_modified",
           "bbox": {
-            "x": 22.0,
-            "y": 26,
-            "width": 290,
-            "height": 46
+            "x": 72.25,
+            "y": 88,
+            "width": 870,
+            "height": 138
           },
           "message": "H3 changed: expected 'Extended Fund Offer \ud83d\udd14Closes on 20th August', found 'Wait! \ud83d\udd14'"
         },
         {
           "type": "heading_modified",
           "bbox": {
-            "x": 22.0,
-            "y": 26,
-            "width": 290,
-            "height": 46
+            "x": 72.25,
+            "y": 88,
+            "width": 870,
+            "height": 138
           },
           "message": "H3 changed: expected 'Extended Fund Offer \ud83d\udd14Closes on 20th August', found 'Wait! \ud83d\udd14'"
         }
@@ -201,10 +201,10 @@
         {
           "type": "extra_image",
           "bbox": {
-            "x": 236.75,
-            "y": 474.5625,
-            "width": 106,
-            "height": 18
+            "x": 716.5,
+            "y": 1433.6875,
+            "width": 318,
+            "height": 54
           },
           "message": "Extra image in live"
         }
@@ -219,10 +219,10 @@
         {
           "type": "extra_button",
           "bbox": {
-            "x": 154.109375,
-            "y": 644.5625,
-            "width": 53.671875,
-            "height": 14
+            "x": 468.578125,
+            "y": 1943.6875,
+            "width": 161.015625,
+            "height": 42
           },
           "message": "Extra button in live: 'Read more' (href: '')"
         }

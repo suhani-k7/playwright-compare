@@ -6,7 +6,7 @@
     "summary": {
       "headings": "PASS",
       "images": "PASS",
-      "buttons": "PASS",
+      "buttons": "FAIL",
       "links": "PASS",
       "canonical": "PASS",
       "meta": "PASS",
@@ -16,7 +16,34 @@
     "details": {
       "headings": [],
       "images": [],
-      "buttons": [],
+      "buttons": [
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": 250.890625,
+            "y": 34,
+            "width": 12,
+            "height": 12
+          },
+          "message": "Icon/generic button group 'button|text:False|href:False|aria:toggle submenu': expected 0, found 6"
+        },
+        {
+          "type": "button_count",
+          "ref_count": 3,
+          "live_count": 4,
+          "message": "Button count (identifiable): expected 3, found 4"
+        },
+        {
+          "type": "extra_button",
+          "bbox": {
+            "x": 1191.703125,
+            "y": 634.5,
+            "width": 53.671875,
+            "height": 14
+          },
+          "message": "Extra button in live: 'Read more' (href: '')"
+        }
+      ],
       "links": [],
       "canonical": [],
       "meta": [],
