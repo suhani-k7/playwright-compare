@@ -154,14 +154,7 @@ def _phash_hamming_distance(hash1, hash2):
 
 
 def compare_images(ref_soup, live_soup, ref_elements: dict, live_elements: dict) -> tuple[str, list]:
-    """
-    Matches images primarily by exact src (fast, precise). For images that
-    don't match by src, falls back to perceptual-hash similarity — this
-    catches "same image, different URL" cases (CDN cache-busting, resize
-    params, CMS path rewrites) and reports them as a distinct, lower-severity
-    "cosmetic" mismatch instead of a false missing+extra pair.
-    """
-    PHASH_MATCH_THRESHOLD = 8  # lower = stricter match; tune against real data if noisy
+    PHASH_MATCH_THRESHOLD = 8
 
     mismatches = []
 
@@ -176,15 +169,19 @@ def compare_images(ref_soup, live_soup, ref_elements: dict, live_elements: dict)
             "message": f"Image count: expected {len(ref_imgs)}, found {len(live_imgs)}"
         })
 
-    # --- Pass 1: match by exact src (unchanged from before) ---
+    # --- Pass 1: match by exact src ---
     ref_dict = {img["src"]: img for img in ref_imgs if img["src"]}
     live_dict = {img["src"]: img for img in live_imgs if img["src"]}
+
+    # NEW: track which ref image each live image (by identity) matched to
+    live_match_map = {}
 
     matched_srcs = set()
     for src, l_img in live_dict.items():
         r_img = ref_dict.get(src)
         if r_img:
             matched_srcs.add(src)
+            live_match_map[id(l_img)] = r_img  # NEW
             if r_img["alt"] != l_img["alt"]:
                 mismatches.append({
                     "type": "alt_mismatch",
@@ -195,7 +192,7 @@ def compare_images(ref_soup, live_soup, ref_elements: dict, live_elements: dict)
     ref_unmatched = [img for src, img in ref_dict.items() if src not in matched_srcs]
     live_unmatched = [img for src, img in live_dict.items() if src not in matched_srcs]
 
-    # --- Pass 2: among src-unmatched images, try perceptual-hash similarity ---
+    # --- Pass 2: phash similarity ---
     candidate_pairs = []
     for ri, r_img in enumerate(ref_unmatched):
         for li, l_img in enumerate(live_unmatched):
@@ -203,7 +200,7 @@ def compare_images(ref_soup, live_soup, ref_elements: dict, live_elements: dict)
             if dist is not None and dist <= PHASH_MATCH_THRESHOLD:
                 candidate_pairs.append((dist, ri, li))
 
-    candidate_pairs.sort(key=lambda p: p[0])  # closest visual match first
+    candidate_pairs.sort(key=lambda p: p[0])
     phash_matched_ref = set()
     phash_matched_live = set()
 
@@ -214,6 +211,7 @@ def compare_images(ref_soup, live_soup, ref_elements: dict, live_elements: dict)
         phash_matched_live.add(li)
         r_img = ref_unmatched[ri]
         l_img = live_unmatched[li]
+        live_match_map[id(l_img)] = r_img  # NEW
         mismatches.append({
             "type": "image_src_changed_cosmetic",
             "bbox": l_img["bbox"],
@@ -243,9 +241,14 @@ def compare_images(ref_soup, live_soup, ref_elements: dict, live_elements: dict)
                 "message": f"Image missing in live (alt: '{r_img['alt']}')"
             })
 
-    # Images with no alt at all in live (unchanged)
+    # CHANGED: only flag empty alt if it's a regression vs. the matched ref image,
+    # or there's no ref match at all (genuinely new image with no alt).
     for l_img in live_imgs:
         if not l_img["alt"].strip():
+            r_img = live_match_map.get(id(l_img))
+            if r_img is not None and not r_img["alt"].strip():
+                # Both ref and live have empty alt for the same image — not a regression, skip.
+                continue
             mismatches.append({
                 "type": "empty_alt",
                 "bbox": l_img["bbox"],
@@ -254,6 +257,7 @@ def compare_images(ref_soup, live_soup, ref_elements: dict, live_elements: dict)
 
     status = "PASS" if not mismatches else "FAIL"
     return status, mismatches
+
 
 def _normalize_btn_text(text: str) -> str:
     return " ".join((text or "").strip().lower().split())
@@ -553,9 +557,9 @@ def compare_og_tags(ref_soup, live_soup) -> tuple[str, list]:
     status = "PASS" if not mismatches else "FAIL"
     return status, mismatches
 
-
 def compare_links(ref_soup, live_soup, ref_elements: dict, live_elements: dict) -> tuple[str, list]:
-    from collections import Counter
+    from collections import defaultdict
+
     mismatches = []
 
     ref_links = ref_elements.get("links", [])
@@ -576,49 +580,94 @@ def compare_links(ref_soup, live_soup, ref_elements: dict, live_elements: dict) 
             "message": f"Link count: expected {len(ref_links)}, found {len(live_links)}"
         })
 
-    # Build normalized lists, resolving relative URLs against their respective base
-    ref_bbox_map = {}
-    live_bbox_map = {}
+    # Normalize every link into {href, bbox}
+    ref_items = [
+        {"href": _normalize_href(l.get("href", ""), base_url=ref_base), "bbox": l.get("bbox")}
+        for l in ref_links
+    ]
+    live_items = [
+        {"href": _normalize_href(l.get("href", ""), base_url=live_base), "bbox": l.get("bbox")}
+        for l in live_links
+    ]
 
-    ref_normalized = []
-    for l in ref_links:
-        n = _normalize_href(l.get("href", ""), base_url=ref_base)
-        ref_normalized.append(n)
-        if n not in ref_bbox_map:
-            ref_bbox_map[n] = l.get("bbox")
+    # Group by href so identical-href instances (e.g. 4x "...SIP") are interchangeable
+    ref_by_href = defaultdict(list)
+    for item in ref_items:
+        ref_by_href[item["href"]].append(item)
 
-    live_normalized = []
-    for l in live_links:
-        n = _normalize_href(l.get("href", ""), base_url=live_base)
-        live_normalized.append(n)
-        if n not in live_bbox_map:
-            live_bbox_map[n] = l.get("bbox")
+    live_by_href = defaultdict(list)
+    for item in live_items:
+        live_by_href[item["href"]].append(item)
 
-    ref_counter = Counter(ref_normalized)
-    live_counter = Counter(live_normalized)
+    # For each href, the first min(ref_count, live_count) instances are considered
+    # "still present" (order doesn't matter since they're identical by href).
+    # Anything beyond that count is a real leftover to reconcile.
+    ref_leftover = []
+    live_leftover = []
 
-    for href, ref_n in ref_counter.items():
-        live_n = live_counter.get(href, 0)
-        if live_n < ref_n:
-            for _ in range(ref_n - live_n):
-                mismatches.append({
-                    "type": "missing_link",
-                    "bbox": ref_bbox_map.get(href),
-                    "message": f"Missing link ({ref_n - live_n}x): {href}"
-                })
+    for href in set(ref_by_href) | set(live_by_href):
+        r_list = ref_by_href.get(href, [])
+        l_list = live_by_href.get(href, [])
+        matched = min(len(r_list), len(l_list))
+        ref_leftover.extend(r_list[matched:])
+        live_leftover.extend(l_list[matched:])
 
-    for href, live_n in live_counter.items():
-        ref_n = ref_counter.get(href, 0)
-        if live_n > ref_n:
-            for _ in range(live_n - ref_n):
-                mismatches.append({
-                    "type": "extra_link",
-                    "bbox": live_bbox_map.get(href),
-                    "message": f"Extra link ({live_n - ref_n}x): {href}"
-                })
+    # Pair leftover ref/live links by bbox proximity, regardless of href —
+    # this catches "same slot, destination changed" (e.g. icon #6's href
+    # swapped) instead of reporting two disconnected missing/extra entries.
+    MAX_PAIR_DIST = 200.0  # px; same slot across ref/live should be close
+
+    candidate_pairs = []
+    for ri, r_item in enumerate(ref_leftover):
+        rc = _bbox_center(r_item["bbox"])
+        if not rc:
+            continue
+        for li, l_item in enumerate(live_leftover):
+            lc = _bbox_center(l_item["bbox"])
+            if not lc:
+                continue
+            dist = ((rc[0] - lc[0]) ** 2 + (rc[1] - lc[1]) ** 2) ** 0.5
+            if dist <= MAX_PAIR_DIST:
+                candidate_pairs.append((dist, ri, li))
+
+    candidate_pairs.sort(key=lambda p: p[0])  # closest position first
+    matched_ref = set()
+    matched_live = set()
+
+    for dist, ri, li in candidate_pairs:
+        if ri in matched_ref or li in matched_live:
+            continue
+        matched_ref.add(ri)
+        matched_live.add(li)
+        r_item = ref_leftover[ri]
+        l_item = live_leftover[li]
+        mismatches.append({
+            "type": "link_href_changed",
+            "bbox": l_item["bbox"],
+            "message": f"Link changed: expected '{r_item['href']}', found '{l_item['href']}'"
+        })
+
+    # Truly unmatched leftovers = real missing/extra links
+    for ri, r_item in enumerate(ref_leftover):
+        if ri not in matched_ref:
+            mismatches.append({
+                "type": "missing_link",
+                "bbox": r_item["bbox"],
+                "message": f"Missing link: {r_item['href']}"
+            })
+
+    for li, l_item in enumerate(live_leftover):
+        if li not in matched_live:
+            mismatches.append({
+                "type": "extra_link",
+                "bbox": l_item["bbox"],
+                "message": f"Extra link: {l_item['href']}"
+            })
 
     status = "PASS" if not mismatches else "FAIL"
     return status, mismatches
+
+
 # -------------------------------------------------------------------
 # Annotation runner
 # -------------------------------------------------------------------
@@ -835,6 +884,74 @@ def generate_summary_report(all_reports: list, slug: str):
             f.write("\n")
 
     print(f"Button diff report saved to {path}")
+
+def generate_readable_report(all_reports: list, slug: str):
+    """
+    Writes a single human-readable text report covering every device and
+    every comparator category — not just buttons — so someone can scan
+    all real issues without opening the raw JSON.
+    """
+    path = os.path.join(DATA_DIR, "reports", f"{slug}-readable-report.txt")
+    os.makedirs(os.path.join(DATA_DIR, "reports"), exist_ok=True)
+
+    # Friendly labels for each category, in the order we want them printed
+    category_labels = [
+        ("headings",     "Headings"),
+        ("images",       "Images"),
+        ("buttons",      "Buttons"),
+        ("links",        "Links"),
+        ("canonical",    "Canonical Tag"),
+        ("meta",         "Meta Tags"),
+        ("og_tags",      "Open Graph Tags"),
+        ("visual_folds", "Visual Folds"),
+    ]
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(f"COMPARISON REPORT — {slug}\n")
+        f.write("=" * 70 + "\n\n")
+
+        for report in all_reports:
+            device = report["device"]
+            summary = report.get("summary", {})
+            details = report.get("details", {})
+
+            f.write(f"[ {device.upper()} ]\n")
+            f.write("-" * 70 + "\n")
+
+            # Quick pass/fail overview line per category
+            overview_bits = []
+            for key, label in category_labels:
+                status = summary.get(key, "N/A")
+                icon = "✅" if status == "PASS" else ("⏭️" if status == "SKIPPED" else "❌")
+                overview_bits.append(f"{icon} {label}: {status}")
+            f.write("  |  ".join(overview_bits) + "\n\n")
+
+            any_issues = False
+
+            for key, label in category_labels:
+                issues = details.get(key, [])
+                if not isinstance(issues, list) or not issues:
+                    continue
+
+                any_issues = True
+                f.write(f"  {label} ({len(issues)} issue(s)):\n")
+
+                for issue in issues:
+                    msg = issue.get("message", "Unspecified issue")
+                    bbox = issue.get("bbox")
+                    loc = ""
+                    if bbox:
+                        loc = f"  [at x={int(bbox['x'])}, y={int(bbox['y'])}]"
+                    f.write(f"    - {msg}{loc}\n")
+
+                f.write("\n")
+
+            if not any_issues:
+                f.write("  No issues found on this device. ✅\n\n")
+
+            f.write("\n")
+
+    print(f"Readable report saved to {path}")
 # -------------------------------------------------------------------
 # CLI entry point
 # -------------------------------------------------------------------
@@ -874,4 +991,5 @@ if __name__ == "__main__":
 
     print(f"\nReport saved to {report_path}")
     generate_summary_report(all_reports, args.slug)
+    generate_readable_report(all_reports, args.slug)
 

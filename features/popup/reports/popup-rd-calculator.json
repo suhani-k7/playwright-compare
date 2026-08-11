@@ -51,26 +51,6 @@
             "height": 18
           },
           "message": "Extra image in live"
-        },
-        {
-          "type": "empty_alt",
-          "bbox": {
-            "x": 44.390625,
-            "y": 146.0,
-            "width": 16,
-            "height": 17
-          },
-          "message": "Missing alt attribute"
-        },
-        {
-          "type": "empty_alt",
-          "bbox": {
-            "x": 68.5625,
-            "y": 343.59375,
-            "width": 239,
-            "height": 184
-          },
-          "message": "Missing alt attribute"
         }
       ],
       "buttons": [
@@ -149,26 +129,6 @@
             "height": 18
           },
           "message": "Extra image in live"
-        },
-        {
-          "type": "empty_alt",
-          "bbox": {
-            "x": 30.0,
-            "y": 98.703125,
-            "width": 12,
-            "height": 12.75
-          },
-          "message": "Missing alt attribute"
-        },
-        {
-          "type": "empty_alt",
-          "bbox": {
-            "x": 111.484375,
-            "y": 82,
-            "width": 264,
-            "height": 145
-          },
-          "message": "Missing alt attribute"
         }
       ],
       "buttons": [
@@ -247,26 +207,6 @@
             "height": 18
           },
           "message": "Extra image in live"
-        },
-        {
-          "type": "empty_alt",
-          "bbox": {
-            "x": 30.0,
-            "y": 98.703125,
-            "width": 12,
-            "height": 12.75
-          },
-          "message": "Missing alt attribute"
-        },
-        {
-          "type": "empty_alt",
-          "bbox": {
-            "x": 94.75,
-            "y": 82,
-            "width": 264,
-            "height": 145
-          },
-          "message": "Missing alt attribute"
         }
       ],
       "buttons": [

@@ -14,21 +14,23 @@ LIVE only (extra) (2):
 
 [ ANDROID ]
 ----------------------------------------
-Reference identifiable buttons: 40
+Reference identifiable buttons: 39
 Live identifiable buttons:      41
 
 REF only (missing from live) (0):
 
-LIVE only (extra) (1):
+LIVE only (extra) (2):
+  - 'Read more' (href: '')
   - '' (href: '')
 
 [ IOS ]
 ----------------------------------------
-Reference identifiable buttons: 40
+Reference identifiable buttons: 39
 Live identifiable buttons:      41
 
 REF only (missing from live) (0):
 
-LIVE only (extra) (1):
+LIVE only (extra) (2):
+  - 'Read more' (href: '')
   - '' (href: '')
 

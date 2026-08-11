@@ -8,10 +8,10 @@ Non-Visual / SEO Status for desktop (rd-calculator)
 
 [Specific Non-Visual Mismatches]
 - Button count (identifiable): expected 40, found 42
-- Fold 0: 1.22% visually different
+- Fold 0: 1.29% visually different
 - Fold 1: 7.82% visually different
-- Fold 2: 8.87% visually different
-- Fold 3: 4.11% visually different
-- Fold 4: 7.3% visually different
-- Fold 5: 7.22% visually different
-- Fold 6: 14.48% visually different
+- Fold 2: 10.2% visually different
+- Fold 3: 4.17% visually different
+- Fold 4: 7.2% visually different
+- Fold 5: 7.15% visually different
+- Fold 6: 10.42% visually different

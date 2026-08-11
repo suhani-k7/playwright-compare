@@ -73,7 +73,7 @@ def _dedupe_buttons(buttons: list) -> list:
             kept.append(btn)
     return kept
 
-def extract_elements(page) -> dict:
+def extract_elements(page, device_scale_factor: float = 1) -> dict:
     """
     Uses Playwright to find all elements we care about and record
     their bounding boxes on the live rendered page.
@@ -85,6 +85,16 @@ def extract_elements(page) -> dict:
     Because bounding boxes require a live browser session.
     Once the browser closes, you can't get positions from saved HTML.
     """
+    def scale_bbox(bbox):
+        if not bbox:
+            return None
+        return {
+            "x": bbox["x"] * device_scale_factor,
+            "y": bbox["y"] * device_scale_factor,
+            "width": bbox["width"] * device_scale_factor,
+            "height": bbox["height"] * device_scale_factor,
+        }
+
     elements = {
         "headings": [],
         "images": [],
@@ -94,7 +104,6 @@ def extract_elements(page) -> dict:
         "meta": [],
         "og_tags": [],
     }
-
     # --- Headings H1-H6 ---
     for level in range(1, 7):
         tag = f"h{level}"
@@ -106,7 +115,7 @@ def extract_elements(page) -> dict:
                 elements["headings"].append({
                     "tag": tag,
                     "text": text,
-                    "bbox": bbox
+                    "bbox": scale_bbox(bbox)
                 })
             
     # --- Images ---
@@ -124,7 +133,7 @@ def extract_elements(page) -> dict:
                 "alt": alt,
                 "src": src,
                 "phash": phash,
-                "bbox": bbox
+                "bbox": scale_bbox(bbox)
             })
     
     # --- Buttons ---
@@ -169,7 +178,7 @@ def extract_elements(page) -> dict:
                 "text": text,
                 "aria_label": aria_label.strip(),
                 "href": href.strip(),
-                "bbox": bbox
+                "bbox": scale_bbox(bbox)
             })
 
     elements["buttons"] = _dedupe_buttons(raw_buttons)
@@ -183,7 +192,7 @@ def extract_elements(page) -> dict:
         if bbox:
             elements["links"].append({
                 "href": href,
-                "bbox": bbox
+                "bbox": scale_bbox(bbox)
             })
 
     # --- Canonical tag ---
@@ -274,6 +283,35 @@ def _neutralize_sticky_elements(page):
             });
         }
     """)
+def _dismiss_popup(page, max_wait_ms: int = 8000):
+    """
+    Waits briefly for a popup/modal to appear and closes it via its
+    close ('×'/'close') button, so the main page capture and element
+    extraction never sees popup content. Popup-specific comparison is
+    handled entirely by capture-popup.py / compare-popup.py instead.
+    """
+    
+    close_selectors = [
+        ".new-investment-popup-close",
+        "[aria-label='Close popup']",
+        "[aria-label*='close' i]",
+        "[class*='close']",
+    ]
+    waited = 0
+    step = 500
+    while waited < max_wait_ms:
+        for selector in close_selectors:
+            try:
+                btn = page.locator(selector).first
+                if btn.count() > 0 and btn.is_visible():
+                    btn.click(timeout=1000)
+                    page.wait_for_timeout(500)
+                    print("  Popup detected and dismissed.")
+                    return
+            except Exception:
+                continue
+        page.wait_for_timeout(step)
+        waited += step
 
 def _scroll_full_page(page):
     """
@@ -314,11 +352,12 @@ def capture_url(url: str, mode: str, slug: str):
         # Viewport 1: Desktop
         # -------------------------------------------------------
         print(f"\n[desktop] Capturing {url}")
-        browser = p.chromium.launch(channel="chrome", headless=False)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page(viewport=DESKTOP_VIEWPORT)
 
         page.goto(url, wait_until="load")
         page.wait_for_load_state("networkidle")
+        _dismiss_popup(page)
         _scroll_full_page(page)
 
         out_dir = get_output_dir(mode, "desktop", slug)
@@ -353,6 +392,7 @@ def capture_url(url: str, mode: str, slug: str):
 
         page.goto(url, wait_until="load")
         page.wait_for_load_state("networkidle")
+        _dismiss_popup(page)
         _scroll_full_page(page)
 
         out_dir = get_output_dir(mode, "android", slug)
@@ -366,7 +406,7 @@ def capture_url(url: str, mode: str, slug: str):
             f.write(page.content())
         print(f"  HTML saved.")
 
-        elements = extract_elements(page)
+        elements = extract_elements(page, device_scale_factor=pixel5["device_scale_factor"])
         with open(os.path.join(out_dir, f"{mode}-android-{slug}-elements.json"), "w", encoding="utf-8") as f:
             json.dump(elements, f, indent=2)
         print(f"  Elements JSON saved. "
@@ -386,6 +426,7 @@ def capture_url(url: str, mode: str, slug: str):
 
         page.goto(url, wait_until="load")
         page.wait_for_load_state("networkidle")
+        _dismiss_popup(page)
         _scroll_full_page(page)
 
         out_dir = get_output_dir(mode, "ios", slug)
@@ -399,7 +440,7 @@ def capture_url(url: str, mode: str, slug: str):
             f.write(page.content())
         print(f"  HTML saved.")
 
-        elements = extract_elements(page)
+        elements = extract_elements(page, device_scale_factor=iphone13mini["device_scale_factor"])
         with open(os.path.join(out_dir, f"{mode}-ios-{slug}-elements.json"), "w", encoding="utf-8") as f:
             json.dump(elements, f, indent=2)
         print(f"  Elements JSON saved. "
