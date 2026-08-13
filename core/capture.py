@@ -5,6 +5,9 @@ from playwright.sync_api import sync_playwright
 from PIL import Image
 import imagehash
 from io import BytesIO
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError, Error as PlaywrightError
+
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -284,18 +287,12 @@ def _neutralize_sticky_elements(page):
         }
     """)
 def _dismiss_popup(page, max_wait_ms: int = 8000):
-    """
-    Waits briefly for a popup/modal to appear and closes it via its
-    close ('×'/'close') button, so the main page capture and element
-    extraction never sees popup content. Popup-specific comparison is
-    handled entirely by capture-popup.py / compare-popup.py instead.
-    """
-    
     close_selectors = [
         ".new-investment-popup-close",
         "[aria-label='Close popup']",
         "[aria-label*='close' i]",
-        "[class*='close']",
+        "[class*='popup'] [class*='close']",   # only match close buttons INSIDE a popup/modal container
+        "[class*='modal'] [class*='close']",
     ]
     waited = 0
     step = 500
@@ -341,31 +338,75 @@ def _scroll_full_page(page):
     page.evaluate("window.scrollTo(0, 0)")
     page.wait_for_timeout(300)  # let the page settle back at top before screenshotting
 
+def _goto_with_retry(page, url: str, retries: int = 1, timeout: int = 45000):
+    """
+    Navigates to the URL. Uses domcontentloaded instead of load, with a
+    longer timeout and one retry — covers both slow-load timeouts and
+    transient network errors (e.g. ERR_NETWORK_CHANGED from a Wi-Fi blip).
+    """
+    last_err = None
+    for attempt in range(retries + 1):
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=timeout)
+            return
+        except (PlaywrightTimeoutError, PlaywrightError) as e:
+            last_err = e
+            print(f"  goto failed ({type(e).__name__}), attempt {attempt + 1}/{retries + 1}, retrying...")
+    raise last_err
+
+def _wait_page_ready(page, selector: str = "body", timeout: int = 15000):
+    """
+    Waits for the page to be usably rendered without relying on
+    networkidle, which can hang forever on pages with persistent
+    background network activity.
+    """
+    try:
+        page.wait_for_selector(selector, timeout=timeout)
+    except PlaywrightTimeoutError:
+        print(f"  Selector '{selector}' not found within {timeout}ms, continuing anyway")
+
+def _wait_images_loaded(page, timeout: int = 10000):
+    """
+    Polls until every <img> on the page reports complete (loaded or
+    errored) or the timeout elapses. _scroll_full_page only waits a
+    fixed 500ms after triggering lazy-loaded images, which isn't
+    always enough on image-heavy pages — this closes that gap right
+    before the screenshot is taken.
+    """
+    try:
+        page.wait_for_function(
+            """() => Array.from(document.images).every(img => img.complete)""",
+            timeout=timeout
+        )
+    except PlaywrightTimeoutError:
+        print("  Not all images finished loading within timeout, continuing anyway")
+
 def capture_url(url: str, mode: str, slug: str):
     """
     Main capture function. Opens the URL in all 3 viewports,
     saves screenshot + HTML + elements.json for each.
     """
     with sync_playwright() as p:
-
+        is_headless = (mode != "live")
         # -------------------------------------------------------
         # Viewport 1: Desktop
         # -------------------------------------------------------
         print(f"\n[desktop] Capturing {url}")
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(headless=is_headless)
         page = browser.new_page(viewport=DESKTOP_VIEWPORT)
-
-        page.goto(url, wait_until="load")
-        page.wait_for_load_state("networkidle")
+        _goto_with_retry(page, url)
+        _wait_page_ready(page)
         page.wait_for_timeout(2000)
         _dismiss_popup(page)
         _scroll_full_page(page)
+        _dismiss_popup(page)
+        _wait_images_loaded(page)
 
         out_dir = get_output_dir(mode, "desktop", slug)
         os.makedirs(out_dir, exist_ok=True)
         
         #_neutralize_sticky_elements(page)
-        page.screenshot(path=os.path.join(out_dir, f"{mode}-desktop-{slug}-screenshot.png"), full_page=True)
+        page.screenshot(path=os.path.join(out_dir, f"{mode}-desktop-{slug}-screenshot.png"), full_page=True, timeout=60000)
         print(f"  Screenshot saved.")
 
         with open(os.path.join(out_dir, f"{mode}-desktop-{slug}-page.html"), "w", encoding="utf-8") as f:
@@ -387,21 +428,23 @@ def capture_url(url: str, mode: str, slug: str):
         # Playwright's device descriptors handle UA + viewport
         # -------------------------------------------------------
         print(f"\n[android] Capturing {url}")
-        browser = p.chromium.launch()
+        browser = p.chromium.launch(headless=is_headless)
         pixel5 = p.devices["Pixel 5"]
         page = browser.new_page(**pixel5)
 
-        page.goto(url, wait_until="load")
-        page.wait_for_load_state("networkidle")
+        _goto_with_retry(page, url)
+        _wait_page_ready(page)
         page.wait_for_timeout(2000)
         _dismiss_popup(page)
         _scroll_full_page(page)
+        _dismiss_popup(page)
+        _wait_images_loaded(page)
 
         out_dir = get_output_dir(mode, "android", slug)
         os.makedirs(out_dir, exist_ok=True)
 
         #_sticky_elements(page)
-        page.screenshot(path=os.path.join(out_dir, f"{mode}-android-{slug}-screenshot.png"), full_page=True)
+        page.screenshot(path=os.path.join(out_dir, f"{mode}-android-{slug}-screenshot.png"), full_page=True, timeout=60000)
         print(f"  Screenshot saved.")
 
         with open(os.path.join(out_dir, f"{mode}-android-{slug}-page.html"), "w", encoding="utf-8") as f:
@@ -422,21 +465,23 @@ def capture_url(url: str, mode: str, slug: str):
         # Viewport 3: iOS (iPhone 13 Mini)
         # -------------------------------------------------------
         print(f"\n[ios] Capturing {url}")
-        browser = p.chromium.launch()
+        browser = p.chromium.launch(headless=is_headless)
         iphone13mini = p.devices["iPhone 13 Mini"]
         page = browser.new_page(**iphone13mini)
 
-        page.goto(url, wait_until="load")
-        page.wait_for_load_state("networkidle")
+        _goto_with_retry(page, url)
+        _wait_page_ready(page)
         page.wait_for_timeout(2000)
         _dismiss_popup(page)
         _scroll_full_page(page)
+        _dismiss_popup(page)
+        _wait_images_loaded(page)
 
         out_dir = get_output_dir(mode, "ios", slug)
         os.makedirs(out_dir, exist_ok=True)
 
         #_neutralize_sticky_elements(page)
-        page.screenshot(path=os.path.join(out_dir, f"{mode}-ios-{slug}-screenshot.png"), full_page=True)
+        page.screenshot(path=os.path.join(out_dir, f"{mode}-ios-{slug}-screenshot.png"), full_page=True, timeout=60000)
         print(f"  Screenshot saved.")
 
         with open(os.path.join(out_dir, f"{mode}-ios-{slug}-page.html"), "w", encoding="utf-8") as f:

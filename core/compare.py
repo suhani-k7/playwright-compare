@@ -737,31 +737,11 @@ def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = F
             draw.text((x, text_y), label, fill="white", font=font)
 
     # Save floating messages and SEO status to a text file
-    warnings_path = os.path.join(DATA_DIR, "diffs", f"{device}-{slug}-non-visual-warnings.txt")
-    with open(warnings_path, "w", encoding="utf-8") as f:
-        f.write(f"Non-Visual / SEO Status for {device} ({slug})\n")
-        f.write("="*50 + "\n\n")
-        
-        # Print SEO Statuses
-        summary = report.get("summary", {})
-        f.write("[SEO Status Overview]\n")
-        f.write(f"- Canonical Tags: {summary.get('canonical', 'N/A')}\n")
-        f.write(f"- Meta Tags:      {summary.get('meta', 'N/A')}\n")
-        f.write(f"- Open Graph:     {summary.get('og_tags', 'N/A')}\n\n")
-
-        f.write("[Specific Non-Visual Mismatches]\n")
-        if floating_messages:
-            for msg in floating_messages:
-                f.write(f"- {msg}\n")
-        else:
-            f.write("- All correct! No non-visual mismatches found.\n")
-            
-    print(f"  Non-visual warnings saved to {warnings_path}")
-
-    os.makedirs(os.path.join(DATA_DIR, "diffs"), exist_ok=True)
-    out_path = os.path.join(DATA_DIR, "diffs", f"{device}-{slug}-annotated.png")
+    os.makedirs(os.path.join(DATA_DIR, "diffs", slug), exist_ok=True)
+    out_path = os.path.join(DATA_DIR, "diffs", slug, f"{device}-annotated.png")
     img.save(out_path)
     print(f"  Annotated screenshot saved to {out_path}")
+        
 
 # -------------------------------------------------------------------
 # Main comparison runner for one device
@@ -791,7 +771,7 @@ def compare_device(device: str, slug: str) -> dict:
     visual_status, visual_issues = compare_visual_folds(
         reference_dir=os.path.join(DATA_DIR, "reference", f"{device}-{slug}"),
         live_dir=os.path.join(DATA_DIR, "live", f"{device}-{slug}"),
-        out_dir=os.path.join(DATA_DIR, "diffs", "folds", f"{device}-{slug}"),
+        out_dir=os.path.join(DATA_DIR, "diffs", slug, "folds", device),
         device=device,
         slug=slug,
         target_fold_height=2500,
@@ -845,56 +825,15 @@ def compare_device(device: str, slug: str) -> dict:
 
     return report
 
-def generate_summary_report(all_reports: list, slug: str):
-    os.makedirs(os.path.join(DATA_DIR, "diffs"), exist_ok=True)
-    path = os.path.join(DATA_DIR, "diffs", f"{slug}-problems.txt")
-
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(f"BUTTON DIFF REPORT — {slug}\n")
-        f.write("=" * 60 + "\n\n")
-
-        for report in all_reports:
-            device = report["device"]
-            details = report["details"]
-            btn_issues = details.get("buttons", [])
-
-            missing = [i for i in btn_issues if i.get("type") == "missing_button"]
-            extra = [i for i in btn_issues if i.get("type") == "extra_button"]
-
-            f.write(f"[ {device.upper()} ]\n")
-            f.write("-" * 40 + "\n")
-
-            # Count line
-            ref_count = next((i.get("ref_count") for i in btn_issues if i.get("type") == "button_count"), None)
-            live_count = next((i.get("live_count") for i in btn_issues if i.get("type") == "button_count"), None)
-            if ref_count is not None:
-                f.write(f"Reference identifiable buttons: {ref_count}\n")
-                f.write(f"Live identifiable buttons:      {live_count}\n\n")
-
-            f.write(f"REF only (missing from live) ({len(missing)}):\n")
-            for i in missing:
-                text = i.get("message", "").replace("Missing button: ", "").replace("Missing button:", "")
-                f.write(f"  - {text}\n")
-
-            f.write(f"\nLIVE only (extra) ({len(extra)}):\n")
-            for i in extra:
-                text = i.get("message", "").replace("Extra button in live: ", "").replace("Extra button in live:", "")
-                f.write(f"  - {text}\n")
-
-            f.write("\n")
-
-    print(f"Button diff report saved to {path}")
-
 def generate_readable_report(all_reports: list, slug: str):
     """
-    Writes a single human-readable text report covering every device and
-    every comparator category — not just buttons — so someone can scan
-    all real issues without opening the raw JSON.
+    Writes a single Markdown report covering every device and every
+    comparator category, so someone can scan all real issues without
+    opening the raw JSON or cross-referencing multiple files.
     """
-    path = os.path.join(DATA_DIR, "reports", f"{slug}-readable-report.txt")
-    os.makedirs(os.path.join(DATA_DIR, "reports"), exist_ok=True)
+    path = os.path.join(DATA_DIR, "diffs", slug, "report.md")
+    os.makedirs(os.path.join(DATA_DIR, "diffs", slug), exist_ok=True)
 
-    # Friendly labels for each category, in the order we want them printed
     category_labels = [
         ("headings",     "Headings"),
         ("images",       "Images"),
@@ -906,50 +845,53 @@ def generate_readable_report(all_reports: list, slug: str):
         ("visual_folds", "Visual Folds"),
     ]
 
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(f"COMPARISON REPORT — {slug}\n")
-        f.write("=" * 70 + "\n\n")
+    def status_icon(status):
+        return "✅" if status == "PASS" else ("⏭️" if status == "SKIPPED" else "❌")
 
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(f"# Comparison Report — {slug}\n\n")
+
+        # --- Top-level summary table across all devices ---
+        f.write("## Summary\n\n")
+        header = "| Category | " + " | ".join(r["device"].capitalize() for r in all_reports) + " |\n"
+        divider = "|---|" + "---|" * len(all_reports) + "\n"
+        f.write(header)
+        f.write(divider)
+        for key, label in category_labels:
+            row = f"| {label} | "
+            row += " | ".join(
+                f"{status_icon(r['summary'].get(key, 'N/A'))} {r['summary'].get(key, 'N/A')}"
+                for r in all_reports
+            )
+            f.write(row + " |\n")
+        f.write("\n")
+
+        # --- Per-device detail sections ---
         for report in all_reports:
             device = report["device"]
-            summary = report.get("summary", {})
             details = report.get("details", {})
 
-            f.write(f"[ {device.upper()} ]\n")
-            f.write("-" * 70 + "\n")
-
-            # Quick pass/fail overview line per category
-            overview_bits = []
-            for key, label in category_labels:
-                status = summary.get(key, "N/A")
-                icon = "✅" if status == "PASS" else ("⏭️" if status == "SKIPPED" else "❌")
-                overview_bits.append(f"{icon} {label}: {status}")
-            f.write("  |  ".join(overview_bits) + "\n\n")
+            f.write(f"## {device.capitalize()}\n\n")
 
             any_issues = False
-
             for key, label in category_labels:
                 issues = details.get(key, [])
                 if not isinstance(issues, list) or not issues:
                     continue
 
                 any_issues = True
-                f.write(f"  {label} ({len(issues)} issue(s)):\n")
+                f.write(f"### {label} ({len(issues)} issue(s))\n\n")
 
                 for issue in issues:
                     msg = issue.get("message", "Unspecified issue")
                     bbox = issue.get("bbox")
-                    loc = ""
-                    if bbox:
-                        loc = f"  [at x={int(bbox['x'])}, y={int(bbox['y'])}]"
-                    f.write(f"    - {msg}{loc}\n")
+                    loc = f" — *at x={int(bbox['x'])}, y={int(bbox['y'])}*" if bbox else ""
+                    f.write(f"- {msg}{loc}\n")
 
                 f.write("\n")
 
             if not any_issues:
-                f.write("  No issues found on this device. ✅\n\n")
-
-            f.write("\n")
+                f.write("No issues found on this device. ✅\n\n")
 
     print(f"Readable report saved to {path}")
 # -------------------------------------------------------------------
@@ -984,12 +926,12 @@ if __name__ == "__main__":
             print(f"\n[{device}] Skipping — {e}")
 
     # Save combined report to reports/
-    os.makedirs(os.path.join(DATA_DIR, "reports"), exist_ok=True)
-    report_path = os.path.join(DATA_DIR, "reports", f"{args.slug}.json")
+    os.makedirs(os.path.join(DATA_DIR, "diffs", args.slug), exist_ok=True)
+    report_path = os.path.join(DATA_DIR, "diffs", args.slug, "raw-report.json")
+    
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(all_reports, f, indent=2)
 
     print(f"\nReport saved to {report_path}")
-    generate_summary_report(all_reports, args.slug)
     generate_readable_report(all_reports, args.slug)
 

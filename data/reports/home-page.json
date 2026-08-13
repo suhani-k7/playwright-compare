@@ -1,0 +1,1364 @@
+[
+  {
+    "device": "desktop",
+    "slug": "home-page",
+    "summary": {
+      "headings": "FAIL",
+      "images": "SKIPPED",
+      "buttons": "FAIL",
+      "canonical": "PASS",
+      "meta": "PASS",
+      "og_tags": "PASS",
+      "links": "FAIL",
+      "visual_folds": "FLAGGED"
+    },
+    "details": {
+      "headings": [
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": -1147.2890625,
+            "y": 124.6875,
+            "width": 44.375,
+            "height": 16
+          },
+          "message": "Extra H2: '0% GST'"
+        },
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": 87.28125,
+            "y": 124.6875,
+            "width": 191.8046875,
+            "height": 16
+          },
+          "message": "Extra H2: 'BSE Dividend Stability Index Fund'"
+        },
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": 3852.7109375,
+            "y": 124.6875,
+            "width": 44.375,
+            "height": 16
+          },
+          "message": "Extra H2: '0% GST'"
+        },
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": 5087.28125,
+            "y": 124.6875,
+            "width": 191.8046875,
+            "height": 16
+          },
+          "message": "Extra H2: 'BSE Dividend Stability Index Fund'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 75,
+            "y": 5673.859375,
+            "width": 319.515625,
+            "height": 44
+          },
+          "message": "Missing H2: 'Understanding the Life Insurance Coverage Amount'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 75,
+            "y": 5820.859375,
+            "width": 164.96875,
+            "height": 22
+          },
+          "message": "Missing H2: 'What is Sum Assured?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 75,
+            "y": 5888.859375,
+            "width": 223.3125,
+            "height": 22
+          },
+          "message": "Missing H2: 'What is Annualised Premium?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 75,
+            "y": 5956.859375,
+            "width": 300.53125,
+            "height": 22
+          },
+          "message": "Missing H2: 'What is Life Insurance Coverage Period?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 75,
+            "y": 6024.859375,
+            "width": 236.375,
+            "height": 22
+          },
+          "message": "Missing H2: 'What are Life Insurance Riders?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 75,
+            "y": 6081.859375,
+            "width": 319.515625,
+            "height": 44
+          },
+          "message": "Missing H2: 'What is Premium Payment Mode or Frequency?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 75,
+            "y": 6160.859375,
+            "width": 245.59375,
+            "height": 22
+          },
+          "message": "Missing H2: 'What is Life Insurance Premium?'"
+        },
+        {
+          "type": "heading_modified",
+          "bbox": {
+            "x": 48,
+            "y": 963.453125,
+            "width": 623.2109375,
+            "height": 30
+          },
+          "message": "H3 changed: expected 'Get Coverage Against Cancer + 63 Critical Illness at just \u20b9542/month@>', found 'Invest \u20b915K/Month Build a \u20b94.24 Cr$4 Corpus at Maturity!'"
+        },
+        {
+          "type": "heading_modified",
+          "bbox": {
+            "x": 659,
+            "y": 1850.4453125,
+            "width": 258,
+            "height": 48
+          },
+          "message": "H3 changed: expected '\u20b92 Lakh Crore Assets Under Management', found '\u20b91.7 Lakh Crore Asset Under Management'"
+        }
+      ],
+      "images": [],
+      "buttons": [
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": 1065.09375,
+            "y": 744,
+            "width": 56.90625,
+            "height": 32
+          },
+          "message": "Icon/generic button group '[role='button']|text:True|href:False|aria:': expected 57, found 46"
+        },
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": 881.59375,
+            "y": -5,
+            "width": 66.328125,
+            "height": 95
+          },
+          "message": "Icon/generic button group 'button|text:True|href:False|aria:': expected 52, found 44"
+        },
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": 1012.03125,
+            "y": 6489.953125,
+            "width": 254,
+            "height": 33
+          },
+          "message": "Icon/generic button group 'button|text:True|href:False|aria:submit secondary button': expected 2, found 1"
+        },
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": -1180,
+            "y": 259.375,
+            "width": 117,
+            "height": 36
+          },
+          "message": "Icon/generic button group 'button|text:True|href:True|aria:': expected 6, found 9"
+        }
+      ],
+      "canonical": [],
+      "meta": [],
+      "og_tags": [],
+      "links": [
+        {
+          "type": "link_count",
+          "ref_count": 245,
+          "live_count": 243,
+          "message": "Link count: expected 245, found 243"
+        },
+        {
+          "type": "link_href_changed",
+          "bbox": {
+            "x": 23,
+            "y": 1973.46875,
+            "width": 79.5078125,
+            "height": 21.5
+          },
+          "message": "Link changed: expected '/investment-plans/investment-calculator?utm_theme=NRI', found '/investment-plans/investment-calculator?utm_theme=PensionRetirement'"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 51,
+            "y": 8714.40625,
+            "width": 116.265625,
+            "height": 18
+          },
+          "message": "Missing link: "
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 199.265625,
+            "y": 8714.40625,
+            "width": 169.796875,
+            "height": 18
+          },
+          "message": "Missing link: "
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 401.0625,
+            "y": 8714.40625,
+            "width": 131.6875,
+            "height": 18
+          },
+          "message": "Missing link: "
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 23,
+            "y": 1060.53125,
+            "width": 79.515625,
+            "height": 22
+          },
+          "message": "Missing link: /investment-plans/investment-calculator?utm_theme=NRI"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 23,
+            "y": 1740.1875,
+            "width": 79.515625,
+            "height": 22
+          },
+          "message": "Missing link: /investment-plans/investment-calculator?utm_theme=NRI"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 925,
+            "y": 10679.890625,
+            "width": 110.421875,
+            "height": 18
+          },
+          "message": "Missing link: /kmp-performance"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 477.71875,
+            "y": 776,
+            "width": 65.75,
+            "height": 19
+          },
+          "message": "Missing link: /cookie-policy"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 2512,
+            "y": 96,
+            "width": 1250,
+            "height": 224.375
+          },
+          "message": "Extra link: /investment-plans/investment-calculator"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 7512,
+            "y": 96,
+            "width": 1250,
+            "height": 224.375
+          },
+          "message": "Extra link: /investment-plans/investment-calculator"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 368,
+            "y": 9995.8046875,
+            "width": 135.4375,
+            "height": 18
+          },
+          "message": "Extra link: /investment-plans/investment-calculator"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 3762,
+            "y": 96,
+            "width": 1250,
+            "height": 224.375
+          },
+          "message": "Extra link: /term-insurance-plans/premium-calculator?utm_theme=1Crore"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 6262,
+            "y": 96,
+            "width": 1250,
+            "height": 224.375
+          },
+          "message": "Extra link: /term-insurance-plans/premium-calculator?utm_theme=1Crore"
+        }
+      ],
+      "visual_folds": [
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 0,
+          "reference_image": "data/diffs/folds/desktop-home-page/reference-fold0.png",
+          "live_image": "data/diffs/folds/desktop-home-page/live-fold0.png",
+          "diff_percent": 16.01,
+          "flagged": true,
+          "message": "Fold 0: 16.01% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 1,
+          "reference_image": "data/diffs/folds/desktop-home-page/reference-fold1.png",
+          "live_image": "data/diffs/folds/desktop-home-page/live-fold1.png",
+          "diff_percent": 61.2,
+          "flagged": true,
+          "message": "Fold 1: 61.2% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 2,
+          "reference_image": "data/diffs/folds/desktop-home-page/reference-fold2.png",
+          "live_image": "data/diffs/folds/desktop-home-page/live-fold2.png",
+          "diff_percent": 19.99,
+          "flagged": true,
+          "message": "Fold 2: 19.99% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 3,
+          "reference_image": "data/diffs/folds/desktop-home-page/reference-fold3.png",
+          "live_image": "data/diffs/folds/desktop-home-page/live-fold3.png",
+          "diff_percent": 15.29,
+          "flagged": true,
+          "message": "Fold 3: 15.29% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 4,
+          "reference_image": "data/diffs/folds/desktop-home-page/reference-fold4.png",
+          "live_image": "data/diffs/folds/desktop-home-page/live-fold4.png",
+          "diff_percent": 25.11,
+          "flagged": true,
+          "message": "Fold 4: 25.11% visually different"
+        }
+      ]
+    }
+  },
+  {
+    "device": "android",
+    "slug": "home-page",
+    "summary": {
+      "headings": "FAIL",
+      "images": "SKIPPED",
+      "buttons": "FAIL",
+      "canonical": "PASS",
+      "meta": "PASS",
+      "og_tags": "PASS",
+      "links": "FAIL",
+      "visual_folds": "FLAGGED"
+    },
+    "details": {
+      "headings": [
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": 147.705078125,
+            "y": 252.140625,
+            "width": 86.646484375,
+            "height": 30.25
+          },
+          "message": "Extra H2: '0% GST'"
+        },
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": 1122.7734375,
+            "y": 252.140625,
+            "width": 374.494140625,
+            "height": 30.25
+          },
+          "message": "Extra H2: 'BSE Dividend Stability Index Fund'"
+        },
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": 4206.705078125,
+            "y": 252.140625,
+            "width": 86.646484375,
+            "height": 30.25
+          },
+          "message": "Extra H2: '0% GST'"
+        },
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": 5181.7734375,
+            "y": 252.140625,
+            "width": 374.494140625,
+            "height": 30.25
+          },
+          "message": "Extra H2: 'BSE Dividend Stability Index Fund'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 121.0,
+            "y": 21657.0234375,
+            "width": 772.75,
+            "height": 132.0
+          },
+          "message": "Missing H2: 'Understanding the Life Insurance Coverage Amount'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 121.0,
+            "y": 22053.0234375,
+            "width": 453.6640625,
+            "height": 66.0
+          },
+          "message": "Missing H2: 'What is Sum Assured?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 121.0,
+            "y": 22185.0234375,
+            "width": 614.109375,
+            "height": 66.0
+          },
+          "message": "Missing H2: 'What is Annualised Premium?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 121.0,
+            "y": 22317.0234375,
+            "width": 772.75,
+            "height": 132.0
+          },
+          "message": "Missing H2: 'What is Life Insurance Coverage Period?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 121.0,
+            "y": 22515.0234375,
+            "width": 650.03125,
+            "height": 66.0
+          },
+          "message": "Missing H2: 'What are Life Insurance Riders?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 121.0,
+            "y": 22647.0234375,
+            "width": 772.75,
+            "height": 132.0
+          },
+          "message": "Missing H2: 'What is Premium Payment Mode or Frequency?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 121.0,
+            "y": 22845.0234375,
+            "width": 675.3828125,
+            "height": 66.0
+          },
+          "message": "Missing H2: 'What is Life Insurance Premium?'"
+        },
+        {
+          "type": "heading_modified",
+          "bbox": {
+            "x": 88.0,
+            "y": 3647.767578125,
+            "width": 904.75,
+            "height": 132.0
+          },
+          "message": "H3 changed: expected 'Get Coverage Against Cancer + 63 Critical Illness at just \u20b9542/month@>', found 'Invest \u20b915K/Month Build a \u20b94.24 Cr$4 Corpus at Maturity!'"
+        },
+        {
+          "type": "heading_modified",
+          "bbox": {
+            "x": 88.0,
+            "y": 7578.849609375,
+            "width": 391.875,
+            "height": 198.0
+          },
+          "message": "H3 changed: expected '\u20b92 Lakh Crore Assets Under Management', found '\u20b91.7 Lakh Crore Asset Under Management'"
+        }
+      ],
+      "images": [],
+      "buttons": [
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": 55.0,
+            "y": 1870.0,
+            "width": 156.4921875,
+            "height": 88.0
+          },
+          "message": "Icon/generic button group '[role='button']|text:True|href:False|aria:': expected 20, found 17"
+        },
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": 695.75,
+            "y": 33.0,
+            "width": 242.0,
+            "height": 99.0
+          },
+          "message": "Icon/generic button group 'button|text:True|href:False|aria:': expected 53, found 43"
+        },
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": 2180.75,
+            "y": 23843.7890625,
+            "width": 566.5,
+            "height": 90.75
+          },
+          "message": "Icon/generic button group 'button|text:True|href:False|aria:submit secondary button': expected 2, found 1"
+        },
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": -937.75,
+            "y": 743.53125,
+            "width": 297.0,
+            "height": 90.75
+          },
+          "message": "Icon/generic button group 'button|text:True|href:True|aria:': expected 6, found 10"
+        }
+      ],
+      "canonical": [],
+      "meta": [],
+      "og_tags": [],
+      "links": [
+        {
+          "type": "link_count",
+          "ref_count": 128,
+          "live_count": 127,
+          "message": "Link count: expected 128, found 127"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 88.0,
+            "y": 31492.484375,
+            "width": 319.73046875,
+            "height": 49.5
+          },
+          "message": "Missing link: "
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 495.73046875,
+            "y": 31492.484375,
+            "width": 466.94140625,
+            "height": 49.5
+          },
+          "message": "Missing link: "
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 1050.671875,
+            "y": 31492.484375,
+            "width": 362.140625,
+            "height": 49.5
+          },
+          "message": "Missing link: "
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": -2.75,
+            "y": 2916.4609375,
+            "width": 218.66796875,
+            "height": 60.5
+          },
+          "message": "Missing link: /investment-plans/investment-calculator?utm_theme=NRI"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": -2.75,
+            "y": 4785.515625,
+            "width": 218.66796875,
+            "height": 60.5
+          },
+          "message": "Missing link: /investment-plans/investment-calculator?utm_theme=NRI"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": -2.75,
+            "y": 5104.34375,
+            "width": 218.66796875,
+            "height": 60.5
+          },
+          "message": "Missing link: /investment-plans/investment-calculator?utm_theme=NRI"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 550.55859375,
+            "y": 1790.25,
+            "width": 180.8125,
+            "height": 52.25
+          },
+          "message": "Missing link: /cookie-policy"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 4076.7152099609375,
+            "y": 209.0,
+            "width": 1014.75,
+            "height": 672.03125
+          },
+          "message": "Extra link: /term-insurance-plans/premium-calculator?utm_theme=1Crore"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 5993.970764160156,
+            "y": 209.0,
+            "width": 1014.75,
+            "height": 672.03125
+          },
+          "message": "Extra link: /term-insurance-plans/premium-calculator?utm_theme=1Crore"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": -981.75,
+            "y": 209.0,
+            "width": 1014.75,
+            "height": 672.03125
+          },
+          "message": "Extra link: /investment-plans/investment-calculator"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 3061.9652099609375,
+            "y": 209.0,
+            "width": 1014.75,
+            "height": 672.03125
+          },
+          "message": "Extra link: /investment-plans/investment-calculator"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 6952.077880859375,
+            "y": 209.0,
+            "width": 1014.75,
+            "height": 672.03125
+          },
+          "message": "Extra link: /investment-plans/investment-calculator"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": -2.75,
+            "y": 5427.0390625,
+            "width": 218.646484375,
+            "height": 59.125
+          },
+          "message": "Extra link: /investment-plans/investment-calculator?utm_theme=PensionRetirement"
+        }
+      ],
+      "visual_folds": [
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 0,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold0.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold0.png",
+          "diff_percent": 22.19,
+          "flagged": true,
+          "message": "Fold 0: 22.19% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 1,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold1.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold1.png",
+          "diff_percent": 51.05,
+          "flagged": true,
+          "message": "Fold 1: 51.05% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 2,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold2.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold2.png",
+          "diff_percent": 25.07,
+          "flagged": true,
+          "message": "Fold 2: 25.07% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 3,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold3.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold3.png",
+          "diff_percent": 18.81,
+          "flagged": true,
+          "message": "Fold 3: 18.81% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 4,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold4.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold4.png",
+          "diff_percent": 18.76,
+          "flagged": true,
+          "message": "Fold 4: 18.76% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 5,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold5.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold5.png",
+          "diff_percent": 75.18,
+          "flagged": true,
+          "message": "Fold 5: 75.18% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 6,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold6.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold6.png",
+          "diff_percent": 47.22,
+          "flagged": true,
+          "message": "Fold 6: 47.22% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 7,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold7.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold7.png",
+          "diff_percent": 78.58,
+          "flagged": true,
+          "message": "Fold 7: 78.58% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 8,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold8.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold8.png",
+          "diff_percent": 32.09,
+          "flagged": true,
+          "message": "Fold 8: 32.09% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 9,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold9.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold9.png",
+          "diff_percent": 20.15,
+          "flagged": true,
+          "message": "Fold 9: 20.15% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 10,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold10.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold10.png",
+          "diff_percent": 31.43,
+          "flagged": true,
+          "message": "Fold 10: 31.43% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 11,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold11.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold11.png",
+          "diff_percent": 58.14,
+          "flagged": true,
+          "message": "Fold 11: 58.14% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 12,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold12.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold12.png",
+          "diff_percent": 47.5,
+          "flagged": true,
+          "message": "Fold 12: 47.5% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 13,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold13.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold13.png",
+          "diff_percent": 25.36,
+          "flagged": true,
+          "message": "Fold 13: 25.36% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 14,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold14.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold14.png",
+          "diff_percent": 36.16,
+          "flagged": true,
+          "message": "Fold 14: 36.16% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 15,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold15.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold15.png",
+          "diff_percent": 27.39,
+          "flagged": true,
+          "message": "Fold 15: 27.39% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 16,
+          "reference_image": "data/diffs/folds/android-home-page/reference-fold16.png",
+          "live_image": "data/diffs/folds/android-home-page/live-fold16.png",
+          "diff_percent": 13.97,
+          "flagged": true,
+          "message": "Fold 16: 13.97% visually different"
+        }
+      ]
+    }
+  },
+  {
+    "device": "ios",
+    "slug": "home-page",
+    "summary": {
+      "headings": "FAIL",
+      "images": "SKIPPED",
+      "buttons": "FAIL",
+      "canonical": "PASS",
+      "meta": "PASS",
+      "og_tags": "PASS",
+      "links": "FAIL",
+      "visual_folds": "FLAGGED"
+    },
+    "details": {
+      "headings": [
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": -891.8671875,
+            "y": 275.0625,
+            "width": 94.5234375,
+            "height": 33
+          },
+          "message": "Extra H2: '0% GST'"
+        },
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": 117.84375,
+            "y": 275.0625,
+            "width": 408.5390625,
+            "height": 33
+          },
+          "message": "Extra H2: 'BSE Dividend Stability Index Fund'"
+        },
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": 3320.1328125,
+            "y": 275.0625,
+            "width": 94.5234375,
+            "height": 33
+          },
+          "message": "Extra H2: '0% GST'"
+        },
+        {
+          "type": "extra_heading",
+          "bbox": {
+            "x": 4329.84375,
+            "y": 275.0625,
+            "width": 408.5390625,
+            "height": 33
+          },
+          "message": "Extra H2: 'BSE Dividend Stability Index Fund'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 132,
+            "y": 24441.890625,
+            "width": 789,
+            "height": 144
+          },
+          "message": "Missing H2: 'Understanding the Life Insurance Coverage Amount'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 132,
+            "y": 24873.890625,
+            "width": 494.90625,
+            "height": 72
+          },
+          "message": "Missing H2: 'What is Sum Assured?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 132,
+            "y": 25017.890625,
+            "width": 669.9375,
+            "height": 72
+          },
+          "message": "Missing H2: 'What is Annualised Premium?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 132,
+            "y": 25161.890625,
+            "width": 789,
+            "height": 144
+          },
+          "message": "Missing H2: 'What is Life Insurance Coverage Period?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 132,
+            "y": 25377.890625,
+            "width": 709.125,
+            "height": 72
+          },
+          "message": "Missing H2: 'What are Life Insurance Riders?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 132,
+            "y": 25521.890625,
+            "width": 789,
+            "height": 144
+          },
+          "message": "Missing H2: 'What is Premium Payment Mode or Frequency?'"
+        },
+        {
+          "type": "missing_heading",
+          "bbox": {
+            "x": 132,
+            "y": 25737.890625,
+            "width": 736.78125,
+            "height": 72
+          },
+          "message": "Missing H2: 'What is Life Insurance Premium?'"
+        },
+        {
+          "type": "heading_modified",
+          "bbox": {
+            "x": 96,
+            "y": 3979.3828125,
+            "width": 933,
+            "height": 144
+          },
+          "message": "H3 changed: expected 'Get Coverage Against Cancer + 63 Critical Illness at just \u20b9542/month@>', found 'Invest \u20b915K/Month Build a \u20b94.24 Cr$4 Corpus at Maturity!'"
+        },
+        {
+          "type": "heading_modified",
+          "bbox": {
+            "x": 96,
+            "y": 8267.8359375,
+            "width": 400.5,
+            "height": 288
+          },
+          "message": "H3 changed: expected '\u20b92 Lakh Crore Assets Under Management', found '\u20b91.7 Lakh Crore Asset Under Management'"
+        }
+      ],
+      "images": [],
+      "buttons": [
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": 60,
+            "y": 1746,
+            "width": 170.71875,
+            "height": 96
+          },
+          "message": "Icon/generic button group '[role='button']|text:True|href:False|aria:': expected 20, found 17"
+        },
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": 705,
+            "y": 36,
+            "width": 264,
+            "height": 108
+          },
+          "message": "Icon/generic button group 'button|text:True|href:False|aria:': expected 53, found 43"
+        },
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": 2379,
+            "y": 26440.359375,
+            "width": 618,
+            "height": 99
+          },
+          "message": "Icon/generic button group 'button|text:True|href:False|aria:submit secondary button': expected 2, found 1"
+        },
+        {
+          "type": "icon_button_count_mismatch",
+          "bbox": {
+            "x": -2022,
+            "y": 811.125,
+            "width": 324,
+            "height": 99
+          },
+          "message": "Icon/generic button group 'button|text:True|href:True|aria:': expected 6, found 10"
+        }
+      ],
+      "canonical": [],
+      "meta": [],
+      "og_tags": [],
+      "links": [
+        {
+          "type": "link_count",
+          "ref_count": 128,
+          "live_count": 127,
+          "message": "Link count: expected 128, found 127"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 96,
+            "y": 34875.609375,
+            "width": 348.796875,
+            "height": 54
+          },
+          "message": "Missing link: "
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 540.796875,
+            "y": 34875.609375,
+            "width": 509.390625,
+            "height": 54
+          },
+          "message": "Missing link: "
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 1146.1875,
+            "y": 34875.609375,
+            "width": 395.0625,
+            "height": 54
+          },
+          "message": "Missing link: "
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": -3,
+            "y": 3181.59375,
+            "width": 238.546875,
+            "height": 66
+          },
+          "message": "Missing link: /investment-plans/investment-calculator?utm_theme=NRI"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": -3,
+            "y": 5220.5625,
+            "width": 238.546875,
+            "height": 66
+          },
+          "message": "Missing link: /investment-plans/investment-calculator?utm_theme=NRI"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": -3,
+            "y": 5568.375,
+            "width": 238.546875,
+            "height": 66
+          },
+          "message": "Missing link: /investment-plans/investment-calculator?utm_theme=NRI"
+        },
+        {
+          "type": "missing_link",
+          "bbox": {
+            "x": 126,
+            "y": 1659,
+            "width": 197.25,
+            "height": 57
+          },
+          "message": "Missing link: /cookie-policy"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 4248,
+            "y": 228,
+            "width": 1053,
+            "height": 733.125
+          },
+          "message": "Extra link: /term-insurance-plans/premium-calculator?utm_theme=1Crore"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 6354,
+            "y": 228,
+            "width": 1053,
+            "height": 733.125
+          },
+          "message": "Extra link: /term-insurance-plans/premium-calculator?utm_theme=1Crore"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": -1017,
+            "y": 228,
+            "width": 1053,
+            "height": 733.125
+          },
+          "message": "Extra link: /investment-plans/investment-calculator"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 3195,
+            "y": 228,
+            "width": 1053,
+            "height": 733.125
+          },
+          "message": "Extra link: /investment-plans/investment-calculator"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": 7407,
+            "y": 228,
+            "width": 1053,
+            "height": 733.125
+          },
+          "message": "Extra link: /investment-plans/investment-calculator"
+        },
+        {
+          "type": "extra_link",
+          "bbox": {
+            "x": -3,
+            "y": 5920.40625,
+            "width": 238.5234375,
+            "height": 64.5
+          },
+          "message": "Extra link: /investment-plans/investment-calculator?utm_theme=PensionRetirement"
+        }
+      ],
+      "visual_folds": [
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 0,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold0.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold0.png",
+          "diff_percent": 17.51,
+          "flagged": true,
+          "message": "Fold 0: 17.51% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 1,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold1.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold1.png",
+          "diff_percent": 53.69,
+          "flagged": true,
+          "message": "Fold 1: 53.69% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 2,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold2.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold2.png",
+          "diff_percent": 32.9,
+          "flagged": true,
+          "message": "Fold 2: 32.9% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 3,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold3.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold3.png",
+          "diff_percent": 16.75,
+          "flagged": true,
+          "message": "Fold 3: 16.75% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 4,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold4.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold4.png",
+          "diff_percent": 23.27,
+          "flagged": true,
+          "message": "Fold 4: 23.27% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 5,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold5.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold5.png",
+          "diff_percent": 50.47,
+          "flagged": true,
+          "message": "Fold 5: 50.47% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 6,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold6.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold6.png",
+          "diff_percent": 47.62,
+          "flagged": true,
+          "message": "Fold 6: 47.62% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 7,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold7.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold7.png",
+          "diff_percent": 56.82,
+          "flagged": true,
+          "message": "Fold 7: 56.82% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 8,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold8.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold8.png",
+          "diff_percent": 64.41,
+          "flagged": true,
+          "message": "Fold 8: 64.41% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 9,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold9.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold9.png",
+          "diff_percent": 17.54,
+          "flagged": true,
+          "message": "Fold 9: 17.54% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 10,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold10.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold10.png",
+          "diff_percent": 19.57,
+          "flagged": true,
+          "message": "Fold 10: 19.57% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 11,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold11.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold11.png",
+          "diff_percent": 30.13,
+          "flagged": true,
+          "message": "Fold 11: 30.13% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 12,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold12.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold12.png",
+          "diff_percent": 65.71,
+          "flagged": true,
+          "message": "Fold 12: 65.71% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 13,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold13.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold13.png",
+          "diff_percent": 30.83,
+          "flagged": true,
+          "message": "Fold 13: 30.83% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 14,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold14.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold14.png",
+          "diff_percent": 37.35,
+          "flagged": true,
+          "message": "Fold 14: 37.35% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 15,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold15.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold15.png",
+          "diff_percent": 30.32,
+          "flagged": true,
+          "message": "Fold 15: 30.32% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 16,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold16.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold16.png",
+          "diff_percent": 16.42,
+          "flagged": true,
+          "message": "Fold 16: 16.42% visually different"
+        },
+        {
+          "type": "visual_fold_diff",
+          "fold_index": 17,
+          "reference_image": "data/diffs/folds/ios-home-page/reference-fold17.png",
+          "live_image": "data/diffs/folds/ios-home-page/live-fold17.png",
+          "diff_percent": 15.4,
+          "flagged": true,
+          "message": "Fold 17: 15.4% visually different"
+        }
+      ]
+    }
+  }
+]

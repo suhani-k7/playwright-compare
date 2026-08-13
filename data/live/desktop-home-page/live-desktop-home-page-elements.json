@@ -1,0 +1,6608 @@
+{
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Life Insurance",
+      "bbox": {
+        "x": 35,
+        "y": 2082.453125,
+        "width": 249.5078125,
+        "height": 48
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "EXTENDED FUND OFFER",
+      "bbox": {
+        "x": -3647.2890625,
+        "y": 124.6875,
+        "width": 150.59375,
+        "height": 16
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "0% GST",
+      "bbox": {
+        "x": -2397.2890625,
+        "y": 124.6875,
+        "width": 44.375,
+        "height": 16
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "BSE Dividend Stability Index Fund",
+      "bbox": {
+        "x": -1162.71875,
+        "y": 124.6875,
+        "width": 191.8046875,
+        "height": 16
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "THIS INDEPENDENCE DAY",
+      "bbox": {
+        "x": 102.7109375,
+        "y": 124.6875,
+        "width": 158.984375,
+        "height": 16
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "EXTENDED FUND OFFER",
+      "bbox": {
+        "x": 1352.7109375,
+        "y": 124.6875,
+        "width": 150.59375,
+        "height": 16
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "0% GST",
+      "bbox": {
+        "x": 2602.7109375,
+        "y": 124.6875,
+        "width": 44.375,
+        "height": 16
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "BSE Dividend Stability Index Fund",
+      "bbox": {
+        "x": 3837.28125,
+        "y": 124.6875,
+        "width": 191.8046875,
+        "height": 16
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "THIS INDEPENDENCE DAY",
+      "bbox": {
+        "x": 5102.7109375,
+        "y": 124.6875,
+        "width": 158.984375,
+        "height": 16
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "EXTENDED FUND OFFER",
+      "bbox": {
+        "x": 6352.7109375,
+        "y": 124.6875,
+        "width": 150.59375,
+        "height": 16
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Insurance Policies for Every Need",
+      "bbox": {
+        "x": 23,
+        "y": 367.375,
+        "width": 1,
+        "height": 37.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Insurance Policies for Every Need",
+      "bbox": {
+        "x": 451.5859375,
+        "y": 382.875,
+        "width": 370.8359375,
+        "height": 30
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Insurance Policy for Every Need",
+      "bbox": {
+        "x": 410.7890625,
+        "y": 806.9609375,
+        "width": 452.4296875,
+        "height": 38.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Why 3 Crore+ Indians\nChoose Axis Max Life ?",
+      "bbox": {
+        "x": 32,
+        "y": 1566.453125,
+        "width": 405.703125,
+        "height": 172
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Simplifying Life Insurance For you",
+      "bbox": {
+        "x": 35,
+        "y": 2614.953125,
+        "width": 1204,
+        "height": 38.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What is Life Insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 2708.703125,
+        "width": 172.5,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "How does life insurance work?",
+      "bbox": {
+        "x": 75,
+        "y": 2776.703125,
+        "width": 227.203125,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What are the Benefits of Life Insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 2844.703125,
+        "width": 298.7578125,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What are the types of life insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 2912.703125,
+        "width": 272.2578125,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Plan Your Life Efficiently with Insurance",
+      "bbox": {
+        "x": 75,
+        "y": 2980.703125,
+        "width": 294.8515625,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What Happens When You Purchase Life Insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 3037.953125,
+        "width": 317.5078125,
+        "height": 43
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Why should you consider life insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 3116.703125,
+        "width": 300.2109375,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Why should you buy life insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 3184.703125,
+        "width": 263.5859375,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Why is buying life insurance a good idea?",
+      "bbox": {
+        "x": 75,
+        "y": 3252.703125,
+        "width": 308.7265625,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Who is most likely to buy life insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 3320.703125,
+        "width": 298.0546875,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What are the documents required to buy life insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 3377.953125,
+        "width": 317.5078125,
+        "height": 43
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "How to buy life insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 3456.703125,
+        "width": 196.9296875,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Why should I buy life insurance online?",
+      "bbox": {
+        "x": 75,
+        "y": 3524.703125,
+        "width": 292.1796875,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "How Much Life Insurance Do I Need?",
+      "bbox": {
+        "x": 75,
+        "y": 3592.703125,
+        "width": 276.2578125,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What are the factors that affect the life insurance premium?",
+      "bbox": {
+        "x": 75,
+        "y": 3649.953125,
+        "width": 317.5078125,
+        "height": 43
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "How to select the best life insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 3728.703125,
+        "width": 277.6484375,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Why choose Axis Max life insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 3796.703125,
+        "width": 272.9296875,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Built on the Foundation of Max Life Insurance \u2013 Backed by the Strength of Axis B",
+      "bbox": {
+        "x": 75,
+        "y": 3843.203125,
+        "width": 317.5078125,
+        "height": 64.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Max Life Insurance is now Axis Max Life Insurance",
+      "bbox": {
+        "x": 75,
+        "y": 3921.953125,
+        "width": 317.5078125,
+        "height": 43
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Popular Axis Max Life Insurance Plans",
+      "bbox": {
+        "x": 75,
+        "y": 4000.703125,
+        "width": 284.1328125,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "How to file a life insurance claim?",
+      "bbox": {
+        "x": 75,
+        "y": 4068.703125,
+        "width": 248.9921875,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What are the Payout Options Available with Axis Max Life Insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 4125.953125,
+        "width": 317.5078125,
+        "height": 43
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What are the documents required to file a life insurance claim?",
+      "bbox": {
+        "x": 75,
+        "y": 4193.953125,
+        "width": 317.5078125,
+        "height": 43
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Additional documents required on basis of cause of death",
+      "bbox": {
+        "x": 75,
+        "y": 4261.953125,
+        "width": 317.5078125,
+        "height": 43
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Important terms related to life insurance",
+      "bbox": {
+        "x": 75,
+        "y": 4340.703125,
+        "width": 306.484375,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Why Should NRIs Buy Life Insurance in India?",
+      "bbox": {
+        "x": 75,
+        "y": 4397.953125,
+        "width": 317.5078125,
+        "height": 43
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What are the Life Insurance Benefits for Young Professionals\u2019 Needs?",
+      "bbox": {
+        "x": 75,
+        "y": 4465.953125,
+        "width": 317.5078125,
+        "height": 43
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What are the Different Types of Death Not Covered in Life Insurance?",
+      "bbox": {
+        "x": 75,
+        "y": 4533.953125,
+        "width": 317.5078125,
+        "height": 43
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What is Life Insurance Policy?",
+      "bbox": {
+        "x": 75,
+        "y": 4612.703125,
+        "width": 220.4375,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "What is an Insurance Policy?",
+      "bbox": {
+        "x": 75,
+        "y": 4680.703125,
+        "width": 212.2578125,
+        "height": 21.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Badhta Bharosa with 99.8%\nDeath Claims Paid Ratio^",
+      "bbox": {
+        "x": 48,
+        "y": 3220.953125,
+        "width": 1210,
+        "height": 96
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Useful Resources for Customers",
+      "bbox": {
+        "x": 35.0390625,
+        "y": 3775.953125,
+        "width": 1203.921875,
+        "height": 44
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Real Folks with Real Stories!",
+      "bbox": {
+        "x": 35.2578125,
+        "y": 4501.765625,
+        "width": 416,
+        "height": 112
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Axis Max Life's Best selling Insurance Policy",
+      "bbox": {
+        "x": 35.515625,
+        "y": 5017.109375,
+        "width": 619.2109375,
+        "height": 48
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Awards",
+      "bbox": {
+        "x": 24,
+        "y": 6128.7421875,
+        "width": 1226,
+        "height": 48
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Companies who\u2019ve trusted Axis Max Life Insurance",
+      "bbox": {
+        "x": 35.0390625,
+        "y": 6921.78125,
+        "width": 254.109375,
+        "height": 154
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Contact Us",
+      "bbox": {
+        "x": 603.5859375,
+        "y": 7367.296875,
+        "width": 157.6875,
+        "height": 44
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "FREQUENTLY ASKED QUESTIONS",
+      "bbox": {
+        "x": 35,
+        "y": 7794.8125,
+        "width": 1204,
+        "height": 43.5
+      }
+    },
+    {
+      "tag": "h2",
+      "text": "Popular Searches",
+      "bbox": {
+        "x": 0,
+        "y": 8454.8046875,
+        "width": 1274,
+        "height": 38.5
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "<span style=\"color: #1E3A5F;\">Protect Your Family with Term Plan</span>",
+      "bbox": {
+        "x": 23,
+        "y": 404.875,
+        "width": 1,
+        "height": 27
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "<span style=\"color: #1E3A5F;\">Grow Your Wealth with Saving Plan</span>",
+      "bbox": {
+        "x": 23,
+        "y": 802.7734375,
+        "width": 1,
+        "height": 27
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "<span style=\"color: #1E3A5F;\">Protect Your Family with Term Plan</span>",
+      "bbox": {
+        "x": 23,
+        "y": 1200.671875,
+        "width": 1,
+        "height": 27
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "<span style=\"color: #1E3A5F;\">Grow Your Wealth with Saving Plan</span>",
+      "bbox": {
+        "x": 23,
+        "y": 1598.5703125,
+        "width": 1,
+        "height": 27
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Invest \u20b915K/Month Build a \u20b94.24 Cr$4 Corpus at Maturity!",
+      "bbox": {
+        "x": 48,
+        "y": 963.453125,
+        "width": 623.2109375,
+        "height": 30
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "99.8% Death Claims Paid Ratio",
+      "bbox": {
+        "x": 48,
+        "y": 1826.453125,
+        "width": 258,
+        "height": 48
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "\u20b92,191,857 Crore Sum Assured",
+      "bbox": {
+        "x": 353.5,
+        "y": 1850.4453125,
+        "width": 258,
+        "height": 48
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "\u20b91.7 Lakh Crore Asset Under Management",
+      "bbox": {
+        "x": 659,
+        "y": 1850.4453125,
+        "width": 258,
+        "height": 48
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "405 Branch - Touchpoints of Trust",
+      "bbox": {
+        "x": 964.5,
+        "y": 1850.453125,
+        "width": 258,
+        "height": 48
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Why Should You Have Life Insurance?",
+      "bbox": {
+        "x": 47,
+        "y": 7937.5625,
+        "width": 268.8046875,
+        "height": 19.5
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Can I Choose the Policy Term and Premium Payment Term When Buying Life Insurance",
+      "bbox": {
+        "x": 47,
+        "y": 7993.5625,
+        "width": 614.8359375,
+        "height": 19.5
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "What Are Life Insurance Quotes?",
+      "bbox": {
+        "x": 47,
+        "y": 8049.5625,
+        "width": 238.3203125,
+        "height": 19.5
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Who Needs Life Insurance the Most?",
+      "bbox": {
+        "x": 47,
+        "y": 8105.5625,
+        "width": 263.1875,
+        "height": 19.5
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "What are the Types of Life Insurance Plans?",
+      "bbox": {
+        "x": 47,
+        "y": 8161.5625,
+        "width": 308.671875,
+        "height": 19.5
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "What Are the Key Factors That Affect Life Insurance Premiums?",
+      "bbox": {
+        "x": 47,
+        "y": 8217.5625,
+        "width": 451.75,
+        "height": 19.5
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "What Are the Uses of Life Insurance?",
+      "bbox": {
+        "x": 47,
+        "y": 8273.5625,
+        "width": 264.1328125,
+        "height": 19.5
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "Do I get survival benefits under my life insurance policy?",
+      "bbox": {
+        "x": 47,
+        "y": 8329.5625,
+        "width": 396.1953125,
+        "height": 19.5
+      }
+    },
+    {
+      "tag": "h3",
+      "text": "DISCLAIMERS",
+      "bbox": {
+        "x": 99,
+        "y": 11256.2890625,
+        "width": 111.21875,
+        "height": 18
+      }
+    }
+  ],
+  "images": [
+    {
+      "alt": "",
+      "src": "https://neouat.maxlifeinsurance.com/static-page/assets/DESKTOP%20HEADER%20%281%29.png",
+      "phash": null,
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1274,
+        "height": 85
+      }
+    },
+    {
+      "alt": "Logo of axis max life insurance graphic",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/axis-max-life-insurance-logo.svg",
+      "phash": null,
+      "bbox": {
+        "x": 12,
+        "y": 23.046875,
+        "width": 101.8828125,
+        "height": 38.8984375
+      }
+    },
+    {
+      "alt": "background-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/NFO_Savings_Desktop%20%282%29.png",
+      "phash": null,
+      "bbox": {
+        "x": -1238,
+        "y": 96,
+        "width": 1250,
+        "height": 217.7265625
+      }
+    },
+    {
+      "alt": "Nfo badge icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Rupee.png",
+      "phash": null,
+      "bbox": {
+        "x": -1162.71875,
+        "y": 126.6875,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "decorative-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Frame%201171277596%20%281%29.svg",
+      "phash": null,
+      "bbox": {
+        "x": -463,
+        "y": 115.375,
+        "width": 165,
+        "height": 184
+      }
+    },
+    {
+      "alt": "person-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Frame%201171277600.png",
+      "phash": null,
+      "bbox": {
+        "x": -798,
+        "y": 96.375,
+        "width": 410,
+        "height": 224
+      }
+    },
+    {
+      "alt": "background-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/slide-1-bg.png",
+      "phash": null,
+      "bbox": {
+        "x": 435,
+        "y": 96,
+        "width": 827,
+        "height": 224
+      }
+    },
+    {
+      "alt": "Nfo badge icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Rupee%20%281%29%201.png",
+      "phash": null,
+      "bbox": {
+        "x": 87.28125,
+        "y": 126.6875,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "gradient-bg",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Ellipse%202.png",
+      "phash": null,
+      "bbox": {
+        "x": 745,
+        "y": 120.375,
+        "width": 373,
+        "height": 200
+      }
+    },
+    {
+      "alt": "decorative-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/slide-1-image-2.png",
+      "phash": null,
+      "bbox": {
+        "x": 745,
+        "y": 108.375,
+        "width": 382,
+        "height": 212
+      }
+    },
+    {
+      "alt": "person-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/slide-1-image-1.png",
+      "phash": null,
+      "bbox": {
+        "x": 704,
+        "y": 126.375,
+        "width": 148,
+        "height": 194
+      }
+    },
+    {
+      "alt": "background-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/mobile-slide-1-bg.png",
+      "phash": null,
+      "bbox": {
+        "x": 2385,
+        "y": 96,
+        "width": 127,
+        "height": 176
+      }
+    },
+    {
+      "alt": "person-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/rohitnewimg%20%281%29.png",
+      "phash": null,
+      "bbox": {
+        "x": 2215.2109375,
+        "y": 115.375,
+        "width": 120.7890625,
+        "height": 205
+      }
+    },
+    {
+      "alt": "background-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Banner%20_%20Desktop.png",
+      "phash": null,
+      "bbox": {
+        "x": 2512,
+        "y": 96,
+        "width": 1250,
+        "height": 217.7265625
+      }
+    },
+    {
+      "alt": "Nfo badge icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Rupee.png",
+      "phash": null,
+      "bbox": {
+        "x": 2587.28125,
+        "y": 126.6875,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "decorative-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Frame%201171277602.png",
+      "phash": null,
+      "bbox": {
+        "x": 3326,
+        "y": 104.375,
+        "width": 126,
+        "height": 138
+      }
+    },
+    {
+      "alt": "person-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/MAX-LIFE-RS_12741%201%20%281%29.png",
+      "phash": null,
+      "bbox": {
+        "x": 3104,
+        "y": 96.375,
+        "width": 258,
+        "height": 224
+      }
+    },
+    {
+      "alt": "background-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/NFO_Savings_Desktop%20%282%29.png",
+      "phash": null,
+      "bbox": {
+        "x": 3762,
+        "y": 96,
+        "width": 1250,
+        "height": 217.7265625
+      }
+    },
+    {
+      "alt": "Nfo badge icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Rupee.png",
+      "phash": null,
+      "bbox": {
+        "x": 3837.28125,
+        "y": 126.6875,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "decorative-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Frame%201171277596%20%281%29.svg",
+      "phash": null,
+      "bbox": {
+        "x": 4537,
+        "y": 115.375,
+        "width": 165,
+        "height": 184
+      }
+    },
+    {
+      "alt": "person-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Frame%201171277600.png",
+      "phash": null,
+      "bbox": {
+        "x": 4202,
+        "y": 96.375,
+        "width": 410,
+        "height": 224
+      }
+    },
+    {
+      "alt": "background-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/slide-1-bg.png",
+      "phash": null,
+      "bbox": {
+        "x": 5435,
+        "y": 96,
+        "width": 827,
+        "height": 224
+      }
+    },
+    {
+      "alt": "Nfo badge icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Rupee%20%281%29%201.png",
+      "phash": null,
+      "bbox": {
+        "x": 5087.28125,
+        "y": 126.6875,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "gradient-bg",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Ellipse%202.png",
+      "phash": null,
+      "bbox": {
+        "x": 5745,
+        "y": 120.375,
+        "width": 373,
+        "height": 200
+      }
+    },
+    {
+      "alt": "decorative-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/slide-1-image-2.png",
+      "phash": null,
+      "bbox": {
+        "x": 5745,
+        "y": 108.375,
+        "width": 382,
+        "height": 212
+      }
+    },
+    {
+      "alt": "person-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/slide-1-image-1.png",
+      "phash": null,
+      "bbox": {
+        "x": 5704,
+        "y": 126.375,
+        "width": 148,
+        "height": 194
+      }
+    },
+    {
+      "alt": "background-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/mobile-slide-1-bg.png",
+      "phash": null,
+      "bbox": {
+        "x": 7385,
+        "y": 96,
+        "width": 127,
+        "height": 176
+      }
+    },
+    {
+      "alt": "person-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/rohitnewimg%20%281%29.png",
+      "phash": null,
+      "bbox": {
+        "x": 7215.2109375,
+        "y": 115.375,
+        "width": 120.7890625,
+        "height": 205
+      }
+    },
+    {
+      "alt": "background-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Banner%20_%20Desktop.png",
+      "phash": null,
+      "bbox": {
+        "x": 7512,
+        "y": 96,
+        "width": 1250,
+        "height": 217.7265625
+      }
+    },
+    {
+      "alt": "Nfo badge icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Rupee.png",
+      "phash": null,
+      "bbox": {
+        "x": 7587.28125,
+        "y": 126.6875,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "decorative-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Frame%201171277602.png",
+      "phash": null,
+      "bbox": {
+        "x": 8326,
+        "y": 104.375,
+        "width": 126,
+        "height": 138
+      }
+    },
+    {
+      "alt": "person-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/MAX-LIFE-RS_12741%201%20%281%29.png",
+      "phash": null,
+      "bbox": {
+        "x": 8104,
+        "y": 96.375,
+        "width": 258,
+        "height": 224
+      }
+    },
+    {
+      "alt": "background-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/NFO_Savings_Desktop%20%282%29.png",
+      "phash": null,
+      "bbox": {
+        "x": 8762,
+        "y": 96,
+        "width": 1250,
+        "height": 217.7265625
+      }
+    },
+    {
+      "alt": "Nfo badge icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Rupee.png",
+      "phash": null,
+      "bbox": {
+        "x": 8837.28125,
+        "y": 126.6875,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "decorative-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Frame%201171277596%20%281%29.svg",
+      "phash": null,
+      "bbox": {
+        "x": 9537,
+        "y": 115.375,
+        "width": 165,
+        "height": 184
+      }
+    },
+    {
+      "alt": "person-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Frame%201171277600.png",
+      "phash": null,
+      "bbox": {
+        "x": 9202,
+        "y": 96.375,
+        "width": 410,
+        "height": 224
+      }
+    },
+    {
+      "alt": "birds icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/ChatGPT%20Image%20Aug%206%2C%202026%20at%2002_20_23%20PM%202.png",
+      "phash": null,
+      "bbox": {
+        "x": 24,
+        "y": 368.375,
+        "width": 134,
+        "height": 59
+      }
+    },
+    {
+      "alt": "flag icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/01%20%282%29.png",
+      "phash": null,
+      "bbox": {
+        "x": 215.5859375,
+        "y": 392.875,
+        "width": 210,
+        "height": 10
+      }
+    },
+    {
+      "alt": "flag icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/02.png",
+      "phash": null,
+      "bbox": {
+        "x": 848.421875,
+        "y": 392.875,
+        "width": 210,
+        "height": 10
+      }
+    },
+    {
+      "alt": "birds icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/ChatGPT%20Image%20Aug%206%2C%202026%20at%2002_20_23%20PM%203.png",
+      "phash": null,
+      "bbox": {
+        "x": 1116,
+        "y": 368.375,
+        "width": 134,
+        "height": 59
+      }
+    },
+    {
+      "alt": "",
+      "src": "https://neouat.maxlifeinsurance.com/static-page/assets/9fdabad6f67329dae0b402320df3ebcea60bbc04.gif",
+      "phash": null,
+      "bbox": {
+        "x": 366.79998779296875,
+        "y": 352.17498779296875,
+        "width": 348.39996337890625,
+        "height": 348.4000244140625
+      }
+    },
+    {
+      "alt": "timer icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/offerNewSvg.svg",
+      "phash": null,
+      "bbox": {
+        "x": 53,
+        "y": 551.875,
+        "width": 13,
+        "height": 13
+      }
+    },
+    {
+      "alt": "image Icon%20Container%20%2811%29%20%281%29",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Icon%20Container%20%2811%29%20%281%29.svg",
+      "phash": null,
+      "bbox": {
+        "x": 179,
+        "y": 606.4609375,
+        "width": 46,
+        "height": 46
+      }
+    },
+    {
+      "alt": "image Icon%20Container%20%283%29",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Icon%20Container%20%283%29.svg",
+      "phash": null,
+      "bbox": {
+        "x": 389,
+        "y": 603.46875,
+        "width": 46,
+        "height": 46
+      }
+    },
+    {
+      "alt": "image Icon%20Container%20%2811%29%20%281%29",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Icon%20Container%20%2811%29%20%281%29.svg",
+      "phash": null,
+      "bbox": {
+        "x": 599,
+        "y": 587.46875,
+        "width": 46,
+        "height": 46
+      }
+    },
+    {
+      "alt": "",
+      "src": "https://neouat.maxlifeinsurance.com/static-page/assets/9fdabad6f67329dae0b402320df3ebcea60bbc04.gif",
+      "phash": null,
+      "bbox": {
+        "x": 989.7999877929688,
+        "y": 352.17498779296875,
+        "width": 348.39996337890625,
+        "height": 348.4000244140625
+      }
+    },
+    {
+      "alt": "image Icon%20Container%20%2811%29%20%281%29",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Icon%20Container%20%2811%29%20%281%29.svg",
+      "phash": null,
+      "bbox": {
+        "x": 802,
+        "y": 591.5078125,
+        "width": 46,
+        "height": 46
+      }
+    },
+    {
+      "alt": "image Icon%20Container%20%285%29%20%281%29",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Icon%20Container%20%285%29%20%281%29.svg",
+      "phash": null,
+      "bbox": {
+        "x": 1012,
+        "y": 591.5078125,
+        "width": 46,
+        "height": 46
+      }
+    },
+    {
+      "alt": "image Icon%20Container%20%282%29%20%281%29",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Icon%20Container%20%282%29%20%281%29.svg",
+      "phash": null,
+      "bbox": {
+        "x": 1222,
+        "y": 591.5078125,
+        "width": 46,
+        "height": 46
+      }
+    },
+    {
+      "alt": "icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/savemoney-icon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 60,
+        "y": 910.453125,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "alt": "icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/umbrella-inactive.svg",
+      "phash": null,
+      "bbox": {
+        "x": 238.46875,
+        "y": 907.953125,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "alt": "icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/retirement.svg",
+      "phash": null,
+      "bbox": {
+        "x": 426.078125,
+        "y": 908.390625,
+        "width": 20,
+        "height": 19.125
+      }
+    },
+    {
+      "alt": "icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/child.svg",
+      "phash": null,
+      "bbox": {
+        "x": 626.1328125,
+        "y": 908.7265625,
+        "width": 20,
+        "height": 18.4609375
+      }
+    },
+    {
+      "alt": "metric-icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/IKBKN-Logo.webp",
+      "phash": null,
+      "bbox": {
+        "x": 48,
+        "y": 1790.453125,
+        "width": 100.7109375,
+        "height": 24
+      }
+    },
+    {
+      "alt": "metric-icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/TrustMetrics_02.webp",
+      "phash": null,
+      "bbox": {
+        "x": 353.5,
+        "y": 1790.453125,
+        "width": 50.875,
+        "height": 47.9921875
+      }
+    },
+    {
+      "alt": "metric-icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/TrustMetrics_03.webp",
+      "phash": null,
+      "bbox": {
+        "x": 659,
+        "y": 1790.453125,
+        "width": 41.9140625,
+        "height": 47.9921875
+      }
+    },
+    {
+      "alt": "metric-icon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/TrustMetrics_04.webp",
+      "phash": null,
+      "bbox": {
+        "x": 964.5,
+        "y": 1790.453125,
+        "width": 38,
+        "height": 48
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 400.5078125,
+        "y": 2712.453125,
+        "width": 8,
+        "height": 14
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 2783.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 2851.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 2919.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 2987.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3055.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3123.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3191.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3259.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3327.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3395.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3463.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3531.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3599.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3667.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3735.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3803.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3871.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 3939.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 4007.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 4075.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 4143.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 4211.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 4279.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 4347.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 4415.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 4483.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 4551.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 4619.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "chevron-right",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/announcement-chevron-left.webp",
+      "phash": null,
+      "bbox": {
+        "x": 397.5078125,
+        "y": 4687.453125,
+        "width": 14,
+        "height": 8
+      }
+    },
+    {
+      "alt": "mobile-claim-graph-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/IKBKN%20Print%20Final_Desktop_674x419%20px%20%283%29.jpg",
+      "phash": null,
+      "bbox": {
+        "x": 0,
+        "y": 3316.953125,
+        "width": 672.7734375,
+        "height": 419
+      }
+    },
+    {
+      "alt": "image Claim%20Settlement",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Claim%20Settlement.webp",
+      "phash": null,
+      "bbox": {
+        "x": 581,
+        "y": 3285.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Customer%20Support",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Customer%20Support.webp",
+      "phash": null,
+      "bbox": {
+        "x": 718.796875,
+        "y": 3366.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Fast%20Service",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Fast%20Service.webp",
+      "phash": null,
+      "bbox": {
+        "x": 718.796875,
+        "y": 3528.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Leaders%20in%20Service",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Leaders%20in%20Service.webp",
+      "phash": null,
+      "bbox": {
+        "x": 856.59375,
+        "y": 3117.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Payout",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Payout.webp",
+      "phash": null,
+      "bbox": {
+        "x": 856.59375,
+        "y": 3285.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Quality%20Assurance",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Quality%20Assurance.webp",
+      "phash": null,
+      "bbox": {
+        "x": 856.59375,
+        "y": 3609.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Speed",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Speed.webp",
+      "phash": null,
+      "bbox": {
+        "x": 994.3984375,
+        "y": 3117.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Support%20System",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Support%20System.webp",
+      "phash": null,
+      "bbox": {
+        "x": 994.3984375,
+        "y": 3366.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Trust",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Trust.webp",
+      "phash": null,
+      "bbox": {
+        "x": 994.3984375,
+        "y": 3690.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Claim%20Settlement",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Claim%20Settlement.webp",
+      "phash": null,
+      "bbox": {
+        "x": 1132.1953125,
+        "y": 3117.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Customer%20Support",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Customer%20Support.webp",
+      "phash": null,
+      "bbox": {
+        "x": 1132.1953125,
+        "y": 3285.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Claim%20Settlement",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Claim%20Settlement.webp",
+      "phash": null,
+      "bbox": {
+        "x": 1132.1953125,
+        "y": 3447.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Trust",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Trust.webp",
+      "phash": null,
+      "bbox": {
+        "x": 1132.1953125,
+        "y": 3609.453125,
+        "width": 125,
+        "height": 150
+      }
+    },
+    {
+      "alt": "image Bharosa_of_AMLI_240x360",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Bharosa_of_AMLI_240x360.webp",
+      "phash": null,
+      "bbox": {
+        "x": 35.0390625,
+        "y": 3881.453125,
+        "width": 240,
+        "height": 360
+      }
+    },
+    {
+      "alt": "Video Thumbnail",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcaseShareIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 241.0390625,
+        "y": 3903.453125,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "image videoCompHomepageShowcasePlayIcon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcasePlayIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 117.9921875,
+        "y": 4146.7265625,
+        "width": 10,
+        "height": 10.90625
+      }
+    },
+    {
+      "alt": "image Smart_Term_Plan_Plus_240x360",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Smart_Term_Plan_Plus_240x360.webp",
+      "phash": null,
+      "bbox": {
+        "x": 299.0390625,
+        "y": 3881.453125,
+        "width": 240,
+        "height": 360
+      }
+    },
+    {
+      "alt": "Video Thumbnail",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcaseShareIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 505.0390625,
+        "y": 3903.453125,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "image videoCompHomepageShowcasePlayIcon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcasePlayIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 381.9921875,
+        "y": 4146.7265625,
+        "width": 10,
+        "height": 10.90625
+      }
+    },
+    {
+      "alt": "image Term_Insurance_Explained_240x360",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Term_Insurance_Explained_240x360.webp",
+      "phash": null,
+      "bbox": {
+        "x": 563.0390625,
+        "y": 3881.453125,
+        "width": 240,
+        "height": 360
+      }
+    },
+    {
+      "alt": "Video Thumbnail",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcaseShareIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 769.0390625,
+        "y": 3903.453125,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "image videoCompHomepageShowcasePlayIcon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcasePlayIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 645.9921875,
+        "y": 4146.7265625,
+        "width": 10,
+        "height": 10.90625
+      }
+    },
+    {
+      "alt": "image Senior_Citizen_Insurance_240x361",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Senior_Citizen_Insurance_240x361.webp",
+      "phash": null,
+      "bbox": {
+        "x": 827.0390625,
+        "y": 3881.453125,
+        "width": 240,
+        "height": 360
+      }
+    },
+    {
+      "alt": "Video Thumbnail",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcaseShareIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 1033.0390625,
+        "y": 3903.453125,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "image videoCompHomepageShowcasePlayIcon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcasePlayIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 909.9921875,
+        "y": 4146.7265625,
+        "width": 10,
+        "height": 10.90625
+      }
+    },
+    {
+      "alt": "image Zero_GST_on_Insurance_240x360",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Zero_GST_on_Insurance_240x360.webp",
+      "phash": null,
+      "bbox": {
+        "x": 1091.0390625,
+        "y": 3881.453125,
+        "width": 240,
+        "height": 360
+      }
+    },
+    {
+      "alt": "Video Thumbnail",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcaseShareIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 1297.0390625,
+        "y": 3903.453125,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "image videoCompHomepageShowcasePlayIcon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcasePlayIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 1173.9921875,
+        "y": 4146.7265625,
+        "width": 10,
+        "height": 10.90625
+      }
+    },
+    {
+      "alt": "image Why_Timely_Retirement_240x360",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Why_Timely_Retirement_240x360.webp",
+      "phash": null,
+      "bbox": {
+        "x": 1355.0390625,
+        "y": 3881.453125,
+        "width": 240,
+        "height": 360
+      }
+    },
+    {
+      "alt": "Video Thumbnail",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcaseShareIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 1561.0390625,
+        "y": 3903.453125,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "image videoCompHomepageShowcasePlayIcon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcasePlayIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 1437.9921875,
+        "y": 4146.7265625,
+        "width": 10,
+        "height": 10.90625
+      }
+    },
+    {
+      "alt": "image Bharosa%20Talks",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Bharosa%20Talks.png",
+      "phash": null,
+      "bbox": {
+        "x": 1619.0390625,
+        "y": 3881.453125,
+        "width": 240,
+        "height": 360
+      }
+    },
+    {
+      "alt": "Video Thumbnail",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcaseShareIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 1825.0390625,
+        "y": 3903.453125,
+        "width": 12,
+        "height": 12
+      }
+    },
+    {
+      "alt": "image videoCompHomepageShowcasePlayIcon",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/videoCompHomepageShowcasePlayIcon.svg",
+      "phash": null,
+      "bbox": {
+        "x": 1701.9921875,
+        "y": 4146.7265625,
+        "width": 10,
+        "height": 10.90625
+      }
+    },
+    {
+      "alt": "message-icon-successStories",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/voicessubtitlleimage.svg",
+      "phash": null,
+      "bbox": {
+        "x": 35.2578125,
+        "y": 4478.5625,
+        "width": 16.7578125,
+        "height": 16
+      }
+    },
+    {
+      "alt": "image Smart%20GIFT%20logo",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Smart%20GIFT%20logo.png",
+      "phash": null,
+      "bbox": {
+        "x": 52.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 48
+      }
+    },
+    {
+      "alt": "image OSP%20PLUS%20LOGO",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/OSP%20PLUS%20LOGO.png",
+      "phash": null,
+      "bbox": {
+        "x": 372.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 39.71875
+      }
+    },
+    {
+      "alt": "image SWAG%20Par%20logo%404x",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/SWAG%20Par%20logo%404x.png",
+      "phash": null,
+      "bbox": {
+        "x": 692.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 48
+      }
+    },
+    {
+      "alt": "image Smart%20Vibe%20V03%20logo%404x",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Smart%20Vibe%20V03%20logo%404x.png",
+      "phash": null,
+      "bbox": {
+        "x": 1012.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 48
+      }
+    },
+    {
+      "alt": "image Axis%20Max%20Life%20SWAG%20V13%404x",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Axis%20Max%20Life%20SWAG%20V13%404x.png",
+      "phash": null,
+      "bbox": {
+        "x": 1332.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 48
+      }
+    },
+    {
+      "alt": "image FWAP%20logo%20%404x",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/FWAP%20logo%20%404x.png",
+      "phash": null,
+      "bbox": {
+        "x": 1652.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 48
+      }
+    },
+    {
+      "alt": "image STEP%20logo%404x",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/STEP%20logo%404x.png",
+      "phash": null,
+      "bbox": {
+        "x": 1972.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 46
+      }
+    },
+    {
+      "alt": "image STPP%20V02%20LOGO%404x",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/STPP%20V02%20LOGO%404x.png",
+      "phash": null,
+      "bbox": {
+        "x": 2292.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 46
+      }
+    },
+    {
+      "alt": "image SSPP%20logo%404x",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/SSPP%20logo%404x.png",
+      "phash": null,
+      "bbox": {
+        "x": 2612.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 46
+      }
+    },
+    {
+      "alt": "image SGPP%20LOGO%20V18%404x",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/SGPP%20LOGO%20V18%404x.png",
+      "phash": null,
+      "bbox": {
+        "x": 2932.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 46
+      }
+    },
+    {
+      "alt": "image SWAG%20PENSION%20logo%404x",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/SWAG%20PENSION%20logo%404x.png",
+      "phash": null,
+      "bbox": {
+        "x": 3252.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 46
+      }
+    },
+    {
+      "alt": "image GLIP%20Logo%404x",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/GLIP%20Logo%404x.png",
+      "phash": null,
+      "bbox": {
+        "x": 3572.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 46
+      }
+    },
+    {
+      "alt": "image FYPP%404x",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/FYPP%404x.png",
+      "phash": null,
+      "bbox": {
+        "x": 3892.0390625,
+        "y": 5196.609375,
+        "width": 93,
+        "height": 46
+      }
+    },
+    {
+      "alt": "logo",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/logo-patch-axismax-new%20%281%29.webp",
+      "phash": null,
+      "bbox": {
+        "x": 27.015625,
+        "y": 5783.71875,
+        "width": 113.0546875,
+        "height": 37.7890625
+      }
+    },
+    {
+      "alt": "main-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/growthAapkiBharosaHamara%20%281%29.webp",
+      "phash": null,
+      "bbox": {
+        "x": 90.875,
+        "y": 5820.609375,
+        "width": 213,
+        "height": 176.578125
+      }
+    },
+    {
+      "alt": "left-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/IKBKN-Logo.webp",
+      "phash": null,
+      "bbox": {
+        "x": 935.6875,
+        "y": 5821.015625,
+        "width": 79,
+        "height": 83
+      }
+    },
+    {
+      "alt": "right-image",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/1.74Crore-new.webp",
+      "phash": null,
+      "bbox": {
+        "x": 1079.1875,
+        "y": 5821.015625,
+        "width": 72,
+        "height": 83
+      }
+    },
+    {
+      "alt": "right-arrow-Awards",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/chevron-right.svg",
+      "phash": null,
+      "bbox": {
+        "x": 1247,
+        "y": 6355.4921875,
+        "width": 10,
+        "height": 17.4921875
+      }
+    },
+    {
+      "alt": "appStoreImage",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/DA01.webp",
+      "phash": null,
+      "bbox": {
+        "x": 175,
+        "y": 6736.265625,
+        "width": 185,
+        "height": 63
+      }
+    },
+    {
+      "alt": "playStoreImage",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Playstore.svg",
+      "phash": null,
+      "bbox": {
+        "x": 376,
+        "y": 6736.265625,
+        "width": 185,
+        "height": 63
+      }
+    },
+    {
+      "alt": "QRcode",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/image%20189.svg",
+      "phash": null,
+      "bbox": {
+        "x": 925.5,
+        "y": 6668.28125,
+        "width": 118,
+        "height": 118
+      }
+    },
+    {
+      "alt": "image companies-desktop-updated",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/companies-desktop-updated.png",
+      "phash": null,
+      "bbox": {
+        "x": 334,
+        "y": 6931.78125,
+        "width": 940,
+        "height": 322
+      }
+    },
+    {
+      "alt": "contactUsLadyImage",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/illustration%20%281%29.svg",
+      "phash": null,
+      "bbox": {
+        "x": 42.078125,
+        "y": 7351.7734375,
+        "width": 442.3125,
+        "height": 342.4609375
+      }
+    },
+    {
+      "alt": "contactDisplay1",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/Group.svg",
+      "phash": null,
+      "bbox": {
+        "x": 623.5859375,
+        "y": 7452.296875,
+        "width": 26,
+        "height": 26
+      }
+    },
+    {
+      "alt": "contactDisplay2",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/mail.svg",
+      "phash": null,
+      "bbox": {
+        "x": 626.5859375,
+        "y": 7532.796875,
+        "width": 20,
+        "height": 17
+      }
+    },
+    {
+      "alt": "contactDisplay3",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/call.svg",
+      "phash": null,
+      "bbox": {
+        "x": 626.5859375,
+        "y": 7607.296875,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "alt": "contactDisplay4",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/call.svg",
+      "phash": null,
+      "bbox": {
+        "x": 626.5859375,
+        "y": 7683.296875,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "alt": "bima-bharosa",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/bima_barosa_webp.webp",
+      "phash": null,
+      "bbox": {
+        "x": 109,
+        "y": 10411.8046875,
+        "width": 104,
+        "height": 46.3828125
+      }
+    },
+    {
+      "alt": "data-gov-in",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/data-gov-in.webp",
+      "phash": null,
+      "bbox": {
+        "x": 916,
+        "y": 10175.8046875,
+        "width": 104,
+        "height": 78
+      }
+    },
+    {
+      "alt": "India-Gov-In",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/india-gov-in.webp",
+      "phash": null,
+      "bbox": {
+        "x": 916,
+        "y": 10265.8046875,
+        "width": 104,
+        "height": 78
+      }
+    },
+    {
+      "alt": "AppstoreImg",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/appstore-icon.webp",
+      "phash": null,
+      "bbox": {
+        "x": 922,
+        "y": 10355.8046875,
+        "width": 148,
+        "height": 43.8828125
+      }
+    },
+    {
+      "alt": "GooglePlayStoreImg",
+      "src": "https://neouat.axismaxlife.com/static-page/assets/googleapp-icon.webp",
+      "phash": null,
+      "bbox": {
+        "x": 922,
+        "y": 10415.6875,
+        "width": 148,
+        "height": 44
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Term Insurance submenu with 6 items",
+      "href": "",
+      "bbox": {
+        "x": 244.7578125,
+        "y": 32.5,
+        "width": 17.828125,
+        "height": 20
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Investment Plans submenu with 7 items",
+      "href": "",
+      "bbox": {
+        "x": 387.8203125,
+        "y": 32.5,
+        "width": 17.8359375,
+        "height": 20
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Healthcare Plans submenu with 2 items",
+      "href": "",
+      "bbox": {
+        "x": 527.546875,
+        "y": 32.5,
+        "width": 17.8359375,
+        "height": 20
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "NRI Plans submenu with 2 items",
+      "href": "",
+      "bbox": {
+        "x": 626.703125,
+        "y": 32.5,
+        "width": 17.7734375,
+        "height": 20
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Calculators submenu with 4 items",
+      "href": "",
+      "bbox": {
+        "x": 743.515625,
+        "y": 32.5,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Claims submenu with 1 items",
+      "href": "",
+      "bbox": {
+        "x": 833.671875,
+        "y": 32.5,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Track Policy",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 877.671875,
+        "y": -5,
+        "width": 65.7890625,
+        "height": 95
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Join as Advisor",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 999.9453125,
+        "y": 16,
+        "width": 115.34375,
+        "height": 53
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Login",
+      "aria_label": "Login menu with 2 items",
+      "href": "",
+      "bbox": {
+        "x": 1131.2890625,
+        "y": 24,
+        "width": 90.7109375,
+        "height": 37
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Hamburger Main menu",
+      "href": "",
+      "bbox": {
+        "x": 1238,
+        "y": 30.5,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Previous",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 24,
+        "y": 188.1875,
+        "width": 24,
+        "height": 40
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "/investment-plans/investment-calculator",
+      "bbox": {
+        "x": -3516.1669921875,
+        "y": 260.375,
+        "width": 116.9921875,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Check Premium",
+      "aria_label": "",
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=1Crore",
+      "bbox": {
+        "x": -2330.095458984375,
+        "y": 260.375,
+        "width": 157.2578125,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": -1135.758056640625,
+        "y": 260.375,
+        "width": 116.9921875,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Check Premium",
+      "aria_label": "",
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=1Crore",
+      "bbox": {
+        "x": 90.07177734375,
+        "y": 260.375,
+        "width": 157.2578125,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "/investment-plans/investment-calculator",
+      "bbox": {
+        "x": 1328.130859375,
+        "y": 260.375,
+        "width": 116.9921875,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Check Premium",
+      "aria_label": "",
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=1Crore",
+      "bbox": {
+        "x": 2576,
+        "y": 260.375,
+        "width": 157.2578125,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 3826,
+        "y": 260.375,
+        "width": 116.9921875,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Check Premium",
+      "aria_label": "",
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=1Crore",
+      "bbox": {
+        "x": 5076,
+        "y": 260.375,
+        "width": 157.2578125,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "/investment-plans/investment-calculator",
+      "bbox": {
+        "x": 6326,
+        "y": 260.375,
+        "width": 116.9921875,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Next",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1226,
+        "y": 188.1875,
+        "width": 24,
+        "height": 40
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Check Premium",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 57,
+        "y": 690.9609375,
+        "width": 167,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Check Premium",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 267,
+        "y": 690.9609375,
+        "width": 167,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Check Premium",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 477,
+        "y": 690.9609375,
+        "width": 167,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Scroll left",
+      "href": "",
+      "bbox": {
+        "x": 306.5,
+        "y": 751.9609375,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Scroll right",
+      "href": "",
+      "bbox": {
+        "x": 329.5,
+        "y": 751.9609375,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 680,
+        "y": 686.9140625,
+        "width": 167,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 890,
+        "y": 686.9140625,
+        "width": 167,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1100,
+        "y": 686.9140625,
+        "width": 167,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Scroll left",
+      "href": "",
+      "bbox": {
+        "x": 929.5,
+        "y": 751.9609375,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Scroll right",
+      "href": "",
+      "bbox": {
+        "x": 952.5,
+        "y": 751.9609375,
+        "width": 15,
+        "height": 15
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "nri",
+      "href": "",
+      "bbox": {
+        "x": 48,
+        "y": 1044.453125,
+        "width": 48,
+        "height": 28
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "+91",
+      "aria_label": "selected country",
+      "href": "",
+      "bbox": {
+        "x": 65,
+        "y": 1157.453125,
+        "width": 27.4609375,
+        "height": 46
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 48,
+        "y": 1356.453125,
+        "width": 1178,
+        "height": 48
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Financial Security",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 2356.953125,
+        "width": 223.6484375,
+        "height": 51.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Child Future Planning",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 295.6484375,
+        "y": 2356.953125,
+        "width": 250.5,
+        "height": 51.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Corpus Over Long Term",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 559.1484375,
+        "y": 2356.953125,
+        "width": 271.3671875,
+        "height": 51.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Disciplined Investments",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 843.515625,
+        "y": 2356.953125,
+        "width": 272.3828125,
+        "height": 51.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Tax Saving",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1128.8984375,
+        "y": 2356.953125,
+        "width": 146.703125,
+        "height": 51.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Retirement Planning",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1288.6015625,
+        "y": 2356.953125,
+        "width": 241.0234375,
+        "height": 51.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Previous tab",
+      "href": "",
+      "bbox": {
+        "x": 595,
+        "y": 2545.953125,
+        "width": 38,
+        "height": 38
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Next tab",
+      "href": "",
+      "bbox": {
+        "x": 641,
+        "y": 2545.953125,
+        "width": 38,
+        "height": 38
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What is Life Insurance?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 2689.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "How does life insurance work?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 2757.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What are the Benefits of Life Insurance?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 2825.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What are the types of life insurance?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 2893.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Plan Your Life Efficiently with Insurance",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 2961.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What Happens When You Purchase Life Insurance?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3029.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Why should you consider life insurance?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3097.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Why should you buy life insurance?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3165.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Why is buying life insurance a good idea?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3233.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Who is most likely to buy life insurance?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3301.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What are the documents required to buy life insurance?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3369.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "How to buy life insurance?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3437.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Why should I buy life insurance online?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3505.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "How Much Life Insurance Do I Need?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3573.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What are the factors that affect the life insurance premium?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3641.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "How to select the best life insurance?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3709.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Why choose Axis Max life insurance?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3777.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Built on the Foundation of Max Life Insurance \u2013 Backed by th",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3845.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Max Life Insurance is now Axis Max Life Insurance",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3913.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Popular Axis Max Life Insurance Plans",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 3981.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "How to file a life insurance claim?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 4049.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Play Now",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 101.0390625,
+        "y": 4136.1796875,
+        "width": 108,
+        "height": 32
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What are the documents required to file a life insurance cla",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 4185.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Additional documents required on basis of cause of death",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 4253.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Important terms related to life insurance",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 4321.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Why Should NRIs Buy Life Insurance in India?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 4389.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What are the Life Insurance Benefits for Young Professionals",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 4457.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What are the Different Types of Death Not Covered in Life In",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 4525.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What is Life Insurance Policy?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 4593.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What is an Insurance Policy?",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 59,
+        "y": 4661.453125,
+        "width": 373.5078125,
+        "height": 60
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Video",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 35.0390625,
+        "y": 3827.953125,
+        "width": 66.96875,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Article",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 102.0078125,
+        "y": 3827.953125,
+        "width": 71.84375,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Calculators",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 173.8515625,
+        "y": 3827.953125,
+        "width": 101.4140625,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 235.0390625,
+        "y": 3897.453125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 499.0390625,
+        "y": 3897.453125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Play Now",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 365.0390625,
+        "y": 4136.1796875,
+        "width": 108,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 763.0390625,
+        "y": 3897.453125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Play Now",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 629.0390625,
+        "y": 4136.1796875,
+        "width": 108,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1027.0390625,
+        "y": 3897.453125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Play Now",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 893.0390625,
+        "y": 4136.1796875,
+        "width": 108,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1291.0390625,
+        "y": 3897.453125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Play Now",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1157.0390625,
+        "y": 4136.1796875,
+        "width": 108,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1555.0390625,
+        "y": 3897.453125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Play Now",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1421.0390625,
+        "y": 4136.1796875,
+        "width": 108,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1819.0390625,
+        "y": 3897.453125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Play Now",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1685.0390625,
+        "y": 4136.1796875,
+        "width": 108,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Scroll left",
+      "href": "",
+      "bbox": {
+        "x": 605,
+        "y": 4249.453125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Scroll right",
+      "href": "",
+      "bbox": {
+        "x": 645,
+        "y": 4249.453125,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "All",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 35.515625,
+        "y": 5085.109375,
+        "width": 47.5234375,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Saving Plans",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 83.0390625,
+        "y": 5085.109375,
+        "width": 109.8828125,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Term Insurance Plan",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 192.921875,
+        "y": 5085.109375,
+        "width": 159.3515625,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Retirement Plans",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 352.2734375,
+        "y": 5085.109375,
+        "width": 138.4765625,
+        "height": 36
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 52.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 52.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 372.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 372.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 692.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 692.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Download Prospectus",
+      "aria_label": "Submit Secondary Button",
+      "href": "",
+      "bbox": {
+        "x": 1012.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1012.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 1332.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1332.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 1652.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1652.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Check Premium",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 1972.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 1972.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Check Premium",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 2292.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 2292.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Check Premium",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 2612.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 2612.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 2932.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 2932.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 3252.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 3252.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 3572.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 3572.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "View Plans",
+      "aria_label": "Submit Primary Button",
+      "href": "",
+      "bbox": {
+        "x": 3892.0390625,
+        "y": 5595.109375,
+        "width": 254,
+        "height": 33
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "View Details",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 3892.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Join 50k+ Advisors- Making the Real Difference!",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 339.5546875,
+        "y": 5928.171875,
+        "width": 422.890625,
+        "height": 48
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "right arrow",
+      "href": "",
+      "bbox": {
+        "x": 1232,
+        "y": 6344.2421875,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Copy Connect on WhatsApp",
+      "href": "",
+      "bbox": {
+        "x": 792.71875,
+        "y": 7466.296875,
+        "width": 12,
+        "height": 14
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Copy Mail to",
+      "href": "",
+      "bbox": {
+        "x": 928.4921875,
+        "y": 7542.296875,
+        "width": 12,
+        "height": 14
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Copy Customer Care",
+      "href": "",
+      "bbox": {
+        "x": 779.5625,
+        "y": 7618.296875,
+        "width": 12,
+        "height": 14
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Copy For On-going Applications/Buying a New Plan",
+      "href": "",
+      "bbox": {
+        "x": 803.0234375,
+        "y": 7694.296875,
+        "width": 12,
+        "height": 14
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Why Should You Have Life Insurance?Having life insurance in ",
+      "aria_label": "Why Should You Have Life Insurance?",
+      "href": "",
+      "bbox": {
+        "x": 35,
+        "y": 7919.8125,
+        "width": 1204,
+        "height": 55
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Can I Choose the Policy Term and Premium Payment Term When B",
+      "aria_label": "Can I Choose the Policy Term and Premium Payment Term When Buying Life Insurance?",
+      "href": "",
+      "bbox": {
+        "x": 35,
+        "y": 7975.8125,
+        "width": 1204,
+        "height": 55
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What Are Life Insurance Quotes?Life insurance quotes show ho",
+      "aria_label": "What Are Life Insurance Quotes?",
+      "href": "",
+      "bbox": {
+        "x": 35,
+        "y": 8031.8125,
+        "width": 1204,
+        "height": 55
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Who Needs Life Insurance the Most?Anyone with financial depe",
+      "aria_label": "Who Needs Life Insurance the Most?",
+      "href": "",
+      "bbox": {
+        "x": 35,
+        "y": 8087.8125,
+        "width": 1204,
+        "height": 55
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What are the Types of Life Insurance Plans?Life insurance is",
+      "aria_label": "What are the Types of Life Insurance Plans?",
+      "href": "/term-insurance-plans",
+      "bbox": {
+        "x": 35,
+        "y": 8143.8125,
+        "width": 1204,
+        "height": 55
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What Are the Key Factors That Affect Life Insurance Premiums",
+      "aria_label": "What Are the Key Factors That Affect Life Insurance Premiums?",
+      "href": "",
+      "bbox": {
+        "x": 35,
+        "y": 8199.8125,
+        "width": 1204,
+        "height": 55
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "What Are the Uses of Life Insurance?The primary purpose of a",
+      "aria_label": "What Are the Uses of Life Insurance?",
+      "href": "",
+      "bbox": {
+        "x": 35,
+        "y": 8255.8125,
+        "width": 1204,
+        "height": 55
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Do I get survival benefits under my life insurance policy?Th",
+      "aria_label": "Do I get survival benefits under my life insurance policy?",
+      "href": "/term-insurance-plans",
+      "bbox": {
+        "x": 35,
+        "y": 8311.8125,
+        "width": 1204,
+        "height": 55
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Show More",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 35,
+        "y": 8391.8125,
+        "width": 107.671875,
+        "height": 32
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 115,
+        "y": 10411.8046875,
+        "width": 104,
+        "height": 46.3828125
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Tools & Calculators",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 368,
+        "y": 9901.8046875,
+        "width": 122.65625,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Investment Plans",
+      "aria_label": "",
+      "href": "/investment-plans",
+      "bbox": {
+        "x": 653,
+        "y": 9561.8046875,
+        "width": 113.46875,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "About Axis Max Life",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 922,
+        "y": 9561.8046875,
+        "width": 127.9921875,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 922,
+        "y": 10175.8046875,
+        "width": 104,
+        "height": 78
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 922,
+        "y": 10265.8046875,
+        "width": 104,
+        "height": 78
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 922,
+        "y": 10355.8046875,
+        "width": 237,
+        "height": 43.8828125
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 922,
+        "y": 10415.6875,
+        "width": 237,
+        "height": 44
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "facebook-redirection",
+      "href": "",
+      "bbox": {
+        "x": 1023,
+        "y": 10672.8046875,
+        "width": 16,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "twitter-redirection",
+      "href": "",
+      "bbox": {
+        "x": 1055,
+        "y": 10672.8046875,
+        "width": 16,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "linkedin-redirection",
+      "href": "",
+      "bbox": {
+        "x": 1087,
+        "y": 10672.8046875,
+        "width": 16,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "youtube-redirection",
+      "href": "",
+      "bbox": {
+        "x": 1119,
+        "y": 10672.8046875,
+        "width": 16,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "youtube-redirection",
+      "href": "",
+      "bbox": {
+        "x": 1151,
+        "y": 10672.8046875,
+        "width": 16,
+        "height": 24
+      }
+    },
+    {
+      "selector": "button",
+      "text": "IRDAI Consumer Education Website",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 142.1796875,
+        "y": 10770.8046875,
+        "width": 217.3125,
+        "height": 18
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Agent Suspended & T.",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 409.4921875,
+        "y": 10770.8046875,
+        "width": 134.03125,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Insurance Ombudsman",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 735.2421875,
+        "y": 10770.8046875,
+        "width": 144.1328125,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "Bima Bharosa",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 423.671875,
+        "y": 10822.8046875,
+        "width": 84.90625,
+        "height": 18
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "UW Approach & Philosophy",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 979.25,
+        "y": 10822.8046875,
+        "width": 167.3125,
+        "height": 18
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Congratulatory Quote on AA",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 291.9609375,
+        "y": 10874.8046875,
+        "width": 173.1796875,
+        "height": 18
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "Financial Literacy Week 2026 by NCFE",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 515.140625,
+        "y": 10874.8046875,
+        "width": 227.6875,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "IRDAI List of Blacklisted Agents",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 792.828125,
+        "y": 10874.8046875,
+        "width": 189.203125,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "AXIS BANK",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 220.8359375,
+        "y": 10942.8046875,
+        "width": 70.140625,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "MAX INDIA",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 338.9765625,
+        "y": 10942.8046875,
+        "width": 72.546875,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "MAX FINANCIAL SERVICES",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 459.5234375,
+        "y": 10942.8046875,
+        "width": 167.9921875,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "ANTARA SENIOR CARE",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 675.515625,
+        "y": 10942.8046875,
+        "width": 141.4609375,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "MAX LIFE PENSION FUND MANAGEMENT",
+      "aria_label": "",
+      "href": "",
+      "bbox": {
+        "x": 864.9765625,
+        "y": 10942.8046875,
+        "width": 261.1484375,
+        "height": 18
+      }
+    },
+    {
+      "selector": "button",
+      "text": "",
+      "aria_label": "Copy To Clipboard",
+      "href": "",
+      "bbox": {
+        "x": 767.71875,
+        "y": 11205.5390625,
+        "width": 12,
+        "height": 14
+      }
+    },
+    {
+      "selector": "[role='button']",
+      "text": "DISCLAIMERS\nAxis Max Life Insurance Limited (earlier known a",
+      "aria_label": "DISCLAIMERS",
+      "href": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=10598",
+      "bbox": {
+        "x": 99,
+        "y": 11222.2890625,
+        "width": 1076,
+        "height": 86
+      }
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "bbox": {
+        "x": 12,
+        "y": 23.046875,
+        "width": 101.8828125,
+        "height": 38.8984375
+      }
+    },
+    {
+      "href": "/term-insurance-plans",
+      "bbox": {
+        "x": 153.8828125,
+        "y": 23,
+        "width": 86.875,
+        "height": 39
+      }
+    },
+    {
+      "href": "/investment-plans",
+      "bbox": {
+        "x": 286.5859375,
+        "y": 23,
+        "width": 97.234375,
+        "height": 39
+      }
+    },
+    {
+      "href": "/health-insurance-plans",
+      "bbox": {
+        "x": 429.65625,
+        "y": 23,
+        "width": 93.890625,
+        "height": 39
+      }
+    },
+    {
+      "href": "/nri-plans",
+      "bbox": {
+        "x": 569.3828125,
+        "y": 23,
+        "width": 53.3203125,
+        "height": 39
+      }
+    },
+    {
+      "href": "/calculators",
+      "bbox": {
+        "x": 668.4765625,
+        "y": 32.75,
+        "width": 71.0390625,
+        "height": 19.5
+      }
+    },
+    {
+      "href": "/claims-centre",
+      "bbox": {
+        "x": 787.515625,
+        "y": 32.75,
+        "width": 42.15625,
+        "height": 19.5
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator",
+      "bbox": {
+        "x": -2488,
+        "y": 96,
+        "width": 1250,
+        "height": 224.375
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=1Crore",
+      "bbox": {
+        "x": -1238,
+        "y": 96,
+        "width": 1250,
+        "height": 224.375
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 12,
+        "y": 96,
+        "width": 1250,
+        "height": 224.375
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=1Crore",
+      "bbox": {
+        "x": 1262,
+        "y": 96,
+        "width": 1250,
+        "height": 224.375
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator",
+      "bbox": {
+        "x": 2512,
+        "y": 96,
+        "width": 1250,
+        "height": 224.375
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=1Crore",
+      "bbox": {
+        "x": 3762,
+        "y": 96,
+        "width": 1250,
+        "height": 224.375
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 5012,
+        "y": 96,
+        "width": 1250,
+        "height": 224.375
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=1Crore",
+      "bbox": {
+        "x": 6262,
+        "y": 96,
+        "width": 1250,
+        "height": 224.375
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator",
+      "bbox": {
+        "x": 7512,
+        "y": 96,
+        "width": 1250,
+        "height": 224.375
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=2Crore",
+      "bbox": {
+        "x": 23,
+        "y": 547.8359375,
+        "width": 118.34375,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=NRI",
+      "bbox": {
+        "x": 23,
+        "y": 663.8046875,
+        "width": 118.34375,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=Women",
+      "bbox": {
+        "x": 23,
+        "y": 779.7734375,
+        "width": 118.34375,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 23,
+        "y": 945.734375,
+        "width": 79.5078125,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 23,
+        "y": 1061.703125,
+        "width": 79.5078125,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=PensionRetirement",
+      "bbox": {
+        "x": 23,
+        "y": 1177.671875,
+        "width": 79.5078125,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=NRI",
+      "bbox": {
+        "x": 23,
+        "y": 1343.6328125,
+        "width": 118.34375,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=2Crore",
+      "bbox": {
+        "x": 23,
+        "y": 1459.6015625,
+        "width": 118.34375,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utm_theme=Women",
+      "bbox": {
+        "x": 23,
+        "y": 1575.5703125,
+        "width": 118.34375,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=SIP",
+      "bbox": {
+        "x": 23,
+        "y": 1741.53125,
+        "width": 79.5078125,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=PensionRetirement",
+      "bbox": {
+        "x": 23,
+        "y": 1857.5,
+        "width": 79.5078125,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator?utm_theme=PensionRetirement",
+      "bbox": {
+        "x": 23,
+        "y": 1973.46875,
+        "width": 79.5078125,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/static-page/assets/homepage/Max%20Life%20T%26C%20Brand%20Refresh%20Leaflet%20.pdf",
+      "bbox": {
+        "x": 163.3515625,
+        "y": 1470.625,
+        "width": 76.8046875,
+        "height": 10
+      }
+    },
+    {
+      "href": "/term-insurance-plans/claim-settlement-ratio",
+      "bbox": {
+        "x": 32,
+        "y": 1778.453125,
+        "width": 290,
+        "height": 202
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 337.5,
+        "y": 1778.453125,
+        "width": 290,
+        "height": 202
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 643,
+        "y": 1778.453125,
+        "width": 290,
+        "height": 202
+      }
+    },
+    {
+      "href": "/branches",
+      "bbox": {
+        "x": 948.5,
+        "y": 1778.453125,
+        "width": 290,
+        "height": 202
+      }
+    },
+    {
+      "href": "/blog/life-insurance/benefits-of-life-insurance",
+      "bbox": {
+        "x": 255,
+        "y": 2163.953125,
+        "width": 130.7734375,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/insurance-calculators",
+      "bbox": {
+        "x": 289.9609375,
+        "y": 2271.453125,
+        "width": 158.7734375,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "/claims-centre",
+      "bbox": {
+        "x": 48,
+        "y": 3590.453125,
+        "width": 143.859375,
+        "height": 47.5
+      }
+    },
+    {
+      "href": "/customer-servicing/claims-tracker",
+      "bbox": {
+        "x": 195.859375,
+        "y": 3590.453125,
+        "width": 197.0625,
+        "height": 47.5
+      }
+    },
+    {
+      "href": "/all-insurance-plans",
+      "bbox": {
+        "x": 1155.3984375,
+        "y": 5017.109375,
+        "width": 51.0859375,
+        "height": 48
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 52.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 372.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 692.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 1012.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 1332.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 1652.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 1972.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 2292.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 2612.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 2932.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 3252.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 3572.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 3892.0390625,
+        "y": 5636.109375,
+        "width": 254,
+        "height": 39.5
+      }
+    },
+    {
+      "href": "https://apps.apple.com/in/app/axis-max-life-insurance/id6447048056",
+      "bbox": {
+        "x": 175,
+        "y": 6736.265625,
+        "width": 185,
+        "height": 63
+      }
+    },
+    {
+      "href": "https://play.google.com/store/apps/details?id=com.maxlifeinsurance.www.twa",
+      "bbox": {
+        "x": 376,
+        "y": 6736.265625,
+        "width": 185,
+        "height": 63
+      }
+    },
+    {
+      "href": "https://wa.me/917428396005",
+      "bbox": {
+        "x": 660.5859375,
+        "y": 7463.296875,
+        "width": 124.1328125,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "mailto:service.helpdesk@axismaxlife.com",
+      "bbox": {
+        "x": 660.5859375,
+        "y": 7539.296875,
+        "width": 259.90625,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "tel:+18601205577",
+      "bbox": {
+        "x": 660.5859375,
+        "y": 7615.296875,
+        "width": 110.9765625,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "tel:+911246488900",
+      "bbox": {
+        "x": 660.5859375,
+        "y": 7691.296875,
+        "width": 134.4375,
+        "height": 21.5
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 51,
+        "y": 7866.3125,
+        "width": 116.2578125,
+        "height": 18
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 199.2578125,
+        "y": 7866.3125,
+        "width": 169.796875,
+        "height": 18
+      }
+    },
+    {
+      "href": "",
+      "bbox": {
+        "x": 401.0546875,
+        "y": 7866.3125,
+        "width": 131.6875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans",
+      "bbox": {
+        "x": 0,
+        "y": 8517.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/smart-term-plan-plus",
+      "bbox": {
+        "x": 258,
+        "y": 8517.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/critical-illness",
+      "bbox": {
+        "x": 516,
+        "y": 8517.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-plan-with-return-of-premium",
+      "bbox": {
+        "x": 774,
+        "y": 8517.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/claim-settlement-ratio",
+      "bbox": {
+        "x": 1032,
+        "y": 8517.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/term-insurance/what-is-term-insurance",
+      "bbox": {
+        "x": 0,
+        "y": 8591.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/investment-plans",
+      "bbox": {
+        "x": 258,
+        "y": 8591.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/investment-plans/ulip-plans",
+      "bbox": {
+        "x": 516,
+        "y": 8591.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/web-stories",
+      "bbox": {
+        "x": 774,
+        "y": 8591.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/investment-plans/savings-and-income-plans",
+      "bbox": {
+        "x": 1032,
+        "y": 8591.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/investment-plans/tax-saving-investments",
+      "bbox": {
+        "x": 0,
+        "y": 8659.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/group-insurance-plans",
+      "bbox": {
+        "x": 258,
+        "y": 8659.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/pension-plans",
+      "bbox": {
+        "x": 516,
+        "y": 8659.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator",
+      "bbox": {
+        "x": 774,
+        "y": 8659.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/insurance-calculators/tax-calculator",
+      "bbox": {
+        "x": 1032,
+        "y": 8659.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/calculators/compound-interest-calculator",
+      "bbox": {
+        "x": 0,
+        "y": 8727.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/insurance-calculators/retirement-planning-calculator",
+      "bbox": {
+        "x": 258,
+        "y": 8727.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/insurance-calculators",
+      "bbox": {
+        "x": 516,
+        "y": 8727.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/term-insurance/why-medical-test-important-term-insurance",
+      "bbox": {
+        "x": 774,
+        "y": 8727.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/term-insurance/tax-benefits-of-term-insurance",
+      "bbox": {
+        "x": 1032,
+        "y": 8727.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/term-insurance/term-insurance-for-all-age-groups",
+      "bbox": {
+        "x": 0,
+        "y": 8801.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/term-insurance/benefits-of-term-insurance",
+      "bbox": {
+        "x": 258,
+        "y": 8801.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/health-insurance-plans",
+      "bbox": {
+        "x": 516,
+        "y": 8801.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/disability-insurance",
+      "bbox": {
+        "x": 774,
+        "y": 8801.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/cibil-credit-score",
+      "bbox": {
+        "x": 1032,
+        "y": 8801.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/fd-calculator",
+      "bbox": {
+        "x": 0,
+        "y": 8875.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/investment-plans/gold-investment-in-india",
+      "bbox": {
+        "x": 258,
+        "y": 8875.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/investment-plans/endowment-plan",
+      "bbox": {
+        "x": 516,
+        "y": 8875.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/investment-plans/rd-calculator",
+      "bbox": {
+        "x": 774,
+        "y": 8875.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/investment-plans/systematic-investment-plans",
+      "bbox": {
+        "x": 1032,
+        "y": 8875.3046875,
+        "width": 242,
+        "height": 48
+      }
+    },
+    {
+      "href": "/investment-plans/sip-calculator",
+      "bbox": {
+        "x": 0,
+        "y": 8943.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/personal-accident-insurance",
+      "bbox": {
+        "x": 258,
+        "y": 8943.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/roi-calculator",
+      "bbox": {
+        "x": 516,
+        "y": 8943.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/fixed-deposit",
+      "bbox": {
+        "x": 774,
+        "y": 8943.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/recurring-deposit",
+      "bbox": {
+        "x": 1032,
+        "y": 8943.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-insurance-for-housewife",
+      "bbox": {
+        "x": 0,
+        "y": 9017.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/calculators",
+      "bbox": {
+        "x": 258,
+        "y": 9017.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/mutual-funds",
+      "bbox": {
+        "x": 516,
+        "y": 9017.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-insurance-for-self-employed",
+      "bbox": {
+        "x": 774,
+        "y": 9017.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-insurance-for-senior-citizens",
+      "bbox": {
+        "x": 1032,
+        "y": 9017.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/nri-plans",
+      "bbox": {
+        "x": 0,
+        "y": 9091.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-insurance-for-women",
+      "bbox": {
+        "x": 258,
+        "y": 9091.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/index-fund-calculator",
+      "bbox": {
+        "x": 516,
+        "y": 9091.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/nri-plans/nri-term-plans",
+      "bbox": {
+        "x": 774,
+        "y": 9091.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/nri-plans/nri-investment-plans",
+      "bbox": {
+        "x": 1032,
+        "y": 9091.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/zero-cost-term-insurance",
+      "bbox": {
+        "x": 0,
+        "y": 9165.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/term-insurance/term-insurance-vs-life-insurance",
+      "bbox": {
+        "x": 258,
+        "y": 9165.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/tax-savings/income-tax-slab-2025-26",
+      "bbox": {
+        "x": 516,
+        "y": 9165.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans/income-replacement-term-plan",
+      "bbox": {
+        "x": 774,
+        "y": 9165.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/term-insurance/term-insurance-without-medical-test",
+      "bbox": {
+        "x": 1032,
+        "y": 9165.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/investments/bse-500-enhanced-value-50-index",
+      "bbox": {
+        "x": 0,
+        "y": 9239.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/investment-plans/bse-500-value-50-index-fund",
+      "bbox": {
+        "x": 258,
+        "y": 9239.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/pension-plans",
+      "bbox": {
+        "x": 516,
+        "y": 9239.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/investments/monthly-income-schemes",
+      "bbox": {
+        "x": 774,
+        "y": 9239.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/tax-savings/how-to-get-gst-number-gstin",
+      "bbox": {
+        "x": 1032,
+        "y": 9239.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/tax-savings/gst-notice",
+      "bbox": {
+        "x": 0,
+        "y": 9313.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/tax-savings/gst-full-form-meaning",
+      "bbox": {
+        "x": 258,
+        "y": 9313.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/tax-savings/gst-invoice",
+      "bbox": {
+        "x": 516,
+        "y": 9313.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/tax-savings/what-are-gst-rates",
+      "bbox": {
+        "x": 774,
+        "y": 9313.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/tax-savings/download-gst-returns",
+      "bbox": {
+        "x": 1032,
+        "y": 9313.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/tax-savings/income-tax-slab-2026-27",
+      "bbox": {
+        "x": 0,
+        "y": 9387.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/blog/tax-savings/section-123",
+      "bbox": {
+        "x": 258,
+        "y": 9387.3046875,
+        "width": 242,
+        "height": 54
+      }
+    },
+    {
+      "href": "/term-insurance-plans",
+      "bbox": {
+        "x": 115,
+        "y": 9561.8046875,
+        "width": 139.0390625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/critical-illness",
+      "bbox": {
+        "x": 115,
+        "y": 9603.8046875,
+        "width": 84.1953125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-plan-with-return-of-premium",
+      "bbox": {
+        "x": 115,
+        "y": 9629.8046875,
+        "width": 210.8125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/claim-settlement-ratio",
+      "bbox": {
+        "x": 115,
+        "y": 9655.8046875,
+        "width": 139.1796875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/smart-secure-plus-plan",
+      "bbox": {
+        "x": 115,
+        "y": 9681.8046875,
+        "width": 140,
+        "height": 18
+      }
+    },
+    {
+      "href": "/continue-your-journey",
+      "bbox": {
+        "x": 115,
+        "y": 9707.8046875,
+        "width": 185.0234375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/term-insurance-for-housewife",
+      "bbox": {
+        "x": 115,
+        "y": 9733.8046875,
+        "width": 183.9375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/zero-cost-term-insurance",
+      "bbox": {
+        "x": 115,
+        "y": 9759.8046875,
+        "width": 156.7734375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/smart-term-plan-plus",
+      "bbox": {
+        "x": 115,
+        "y": 9785.8046875,
+        "width": 129.9921875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/",
+      "bbox": {
+        "x": 368,
+        "y": 9561.8046875,
+        "width": 92.0625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/endowment-plan",
+      "bbox": {
+        "x": 368,
+        "y": 9603.8046875,
+        "width": 111.984375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/online-insurance-plans",
+      "bbox": {
+        "x": 368,
+        "y": 9629.8046875,
+        "width": 140.5078125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/pension-plans",
+      "bbox": {
+        "x": 368,
+        "y": 9655.8046875,
+        "width": 104.2734375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/group-insurance-plans",
+      "bbox": {
+        "x": 368,
+        "y": 9681.8046875,
+        "width": 138.7109375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/child-insurance-plans",
+      "bbox": {
+        "x": 368,
+        "y": 9707.8046875,
+        "width": 131.203125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/health-insurance-plans",
+      "bbox": {
+        "x": 368,
+        "y": 9733.8046875,
+        "width": 140.5859375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/nri-plans",
+      "bbox": {
+        "x": 368,
+        "y": 9759.8046875,
+        "width": 58.53125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/health-insurance-plans/abha-ayushman-bharat-health-account",
+      "bbox": {
+        "x": 368,
+        "y": 9785.8046875,
+        "width": 66.6953125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/pay-online",
+      "bbox": {
+        "x": 115,
+        "y": 9943.8046875,
+        "width": 124.8203125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login",
+      "bbox": {
+        "x": 115,
+        "y": 9969.8046875,
+        "width": 97.3359375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator?utmCode=14363541&utm_source=homepage&utm_medium=agent&utm_campaign=cross_sell",
+      "bbox": {
+        "x": 115,
+        "y": 9995.8046875,
+        "width": 153.4140625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/claims-centre",
+      "bbox": {
+        "x": 115,
+        "y": 10021.8046875,
+        "width": 91.1875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login",
+      "bbox": {
+        "x": 115,
+        "y": 10047.8046875,
+        "width": 132.265625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login",
+      "bbox": {
+        "x": 115,
+        "y": 10073.8046875,
+        "width": 112.2578125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/electronic-insurance-account",
+      "bbox": {
+        "x": 115,
+        "y": 10099.8046875,
+        "width": 182.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/contact-us/faqs",
+      "bbox": {
+        "x": 115,
+        "y": 10125.8046875,
+        "width": 209.4609375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/premium-payment-options",
+      "bbox": {
+        "x": 115,
+        "y": 10151.8046875,
+        "width": 165.09375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login?redirectURL=/application-tracker",
+      "bbox": {
+        "x": 115,
+        "y": 10177.8046875,
+        "width": 104.03125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/contact-us",
+      "bbox": {
+        "x": 115,
+        "y": 10203.8046875,
+        "width": 66.1484375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login",
+      "bbox": {
+        "x": 115,
+        "y": 10229.8046875,
+        "width": 146.65625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login",
+      "bbox": {
+        "x": 115,
+        "y": 10255.8046875,
+        "width": 106.2421875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/downloads",
+      "bbox": {
+        "x": 115,
+        "y": 10281.8046875,
+        "width": 103.6015625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/login?redirectURL=/update-pan",
+      "bbox": {
+        "x": 115,
+        "y": 10307.8046875,
+        "width": 105.59375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/service-tats",
+      "bbox": {
+        "x": 115,
+        "y": 10333.8046875,
+        "width": 73.140625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/download-coi",
+      "bbox": {
+        "x": 115,
+        "y": 10359.8046875,
+        "width": 142.15625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/feedback",
+      "bbox": {
+        "x": 115,
+        "y": 10385.8046875,
+        "width": 57.8828125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/premium-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 9943.8046875,
+        "width": 160.359375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/insurance-calculators/tax-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 9969.8046875,
+        "width": 134.8671875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/investment-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 9995.8046875,
+        "width": 135.4375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/compound-interest-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10021.8046875,
+        "width": 184.4609375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/insurance-calculators",
+      "bbox": {
+        "x": 368,
+        "y": 10047.8046875,
+        "width": 132.03125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/fd-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10073.8046875,
+        "width": 81.328125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/cibil-credit-score",
+      "bbox": {
+        "x": 368,
+        "y": 10099.8046875,
+        "width": 109.4375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/rd-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10125.8046875,
+        "width": 82.671875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/ppf-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10151.8046875,
+        "width": 87.5703125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/roi-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10177.8046875,
+        "width": 87.7421875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/sip-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10203.8046875,
+        "width": 84.5,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/nps-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10229.8046875,
+        "width": 89.9765625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/lumpsum-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10255.8046875,
+        "width": 126.5078125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/nsc-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10281.8046875,
+        "width": 90.328125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/step-up-sip-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10307.8046875,
+        "width": 135.921875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/insurance-calculators/bmi-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10333.8046875,
+        "width": 89.7421875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/sukanya-samriddhi-yojana-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10359.8046875,
+        "width": 86.7265625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/insurance-calculators/retirement-planning-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10385.8046875,
+        "width": 190.5546875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/swp-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10411.8046875,
+        "width": 92.1875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/apy-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10437.8046875,
+        "width": 88.625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/emi-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10463.8046875,
+        "width": 88.5234375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/calculators/elss-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10489.8046875,
+        "width": 93.40625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/insurance-calculators/home-loan-insurance-calculator",
+      "bbox": {
+        "x": 368,
+        "y": 10515.8046875,
+        "width": 199.5546875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans",
+      "bbox": {
+        "x": 653,
+        "y": 9561.8046875,
+        "width": 113.46875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/ulip-plans",
+      "bbox": {
+        "x": 653,
+        "y": 9603.8046875,
+        "width": 64.7421875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/tax-saving-investments",
+      "bbox": {
+        "x": 653,
+        "y": 9629.8046875,
+        "width": 137.046875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-wealth-plan",
+      "bbox": {
+        "x": 653,
+        "y": 9655.8046875,
+        "width": 112.4921875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-wealth-income-plan",
+      "bbox": {
+        "x": 653,
+        "y": 9681.8046875,
+        "width": 161.90625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/ulip-plans/flexi-wealth-Advantage-Plan",
+      "bbox": {
+        "x": 653,
+        "y": 9707.8046875,
+        "width": 172.1796875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/savings-and-income-plans",
+      "bbox": {
+        "x": 653,
+        "y": 9733.8046875,
+        "width": 145.109375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/smart-fd-plan",
+      "bbox": {
+        "x": 653,
+        "y": 9759.8046875,
+        "width": 187.671875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/money-back-policy",
+      "bbox": {
+        "x": 653,
+        "y": 9785.8046875,
+        "width": 112.390625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-growth-super-fund",
+      "bbox": {
+        "x": 653,
+        "y": 9811.8046875,
+        "width": 212.2578125,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-high-growth-fund",
+      "bbox": {
+        "x": 653,
+        "y": 9855.8046875,
+        "width": 194.546875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-secured-fund",
+      "bbox": {
+        "x": 653,
+        "y": 9881.8046875,
+        "width": 211.25,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-sustainable-equity-fund",
+      "bbox": {
+        "x": 653,
+        "y": 9907.8046875,
+        "width": 214.59375,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-nifty-smallcap-quality-index-fund",
+      "bbox": {
+        "x": 653,
+        "y": 9951.8046875,
+        "width": 216.9609375,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-balanced-fund",
+      "bbox": {
+        "x": 653,
+        "y": 9995.8046875,
+        "width": 218.0625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-pure-growth-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10021.8046875,
+        "width": 213.5703125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-secure-plus-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10047.8046875,
+        "width": 206.765625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-growth-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10073.8046875,
+        "width": 207.1953125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-conservative-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10099.8046875,
+        "width": 206.8046875,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-diversified-equity-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10143.8046875,
+        "width": 234.078125,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-money-market-ii-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10187.8046875,
+        "width": 235.0078125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-ul-life-dynamic-bond-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10213.8046875,
+        "width": 216.8046875,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-midcap-momentum-index-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10257.8046875,
+        "width": 202.9453125,
+        "height": 36
+      }
+    },
+    {
+      "href": "/blog/tax-savings/income-tax-slab-2025-26",
+      "bbox": {
+        "x": 653,
+        "y": 10301.8046875,
+        "width": 151.1171875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/max-life-nifty-500-momentum-50-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10327.8046875,
+        "width": 231.609375,
+        "height": 36
+      }
+    },
+    {
+      "href": "/static-page/assets/homepage/Axis%20Max%20Life%20Sustainable%20Yield%20Index%20Factsheet.pdf",
+      "bbox": {
+        "x": 653,
+        "y": 10371.8046875,
+        "width": 224.125,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/sustainable-wealth-50-index-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10415.8046875,
+        "width": 217.75,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/axis-max-life-smart-innovation-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10459.8046875,
+        "width": 222.9765625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/investment-plans/nifty-500-multifactor-50-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10485.8046875,
+        "width": 226.34375,
+        "height": 36
+      }
+    },
+    {
+      "href": "/investment-plans/multifactor-index-pension-fund",
+      "bbox": {
+        "x": 653,
+        "y": 10529.8046875,
+        "width": 226.34375,
+        "height": 36
+      }
+    },
+    {
+      "href": "/pure-growth-fund-certification",
+      "bbox": {
+        "x": 653,
+        "y": 10573.8046875,
+        "width": 226.65625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/why-max-life",
+      "bbox": {
+        "x": 922,
+        "y": 9603.8046875,
+        "width": 109.59375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us",
+      "bbox": {
+        "x": 922,
+        "y": 9629.8046875,
+        "width": 95.9140625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/awards-achievements",
+      "bbox": {
+        "x": 922,
+        "y": 9655.8046875,
+        "width": 140.5859375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/csr",
+      "bbox": {
+        "x": 922,
+        "y": 9681.8046875,
+        "width": 23.4453125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/esg",
+      "bbox": {
+        "x": 922,
+        "y": 9707.8046875,
+        "width": 23.8359375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/diversity-and-inclusion",
+      "bbox": {
+        "x": 922,
+        "y": 9733.8046875,
+        "width": 169.15625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/newsroom",
+      "bbox": {
+        "x": 922,
+        "y": 9759.8046875,
+        "width": 82.125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/about-us/our-leadership",
+      "bbox": {
+        "x": 922,
+        "y": 9785.8046875,
+        "width": 94.6796875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/newsroom/public-disclosures",
+      "bbox": {
+        "x": 922,
+        "y": 9811.8046875,
+        "width": 109.6875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/static-page/assets/homepage/ISNP%20Schedule%20II%20III.pdf",
+      "bbox": {
+        "x": 922,
+        "y": 9837.8046875,
+        "width": 74.4140625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/term-insurance-plans/claim-settlement-ratio",
+      "bbox": {
+        "x": 922,
+        "y": 9863.8046875,
+        "width": 99.2734375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/join-max-life/become-an-agent",
+      "bbox": {
+        "x": 922,
+        "y": 9889.8046875,
+        "width": 118.203125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/fund-performance",
+      "bbox": {
+        "x": 922,
+        "y": 9915.8046875,
+        "width": 108.1796875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/fund-performance/monthly-factsheets",
+      "bbox": {
+        "x": 922,
+        "y": 9941.8046875,
+        "width": 118.6015625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/fund-portfolio-data",
+      "bbox": {
+        "x": 922,
+        "y": 9967.8046875,
+        "width": 86.8984375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/fund-performance/fund-performance-benchmark",
+      "bbox": {
+        "x": 922,
+        "y": 9993.8046875,
+        "width": 194.3046875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/monthly-fund-snapshots-report",
+      "bbox": {
+        "x": 922,
+        "y": 10019.8046875,
+        "width": 145.25,
+        "height": 18
+      }
+    },
+    {
+      "href": "/fund-performance/annual-investment-reports",
+      "bbox": {
+        "x": 922,
+        "y": 10045.8046875,
+        "width": 160.671875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/branches",
+      "bbox": {
+        "x": 922,
+        "y": 10071.8046875,
+        "width": 139.5625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/disclosures-under-regulation-62-lodr",
+      "bbox": {
+        "x": 922,
+        "y": 10097.8046875,
+        "width": 56.765625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/newsroom/key-company-policies",
+      "bbox": {
+        "x": 922,
+        "y": 10123.8046875,
+        "width": 132.2890625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/careers",
+      "bbox": {
+        "x": 922,
+        "y": 10149.8046875,
+        "width": 46.8828125,
+        "height": 18
+      }
+    },
+    {
+      "href": "/do-not-disturb",
+      "bbox": {
+        "x": 593.5234375,
+        "y": 10770.8046875,
+        "width": 91.71875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/privacy-policy",
+      "bbox": {
+        "x": 929.375,
+        "y": 10770.8046875,
+        "width": 82.046875,
+        "height": 18
+      }
+    },
+    {
+      "href": "/disclaimer",
+      "bbox": {
+        "x": 1061.421875,
+        "y": 10770.8046875,
+        "width": 70.3984375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/service-tats",
+      "bbox": {
+        "x": 127.4296875,
+        "y": 10822.8046875,
+        "width": 73.140625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/grievance-redressal",
+      "bbox": {
+        "x": 250.5703125,
+        "y": 10822.8046875,
+        "width": 123.1015625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/cs/unclaimed-amount",
+      "bbox": {
+        "x": 558.578125,
+        "y": 10822.8046875,
+        "width": 117.734375,
+        "height": 18
+      }
+    },
+    {
+      "href": "/customer-servicing/withdrawn-plans",
+      "bbox": {
+        "x": 726.3125,
+        "y": 10822.8046875,
+        "width": 102.9765625,
+        "height": 18
+      }
+    },
+    {
+      "href": "/sitemap",
+      "bbox": {
+        "x": 879.2890625,
+        "y": 10822.8046875,
+        "width": 49.9609375,
+        "height": 18
+      }
+    },
+    {
+      "href": "mailto:service.helpdesk@axismaxlife.com",
+      "bbox": {
+        "x": 552.546875,
+        "y": 11202.7890625,
+        "width": 211.171875,
+        "height": 19.5
+      }
+    }
+  ],
+  "canonical": [
+    {
+      "href": "https://www.axismaxlife.com",
+      "bbox": null
+    }
+  ],
+  "meta": [
+    {
+      "name": "title",
+      "value": "Life Insurance: Buy Best Life Insurance Policy Online in India 2026 | Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "name": "description",
+      "value": "Buy Life Insurance and secure your family's financial future on Axis Max Life. Check various types of life insurance to avail life cover and wealth benefits. Buy your life insurance plan and policy today!",
+      "bbox": null
+    }
+  ],
+  "og_tags": [
+    {
+      "property": "og:title",
+      "value": "Life Insurance: Buy Best Life Insurance Policy Online in India 2026 | Axis Max Life Insurance",
+      "bbox": null
+    },
+    {
+      "property": "og:description",
+      "value": "Buy Life Insurance and secure your family's financial future on Axis Max Life. Check various types of life insurance to avail life cover and wealth benefits. Buy your life insurance plan and policy today!",
+      "bbox": null
+    }
+  ]
+}

@@ -318,18 +318,18 @@ def crawl_viewport_mode(
         with sync_playwright() as p:
             # 1. Initialize browser/page based on viewport
             if viewport_name == "desktop":
-                browser = p.chromium.launch(headless=True)
+                browser = p.chromium.launch(headless=False)
                 page = browser.new_page(viewport=DESKTOP_VIEWPORT)
                 viewport_w = DESKTOP_VIEWPORT["width"]
                 viewport_h = DESKTOP_VIEWPORT["height"]
             elif viewport_name == "ios":
-                browser = p.chromium.launch(headless=True)
+                browser = p.chromium.launch(headless=False)
                 device = p.devices["iPhone 13"]
                 page = browser.new_page(**device)
                 viewport_w = device["viewport"]["width"]
                 viewport_h = device["viewport"]["height"]
             elif viewport_name == "android":
-                browser = p.chromium.launch(headless=True)
+                browser = p.chromium.launch(headless=False)
                 device = p.devices["Pixel 5"]
                 page = browser.new_page(**device)
                 viewport_w = device["viewport"]["width"]
