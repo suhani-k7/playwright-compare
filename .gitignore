@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 outputs/
 DOCUMENTATION.md
+data/features/*/live/
+features/*/reference/
+features/*/live/
+features/*/reference/

@@ -29,7 +29,7 @@ from compare import (
 
 def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
     base = REFERENCE_DIR if mode == "reference" else LIVE_DIR
-    path = os.path.join(base, f"{device}-{slug}", f"{mode}-{device}-{slug}-page.html")
+    path = os.path.join(base, slug, device, f"{mode}-{device}-{slug}-page.html")
     if not os.path.exists(path):
         raise FileNotFoundError(f"HTML not found: {path}. Run capture-popup.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -37,7 +37,7 @@ def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
 
 def load_elements(mode: str, device: str, slug: str) -> dict:
     base = REFERENCE_DIR if mode == "reference" else LIVE_DIR
-    path = os.path.join(base, f"{device}-{slug}", f"{mode}-{device}-{slug}-elements.json")
+    path = os.path.join(base, slug, device, f"{mode}-{device}-{slug}-elements.json")
     if not os.path.exists(path):
         raise FileNotFoundError(f"Elements JSON not found: {path}. Run capture-popup.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -45,7 +45,7 @@ def load_elements(mode: str, device: str, slug: str) -> dict:
 
 def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = False):
     # Use live screenshot
-    live_img_path = os.path.join(LIVE_DIR, f"{device}-{slug}", f"live-{device}-{slug}-screenshot.png")
+    live_img_path = os.path.join(LIVE_DIR, slug, device, f"live-{device}-{slug}-screenshot.png")
     if not os.path.exists(live_img_path):
         print(f"  [Annotate] Screenshot not found: {live_img_path}")
         return

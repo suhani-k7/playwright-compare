@@ -24,9 +24,9 @@ DESKTOP_VIEWPORT = {"width": 1280, "height": 800}
 def get_output_dir(mode: str, device: str, slug: str) -> str:
     """
     Returns the output directory path for a given mode/device/slug combo.
-    e.g. reference/desktop-rd-calculator/
+    e.g. reference/rd-calculator/desktop/
     """
-    return os.path.join(DATA_DIR, mode, f"{device}-{slug}")
+    return os.path.join(DATA_DIR, mode, slug, device)
 
 def _dedupe_buttons(buttons: list) -> list:
     """
@@ -244,6 +244,41 @@ def extract_elements(page, device_scale_factor: float = 1) -> dict:
 
     return elements
 
+def _scroll_full_page(page, max_scroll_height: int = 30000, max_iterations: int = 150):
+    """
+    Step-scrolls to the bottom of the page to trigger lazy-loaded images,
+    with a hard cap on both total scroll distance and iteration count.
+    Without a cap, pages with infinite-scroll or continuously-appending
+    content (scrollHeight keeps growing as you approach it) can produce
+    an extremely tall page that takes minutes to screenshot or exceeds
+    the timeout entirely.
+    """
+    page.evaluate(f"""
+        async () => {{
+            await new Promise((resolve) => {{
+                let totalHeight = 0;
+                let iterations = 0;
+                const distance = 400;
+                const maxHeight = {max_scroll_height};
+                const maxIterations = {max_iterations};
+                const timer = setInterval(() => {{
+                    window.scrollBy(0, distance);
+                    totalHeight += distance;
+                    iterations += 1;
+                    const reachedBottom = totalHeight >= document.body.scrollHeight;
+                    const hitCap = totalHeight >= maxHeight || iterations >= maxIterations;
+                    if (reachedBottom || hitCap) {{
+                        clearInterval(timer);
+                        resolve();
+                    }}
+                }}, 100);
+            }});
+        }}
+    """)
+    page.wait_for_timeout(500)
+    page.evaluate("window.scrollTo(0, 0)")
+    page.wait_for_timeout(300)
+
 def _neutralize_sticky_elements(page):
     """
     Full-page screenshots scroll-and-stitch the page together. A sticky/fixed
@@ -286,17 +321,31 @@ def _neutralize_sticky_elements(page):
             });
         }
     """)
-def _dismiss_popup(page, max_wait_ms: int = 8000):
+def _dismiss_popup(page, max_wait_ms: int = 3000):
     close_selectors = [
         ".new-investment-popup-close",
         "[aria-label='Close popup']",
         "[aria-label*='close' i]",
         "[class*='popup'] [class*='close']",   # only match close buttons INSIDE a popup/modal container
         "[class*='modal'] [class*='close']",
+        ".close",
+        ".close-btn",
+        ".close-button",
+        "[class*='close' i]:not([class*='closetab'])",
+        "[id*='close' i]",
+        "text=×",
     ]
+    # Quick DOM check: if no popup or modal container classes exist, limit the maximum wait time to 1s
+    has_popup_el = page.evaluate("""() => {
+        return !!document.querySelector(
+            '[class*="popup"], [class*="modal"], [class*="dialog"], [class*="smartech"], .new-investment-popup-close, [class*="close" i]:not([class*="closetab"]), [id*="close" i]'
+        );
+    }""")
+    
+    actual_max_wait = max_wait_ms if has_popup_el else 1000
     waited = 0
-    step = 500
-    while waited < max_wait_ms:
+    step = 250
+    while waited < actual_max_wait:
         for selector in close_selectors:
             try:
                 btn = page.locator(selector).first
@@ -310,33 +359,7 @@ def _dismiss_popup(page, max_wait_ms: int = 8000):
         page.wait_for_timeout(step)
         waited += step
 
-def _scroll_full_page(page):
-    """
-    Step-scrolls to the bottom of the page and back to the top, to trigger
-    any lazy-loaded images (loading="lazy" or intersection-observer based)
-    before taking the full-page screenshot. A single scrollTo() jump can
-    skip past the trigger point for observer-based lazy loaders, so we
-    scroll in small increments instead.
-    """
-    page.evaluate("""
-        async () => {
-            await new Promise((resolve) => {
-                let totalHeight = 0;
-                const distance = 400;
-                const timer = setInterval(() => {
-                    window.scrollBy(0, distance);
-                    totalHeight += distance;
-                    if (totalHeight >= document.body.scrollHeight) {
-                        clearInterval(timer);
-                        resolve();
-                    }
-                }, 100);
-            });
-        }
-    """)
-    page.wait_for_timeout(500)  # let final images finish loading after last scroll step
-    page.evaluate("window.scrollTo(0, 0)")
-    page.wait_for_timeout(300)  # let the page settle back at top before screenshotting
+
 
 def _goto_with_retry(page, url: str, retries: int = 1, timeout: int = 45000):
     """
@@ -365,7 +388,7 @@ def _wait_page_ready(page, selector: str = "body", timeout: int = 15000):
     except PlaywrightTimeoutError:
         print(f"  Selector '{selector}' not found within {timeout}ms, continuing anyway")
 
-def _wait_images_loaded(page, timeout: int = 10000):
+def _wait_images_loaded(page, timeout: int = 3000):
     """
     Polls until every <img> on the page reports complete (loaded or
     errored) or the timeout elapses. _scroll_full_page only waits a
@@ -380,6 +403,211 @@ def _wait_images_loaded(page, timeout: int = 10000):
         )
     except PlaywrightTimeoutError:
         print("  Not all images finished loading within timeout, continuing anyway")
+
+def _screenshot_full_page_stable(page, path: str, timeout: int = 60000):
+    """
+    Takes a full-page screenshot. If the page physical height (CSS height * device scale factor)
+    exceeds Chromium's texture size rendering limit (typically 16,384 physical px),
+    it takes multiple screenshots in safe chunks (max 14,000 physical px) and stitches them
+    vertically using Pillow. This avoids the tiled repetition bugs of Chromium's compositor
+    under mobile emulation. Otherwise, it takes a fast single-pass screenshot.
+
+    For chunked capture, fixed/sticky elements (e.g. the sticky nav header) are temporarily
+    hidden with visibility:hidden before capture begins to prevent them from painting over
+    page content in every chunk. Their visibility is restored after stitching.
+    NOTE: We use visibility:hidden (not display:none or position:static) to preserve page
+    layout while making elements invisible — avoiding the blue-overlay artifact that occurred
+    when position:static was used and the nav flowed into the content area.
+    """
+    total_height = page.evaluate("document.body.scrollHeight")
+    dsf = page.evaluate("window.devicePixelRatio") or 1.0
+    current_viewport = page.viewport_size
+    width = current_viewport["width"] if current_viewport else 1280
+    height = current_viewport["height"] if current_viewport else 800
+
+    # Safe physical rendering limit (well under 16,384px)
+    max_physical_height = 14000
+
+    # We only capture in a single pass if the page is short (<= 2 * viewport height)
+    # AND fits within the physical limit. This prevents layout reflow bugs (like
+    # stretched containers and footer gaps) that occur when viewport height is
+    # resized to very large values.
+    is_short_page = total_height <= 2 * height
+    fits_limit = total_height * dsf <= max_physical_height
+
+    if is_short_page and fits_limit:
+        page.set_viewport_size({"width": width, "height": total_height})
+        page.wait_for_timeout(300)
+        new_total_height = page.evaluate("document.body.scrollHeight")
+        if new_total_height != total_height and new_total_height * dsf <= max_physical_height:
+            page.set_viewport_size({"width": width, "height": new_total_height})
+            page.wait_for_timeout(200)
+        page.screenshot(path=path, full_page=False, timeout=timeout)
+        if current_viewport:
+            page.set_viewport_size(current_viewport)
+        return
+
+    # --- Chunked path ---
+    # We scroll and capture in chunks of the original viewport height (no resizing)
+    # to maintain the identical layout as real-world screen sizes.
+    chunk_height_css = height
+    print(f"  Page height ({total_height}px) is tall. Capturing in chunks of original viewport height ({chunk_height_css}px).")
+
+    # JS snippets used inside the chunk loop.
+    #
+    # We inject a <style> tag instead of setting inline visibility, because
+    # React re-renders on scroll events can overwrite inline styles — but they
+    # cannot remove a <style> tag injected into <head>. Using !important in the
+    # stylesheet rule ensures the rule wins over any framework-applied styles.
+    _ENSURE_STYLE_JS = """
+        () => {
+            if (!document.getElementById('_capture_hide_nav_style')) {
+                const style = document.createElement('style');
+                style.id = '_capture_hide_nav_style';
+                style.textContent = '[data-_capturehide="1"] { visibility: hidden !important; }';
+                document.head.appendChild(style);
+            }
+        }
+    """
+
+
+    _HIDE_BOTTOM_ONLY_JS = """
+        () => {
+            const vw = window.innerWidth;
+            const vh = window.innerHeight;
+            document.querySelectorAll('*').forEach(el => {
+                const s = window.getComputedStyle(el);
+                if (s.position !== 'fixed' && s.position !== 'sticky') return;
+                const rect = el.getBoundingClientRect();
+                // Bottom-pinned sticky banners / CTA bars only.
+                if (rect.bottom > vh - 120 && rect.height > 0 && rect.height < 200 && rect.width > vw * 0.5) {
+                    el.setAttribute('data-_capturehide', '1');
+                }
+            });
+        }
+    """
+    _HIDE_FIXED_ELEMENTS_JS = """
+        () => {
+            const vw = window.innerWidth;
+            const vh = window.innerHeight;
+            document.querySelectorAll('*').forEach(el => {
+                const s = window.getComputedStyle(el);
+                if (s.position !== 'fixed' && s.position !== 'sticky') return;
+                const rect = el.getBoundingClientRect();
+                // Top-pinned nav bars.
+                const isTopBar = (
+                    rect.top < 120 &&
+                    rect.height > 0 && rect.height < 200 &&
+                    rect.width > vw * 0.5
+                );
+                // Bottom-pinned sticky banners / CTA bars.
+                const isBottomBar = (
+                    rect.bottom > vh - 120 &&
+                    rect.height > 0 && rect.height < 200 &&
+                    rect.width > vw * 0.5
+                );
+                if (isTopBar || isBottomBar) {
+                    el.setAttribute('data-_capturehide', '1');
+                }
+            });
+        }
+    """
+    _RESTORE_FIXED_ELEMENTS_JS = """
+        () => {
+            const style = document.getElementById('_capture_hide_nav_style');
+            if (style) style.remove();
+            document.querySelectorAll('[data-_capturehide]').forEach(el => {
+                el.removeAttribute('data-_capturehide');
+            });
+        }
+    """
+    _UNLOCK_SCROLL_JS = """
+        () => {
+            // Popups often set overflow:hidden on body/html to prevent scroll.
+            // Remove it so window.scrollTo() works correctly between chunks.
+            document.body.style.removeProperty('overflow');
+            document.documentElement.style.removeProperty('overflow');
+        }
+    """
+
+    chunks = []
+    y_offset = 0
+    any_hidden = False
+
+    # Ensure viewport size matches the original viewport size
+    if current_viewport:
+        page.set_viewport_size(current_viewport)
+
+    # Inject the hide stylesheet once upfront so it persists across re-renders.
+    page.evaluate(_ENSURE_STYLE_JS)
+
+    while y_offset < total_height:
+        remaining = total_height - y_offset
+        is_last = remaining < chunk_height_css
+
+        # Calculate target scroll position for this step
+        if not is_last:
+            scroll_pos = y_offset
+        else:
+            max_scroll = page.evaluate("document.body.scrollHeight - window.innerHeight")
+            scroll_pos = min(total_height - chunk_height_css, max_scroll)
+            scroll_pos = max(0, scroll_pos)
+
+        # 1. Scroll first and wait for the layout to settle (triggering scroll events)
+        page.evaluate(f"window.scrollTo(0, {scroll_pos})")
+        page.wait_for_timeout(300)
+
+        # 2. Unlock body overflow and dismiss any popup/modal that was triggered by the scroll
+        page.evaluate(_UNLOCK_SCROLL_JS)
+        _dismiss_popup(page, max_wait_ms=500)
+
+        # 3. Apply the CSS hiding stylesheet rule (React re-renders on scroll have already finished)
+        if scroll_pos == 0:
+            # First chunk: show top navigation, hide sticky bottom banner
+            page.evaluate(_HIDE_BOTTOM_ONLY_JS)
+        else:
+            # Subsequent chunks: hide all fixed/sticky elements (top and bottom)
+            page.evaluate(_HIDE_FIXED_ELEMENTS_JS)
+        any_hidden = True
+
+        # 4. Take the screenshot immediately after hiding
+        chunk_data = page.screenshot(full_page=False, timeout=timeout)
+
+        if not is_last:
+            chunks.append((Image.open(BytesIO(chunk_data)), chunk_height_css))
+            y_offset += chunk_height_css
+        else:
+            img = Image.open(BytesIO(chunk_data))
+            # Crop the bottom 'remaining' CSS pixels transformed to physical pixels
+            physical_remaining = int(remaining * dsf)
+            crop_top = img.height - physical_remaining
+            cropped_img = img.crop((0, crop_top, img.width, img.height))
+            chunks.append((cropped_img, remaining))
+            break
+
+    # Restore all fixed elements to their original state
+    if any_hidden:
+        page.evaluate(_RESTORE_FIXED_ELEMENTS_JS)
+
+
+    # Stitch the chunks vertically
+    total_physical_width = chunks[0][0].width
+    total_physical_height = sum(c[0].height for c in chunks)
+    print(f"  Stitching {len(chunks)} chunks into a {total_physical_width}x{total_physical_height} image...")
+
+    stitched_image = Image.new("RGBA", (total_physical_width, total_physical_height))
+    current_y = 0
+    for img, _ in chunks:
+        stitched_image.paste(img, (0, current_y))
+        current_y += img.height
+
+    stitched_image.save(path)
+
+    # Restore original viewport state and scroll to top
+    if current_viewport:
+        page.set_viewport_size(current_viewport)
+    page.evaluate("window.scrollTo(0, 0)")
+
 
 def capture_url(url: str, mode: str, slug: str):
     """
@@ -404,9 +632,8 @@ def capture_url(url: str, mode: str, slug: str):
 
         out_dir = get_output_dir(mode, "desktop", slug)
         os.makedirs(out_dir, exist_ok=True)
-        
-        #_neutralize_sticky_elements(page)
-        page.screenshot(path=os.path.join(out_dir, f"{mode}-desktop-{slug}-screenshot.png"), full_page=True, timeout=60000)
+
+        _screenshot_full_page_stable(page, os.path.join(out_dir, f"{mode}-desktop-{slug}-screenshot.png"), timeout=60000)
         print(f"  Screenshot saved.")
 
         with open(os.path.join(out_dir, f"{mode}-desktop-{slug}-page.html"), "w", encoding="utf-8") as f:
@@ -443,8 +670,7 @@ def capture_url(url: str, mode: str, slug: str):
         out_dir = get_output_dir(mode, "android", slug)
         os.makedirs(out_dir, exist_ok=True)
 
-        #_sticky_elements(page)
-        page.screenshot(path=os.path.join(out_dir, f"{mode}-android-{slug}-screenshot.png"), full_page=True, timeout=60000)
+        _screenshot_full_page_stable(page, os.path.join(out_dir, f"{mode}-android-{slug}-screenshot.png"), timeout=60000)
         print(f"  Screenshot saved.")
 
         with open(os.path.join(out_dir, f"{mode}-android-{slug}-page.html"), "w", encoding="utf-8") as f:
@@ -480,8 +706,7 @@ def capture_url(url: str, mode: str, slug: str):
         out_dir = get_output_dir(mode, "ios", slug)
         os.makedirs(out_dir, exist_ok=True)
 
-        #_neutralize_sticky_elements(page)
-        page.screenshot(path=os.path.join(out_dir, f"{mode}-ios-{slug}-screenshot.png"), full_page=True, timeout=60000)
+        _screenshot_full_page_stable(page, os.path.join(out_dir, f"{mode}-ios-{slug}-screenshot.png"), timeout=60000)
         print(f"  Screenshot saved.")
 
         with open(os.path.join(out_dir, f"{mode}-ios-{slug}-page.html"), "w", encoding="utf-8") as f:
@@ -525,4 +750,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     capture_url(args.url, args.mode, args.slug)
-    print(f"\nDone. Output saved to data/{args.mode}/[device]-{args.slug}/")
+    print(f"\nDone. Output saved to data/{args.mode}/{args.slug}/[device]/")

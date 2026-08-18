@@ -20,7 +20,7 @@ FIRST_FOLD_HEIGHTS = {"desktop": 800, "android": 851, "ios": 693}
 def get_output_dir(mode: str, device: str, slug: str) -> str:
     """Return directory for given mode (reference/live) and device/slug."""
     base = REFERENCE_DIR if mode == "reference" else LIVE_DIR
-    return os.path.join(base, f"{device}-{slug}")
+    return os.path.join(base, slug, device)
 
 # Reuse element extraction from firstfold (same logic) – copy here
 def extract_elements(page, fold_height: int, popup_selector: str = None, device_scale_factor: float = 1) -> dict:
@@ -377,4 +377,4 @@ if __name__ == "__main__":
     parser.add_argument("--slug", required=True)
     args = parser.parse_args()
     capture_url(args.url, args.mode, args.slug)
-    print(f"\nDone. Output saved to {args.mode}/[device]-{args.slug}/")
+    print(f"\nDone. Output saved to {args.mode}/{args.slug}/[device]/")

@@ -46,6 +46,10 @@
             color: #ff8a3d;
         }
 
+        .score.high {
+            color: #ef4444;
+        }
+
         .score.ok {
             color: #7fd88f;
         }
@@ -112,10 +116,118 @@
         .label-right {
             right: 8px;
         }
+
+        .fold-issues {
+            margin-top: 10px;
+            padding: 10px 12px;
+            background: #141414;
+            border: 1px solid #2a2a2a;
+            border-radius: 6px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .fold-issues p {
+            margin: 0 0 4px 0;
+            color: #aaa;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .fold-issues ul {
+            margin: 0;
+            padding-left: 16px;
+            list-style: none;
+        }
+
+        .fold-issues li {
+            margin-bottom: 3px;
+            color: #ccc;
+        }
+
+        .fold-issues li::before {
+            content: "\2022";
+            color: #ff8a3d;
+            margin-right: 6px;
+        }
+
+        .fold-issues .cat-label {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 1px 5px;
+            border-radius: 3px;
+            margin-right: 4px;
+            background: #2a2a2a;
+            color: #999;
+        }
+
+        .top-nav {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 14px;
+            background: #1a1a1a;
+            border: 1px solid #444;
+            border-radius: 6px;
+            color: #ccc;
+            font-size: 13px;
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .back-btn:hover {
+            border-color: #ff8a3d;
+            color: #ff8a3d;
+        }
+
+        .viewport-switcher {
+            display: flex;
+            gap: 6px;
+            margin-left: auto;
+        }
+
+        .vp-btn {
+            padding: 6px 14px;
+            background: #1a1a1a;
+            border: 1px solid #444;
+            border-radius: 6px;
+            color: #999;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+
+        .vp-btn:hover {
+            border-color: #888;
+            color: #ccc;
+        }
+
+        .vp-btn.active {
+            border-color: #ff8a3d;
+            color: #ff8a3d;
+            background: #ff8a3d11;
+        }
     </style>
 </head>
 
 <body>
+    <nav class="top-nav">
+        <a href="landing.html" class="back-btn">&#8592; All Pages</a>
+        <div class="viewport-switcher" id="viewport-switcher"></div>
+    </nav>
     <h1>Visual fold comparison — <span id="slug"></span></h1>
     <div id="folds"></div>
     <script>
@@ -126,7 +238,22 @@
             const device = params.get("device") || "desktop";
             document.getElementById("slug").textContent = `${slug} (${device})`;
 
-            const res = await fetch(`../data/reports/${slug}.json`);
+            // Build viewport switcher
+            const devices = [
+                { key: "desktop", label: "Desktop" },
+                { key: "android", label: "Android" },
+                { key: "ios", label: "iOS" },
+            ];
+            const switcher = document.getElementById("viewport-switcher");
+            devices.forEach(d => {
+                const a = document.createElement("a");
+                a.className = "vp-btn" + (d.key === device ? " active" : "");
+                a.textContent = d.label;
+                a.href = `?slug=${slug}&device=${d.key}`;
+                switcher.appendChild(a);
+            });
+
+            const res = await fetch(`../data/diffs/${slug}/raw-report.json`);
             const reports = await res.json();
             const report = reports.find(r => r.device === device);
             if (!report) {
@@ -137,19 +264,66 @@
             const container = document.getElementById("folds");
             const folds = [...report.details.visual_folds].sort((a, b) => a.fold_index - b.fold_index);
 
+            const ISSUE_CATEGORIES = ["headings", "buttons", "links"];
+            const CATEGORY_LABELS = { headings: "Headings", buttons: "Buttons", links: "Links" };
+
+            function bboxOverlapsFold(bbox, fold) {
+                if (!bbox || fold.y_start == null || fold.y_end == null) return false;
+                const bTop = bbox.y;
+                const bBottom = bbox.y + (bbox.height || 0);
+                return bBottom > fold.y_start && bTop < fold.y_end;
+            }
+
+            function getIssuesForFold(fold) {
+                const found = [];
+                for (const cat of ISSUE_CATEGORIES) {
+                    const issues = (report.details[cat] || []).filter(
+                        issue => issue.bbox && bboxOverlapsFold(issue.bbox, fold)
+                    );
+                    if (issues.length > 0) {
+                        found.push({ cat, issues });
+                    }
+                }
+                return found;
+            }
+
             folds.forEach(fold => {
                 const div = document.createElement("div");
                 div.className = fold.flagged ? "fold flagged" : "fold";
-                const scoreClass = fold.flagged ? "score flagged" : "score ok";
+                const scoreClass = fold.diff_percent > 10 ? "score high" : fold.diff_percent > 5 ? "score flagged" : "score ok";
+
+                const issueGroups = getIssuesForFold(fold);
+                let issuesHtml = "";
+                if (issueGroups.length > 0) {
+                    const items = issueGroups.map(g =>
+                        g.issues.map(i => {
+                            return `<li><span class="cat-label">${CATEGORY_LABELS[g.cat] || g.cat}</span>${i.message || ""}</li>`;
+                        }).join("")
+                    ).join("");
+                    issuesHtml = `
+                        <div class="fold-issues">
+                            <p>Issues in this fold</p>
+                            <ul>${items}</ul>
+                        </div>`;
+                } else {
+                    const label = fold.diff_percent <= 5 ? "Minor pixel changes" : "Pixel changes";
+                    issuesHtml = `
+                        <div class="fold-issues">
+                            <p>Issues in this fold</p>
+                            <ul><li>${label}</li></ul>
+                        </div>`;
+                }
+
                 div.innerHTML = `
                     <p>Fold ${fold.fold_index} — <span class="${scoreClass}">${fold.diff_percent}% different</span></p>
+                    ${issuesHtml}
                     <div class="slider-wrap">
                         <span class="side-label label-left">Reference</span>
                         <span class="side-label label-right">Live</span>
                         <img-comparison-slider>
                         <img slot="first" src="../${fold.reference_image}">
                         <img slot="second" src="../${fold.live_image}">
-                        <div slot="handle" class="custom-handle">⇔</div>
+                        <div slot="handle" class="custom-handle">\u21d4</div>
                         </img-comparison-slider>
                     </div>
                     `;

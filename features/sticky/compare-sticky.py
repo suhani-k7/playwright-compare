@@ -32,7 +32,7 @@ from compare import (
 def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
     """Load the saved HTML for a given mode/device/slug."""
     base = REFERENCE_DIR if mode == "reference" else LIVE_DIR
-    path = os.path.join(base, f"{device}-{slug}", f"{mode}-{device}-{slug}-page.html")
+    path = os.path.join(base, slug, device, f"{mode}-{device}-{slug}-page.html")
     if not os.path.exists(path):
         raise FileNotFoundError(f"HTML not found: {path}. Run capture-sticky.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -41,7 +41,7 @@ def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
 def load_elements(mode: str, device: str, slug: str) -> dict:
     """Load the elements JSON for a given mode/device/slug."""
     base = REFERENCE_DIR if mode == "reference" else LIVE_DIR
-    path = os.path.join(base, f"{device}-{slug}", f"{mode}-{device}-{slug}-elements.json")
+    path = os.path.join(base, slug, device, f"{mode}-{device}-{slug}-elements.json")
     if not os.path.exists(path):
         raise FileNotFoundError(f"Elements JSON not found: {path}. Run capture-sticky.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -89,7 +89,7 @@ def compare_sticky(ref_elements: dict, live_elements: dict):
 
 def _load_pct_elements(mode: str, device: str, slug: str, pct: int) -> dict:
     base = REFERENCE_DIR if mode == "reference" else LIVE_DIR
-    path = os.path.join(base, f"{device}-{slug}", f"{mode}-{device}-{slug}-{pct}pct-elements.json")
+    path = os.path.join(base, slug, device, f"{mode}-{device}-{slug}-{pct}pct-elements.json")
     if not os.path.exists(path):
         return {}
     with open(path, "r", encoding="utf-8") as f:
@@ -125,7 +125,7 @@ def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = F
     scroll position, and skip saving screenshots that end up with nothing
     to show (so we're not saving 10 near-duplicate annotated images).
     """
-    live_dir = os.path.join(LIVE_DIR, f"{device}-{slug}")
+    live_dir = os.path.join(LIVE_DIR, slug, device)
     if not os.path.isdir(live_dir):
         print(f"  [Annotate] Live directory not found: {live_dir}")
         return

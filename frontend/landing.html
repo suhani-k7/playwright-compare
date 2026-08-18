@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Visual Fold Comparison</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0f0f0f;
+            color: #e6e6e6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 480px;
+            margin: 40px 20px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 36px 32px;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 28px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .slug-input-wrap {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .slug-input {
+            width: 100%;
+            padding: 10px 14px;
+            background: #111;
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.15s;
+        }
+
+        .slug-input:focus {
+            border-color: #ff8a3d;
+        }
+
+        .slug-input::placeholder {
+            color: #555;
+        }
+
+        .slug-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 4px;
+            background: #1e1e1e;
+            border: 1px solid #444;
+            border-radius: 8px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 20;
+            display: none;
+        }
+
+        .slug-dropdown.open {
+            display: block;
+        }
+
+        .slug-option {
+            padding: 10px 14px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.1s;
+        }
+
+        .slug-option:hover {
+            background: #2a2a2a;
+        }
+
+        .slug-option.selected {
+            background: #2a2a2a;
+            color: #ff8a3d;
+        }
+
+        .slug-option .badge {
+            font-size: 10px;
+            padding: 2px 7px;
+            border-radius: 10px;
+            background: #333;
+            color: #888;
+        }
+
+        .slug-option .badge.report {
+            background: #ff8a3d22;
+            color: #ff8a3d;
+        }
+
+        .viewport-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+
+        .viewport-btn {
+            padding: 12px 0;
+            background: #111;
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: #ccc;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.15s;
+        }
+
+        .viewport-btn:hover {
+            border-color: #666;
+        }
+
+        .viewport-btn.active {
+            border-color: #ff8a3d;
+            background: #ff8a3d11;
+            color: #ff8a3d;
+        }
+
+        .viewport-btn .icon {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .viewport-btn.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .go-btn {
+            width: 100%;
+            padding: 13px;
+            background: #ff8a3d;
+            border: none;
+            border-radius: 8px;
+            color: #111;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.15s;
+        }
+
+        .go-btn:hover {
+            opacity: 0.9;
+        }
+
+        .go-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .error-msg {
+            margin-top: 12px;
+            font-size: 12px;
+            color: #ef4444;
+            display: none;
+        }
+
+        .error-msg.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Visual Fold Comparison</h1>
+        <p class="subtitle">Select a page and viewport to compare reference vs live folds.</p>
+
+        <label for="slug-search">Page</label>
+        <div class="slug-input-wrap">
+            <input type="text" id="slug-search" class="slug-input" placeholder="Search pages..." autocomplete="off">
+            <div id="slug-dropdown" class="slug-dropdown"></div>
+        </div>
+
+        <label>Viewport</label>
+        <div class="viewport-grid" id="viewport-grid">
+            <button class="viewport-btn" data-device="desktop">
+                <span class="icon">&#128187;</span>
+                Desktop
+            </button>
+            <button class="viewport-btn" data-device="android">
+                <span class="icon">&#128241;</span>
+                Android
+            </button>
+            <button class="viewport-btn" data-device="ios">
+                <span class="icon">&#128241;</span>
+                iOS
+            </button>
+        </div>
+
+        <button class="go-btn" id="go-btn" disabled>Compare</button>
+        <p class="error-msg" id="error-msg"></p>
+    </div>
+
+    <script>
+        let manifest = [];
+        let selectedSlug = null;
+        let selectedDevice = null;
+        let availableDevices = [];
+
+        async function init() {
+            try {
+                const res = await fetch("../data/manifest.json");
+                manifest = await res.json();
+            } catch (e) {
+                showError("Could not load manifest. Run compare.py first.");
+                return;
+            }
+            renderDropdown(manifest);
+        }
+
+        function renderDropdown(items) {
+            const dropdown = document.getElementById("slug-dropdown");
+            dropdown.innerHTML = items.map(s =>
+                `<div class="slug-option" data-slug="${s.slug}">
+                    <span>${s.slug}</span>
+                    <span class="badge ${s.has_report ? 'report' : ''}">${s.has_report ? 'report' : 'no report'}</span>
+                </div>`
+            ).join("");
+
+            dropdown.querySelectorAll(".slug-option").forEach(el => {
+                el.addEventListener("click", () => selectSlug(el.dataset.slug));
+            });
+        }
+
+        function selectSlug(slug) {
+            selectedSlug = manifest.find(s => s.slug === slug);
+            if (!selectedSlug) return;
+
+            document.getElementById("slug-search").value = slug;
+            document.getElementById("slug-dropdown").classList.remove("open");
+
+            availableDevices = selectedSlug.devices;
+            selectedDevice = null;
+
+            document.querySelectorAll(".viewport-btn").forEach(btn => {
+                const d = btn.dataset.device;
+                if (availableDevices.includes(d)) {
+                    btn.classList.remove("disabled");
+                    btn.classList.remove("active");
+                } else {
+                    btn.classList.add("disabled");
+                    btn.classList.remove("active");
+                }
+            });
+
+            updateGoBtn();
+        }
+
+        document.getElementById("slug-search").addEventListener("input", function () {
+            const val = this.value.toLowerCase();
+            const filtered = manifest.filter(s => s.slug.toLowerCase().includes(val));
+            renderDropdown(filtered);
+            document.getElementById("slug-dropdown").classList.add("open");
+            selectedSlug = null;
+            updateGoBtn();
+        });
+
+        document.getElementById("slug-search").addEventListener("focus", function () {
+            const val = this.value.toLowerCase();
+            const filtered = val ? manifest.filter(s => s.slug.toLowerCase().includes(val)) : manifest;
+            renderDropdown(filtered);
+            document.getElementById("slug-dropdown").classList.add("open");
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!e.target.closest(".slug-input-wrap")) {
+                document.getElementById("slug-dropdown").classList.remove("open");
+            }
+        });
+
+        document.querySelectorAll(".viewport-btn").forEach(btn => {
+            btn.addEventListener("click", function () {
+                if (this.classList.contains("disabled")) return;
+                document.querySelectorAll(".viewport-btn").forEach(b => b.classList.remove("active"));
+                this.classList.add("active");
+                selectedDevice = this.dataset.device;
+                updateGoBtn();
+            });
+        });
+
+        function updateGoBtn() {
+            const goBtn = document.getElementById("go-btn");
+            goBtn.disabled = !(selectedSlug && selectedDevice);
+        }
+
+        function showError(msg) {
+            const el = document.getElementById("error-msg");
+            el.textContent = msg;
+            el.classList.add("show");
+        }
+
+        document.getElementById("go-btn").addEventListener("click", function () {
+            if (!selectedSlug || !selectedDevice) return;
+            if (!selectedSlug.has_report) {
+                showError("No report exists for this slug yet. Run compare.py first.");
+                return;
+            }
+            window.location.href = `fold_slider_demo.html?slug=${selectedSlug.slug}&device=${selectedDevice}`;
+        });
+
+        init();
+    </script>
+</body>
+
+</html>

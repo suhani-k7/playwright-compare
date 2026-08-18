@@ -44,7 +44,7 @@ def _normalize_href(href: str, base_url: str = "", known_domains: list = None) -
     return normalized
 
 def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
-    path = os.path.join(DATA_DIR, mode, f"{device}-{slug}", f"{mode}-{device}-{slug}-page.html")
+    path = os.path.join(DATA_DIR, mode, slug, device, f"{mode}-{device}-{slug}-page.html")
     if not os.path.exists(path):
         raise FileNotFoundError(f"HTML not found: {path}. Run capture.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -52,7 +52,7 @@ def load_html(mode: str, device: str, slug: str) -> BeautifulSoup:
 
 
 def load_elements(mode: str, device: str, slug: str) -> dict:
-    path = os.path.join(DATA_DIR, mode, f"{device}-{slug}", f"{mode}-{device}-{slug}-elements.json")
+    path = os.path.join(DATA_DIR, mode, slug, device, f"{mode}-{device}-{slug}-elements.json")
     if not os.path.exists(path):
         raise FileNotFoundError(f"Elements JSON not found: {path}. Run capture.py first.")
     with open(path, "r", encoding="utf-8") as f:
@@ -677,7 +677,7 @@ def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = F
     Draws bounding boxes and labels on the live screenshot based on the report.
     Saves to the 'diffs/' folder.
     """
-    live_img_path = os.path.join(DATA_DIR, "live", f"{device}-{slug}", f"live-{device}-{slug}-screenshot.png")
+    live_img_path = os.path.join(DATA_DIR, "live", slug, device, f"live-{device}-{slug}-screenshot.png")
     if not os.path.exists(live_img_path):
         print(f"  [Annotate] Live screenshot not found: {live_img_path}")
         return
@@ -688,9 +688,24 @@ def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = F
         print(f"  [Annotate] Failed to open image {live_img_path}: {e}")
         return
 
+    # Scale factor mapping based on capture configuration:
+    # Desktop uses 1.0, Pixel 5 (Android) uses 2.75, iPhone 13 Mini (iOS) uses 3.0.
+    scale_factors = {
+        "desktop": 1.0,
+        "android": 2.75,
+        "ios": 3.0
+    }
+    dsf = scale_factors.get(device, 1.0)
+
+    # Scale font size, border thickness, and spacing proportionally
+    base_font_size = 16
+    scaled_font_size = max(12, int(base_font_size * dsf))
+    border_width = max(1, int(3 * dsf))
+    spacing = int(20 * dsf)
+
     draw = ImageDraw.Draw(img)
     try:
-        font = ImageFont.load_default(size=16)
+        font = ImageFont.load_default(size=scaled_font_size)
     except Exception:
         font = ImageFont.load_default()
 
@@ -713,14 +728,15 @@ def annotate_screenshot(device: str, slug: str, report: dict, show_all: bool = F
             w = bbox["width"]
             h = bbox["height"]
             
-            # Draw red rectangle
-            draw.rectangle([(x, y), (x + w, y + h)], outline="red", width=3)
+            # Draw red rectangle with scaled outline thickness
+            draw.rectangle([(x, y), (x + w, y + h)], outline="red", width=border_width)
             
             # Truncate label if too long
             if len(label) > 60:
                 label = label[:57] + "..."
             
-            text_y = max(0, y - 20)
+            # Position label above the bounding box, taking scaled spacing and border into account
+            text_y = max(0, y - spacing - border_width)
             try:
                 text_bbox = draw.textbbox((x, text_y), label, font=font)
                 label_w = text_bbox[2] - text_bbox[0]
@@ -769,8 +785,8 @@ def compare_device(device: str, slug: str) -> dict:
     link_status,     link_issues     = compare_links(ref_soup, live_soup, ref_elements, live_elements)
     
     visual_status, visual_issues = compare_visual_folds(
-        reference_dir=os.path.join(DATA_DIR, "reference", f"{device}-{slug}"),
-        live_dir=os.path.join(DATA_DIR, "live", f"{device}-{slug}"),
+        reference_dir=os.path.join(DATA_DIR, "reference", slug, device),
+        live_dir=os.path.join(DATA_DIR, "live", slug, device),
         out_dir=os.path.join(DATA_DIR, "diffs", slug, "folds", device),
         device=device,
         slug=slug,
@@ -925,13 +941,42 @@ if __name__ == "__main__":
         except FileNotFoundError as e:
             print(f"\n[{device}] Skipping — {e}")
 
-    # Save combined report to reports/
+    # Save combined report to diffs/
     os.makedirs(os.path.join(DATA_DIR, "diffs", args.slug), exist_ok=True)
     report_path = os.path.join(DATA_DIR, "diffs", args.slug, "raw-report.json")
-    
+
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(all_reports, f, indent=2)
 
+    # Also write to data/reports/ for server.py and other consumers
+    os.makedirs(os.path.join(DATA_DIR, "reports"), exist_ok=True)
+    reports_path = os.path.join(DATA_DIR, "reports", f"{args.slug}.json")
+
+    with open(reports_path, "w", encoding="utf-8") as f:
+        json.dump(all_reports, f, indent=2)
+
     print(f"\nReport saved to {report_path}")
+    print(f"Report also saved to {reports_path}")
     generate_readable_report(all_reports, args.slug)
+
+    # Update manifest with all available slugs
+    _update_manifest()
+
+
+def _update_manifest():
+    """Scans data/reference/ and builds a manifest of all slugs with their available devices."""
+    ref_dir = os.path.join(DATA_DIR, "reference")
+    manifest = []
+    if os.path.isdir(ref_dir):
+        for slug in sorted(os.listdir(ref_dir)):
+            slug_path = os.path.join(ref_dir, slug)
+            if not os.path.isdir(slug_path):
+                continue
+            devices = sorted(d for d in os.listdir(slug_path) if os.path.isdir(os.path.join(slug_path, d)))
+            has_report = os.path.exists(os.path.join(DATA_DIR, "diffs", slug, "raw-report.json"))
+            manifest.append({"slug": slug, "devices": devices, "has_report": has_report})
+    manifest_path = os.path.join(DATA_DIR, "manifest.json")
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
+    print(f"Manifest updated: {manifest_path} ({len(manifest)} slug(s))")
 
