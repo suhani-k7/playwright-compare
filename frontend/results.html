@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side-by-Side Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        :root {
+            --bg: #0b0f19;
+            --card: #141b2d;
+            --border: #242f4c;
+            --accent: #ff8a3d;
+            --accent-glow: rgba(255,138,61,0.15);
+            --text: #f3f4f6;
+            --muted: #9ca3af;
+            --success: #10b981;
+            --danger: #ef4444;
+            --topbar-h: 60px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ── TOP BAR ── */
+        .topbar {
+            height: var(--topbar-h);
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0 18px;
+            flex-shrink: 0;
+            z-index: 10;
+        }
+
+        .topbar-left { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+        .topbar-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+        .slug-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            white-space: nowrap;
+        }
+        .slug-label span { color: var(--accent); }
+
+        .sep { width: 1px; height: 24px; background: var(--border); margin: 0 4px; }
+
+        /* Viewport switcher */
+        .vp-group { display: flex; gap: 4px; }
+        .vp-btn {
+            padding: 6px 13px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.15s;
+            white-space: nowrap;
+        }
+        .vp-btn:hover { border-color: #4b5563; color: #fff; }
+        .vp-btn.active { border-color: var(--accent); background: var(--accent-glow); color: var(--accent); }
+
+        /* Icon buttons */
+        .icon-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 13px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.15s;
+            white-space: nowrap;
+        }
+        .icon-btn:hover { border-color: #666; color: #fff; }
+        .icon-btn.accent { border-color: var(--accent); color: var(--accent); }
+        .icon-btn.accent:hover { background: var(--accent-glow); }
+        .icon-btn .ico { font-size: 14px; }
+
+        /* ── WORKSPACE ── */
+        .workspace {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Column headers */
+        .col-header {
+            position: absolute;
+            top: 0;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            z-index: 5;
+            gap: 6px;
+        }
+        .col-header.ref-header { left: 0; width: 50%; background: rgba(16, 185, 129, 0.08); border-bottom: 1px solid rgba(16,185,129,0.25); color: var(--success); }
+        .col-header.live-header { left: 50%; width: 50%; background: rgba(255, 138, 61, 0.06); border-bottom: 1px solid rgba(255,138,61,0.2); border-left: 1px solid var(--border); color: var(--accent); }
+
+        /* Image panels */
+        .panels {
+            position: absolute;
+            top: 34px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+        }
+
+        .panel {
+            flex: 1;
+            overflow: auto;
+            position: relative;
+            cursor: default;
+            background: #090d16;
+            user-select: none;
+            touch-action: pan-x pan-y;
+        }
+        .panel:last-child { border-left: 2px solid var(--border); }
+
+        .panel-inner {
+            display: inline-block;
+            min-width: 100%;
+        }
+
+        .panel-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            cursor: zoom-in;
+        }
+
+        /* Zoom hint */
+        .zoom-hint {
+            position: sticky;
+            bottom: 10px;
+            right: 10px;
+            float: right;
+            background: rgba(0,0,0,0.72);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 5px 10px;
+            font-size: 11px;
+            color: var(--muted);
+            z-index: 4;
+            pointer-events: none;
+            margin: 0 10px 10px 0;
+        }
+
+        /* Reset button per panel */
+        .reset-btn {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            background: rgba(20,27,45,0.85);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--muted);
+            font-size: 11px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            z-index: 4;
+            transition: all 0.15s;
+        }
+        .reset-btn:hover { color: #fff; border-color: #555; }
+
+        /* ── REPORT DRAWER ── */
+        .drawer-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 50;
+        }
+        .drawer-overlay.open { display: block; }
+
+        .drawer {
+            position: fixed;
+            top: 0; right: 0;
+            width: min(620px, 100vw);
+            height: 100vh;
+            background: var(--card);
+            border-left: 1px solid var(--border);
+            z-index: 51;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -10px 0 40px rgba(0,0,0,0.5);
+        }
+        .drawer.open { transform: translateX(0); }
+
+        .drawer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+        .drawer-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .drawer-close {
+            width: 32px; height: 32px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            color: var(--muted);
+            font-size: 16px;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.15s;
+        }
+        .drawer-close:hover { color: #fff; border-color: #555; }
+
+        .drawer-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 28px 28px 40px;
+        }
+
+        /* Markdown styles inside drawer */
+        .md-content h1 { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 16px; }
+        .md-content h2 { font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 700; color: var(--accent); margin: 28px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+        .md-content h3 { font-size: 14px; font-weight: 700; color: #cbd5e1; margin: 20px 0 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .md-content p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 10px; }
+        .md-content ul { padding-left: 0; list-style: none; margin-bottom: 12px; }
+        .md-content ul li {
+            font-size: 13.5px;
+            color: #d1d5db;
+            line-height: 1.6;
+            padding: 7px 12px 7px 36px;
+            position: relative;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            background: rgba(255,255,255,0.03);
+        }
+        .md-content ul li::before {
+            content: "●";
+            color: var(--accent);
+            position: absolute;
+            left: 13px;
+            font-size: 8px;
+            top: 11px;
+        }
+        .md-content em { color: var(--muted); font-style: italic; font-size: 12px; }
+        .md-content code { background: rgba(255,138,61,0.1); color: var(--accent); padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+        .md-content table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 20px; }
+        .md-content th { background: rgba(255,255,255,0.05); color: var(--muted); text-align: left; padding: 10px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border); }
+        .md-content td { padding: 10px 14px; color: #d1d5db; border-bottom: 1px solid rgba(36,47,76,0.5); font-size: 13px; }
+        .md-content td:first-child { color: #94a3b8; font-weight: 600; }
+        .md-content hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+
+        /* Loading state for drawer */
+        .drawer-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            color: var(--muted);
+            font-size: 14px;
+            gap: 10px;
+        }
+        .spin {
+            width: 18px; height: 18px;
+            border: 2px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Error/loading banner for images */
+        .img-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+        .img-placeholder .spin { width: 28px; height: 28px; border-width: 3px; }
+        .img-placeholder.error { color: var(--danger); }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <div class="topbar-left">
+        <div class="slug-label">Results: <span id="slug-display">—</span></div>
+        <div class="sep"></div>
+        <div class="vp-group" id="vp-group">
+            <button class="vp-btn" data-device="desktop">🖥 Desktop</button>
+            <button class="vp-btn" data-device="android">📱 Android</button>
+            <button class="vp-btn" data-device="ios">📱 iOS</button>
+        </div>
+    </div>
+    <div class="topbar-right">
+        <button class="icon-btn" id="report-btn"><span class="ico">📋</span> View Report</button>
+        <a class="icon-btn" id="slider-link" href="#" target="_blank"><span class="ico">⇔</span> Fold Slider</a>
+        <a class="icon-btn" href="/"><span class="ico">←</span> Landing</a>
+    </div>
+</div>
+
+<!-- WORKSPACE -->
+<div class="workspace" id="workspace">
+    <!-- Column headers -->
+    <div class="col-header ref-header"><span>✦</span> Reference (Production)</div>
+    <div class="col-header live-header"><span>⬤</span> Live / UAT — Annotated</div>
+
+    <!-- Panels -->
+    <div class="panels">
+        <!-- Reference panel -->
+        <div class="panel" id="panel-ref">
+            <div class="panel-inner" id="inner-ref">
+                <img class="panel-img" id="img-ref" src="" alt="Reference screenshot">
+            </div>
+            <div class="img-placeholder" id="placeholder-ref"><div class="spin"></div> Loading…</div>
+            <button class="reset-btn" data-panel="ref">Reset view</button>
+            <div class="zoom-hint">Click to zoom · Double-click to reset · Pinch on touch</div>
+        </div>
+
+        <!-- Live/Annotated panel -->
+        <div class="panel" id="panel-live">
+            <div class="panel-inner" id="inner-live">
+                <img class="panel-img" id="img-live" src="" alt="Live annotated screenshot">
+            </div>
+            <div class="img-placeholder" id="placeholder-live"><div class="spin"></div> Loading…</div>
+            <button class="reset-btn" data-panel="live">Reset view</button>
+            <div class="zoom-hint">Click to zoom · Double-click to reset · Pinch on touch</div>
+        </div>
+    </div>
+</div>
+
+<!-- REPORT DRAWER -->
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<div class="drawer" id="drawer">
+    <div class="drawer-header">
+        <div class="drawer-title">📋 Comparison Report — <span id="drawer-slug"></span></div>
+        <button class="drawer-close" id="drawer-close">✕</button>
+    </div>
+    <div class="drawer-body">
+        <div id="report-content"><div class="drawer-loading"><div class="spin"></div> Loading report…</div></div>
+    </div>
+</div>
+
+<script>
+// ── URL PARAMS ─────────────────────────────────────────────────────────────
+const params = new URLSearchParams(window.location.search);
+let slug = params.get('slug') || '';
+let device = params.get('device') || 'desktop';
+
+if (!slug) {
+    document.body.innerHTML = '<div style="display:flex;height:100vh;align-items:center;justify-content:center;color:#9ca3af;font-family:sans-serif;flex-direction:column;gap:12px"><div style="font-size:48px">⚠️</div><div style="font-size:18px">No slug specified. Go back to <a href="/" style="color:#ff8a3d">Landing Page</a>.</div></div>';
+}
+
+// ── STATE ──────────────────────────────────────────────────────────────────
+// Per-panel zoom state: tracks current scale multiplier relative to fit-width
+const state = {
+    ref:  { scale: 1 },
+    live: { scale: 1 },
+};
+
+const ZOOM_STEP = 1.6;   // each click zooms by this factor
+const MAX_SCALE = 12;
+const MIN_SCALE = 0.5;   // can zoom out to half fit-width
+
+// Apply zoom: resize the image so overflow scroll works naturally
+function applyZoom(panelId) {
+    const st = state[panelId];
+    const panel = document.getElementById(`panel-${panelId}`);
+    const img = document.getElementById(`img-${panelId}`);
+    const fitW = panel.clientWidth;
+    img.style.width = Math.round(fitW * st.scale) + 'px';
+}
+
+function resetZoom(panelId) {
+    const st = state[panelId];
+    st.scale = 1;
+    const panel = document.getElementById(`panel-${panelId}`);
+    const img = document.getElementById(`img-${panelId}`);
+    img.style.width = '100%';
+    panel.scrollLeft = 0;
+    panel.scrollTop = 0;
+    img.style.cursor = 'zoom-in';
+}
+
+// ── IMAGE PATH HELPERS ─────────────────────────────────────────────────────
+function refImgPath(s, d) {
+    return `/data/reference/${s}/${d}/reference-${d}-${s}-screenshot.png`;
+}
+function liveImgPath(s, d) {
+    return `/data/diffs/${s}/${d}-annotated.png`;
+}
+
+// ── LOAD IMAGES ────────────────────────────────────────────────────────────
+function loadImages(s, d) {
+    ['ref', 'live'].forEach(p => {
+        const placeholder = document.getElementById(`placeholder-${p}`);
+        const img = document.getElementById(`img-${p}`);
+        placeholder.className = 'img-placeholder';
+        placeholder.innerHTML = '<div class="spin"></div> Loading…';
+        img.style.display = 'none';
+    });
+
+    const refImg = document.getElementById('img-ref');
+    const liveImg = document.getElementById('img-live');
+
+    function onLoad(imgEl, phId) {
+        document.getElementById(phId).style.display = 'none';
+        imgEl.style.display = 'block';
+    }
+    function onError(imgEl, phId, path) {
+        const ph = document.getElementById(phId);
+        ph.className = 'img-placeholder error';
+        ph.innerHTML = `⚠ Image not found<br><span style="font-size:11px;opacity:0.6">${path}</span>`;
+        imgEl.style.display = 'none';
+    }
+
+    const rPath = refImgPath(s, d);
+    const lPath = liveImgPath(s, d);
+
+    refImg.onload = () => { onLoad(refImg, 'placeholder-ref'); resetZoom('ref'); };
+    refImg.onerror = () => onError(refImg, 'placeholder-ref', rPath);
+    refImg.src = rPath;
+
+    liveImg.onload = () => { onLoad(liveImg, 'placeholder-live'); resetZoom('live'); };
+    liveImg.onerror = () => onError(liveImg, 'placeholder-live', lPath);
+    liveImg.src = lPath;
+
+    // Reset zoom on viewport switch
+    resetZoom('ref');
+    resetZoom('live');
+}
+
+// ── VIEWPORT SWITCHER ──────────────────────────────────────────────────────
+function setDevice(d) {
+    device = d;
+    // update URL without reload
+    const url = new URL(window.location);
+    url.searchParams.set('device', device);
+    window.history.replaceState({}, '', url);
+
+    document.querySelectorAll('.vp-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.device === device);
+    });
+
+    // Update slider link
+    document.getElementById('slider-link').href = `/frontend/fold_slider_demo.html?slug=${slug}&device=${device}`;
+
+    loadImages(slug, device);
+}
+
+document.querySelectorAll('.vp-btn').forEach(btn => {
+    btn.addEventListener('click', () => setDevice(btn.dataset.device));
+});
+
+// ── CLICK-TO-ZOOM + PINCH-ZOOM ENGINE ─────────────────────────────────────
+function makeZoom(panelEl, panelId) {
+    const img = document.getElementById(`img-${panelId}`);
+
+    // Click: zoom in, centred on click point
+    panelEl.addEventListener('click', e => {
+        // Ignore clicks on the reset button
+        if (e.target.classList.contains('reset-btn')) return;
+
+        const st = state[panelId];
+        const newScale = Math.min(MAX_SCALE, st.scale * ZOOM_STEP);
+        if (newScale === st.scale) return;
+
+        // Content coords of the click (in pre-zoom image pixels)
+        const rect = panelEl.getBoundingClientRect();
+        const cx = (e.clientX - rect.left + panelEl.scrollLeft) / st.scale;
+        const cy = (e.clientY - rect.top  + panelEl.scrollTop)  / st.scale;
+
+        st.scale = newScale;
+        applyZoom(panelId);
+
+        // Scroll so the clicked point stays under the cursor
+        panelEl.scrollLeft = cx * newScale - (e.clientX - rect.left);
+        panelEl.scrollTop  = cy * newScale - (e.clientY - rect.top);
+
+        // Switch cursor to zoom-out once not at base scale
+        img.style.cursor = newScale >= MAX_SCALE ? 'default' : 'zoom-in';
+    });
+
+    // Double-click: reset to fit-width
+    panelEl.addEventListener('dblclick', e => {
+        e.stopPropagation();
+        resetZoom(panelId);
+    });
+
+    // Trackpad pinch-to-zoom (macOS trackpad gestures fire wheel event with ctrlKey: true)
+    panelEl.addEventListener('wheel', e => {
+        if (e.ctrlKey) {
+            e.preventDefault();
+            const rect = panelEl.getBoundingClientRect();
+            const cx = e.clientX - rect.left;
+            const cy = e.clientY - rect.top;
+
+            const st = state[panelId];
+            const factor = Math.exp(-e.deltaY * 0.01);
+            const newScale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, st.scale * factor));
+
+            if (newScale !== st.scale) {
+                const contentX = (cx + panelEl.scrollLeft) / st.scale;
+                const contentY = (cy + panelEl.scrollTop) / st.scale;
+
+                st.scale = newScale;
+                applyZoom(panelId);
+
+                panelEl.scrollLeft = contentX * newScale - cx;
+                panelEl.scrollTop  = contentY * newScale - cy;
+            }
+        }
+    }, { passive: false });
+
+    // Pinch zoom (touch)
+    let lastDist = null;
+    let lastMidX = 0, lastMidY = 0;
+
+    // Prevent iOS Safari native page scale/zoom gestures
+    panelEl.addEventListener('gesturestart', e => {
+        e.preventDefault();
+    }, { passive: false });
+    panelEl.addEventListener('gesturechange', e => {
+        e.preventDefault();
+    }, { passive: false });
+
+    panelEl.addEventListener('touchstart', e => {
+        if (e.touches.length === 2) {
+            panelEl.style.overflow = 'hidden'; // temporarily disable native scroll to avoid jump
+            panelEl.style.touchAction = 'none'; // force browser to route touches to JS
+            lastDist = Math.hypot(
+                e.touches[0].clientX - e.touches[1].clientX,
+                e.touches[0].clientY - e.touches[1].clientY
+            );
+            lastMidX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+            lastMidY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    panelEl.addEventListener('touchmove', e => {
+        if (e.touches.length !== 2 || !lastDist) return;
+        e.preventDefault();
+
+        const dist = Math.hypot(
+            e.touches[0].clientX - e.touches[1].clientX,
+            e.touches[0].clientY - e.touches[1].clientY
+        );
+        const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+        const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+
+        const st = state[panelId];
+        const ratio = dist / lastDist;
+        const newScale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, st.scale * ratio));
+
+        // Pinch midpoint in content coords
+        const rect = panelEl.getBoundingClientRect();
+        const cx = (lastMidX - rect.left + panelEl.scrollLeft) / st.scale;
+        const cy = (lastMidY - rect.top  + panelEl.scrollTop)  / st.scale;
+
+        st.scale = newScale;
+        applyZoom(panelId);
+
+        panelEl.scrollLeft = cx * newScale - (lastMidX - rect.left);
+        panelEl.scrollTop  = cy * newScale - (lastMidY - rect.top);
+
+        lastDist = dist;
+        lastMidX = midX;
+        lastMidY = midY;
+    }, { passive: false });
+
+    const handleTouchEnd = () => {
+        lastDist = null;
+        panelEl.style.overflow = 'auto'; // restore native scrolling
+        panelEl.style.touchAction = 'pan-x pan-y'; // restore native scroll action
+    };
+
+    panelEl.addEventListener('touchend', handleTouchEnd);
+    panelEl.addEventListener('touchcancel', handleTouchEnd);
+}
+
+makeZoom(document.getElementById('panel-ref'), 'ref');
+makeZoom(document.getElementById('panel-live'), 'live');
+
+// Reset buttons
+document.querySelectorAll('.reset-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.stopPropagation();
+        resetZoom(btn.dataset.panel);
+    });
+});
+
+// ── REPORT DRAWER ──────────────────────────────────────────────────────────
+let reportLoaded = false;
+
+function openDrawer() {
+    document.getElementById('drawer-overlay').classList.add('open');
+    document.getElementById('drawer').classList.add('open');
+    if (!reportLoaded) loadReport();
+}
+
+function closeDrawer() {
+    document.getElementById('drawer-overlay').classList.remove('open');
+    document.getElementById('drawer').classList.remove('open');
+}
+
+async function loadReport() {
+    const container = document.getElementById('report-content');
+    try {
+        const res = await fetch(`/data/diffs/${slug}/report.md`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const md = await res.text();
+        container.innerHTML = `<div class="md-content">${marked.parse(md)}</div>`;
+        reportLoaded = true;
+    } catch (e) {
+        container.innerHTML = `<div style="color:#ef4444;font-size:13px;padding:20px 0">⚠ Could not load report: ${e.message}</div>`;
+    }
+}
+
+document.getElementById('report-btn').addEventListener('click', openDrawer);
+document.getElementById('drawer-close').addEventListener('click', closeDrawer);
+document.getElementById('drawer-overlay').addEventListener('click', closeDrawer);
+
+// Keyboard: Escape closes drawer
+window.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeDrawer();
+});
+
+// ── INIT ───────────────────────────────────────────────────────────────────
+if (slug) {
+    document.getElementById('slug-display').textContent = slug;
+    document.getElementById('drawer-slug').textContent = slug;
+    setDevice(device);
+}
+</script>
+</body>
+</html>

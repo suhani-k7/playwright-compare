@@ -698,6 +698,13 @@
                 const data = await res.json();
                 if (data.status === "already_exists") {
                     this.disabled = false;
+                    const warningBox = document.getElementById("warning-box");
+                    warningBox.innerHTML = `Slug "<strong>${slug}</strong>" already captured. Opening results...`;
+                    warningBox.classList.add("show");
+                    setTimeout(() => {
+                        window.location.href = `/results?slug=${slug}&device=desktop`;
+                        warningBox.classList.remove("show");
+                    }, 1500);
                 } else if (data.status === "started") {
                     // Job kicked off in background: Start polling!
                     startProgressPolling(data.job_id, data.slug);
@@ -747,12 +754,13 @@
                     if (job.status === "done") {
                         clearInterval(pollInterval);
                         progressBar.style.width = "100%";
-                        progressText.textContent = "Complete!";
-                        setTimeout(() => {
-                            progressCard.classList.remove("show");
-                        }, 1000);
+                        progressText.textContent = "Complete! Opening results...";
                         document.getElementById("run-btn").disabled = false;
                         fetchManifest();
+                        setTimeout(() => {
+                            window.location.href = `/results?slug=${slug}&device=desktop`;
+                            progressCard.classList.remove("show");
+                        }, 1200);
                     } else if (job.status === "error") {
                         clearInterval(pollInterval);
                         progressText.textContent = "Error: " + job.error;

@@ -2,7 +2,7 @@ venv/
 __pycache__/
 *.pyc
 data/
-DOCUMENTATION.md
-features/*/live/
 features/*/reference/
 features/*/live/
+*.swp
+*.swo

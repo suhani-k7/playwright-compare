@@ -175,6 +175,11 @@ def index():
     return FileResponse(os.path.join(BASE_DIR, "frontend", "landing.html"))
 
 
+@app.get("/results")
+def results():
+    return FileResponse(os.path.join(BASE_DIR, "frontend", "results.html"))
+
+
 app.mount("/frontend", StaticFiles(directory=os.path.join(BASE_DIR, "frontend")), name="frontend")
 app.mount("/data", StaticFiles(directory=DATA_DIR), name="data")
 

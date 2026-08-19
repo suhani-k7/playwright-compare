@@ -335,7 +335,9 @@ def _dismiss_popup(page, max_wait_ms: int = 3000):
         ".new-investment-popup-close",
         "[aria-label='Close popup']",
         "[aria-label*='close' i]",
-        "[class*='popup'] [class*='close']",   # only match close buttons INSIDE a popup/modal container
+        "[alt*='close' i]",
+        "img[src*='close' i]",
+        "[class*='popup'] [class*='close']",
         "[class*='modal'] [class*='close']",
         ".close",
         ".close-btn",
@@ -344,13 +346,17 @@ def _dismiss_popup(page, max_wait_ms: int = 3000):
         "[id*='close' i]",
         "text=×",
     ]
-    # Quick DOM check: if no popup or modal container classes exist, limit the maximum wait time to 1s
-    has_popup_el = page.evaluate("""() => {
-        return !!document.querySelector(
-            '[class*="popup"], [class*="modal"], [class*="dialog"], [class*="smartech"], .new-investment-popup-close, [class*="close" i]:not([class*="closetab"]), [id*="close" i]'
-        );
-    }""")
-    
+    try:
+        has_popup_el = page.evaluate("""() => {
+            return !!document.querySelector(
+                '[class*="popup"], [class*="modal"], [class*="dialog"], [class*="smartech"], .new-investment-popup-close, [class*="close" i]:not([class*="closetab"]), [id*="close" i], [alt*="close" i], img[src*="close" i]'
+            );
+        }""")
+    except PlaywrightError:
+        # Page navigated mid-check (redirect) — nothing to dismiss yet, skip this pass.
+        print("  Popup check skipped — page was navigating.")
+        return
+
     actual_max_wait = max_wait_ms if has_popup_el else 1000
     waited = 0
     step = 250
@@ -367,7 +373,6 @@ def _dismiss_popup(page, max_wait_ms: int = 3000):
                 continue
         page.wait_for_timeout(step)
         waited += step
-
 
 
 def _goto_with_retry(page, url: str, retries: int = 1, timeout: int = 45000):

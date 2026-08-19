@@ -10,7 +10,7 @@ This document explains the internal algorithms, data flow, and design decisions 
 2. [Capture — `core/capture.py`](#2-capture)
 3. [Compare — `core/compare.py`](#3-compare)
 4. [Fold Diffing — `core/fold_utils.py`](#4-fold-diffing)
-5. [Backend API — `backend/`](#5-backend-api)
+5. [Server — `server.py`](#5-server)
 6. [Sticky Feature — `features/sticky/`](#6-sticky-feature)
 7. [Design Decisions & Fixes](#7-design-decisions--fixes)
 
@@ -213,78 +213,21 @@ Structural comparators (headings, buttons, links) only catch what they're explic
 
 ---
 
-## 5. Backend API — `backend/`
+## 5. Server — `server.py`
 
-There are two backend implementations:
+A minimal FastAPI app using a background thread + queue. Runs `capture.py` → `capture.py` → `compare.py` as subprocesses. Serves `landing.html` as the entry point, `results.html` for side-by-side viewing, and the `data/` directory as static files.
 
-### 5.1 `server.py` (Simple)
+**Subprocess management (`run_capture` helper):**
+- Each `capture.py` invocation runs via `subprocess.run()` with `capture_output=True` and `text=True`, so stderr/stdout are captured instead of silently lost.
+- Capture timeout: 300 seconds per viewport set. Compare timeout: 120 seconds.
+- On non-zero exit, the helper raises `RuntimeError` with the full stderr output, which surfaces the actual Playwright error (not just "exit status N").
+- `subprocess.TimeoutExpired` is caught separately with a user-friendly message.
 
-A minimal FastAPI app using a background thread + queue. Runs `capture.py` → `capture.py` → `compare.py` as subprocesses. Serves the legacy `compare.html` frontend and the `data/` directory as static files.
+**Slug caching:** If a slug already exists in `data/manifest.json` with a matching reference URL, the server returns `"already_exists"` immediately without re-running capture. The frontend auto-opens the results page for that slug.
 
-### 5.2 `backend/` (Full App)
-
-A production-oriented backend with parallel crawling, structured diff engine, caching, and on-demand annotation.
-
-#### Crawler Engine — `crawler_engine.py`
-
-Spawns **6 parallel threads** (3 viewports × 2 modes), each with its own Playwright browser instance:
-
-```
-desktop × reference
-desktop × live
-ios × reference
-ios × live
-android × reference
-android × live
-```
-
-Each thread captures 4 sections per viewport:
-
-1. **Fullpage** — full-page screenshot + elements JSON.
-2. **First Fold** — viewport-only screenshot (no scroll), elements filtered to those with `y < viewport_height`.
-3. **Sticky** — scrolled to 50% page height, viewport screenshot, sticky-only elements extracted via `isStickyOrFixed()` DOM walk.
-4. **Popup** — auto-detects modals via 5 trigger strategies (see below), screenshots the popup region.
-
-#### Popup Detection Strategies
-
-1. **Auto-appear** — wait up to 5s for a modal to appear on its own.
-2. **Scroll trigger** — scroll down 500px, back to top, scan again.
-3. **Tab visibility switch** — fake `visibilitychange` to `hidden` then `visible`.
-4. **Exit-intent mouse** — move mouse to top of viewport.
-5. **Longer passive wait** — 10 more seconds of scanning.
-
-Modal detection criteria: element must be ≥200×150px, cover ≥5% of viewport, and have at least one "modal trait" (close button, form inputs, backdrop overlay, high z-index).
-
-#### Diff Engine — `diff_engine.py`
-
-**Element alignment** (`match_elements()`) uses a 5-strategy cascade:
-
-1. **By ID** — exact `id` attribute match (same tag + same id).
-2. **By name** — exact `name` attribute match.
-3. **By stable attributes** — tag-specific: img `src` (normalized), link `href` (normalized), heading `text` (>3 chars).
-4. **By CSS selector path** — exact `selector` string match (fallback).
-5. **By sequential order** — first-unmatched of same tag type (last resort).
-
-**Diff logic** (`diff_elements()`):
-- Unmatched reference → `missing` issue.
-- Unmatched live → `extra` issue.
-- Matched pairs → attribute-specific diffs (text content, tag level, font family, alt text, src, href, dimensions).
-
-**SEO diff** (`diff_seo()`): Compares title, description, keywords, canonical, OG tags, Twitter Card tags, and hreflangs.
-
-**Font stack check**: Compares `body` computed font-family across reference and live.
-
-**Popup presence check**: If one side has a popup and the other doesn't, that's flagged.
-
-**Sticky count check**: If the number of sticky elements differs between reference and live, that's flagged.
-
-#### Cache — `cache.py`
-
-In-memory TTL cache (5 minutes). Hashes `ref_url + live_url` → `run_id`. If a cached run exists and didn't fail, it's reused.
-
-#### Exporter — `exporter.py`
-
-On-demand annotation: reads `live.png` and `diff.json` for a given viewport/section, draws red bounding boxes and labels using PIL, saves as `live-annotated.png`, returns the static URL path.
+**Frontend pages:**
+- **`landing.html`** — Vanilla HTML+JS, no build step. Auto-derives the live URL (swaps `www.` → `neouat.`) and slug from the reference URL input. Polls `/api/jobs/{jobId}` every 2 seconds for progress updates. On completion, opens `fold_slider_demo.html?slug=<slug>&device=desktop` automatically.
+- **`results.html`** — Side-by-side results viewer with two-panel image display, click-to-zoom, pinch-zoom, viewport switcher (Desktop/Android/iOS), and a slide-out Markdown report drawer.
 
 ---
 
