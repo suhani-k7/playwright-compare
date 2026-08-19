@@ -571,23 +571,31 @@ def compare_links(ref_soup, live_soup, ref_elements: dict, live_elements: dict) 
     ref_base = ref_canonical["href"].strip() if ref_canonical and ref_canonical.get("href") else ""
     live_base = live_canonical["href"].strip() if live_canonical and live_canonical.get("href") else ""
 
-    # Count check
-    if len(ref_links) != len(live_links):
+    # Separate visible (has bbox) vs hidden (no bbox) links up front
+    def _is_visible(link):
+        return link.get("bbox") is not None
+
+    ref_visible = [l for l in ref_links if _is_visible(l)]
+    live_visible = [l for l in live_links if _is_visible(l)]
+    ref_hidden = [l for l in ref_links if not _is_visible(l)]
+
+    # Count check (visible links only, since hidden counts vary by viewport)
+    if len(ref_visible) != len(live_visible):
         mismatches.append({
             "type": "link_count",
-            "ref_count": len(ref_links),
-            "live_count": len(live_links),
-            "message": f"Link count: expected {len(ref_links)}, found {len(live_links)}"
+            "ref_count": len(ref_visible),
+            "live_count": len(live_visible),
+            "message": f"Link count: expected {len(ref_visible)}, found {len(live_visible)}"
         })
 
     # Normalize every link into {href, bbox}
     ref_items = [
         {"href": _normalize_href(l.get("href", ""), base_url=ref_base), "bbox": l.get("bbox")}
-        for l in ref_links
+        for l in ref_visible
     ]
     live_items = [
         {"href": _normalize_href(l.get("href", ""), base_url=live_base), "bbox": l.get("bbox")}
-        for l in live_links
+        for l in live_visible
     ]
 
     # Group by href so identical-href instances (e.g. 4x "...SIP") are interchangeable
@@ -662,6 +670,28 @@ def compare_links(ref_soup, live_soup, ref_elements: dict, live_elements: dict) 
                 "type": "extra_link",
                 "bbox": l_item["bbox"],
                 "message": f"Extra link: {l_item['href']}"
+            })
+
+    # ----------------------------------------------------------------
+    # Phase 2 – Hidden (DOM-only) link comparison
+    # Compare purely by normalised href; no bbox needed.
+    # If a hidden reference link is absent from live's entire DOM
+    # (visible OR hidden), flag it.
+    # ----------------------------------------------------------------
+    all_live_hrefs = set(
+        _normalize_href(l.get("href", ""), base_url=live_base) for l in live_links
+    )
+    all_ref_hidden_hrefs_seen = set()
+    for l in ref_hidden:
+        norm = _normalize_href(l.get("href", ""), base_url=ref_base)
+        if norm in all_ref_hidden_hrefs_seen:
+            continue  # skip duplicate hrefs
+        all_ref_hidden_hrefs_seen.add(norm)
+        if norm and norm not in all_live_hrefs:
+            mismatches.append({
+                "type": "missing_link",
+                "bbox": None,  # no visual position; flagged as floating message
+                "message": f"Missing link (hidden/collapsed in reference, absent from live DOM): {norm}"
             })
 
     status = "PASS" if not mismatches else "FAIL"
@@ -914,6 +944,25 @@ def generate_readable_report(all_reports: list, slug: str):
 # CLI entry point
 # -------------------------------------------------------------------
 
+def _update_manifest():
+    """Scans data/reference/ and builds a manifest of all slugs with their available devices."""
+    ref_dir = os.path.join(DATA_DIR, "reference")
+    manifest = []
+    if os.path.isdir(ref_dir):
+        for slug in sorted(os.listdir(ref_dir)):
+            slug_path = os.path.join(ref_dir, slug)
+            if not os.path.isdir(slug_path):
+                continue
+            devices = sorted(d for d in os.listdir(slug_path) if os.path.isdir(os.path.join(slug_path, d)))
+            has_report = os.path.exists(os.path.join(DATA_DIR, "diffs", slug, "raw-report.json"))
+            manifest.append({"slug": slug, "devices": devices, "has_report": has_report})
+    manifest_path = os.path.join(DATA_DIR, "manifest.json")
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
+    print(f"Manifest updated: {manifest_path} ({len(manifest)} slug(s))")
+
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Compare reference vs live HTML structure across all viewports."
@@ -961,22 +1010,3 @@ if __name__ == "__main__":
 
     # Update manifest with all available slugs
     _update_manifest()
-
-
-def _update_manifest():
-    """Scans data/reference/ and builds a manifest of all slugs with their available devices."""
-    ref_dir = os.path.join(DATA_DIR, "reference")
-    manifest = []
-    if os.path.isdir(ref_dir):
-        for slug in sorted(os.listdir(ref_dir)):
-            slug_path = os.path.join(ref_dir, slug)
-            if not os.path.isdir(slug_path):
-                continue
-            devices = sorted(d for d in os.listdir(slug_path) if os.path.isdir(os.path.join(slug_path, d)))
-            has_report = os.path.exists(os.path.join(DATA_DIR, "diffs", slug, "raw-report.json"))
-            manifest.append({"slug": slug, "devices": devices, "has_report": has_report})
-    manifest_path = os.path.join(DATA_DIR, "manifest.json")
-    with open(manifest_path, "w", encoding="utf-8") as f:
-        json.dump(manifest, f, indent=2)
-    print(f"Manifest updated: {manifest_path} ({len(manifest)} slug(s))")
-

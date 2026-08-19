@@ -197,6 +197,15 @@ def extract_elements(page, device_scale_factor: float = 1) -> dict:
                 "href": href,
                 "bbox": scale_bbox(bbox)
             })
+        else:
+            # The element exists in the DOM but has no rendered size — e.g. it is
+            # inside a collapsed accordion/dropdown on mobile. Record it anyway
+            # (without a bbox) so the comparator can still flag it as missing.
+            elements["links"].append({
+                "href": href,
+                "bbox": None,
+                "hidden": True
+            })
 
     # --- Canonical tag ---
     # This lives in <head> so it has no visual bbox.

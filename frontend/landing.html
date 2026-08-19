@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Visual Fold Comparison</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Regression Test Center</title>
+    <!-- Modern Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #141b2d;
+            --accent-color: #ff8a3d;
+            --accent-glow: rgba(255, 138, 61, 0.15);
+            --border-color: #242f4c;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -12,85 +31,270 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0f0f0f;
-            color: #e6e6e6;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(255, 138, 61, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.03) 0px, transparent 50%);
+            color: var(--text-primary);
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 960px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff 30%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .card {
-            width: 100%;
-            max-width: 480px;
-            margin: 40px 20px;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 12px;
-            padding: 36px 32px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
 
-        h1 {
-            font-size: 22px;
+        .card:hover {
+            border-color: rgba(255, 138, 61, 0.3);
+        }
+
+        .card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
             font-weight: 700;
-            margin-bottom: 6px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
         }
 
-        .subtitle {
-            font-size: 13px;
-            color: #888;
-            margin-bottom: 28px;
+        .card-title .icon {
+            color: var(--accent-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
         }
 
         label {
             display: block;
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #999;
+            letter-spacing: 0.75px;
+            color: var(--text-secondary);
             margin-bottom: 8px;
         }
 
-        .slug-input-wrap {
-            position: relative;
+        .input-field {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(11, 15, 25, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 14px;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .input-field:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+            background: rgba(11, 15, 25, 0.9);
+        }
+
+        .input-field::placeholder {
+            color: #4b5563;
+        }
+
+        .input-field[readonly] {
+            color: #9ca3af;
+            background: rgba(11, 15, 25, 0.3);
+            border-style: dashed;
+            cursor: default;
+        }
+
+        /* Viewport toggles */
+        .viewport-flex {
+            display: flex;
+            gap: 8px;
             margin-bottom: 20px;
         }
 
-        .slug-input {
-            width: 100%;
-            padding: 10px 14px;
-            background: #111;
-            border: 1px solid #444;
-            border-radius: 8px;
+        .viewport-toggle {
+            flex: 1;
+            padding: 10px;
+            background: rgba(11, 15, 25, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .viewport-toggle:hover {
+            border-color: #4b5563;
             color: #fff;
+        }
+
+        .viewport-toggle.active {
+            border-color: var(--accent-color);
+            background: var(--accent-glow);
+            color: var(--accent-color);
+        }
+
+        .viewport-toggle .icon {
+            font-size: 18px;
+        }
+
+        /* Checkbox wrap */
+        .checkbox-wrap {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+
+        .checkbox-wrap input[type="checkbox"] {
+            accent-color: var(--accent-color);
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        /* Action buttons */
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--accent-color);
+            border: none;
+            border-radius: 10px;
+            color: #0b0f19;
             font-size: 14px;
-            outline: none;
-            transition: border-color 0.15s;
+            font-weight: 800;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .slug-input:focus {
-            border-color: #ff8a3d;
+        .btn:hover {
+            opacity: 0.95;
+            box-shadow: 0 4px 20px rgba(255, 138, 61, 0.4);
+            transform: translateY(-1px);
         }
 
-        .slug-input::placeholder {
-            color: #555;
+        .btn:active {
+            transform: translateY(1px);
         }
 
+        .btn:disabled {
+            background: #242f4c;
+            color: #4b5563;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        /* Alerts and Warnings */
+        .alert {
+            display: none;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-top: 12px;
+            border: 1px solid transparent;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.3);
+            color: #fbbf24;
+        }
+
+        .alert-error {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: rgba(239, 68, 68, 0.3);
+            color: #fca5a5;
+        }
+
+        /* Historical Dropdown */
         .slug-dropdown {
             position: absolute;
             top: 100%;
             left: 0;
             right: 0;
-            margin-top: 4px;
-            background: #1e1e1e;
-            border: 1px solid #444;
-            border-radius: 8px;
-            max-height: 200px;
+            margin-top: 6px;
+            background: #101625;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            max-height: 220px;
             overflow-y: auto;
-            z-index: 20;
+            z-index: 50;
             display: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
         }
 
         .slug-dropdown.open {
@@ -98,253 +302,471 @@
         }
 
         .slug-option {
-            padding: 10px 14px;
+            padding: 12px 16px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 13px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            transition: background 0.1s;
+            border-bottom: 1px solid rgba(36, 47, 76, 0.5);
+            transition: background 0.15s;
         }
 
         .slug-option:hover {
-            background: #2a2a2a;
+            background: rgba(255, 138, 61, 0.08);
+            color: var(--accent-color);
         }
 
-        .slug-option.selected {
-            background: #2a2a2a;
-            color: #ff8a3d;
+        .slug-option:last-child {
+            border-bottom: none;
         }
 
-        .slug-option .badge {
+        .badge {
             font-size: 10px;
-            padding: 2px 7px;
-            border-radius: 10px;
-            background: #333;
-            color: #888;
-        }
-
-        .slug-option .badge.report {
-            background: #ff8a3d22;
-            color: #ff8a3d;
-        }
-
-        .viewport-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 28px;
-        }
-
-        .viewport-btn {
-            padding: 12px 0;
-            background: #111;
-            border: 1px solid #444;
-            border-radius: 8px;
-            color: #ccc;
-            font-size: 13px;
-            font-weight: 500;
-            cursor: pointer;
-            text-align: center;
-            transition: all 0.15s;
-        }
-
-        .viewport-btn:hover {
-            border-color: #666;
-        }
-
-        .viewport-btn.active {
-            border-color: #ff8a3d;
-            background: #ff8a3d11;
-            color: #ff8a3d;
-        }
-
-        .viewport-btn .icon {
-            display: block;
-            font-size: 20px;
-            margin-bottom: 4px;
-        }
-
-        .viewport-btn.disabled {
-            opacity: 0.3;
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-
-        .go-btn {
-            width: 100%;
-            padding: 13px;
-            background: #ff8a3d;
-            border: none;
-            border-radius: 8px;
-            color: #111;
-            font-size: 14px;
             font-weight: 700;
-            cursor: pointer;
-            transition: opacity 0.15s;
+            padding: 3px 8px;
+            border-radius: 20px;
+            background: #1e293b;
+            color: #64748b;
+            text-transform: uppercase;
         }
 
-        .go-btn:hover {
-            opacity: 0.9;
+        .badge.active {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
         }
 
-        .go-btn:disabled {
-            opacity: 0.3;
-            cursor: not-allowed;
-        }
-
-        .error-msg {
-            margin-top: 12px;
-            font-size: 12px;
-            color: #ef4444;
+        /* Progress Panel */
+        .progress-card {
             display: none;
+            flex-direction: column;
+            gap: 16px;
         }
 
-        .error-msg.show {
-            display: block;
+        .progress-card.show {
+            display: flex;
         }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 8px;
+            background: #111827;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--accent-color) 0%, #10b981 100%);
+            border-radius: 10px;
+            transition: width 0.4s ease;
+        }
+
+        .progress-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.9); opacity: 0.4; }
+            50% { transform: scale(1.3); opacity: 1; }
+            100% { transform: scale(0.9); opacity: 0.4; }
+        }
+
+        .btn-secondary {
+            background: #1e293b;
+            color: #fff;
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: #334155;
+            box-shadow: none;
+        }
+
+
     </style>
 </head>
 
 <body>
-    <div class="card">
-        <h1>Visual Fold Comparison</h1>
-        <p class="subtitle">Select a page and viewport to compare reference vs live folds.</p>
+    <div class="container">
+        <header>
+            <h1>Visual Regression Test Center</h1>
+            <p>Automated visual diff and structural validation across Desktop, Android, and iOS viewports</p>
+        </header>
 
-        <label for="slug-search">Page</label>
-        <div class="slug-input-wrap">
-            <input type="text" id="slug-search" class="slug-input" placeholder="Search pages..." autocomplete="off">
-            <div id="slug-dropdown" class="slug-dropdown"></div>
+        <div class="dashboard-grid">
+            <!-- Left Side: Interactive Launcher -->
+            <div class="card" style="display: flex; flex-direction: column; gap: 4px;">
+                <div class="card-title">
+                    <span class="icon">&#9889;</span> Launch Visual Comparison
+                </div>
+
+                <div class="form-group">
+                    <label for="ref-url">Reference / Production URL</label>
+                    <input type="text" id="ref-url" class="input-field" placeholder="https://www.axismaxlife.com/some-page" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="live-url">Live / UAT URL (Derived)</label>
+                    <input type="text" id="live-url" class="input-field" placeholder="https://neouat.axismaxlife.com/some-page">
+                </div>
+
+                <div class="form-group">
+                    <label for="slug-input">Compare Identifier (Slug)</label>
+                    <input type="text" id="slug-input" class="input-field" placeholder="e.g. term-insurance-slug">
+                </div>
+
+                <label>Target Viewports (Display Filter)</label>
+                <div class="viewport-flex">
+                    <button type="button" class="viewport-toggle active" data-device="desktop">
+                        <span class="icon">&#128187;</span>
+                        <span>Desktop</span>
+                    </button>
+                    <button type="button" class="viewport-toggle active" data-device="android">
+                        <span class="icon">&#128241;</span>
+                        <span>Android</span>
+                    </button>
+                    <button type="button" class="viewport-toggle active" data-device="ios">
+                        <span class="icon">&#128241;</span>
+                        <span>iOS</span>
+                    </button>
+                </div>
+
+                <label class="checkbox-wrap">
+                    <input type="checkbox" id="force-refresh">
+                    <span>Force Re-run (bypass cache and run fresh capture)</span>
+                </label>
+
+                <button class="btn" id="run-btn">Compare Sites</button>
+                
+                <div class="alert alert-warning" id="warning-box"></div>
+                <div class="alert alert-error" id="error-box"></div>
+            </div>
+
+            <!-- Right Side: Historical runs & Quick launcher -->
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+                <!-- Existing Comparison Card -->
+                <div class="card">
+                    <div class="card-title">
+                        <span class="icon">&#128196;</span> Existing Test Records
+                    </div>
+                    <div class="form-group">
+                        <label for="slug-search">Select Run ID</label>
+                        <div style="position: relative;">
+                            <input type="text" id="slug-search" class="input-field" placeholder="Search saved slugs..." autocomplete="off">
+                            <div id="slug-dropdown" class="slug-dropdown"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Quick Viewport</label>
+                        <select id="quick-device-select" class="input-field">
+                            <option value="desktop">Desktop</option>
+                            <option value="android">Android</option>
+                            <option value="ios">iOS</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-secondary" id="quick-view-btn" disabled>Go to Interactive Slider</button>
+                </div>
+
+                <!-- Run / Progress State Card -->
+                <div class="card progress-card" id="progress-card">
+                    <div class="progress-status">
+                        <span>Running Test Job</span>
+                        <span class="pulse-dot"></span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <div id="progress-text" style="font-size: 13px; color: var(--text-secondary);">Queued...</div>
+                </div>
+            </div>
         </div>
-
-        <label>Viewport</label>
-        <div class="viewport-grid" id="viewport-grid">
-            <button class="viewport-btn" data-device="desktop">
-                <span class="icon">&#128187;</span>
-                Desktop
-            </button>
-            <button class="viewport-btn" data-device="android">
-                <span class="icon">&#128241;</span>
-                Android
-            </button>
-            <button class="viewport-btn" data-device="ios">
-                <span class="icon">&#128241;</span>
-                iOS
-            </button>
-        </div>
-
-        <button class="go-btn" id="go-btn" disabled>Compare</button>
-        <p class="error-msg" id="error-msg"></p>
     </div>
 
     <script>
         let manifest = [];
-        let selectedSlug = null;
-        let selectedDevice = null;
-        let availableDevices = [];
+        let activeJobId = null;
+        let pollInterval = null;
 
-        async function init() {
+        async function fetchManifest() {
             try {
-                const res = await fetch("../data/manifest.json");
+                const res = await fetch("/data/manifest.json");
                 manifest = await res.json();
+                renderDropdown(manifest);
             } catch (e) {
-                showError("Could not load manifest. Run compare.py first.");
-                return;
+                console.error("Could not load manifest.json yet.");
             }
-            renderDropdown(manifest);
         }
 
         function renderDropdown(items) {
             const dropdown = document.getElementById("slug-dropdown");
-            dropdown.innerHTML = items.map(s =>
-                `<div class="slug-option" data-slug="${s.slug}">
+            dropdown.innerHTML = items.map(s => `
+                <div class="slug-option" data-slug="${s.slug}">
                     <span>${s.slug}</span>
-                    <span class="badge ${s.has_report ? 'report' : ''}">${s.has_report ? 'report' : 'no report'}</span>
-                </div>`
-            ).join("");
+                    <span class="badge ${s.has_report ? 'active' : ''}">${s.has_report ? 'compared' : 'captured'}</span>
+                </div>
+            `).join("");
 
             dropdown.querySelectorAll(".slug-option").forEach(el => {
-                el.addEventListener("click", () => selectSlug(el.dataset.slug));
+                el.addEventListener("click", () => selectSlugFromHistory(el.dataset.slug));
             });
         }
 
-        function selectSlug(slug) {
-            selectedSlug = manifest.find(s => s.slug === slug);
-            if (!selectedSlug) return;
-
-            document.getElementById("slug-search").value = slug;
-            document.getElementById("slug-dropdown").classList.remove("open");
-
-            availableDevices = selectedSlug.devices;
-            selectedDevice = null;
-
-            document.querySelectorAll(".viewport-btn").forEach(btn => {
-                const d = btn.dataset.device;
-                if (availableDevices.includes(d)) {
-                    btn.classList.remove("disabled");
-                    btn.classList.remove("active");
-                } else {
-                    btn.classList.add("disabled");
-                    btn.classList.remove("active");
+        // Live URL & Slug derivation helper function
+        function deriveLiveUrl(refUrl) {
+            try {
+                const url = new URL(refUrl);
+                let hostname = url.hostname;
+                if (hostname.startsWith("www.")) {
+                    url.hostname = "neouat." + hostname.slice(4);
+                } else if (hostname.includes("axismaxlife.com") && !hostname.startsWith("neouat.")) {
+                    url.hostname = "neouat.axismaxlife.com";
+                } else if (!hostname.startsWith("neouat.")) {
+                    url.hostname = "neouat." + hostname;
                 }
-            });
-
-            updateGoBtn();
+                return url.toString();
+            } catch(e) {
+                return "";
+            }
         }
 
-        document.getElementById("slug-search").addEventListener("input", function () {
+        function deriveSlug(refUrl) {
+            try {
+                const url = new URL(refUrl);
+                const pathSegments = url.pathname.split("/").filter(Boolean);
+                if (pathSegments.length > 0) {
+                    return pathSegments[pathSegments.length - 1];
+                }
+                return "home";
+            } catch(e) {
+                return "";
+            }
+        }
+
+        // Collision safety check helper
+        async function checkSlugCollision() {
+            const slug = document.getElementById("slug-input").value.trim();
+            const refUrl = document.getElementById("ref-url").value.trim();
+            const warningBox = document.getElementById("warning-box");
+            const runBtn = document.getElementById("run-btn");
+            const forceRefresh = document.getElementById("force-refresh").checked;
+
+            warningBox.classList.remove("show");
+            warningBox.textContent = "";
+
+            if (!slug || !refUrl) return true;
+
+            const existing = manifest.find(item => item.slug === slug);
+            if (existing) {
+                // Fetch existing canonical reference URL from elements.json
+                try {
+                    // Try desktop first to check canonical reference url
+                    const elementsRes = await fetch(`/data/reference/${slug}/desktop/reference-desktop-${slug}-elements.json`);
+                    if (elementsRes.ok) {
+                        const data = await elementsRes.json();
+                        const canonical = data.canonical && data.canonical[0] ? data.canonical[0].href : null;
+                        if (canonical) {
+                            const norm = u => u.trim().toLowerCase().replace(/\/$/, "");
+                            if (norm(canonical) !== norm(refUrl)) {
+                                warningBox.innerHTML = `⚠️ <strong>Slug Collision Warning:</strong> The slug <strong>"${slug}"</strong> is already in use for a different URL:<br><code style="word-break: break-all;">${canonical}</code>.<br><br>Please choose a different identifier (slug) or check <strong>"Force Re-run"</strong> above to overwrite this existing data.`;
+                                warningBox.classList.add("show");
+                                if (!forceRefresh) {
+                                    return false; // prevent run
+                                }
+                            }
+                        }
+                    }
+                } catch (e) {
+                    console.warn("Could not read existing slug canonical reference data:", e);
+                }
+            }
+            return true;
+        }
+
+        // Event listener for Reference URL keyup/change inputs
+        document.getElementById("ref-url").addEventListener("input", function() {
+            const val = this.value.trim();
+            if (val) {
+                document.getElementById("live-url").value = deriveLiveUrl(val);
+                document.getElementById("slug-input").value = deriveSlug(val);
+                checkSlugCollision();
+            }
+        });
+
+        document.getElementById("slug-input").addEventListener("input", checkSlugCollision);
+        document.getElementById("force-refresh").addEventListener("change", checkSlugCollision);
+
+        // Target Viewport Active selection
+        document.querySelectorAll(".viewport-toggle").forEach(btn => {
+            btn.addEventListener("click", function() {
+                this.classList.toggle("active");
+            });
+        });
+
+        // Search inputs for historical dropdowns
+        const searchInput = document.getElementById("slug-search");
+        const dropdown = document.getElementById("slug-dropdown");
+
+        searchInput.addEventListener("input", function () {
             const val = this.value.toLowerCase();
             const filtered = manifest.filter(s => s.slug.toLowerCase().includes(val));
             renderDropdown(filtered);
-            document.getElementById("slug-dropdown").classList.add("open");
-            selectedSlug = null;
-            updateGoBtn();
+            dropdown.classList.add("open");
+            document.getElementById("quick-view-btn").disabled = true;
         });
 
-        document.getElementById("slug-search").addEventListener("focus", function () {
+        searchInput.addEventListener("focus", function () {
             const val = this.value.toLowerCase();
             const filtered = val ? manifest.filter(s => s.slug.toLowerCase().includes(val)) : manifest;
             renderDropdown(filtered);
-            document.getElementById("slug-dropdown").classList.add("open");
+            dropdown.classList.add("open");
         });
 
         document.addEventListener("click", function (e) {
-            if (!e.target.closest(".slug-input-wrap")) {
-                document.getElementById("slug-dropdown").classList.remove("open");
+            if (!e.target.closest("#slug-search") && !e.target.closest("#slug-dropdown")) {
+                dropdown.classList.remove("open");
             }
         });
 
-        document.querySelectorAll(".viewport-btn").forEach(btn => {
-            btn.addEventListener("click", function () {
-                if (this.classList.contains("disabled")) return;
-                document.querySelectorAll(".viewport-btn").forEach(b => b.classList.remove("active"));
-                this.classList.add("active");
-                selectedDevice = this.dataset.device;
-                updateGoBtn();
-            });
+        function selectSlugFromHistory(slug) {
+            const item = manifest.find(s => s.slug === slug);
+            if (!item) return;
+
+            searchInput.value = slug;
+            dropdown.classList.remove("open");
+            document.getElementById("quick-view-btn").disabled = false;
+        }
+
+        // Quick View button links to Option B Slider view
+        document.getElementById("quick-view-btn").addEventListener("click", function() {
+            const slug = searchInput.value.trim();
+            const device = document.getElementById("quick-device-select").value;
+            if (slug) {
+                window.open(`/frontend/fold_slider_demo.html?slug=${slug}&device=${device}`, "_blank");
+            }
         });
 
-        function updateGoBtn() {
-            const goBtn = document.getElementById("go-btn");
-            goBtn.disabled = !(selectedSlug && selectedDevice);
-        }
+        // Launch runs compare trigger
+        document.getElementById("run-btn").addEventListener("click", async function() {
+            const refUrl = document.getElementById("ref-url").value.trim();
+            const liveUrl = document.getElementById("live-url").value.trim();
+            const slug = document.getElementById("slug-input").value.trim();
+            const forceRefresh = document.getElementById("force-refresh").checked;
+            
+            const errorBox = document.getElementById("error-box");
+            errorBox.classList.remove("show");
+            errorBox.textContent = "";
 
-        function showError(msg) {
-            const el = document.getElementById("error-msg");
-            el.textContent = msg;
-            el.classList.add("show");
-        }
-
-        document.getElementById("go-btn").addEventListener("click", function () {
-            if (!selectedSlug || !selectedDevice) return;
-            if (!selectedSlug.has_report) {
-                showError("No report exists for this slug yet. Run compare.py first.");
+            if (!refUrl || !liveUrl || !slug) {
+                errorBox.textContent = "Please fill in Reference URL, Live URL and Slug identifier.";
+                errorBox.classList.add("show");
                 return;
             }
-            window.location.href = `fold_slider_demo.html?slug=${selectedSlug.slug}&device=${selectedDevice}`;
+
+            const canRun = await checkSlugCollision();
+            if (!canRun) return;
+
+            // Trigger comparison
+            try {
+                this.disabled = true;
+                const res = await fetch("/api/compare", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        reference_url: refUrl,
+                        live_url: liveUrl,
+                        slug: slug,
+                        force_refresh: forceRefresh
+                    })
+                });
+
+                const data = await res.json();
+                if (data.status === "already_exists") {
+                    this.disabled = false;
+                } else if (data.status === "started") {
+                    // Job kicked off in background: Start polling!
+                    startProgressPolling(data.job_id, data.slug);
+                } else if (data.status === "collision") {
+                    this.disabled = false;
+                    errorBox.innerHTML = `Slug collision: ${data.message}`;
+                    errorBox.classList.add("show");
+                }
+            } catch(e) {
+                this.disabled = false;
+                errorBox.textContent = "API error connecting to server: " + e.message;
+                errorBox.classList.add("show");
+            }
         });
 
-        init();
+        // Polling loop logic
+        function startProgressPolling(jobId, slug) {
+            const progressCard = document.getElementById("progress-card");
+            const progressBar = document.getElementById("progress-bar");
+            const progressText = document.getElementById("progress-text");
+            
+            progressCard.classList.add("show");
+            progressBar.style.width = "5%";
+            progressText.textContent = "Queued in background...";
+
+            activeJobId = jobId;
+
+            if (pollInterval) clearInterval(pollInterval);
+            
+            pollInterval = setInterval(async () => {
+                try {
+                    const res = await fetch(`/api/jobs/${jobId}`);
+                    if (!res.ok) return;
+                    const job = await res.json();
+                    
+                    progressText.textContent = job.progress || "Running captures...";
+
+                    // Basic progress mapping based on status labels
+                    if (job.progress.includes("reference")) {
+                        progressBar.style.width = "30%";
+                    } else if (job.progress.includes("live")) {
+                        progressBar.style.width = "65%";
+                    } else if (job.progress.includes("Comparing")) {
+                        progressBar.style.width = "85%";
+                    }
+
+                    if (job.status === "done") {
+                        clearInterval(pollInterval);
+                        progressBar.style.width = "100%";
+                        progressText.textContent = "Complete!";
+                        setTimeout(() => {
+                            progressCard.classList.remove("show");
+                        }, 1000);
+                        document.getElementById("run-btn").disabled = false;
+                        fetchManifest();
+                    } else if (job.status === "error") {
+                        clearInterval(pollInterval);
+                        progressText.textContent = "Error: " + job.error;
+                        progressBar.style.backgroundColor = "var(--error)";
+                        document.getElementById("run-btn").disabled = false;
+                    }
+                } catch(e) {
+                    console.error("Polling fetch error:", e);
+                }
+            }, 2000);
+        }
+
+        // Initialize manifest load
+        fetchManifest();
     </script>
 </body>
 
